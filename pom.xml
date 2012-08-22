@@ -9,14 +9,83 @@
     License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
     OF ANY KIND, either express or implied. See the License for the specific 
     language governing permissions and limitations under the License. -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>org.gatein.portal.quickstarts</groupId>
-  <artifactId>gatein-portal-quickstarts-parent</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>GateIn Portal Quickstarts Parent</name>
-  <modules>
-  	<module>gatein-portal-simplesthelloworld</module>
-  </modules>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.gatein.portal.quickstarts</groupId>
+    <artifactId>gatein-portal-quickstarts-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>GateIn Portal Quickstarts Parent</name>
+    <url>http://gatein.org</url>
+    <scm>
+        <url>https://github.com/ppalaga/gatein-portal-quickstart</url>
+    </scm>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <properties>
+        <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
+
+        <github.global.server>github</github.global.server>
+        <downloads.maven.plugin.version>0.5</downloads.maven.plugin.version>
+    </properties>
+
+    <modules>
+        <module>gatein-portal-simplesthelloworld</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${maven.antrun.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <delete dir="target/assembly" />
+                                <mkdir dir="target/assembly" />
+                                
+                                <copy file="src/main/project-examples-xml/project-examples-gatein.xml" todir="target/assembly" />
+
+                                <zip destfile="target/assembly/gatein-portal-simplesthelloworld.zip" basedir="${project.basedir}"
+                                    includes="gatein-portal-simplesthelloworld/**"
+                                    excludes="gatein-portal-simplesthelloworld/target/**, .*/**" />
+
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>downloads-maven-plugin</artifactId>
+                <version>${downloads.maven.plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>upload</goal>
+                        </goals>
+                        <phase>install</phase>
+                        <configuration>
+                            <description>${project.version} release of ${project.name}</description>
+                            <override>true</override>
+                            <includes>
+                                <include>assembly/*</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
