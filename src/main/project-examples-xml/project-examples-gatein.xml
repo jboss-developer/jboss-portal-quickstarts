@@ -22,7 +22,7 @@
             </fix>
             <fix type="plugin">
                 <property name="id">org.maven.ide.eclipse.wtp</property>
-                <property name="versions">[0.13.1,0.15.0)</property>
+                <property name="versions">[0.13.1,0.16.0)</property>
                 <property name="description">m2eclipse-wtp &gt;= 0.13.1</property>
                 <property name="connectorIds">org.maven.ide.eclipse.wtp</property>
             </fix>
