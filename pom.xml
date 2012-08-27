@@ -30,8 +30,8 @@
     </licenses>
 
     <properties>
+        <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
-
         <github.global.server>github</github.global.server>
         <downloads.maven.plugin.version>0.5</downloads.maven.plugin.version>
     </properties>
@@ -52,7 +52,7 @@
                                 <delete dir="target/assembly" />
                                 <mkdir dir="target/assembly" />
                                 
-                                <copy file="src/main/project-examples-xml/project-examples-gatein.xml" todir="target/assembly" />
+                                <copy file="src/main/project-examples-xml/project-examples-gatein.xml" tofile="target/assembly/project-examples-gatein-${org.jboss.ide.target.version}.xml" />
 
                                 <zip destfile="target/assembly/gatein-portal-simplesthelloworld.zip" basedir="${project.basedir}"
                                     includes="gatein-portal-simplesthelloworld/**"
