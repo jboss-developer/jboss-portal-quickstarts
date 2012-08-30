@@ -68,19 +68,19 @@ To ensure that the example portlet has been deployed successfully do the followi
 see the newly imported Simplest Hello World Portlet under the Simplest-Hello-World-Portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to an existing page or (b) to a new page 
 ()  (go to the page and hit Group Editor > Edit Page).
-** If you have chosen (a) to add the portlet to a new page, go to Top Menu > Group Editor > Add New Page 
-*** In the Page Creation Wizard, fill in:
-**** Node Name: helloworld
-**** Display Name: Hello World
-*** Click Next
-*** Leave Empty Layout as it is and hit Mext
-*** Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
-*** Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added 
+  * If you have chosen (a) to add the portlet to a new page, go to Top Menu > Group Editor > Add New Page 
+    * In the Page Creation Wizard, fill in:
+      * Node Name: helloworld
+      * Display Name: Hello World
+    * Click Next
+    * Leave Empty Layout as it is and hit Mext
+    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added 
  
-** Node Name: helloworld
-** Label: Hello World
+  * Node Name: helloworld
+  * Label: Hello World
 * Still in the Add/Edit Page Node dialog, switch to Page Selector tab and fill in:
-** 
+  * 
 
 
 Undeploy the Archive
