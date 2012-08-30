@@ -1,13 +1,13 @@
 <projects>
     <project>
         <category>GateIn Portal Quickstarts</category>
-        <name>gatein-portal-simplesthelloworld</name>
+        <name>simplest-hello-world-portlet</name>
         <priority>1</priority>
-        <included-projects>gatein-portal-simplesthelloworld</included-projects>
+        <included-projects>simplest-hello-world-portlet</included-projects>
         <shortDescription>Simplest Hello World Portlet</shortDescription>
-        <description>GateIn Portal Quickstart - Simplest Hello World Portlet</description>
+        <description>Simplest Hello World Portlet is the very essence of every possible Portlet.</description>
         <size>6170</size>
-        <url>https://github.com/downloads/ppalaga/gatein-portal-quickstart/gatein-portal-simplesthelloworld.zip</url>
+        <url>https://github.com/downloads/ppalaga/gatein-portal-quickstart/simplest-hello-world-portlet.zip</url>
         <fixes>
             <fix type="wtpruntime">
                 <property name="allowed-types">org.jboss.ide.eclipse.as.runtime.71</property>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+    <portlet>
+        <description>Simplest Hello World Portlet is the very essence of every possible Portlet.</description>
+        <portlet-name>SimplestHelloWorldPortlet</portlet-name>
+        <display-name>Simplest Hello World Portlet</display-name>
+        <portlet-class>org.jboss.portal.portlet.samples.SimplestHelloWorldPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Simplest Hello World Portlet</title>
+        </portlet-info>
+    </portlet>
+</portlet-app>
