@@ -1,7 +1,7 @@
 <!-- Do not edit this derived file! The master file can be found under gatein-portal-quickstarts-parent/src/main -->
 
 Simplest Hello World Portlet
-============================
+===============================
 Author: Thomas Heute, Peter Palaga
 Level: Beginner
 Technologies: Portlet
@@ -64,11 +64,23 @@ To ensure that the example portlet has been deployed successfully do the followi
 * Point your web browser at the base URL of your portal - URL of a default local GateIn Portal instalallation is
 [http://127.0.0.1:8180/portal/classic](http://127.0.0.1:8180/portal/classic).
 * Sign in as root or other user with manager:/platform/administrators permissions.
-* Go to Top Menu > Group > Administration > Application Registry and hit "Import Applications". After that, you should see a 
-Then you can add the example portlet to a page of your
-choice: either a new page (Site Editor > Add new Page) or an existing
-page (go to page and Site Editor > Edit Page). If you added a new page
-you need to add it to navigation (...) .
+* Go to Top Menu > Group > Administration > Application Registry and hit "Import Applications". After having done so, you should
+see the newly imported Simplest Hello World Portlet under the Simplest-Hello-World-Portlet Category.
+* Then you can add the example portlet to a page of your choice: either (a) to an existing page or (b) to a new page 
+()  (go to the page and hit Group Editor > Edit Page).
+** If you have chosen (a) to add the portlet to a new page, go to Top Menu > Group Editor > Add New Page 
+*** In the Page Creation Wizard, fill in:
+**** Node Name: helloworld
+**** Display Name: Hello World
+*** Click Next
+*** Leave Empty Layout as it is and hit Mext
+*** Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+*** Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added 
+ 
+** Node Name: helloworld
+** Label: Hello World
+* Still in the Add/Edit Page Node dialog, switch to Page Selector tab and fill in:
+** 
 
 
 Undeploy the Archive
