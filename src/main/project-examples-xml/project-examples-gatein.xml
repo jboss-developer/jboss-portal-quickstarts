@@ -1,4 +1,14 @@
 <projects>
+<!-- Beware that this file is handled by Maven during the build. 
+     The text content of the following elements is overwritten (or added) by Maven, the new values being taken form the 
+     respective sub-project's pom.xml:
+     - category
+     - included-projects
+     - shortDescription
+     - description
+     - size
+     - url
+ -->
     <project>
         <category>GateIn Portal Quickstarts</category>
         <name>simplest-hello-world-portlet</name>
@@ -46,6 +56,6 @@
             feature.
         </importTypeDescription>
         <tags>central</tags>
-        <icon path="icons/jboss.png" />
+        <icon path="icons/gatein.png" />
     </project>
 </projects>

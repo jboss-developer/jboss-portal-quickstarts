@@ -15,10 +15,10 @@
 
     <artifactId>simplest-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>GateIn Portal Quickstart - Simplest Hello World Portlet</name>
+    <name>Simplest Hello World Portlet</name>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>GateIn Portal Quickstart - Simplest Hello World Portlet</description>
+    <description>The very essence of every possible portlet.</description>
     <url>http://www.gatein.org</url>
     <licenses>
         <license>

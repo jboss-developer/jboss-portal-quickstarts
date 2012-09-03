@@ -33,11 +33,16 @@
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
         <compatibility.gatein.version>3.4</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
-        
+
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>
         <downloads.maven.plugin.version>0.5</downloads.maven.plugin.version>
         <com.google.code.maven-replacer-plugin>1.5.0</com.google.code.maven-replacer-plugin>
+        <org.codehaus.gmaven.version>1.4</org.codehaus.gmaven.version>
+        <org.freemarker.version>2.3.19</org.freemarker.version>
+        
+        <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
+        
     </properties>
 
     <modules>
@@ -46,66 +51,53 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>com.google.code.maven-replacer-plugin</groupId>
-                <artifactId>replacer</artifactId>
-                <version>${com.google.code.maven-replacer-plugin}</version>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>${org.codehaus.gmaven.version}</version>
                 <executions>
                     <execution>
-                        <phase>prepare-package</phase>
+                        <phase>generate-resources</phase>
                         <goals>
-                            <goal>replace</goal>
+                            <goal>execute</goal>
                         </goals>
+                        <configuration>
+                            <classpath>
+                                <element>
+                                    <groupId>org.freemarker</groupId>
+                                    <artifactId>freemarker</artifactId>
+                                    <version>${org.freemarker.version}</version>
+                                </element>
+                                <element>
+                                    <artifactId>maven-model</artifactId>
+                                    <groupId>org.apache.maven</groupId>
+                                    <version>${maven.version}</version>
+                                </element>
+                            </classpath>
+                            <source>${project.basedir}/src/build/groovy/FreeMarkerMerger.groovy</source>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <ignoreMissingFile>false</ignoreMissingFile>
-                    <basedir>src/main/readme</basedir>
-                    <includes>
-                        <include>**/*.md</include>
-                    </includes>
-                    <outputDir>../../..</outputDir>
-                    <regex>false</regex>
-                    <replacements>
-                        <replacement>
-                            <token>@@@ Replacements done with com.google.code.maven-replacer-plugin in pom.xml @@@</token>
-                            <value><![CDATA[<!-- Do not edit this derived file! The master file can be found under gatein-portal-quickstarts-parent/src/main -->]]></value>
-                        </replacement>
-                        <replacement>
-                            <token>@@@EPP_VERSION@@@</token>
-                            <value>${compatibility.epp.version}</value>
-                        </replacement>
-                        <replacement>
-                            <token>@@@GATEIN_VERSION@@@</token>
-                            <value>${compatibility.gatein.version}</value>
-                        </replacement>
-                        <replacement>
-                            <token>@@@PORTLET_PRIMER_URL@@@</token>
-                            <value>http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</value>
-                        </replacement>
-                    </replacements>
-                </configuration>
             </plugin>
             <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>${maven.antrun.plugin.version}</version>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>${org.codehaus.gmaven.version}</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <configuration>
-                            <target>
-                                <delete dir="target/assembly" />
-                                <mkdir dir="target/assembly" />
-
-                                <copy file="src/main/project-examples-xml/project-examples-gatein.xml" tofile="target/assembly/project-examples-gatein-${org.jboss.ide.target.version}.xml" />
-
-                                <zip destfile="target/assembly/simplest-hello-world-portlet.zip" basedir="${project.basedir}"
-                                    includes="simplest-hello-world-portlet/**" excludes="simplest-hello-world-portlet/target/**, .*/**" />
-
-                            </target>
-                        </configuration>
                         <goals>
-                            <goal>run</goal>
+                            <goal>execute</goal>
                         </goals>
+                        <configuration>
+                            <classpath>
+                                <element>
+                                    <artifactId>maven-model</artifactId>
+                                    <groupId>org.apache.maven</groupId>
+                                    <version>${maven.version}</version>
+                                </element>
+                            </classpath>
+                            <source>${project.basedir}/src/build/groovy/Packager.groovy</source>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -118,7 +110,7 @@
                         <goals>
                             <goal>upload</goal>
                         </goals>
-                        <phase>install</phase>
+                        <phase>deploy</phase>
                         <configuration>
                             <description>${project.version} release of ${project.name}</description>
                             <override>true</override>
@@ -129,6 +121,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+
         </plugins>
     </build>
 </project>

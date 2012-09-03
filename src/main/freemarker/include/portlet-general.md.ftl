@@ -1,31 +1,14 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/simplest-hello-world-portlet/README.md.ftl -->
-
-Simplest Hello World Portlet
-============================
-Author: Thomas Heute, Peter Palaga  
-Level: Beginner  
-Technologies: Portlet  
-Summary: The very essence of every possible Portlet.
-
-
-What is it?
------------
-
-This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
-
-You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
-
-
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
+<#-- This file is handled as a FreeMarker template gatein-portal-quickstarts-parent/pom.xml -->
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/${.template_name} -->
 
 System requirements
 -------------------
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portlet application this project produces is designed to be deployed on GateIn Portal 3.4 running on either
+The portlet application this project produces is designed to be deployed on GateIn Portal ${compatibility.gatein.version} running on either
 JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
-to support the coming EPP version 6.
+to support the coming EPP version ${compatibility.epp.version}.
 
 
 Maven Configuration
@@ -56,7 +39,7 @@ Configuration section above.
 
         mvn clean package jboss-as:deploy
 
-4. This will deploy `target/simplest-hello-world-portlet.war` to the running instance of the portal.
+4. This will deploy `target/${project.artifactId}.war` to the running instance of the portal.
 
 
 Access the deployed Portlet
@@ -67,13 +50,13 @@ To ensure that the example portlet has been deployed successfully do the followi
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After having done so, you should
-see the newly imported Simplest Hello World Portlet under the simplest-hello-world-portlet Category.
+see the newly imported ${project.name} under the ${project.artifactId} Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
   * If you have chosen (a) to add the portlet to a new page:
     * Go to Top Menu > Group Editor > Add New Page
     * In the Page Creation Wizard, fill in:
-      * Node Name: simplest-hello-world-portlet
-      * Display Name: Simplest Hello World Portlet
+      * Node Name: ${project.artifactId}
+      * Display Name: ${project.name}
     * Click Next
     * Leave Empty Layout as it is and hit Mext
     * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
