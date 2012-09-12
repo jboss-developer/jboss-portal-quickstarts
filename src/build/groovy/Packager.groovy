@@ -135,6 +135,6 @@ for (module in project.modules){
 
 }
 
-add
+
 writeDom(descriptorDom, "target/assembly/project-examples-gatein-"+ project.properties.get("org.jboss.ide.target.version") +".xml")
 
