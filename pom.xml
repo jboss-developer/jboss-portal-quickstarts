@@ -110,7 +110,7 @@
                         <goals>
                             <goal>upload</goal>
                         </goals>
-                        <phase>deploy</phase>
+                        <phase>install</phase>
                         <configuration>
                             <description>${project.version} release of ${project.name}</description>
                             <override>true</override>
