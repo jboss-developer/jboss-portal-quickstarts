@@ -40,13 +40,14 @@
         <com.google.code.maven-replacer-plugin>1.5.0</com.google.code.maven-replacer-plugin>
         <org.codehaus.gmaven.version>1.4</org.codehaus.gmaven.version>
         <org.freemarker.version>2.3.19</org.freemarker.version>
-        
+
         <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
-        
+
     </properties>
 
     <modules>
         <module>simplest-hello-world-portlet</module>
+        <module>jsf2-hello-world-portlet</module>
     </modules>
     <build>
         <plugins>
@@ -78,51 +79,60 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>${org.codehaus.gmaven.version}</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <classpath>
-                                <element>
-                                    <artifactId>maven-model</artifactId>
-                                    <groupId>org.apache.maven</groupId>
-                                    <version>${maven.version}</version>
-                                </element>
-                            </classpath>
-                            <source>${project.basedir}/src/build/groovy/Packager.groovy</source>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>com.github.github</groupId>
-                <artifactId>downloads-maven-plugin</artifactId>
-                <version>${downloads.maven.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <phase>install</phase>
-                        <configuration>
-                            <description>${project.version} release of ${project.name}</description>
-                            <override>true</override>
-                            <includes>
-                                <include>assembly/*</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>publish-zips</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>gmaven-plugin</artifactId>
+                        <version>${org.codehaus.gmaven.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <classpath>
+                                        <element>
+                                            <artifactId>maven-model</artifactId>
+                                            <groupId>org.apache.maven</groupId>
+                                            <version>${maven.version}</version>
+                                        </element>
+                                    </classpath>
+                                    <source>${project.basedir}/src/build/groovy/Packager.groovy</source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>com.github.github</groupId>
+                        <artifactId>downloads-maven-plugin</artifactId>
+                        <version>${downloads.maven.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>upload</goal>
+                                </goals>
+                                <phase>install</phase>
+                                <configuration>
+                                    <description>${project.version} release of ${project.name}</description>
+                                    <override>true</override>
+                                    <includes>
+                                        <include>assembly/*</include>
+                                    </includes>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+    </profiles>
 </project>

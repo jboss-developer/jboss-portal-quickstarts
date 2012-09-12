@@ -1,0 +1,112 @@
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
+
+Simplest Hello World Portlet
+============================
+Author: Thomas Heute, Peter Palaga  
+Level: Beginner  
+Technologies: Portlet  
+Summary: The very essence of every possible Portlet.
+
+
+What is it?
+-----------
+
+This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
+
+You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
+
+
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
+
+System requirements
+-------------------
+
+All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
+
+The portlet application this project produces is designed to be deployed on GateIn Portal 3.4 running on either
+JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
+to support the coming EPP version 6.
+
+
+Maven Configuration
+-------------------
+
+TODO
+
+
+Start the Portal
+----------------
+
+1. Open a command line and navigate to the root of the JBoss server directory.
+2. The following shows the command line to start the server with the web profile:
+
+        For Linux:   JBOSS_HOME/bin/standalone.sh
+        For Windows: JBOSS_HOME\bin\standalone.bat
+
+
+Build and Deploy the Quickstart
+-------------------------------
+
+_NOTE: The following build command assumes you have configured your Maven user settings. If you have not please refer to Maven 
+Configuration section above.
+
+1. Make sure you have started the JBoss Server as described above.
+2. Open a command line and navigate to the root directory of this quickstart.
+3. Type this command to build and deploy the archive:
+
+        mvn clean package jboss-as:deploy
+
+4. This will deploy `target/jsf2-hello-world-portlet.war` to the running instance of the portal.
+
+
+Access the deployed Portlet
+---------------------------
+
+To ensure that the example portlet has been deployed successfully do the following: 
+* Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
+[http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
+* Sign in as root or other user with manager:/platform/administrators permissions.
+* Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After having done so, you should
+see the newly imported JSF 2.0 Hello World Portlet under the jsf2-hello-world-portlet Category.
+* Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
+  * If you have chosen (a) to add the portlet to a new page:
+    * Go to Top Menu > Group Editor > Add New Page
+    * In the Page Creation Wizard, fill in:
+      * Node Name: jsf2-hello-world-portlet
+      * Display Name: JSF 2.0 Hello World Portlet
+    * Click Next
+    * Leave Empty Layout as it is and hit Mext
+    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+  * If you have chosen (b) to add the portlet to an existing page:
+    * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
+    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+
+
+Undeploy the Archive
+--------------------
+
+1. Make sure you have started the JBoss Server as described above.
+2. Open a command line and navigate to the root directory of this quickstart.
+3. When you are finished testing, type this command to undeploy the archive:
+
+        mvn jboss-as:undeploy
+
+
+Use JBoss Developer Studio or Eclipse to Run this Quickstart
+------------------------------------------------------------
+You can also deploy the quickstarts from Eclipse using JBoss tools. For more information on how to set up Maven and the JBoss 
+tools, refer to the 
+[JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
+or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
+
+
+Debug the Application
+---------------------
+
+If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
+commands to pull them into your local repository. The IDE should then detect them.
+
+        mvn dependency:sources
+        mvn dependency:resolve -Dclassifier=javadoc
