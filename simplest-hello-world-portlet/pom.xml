@@ -64,12 +64,29 @@
             <groupId>javax.portlet</groupId>
             <artifactId>portlet-api</artifactId>
             <scope>provided</scope>
-        </dependency>    
+        </dependency>
     </dependencies>
 
     <build>
         <finalName>${artifactId}</finalName>
         <plugins>
+            <!-- To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
+                just after <version>${jboss.as.plugin.version}</version> and adjust it to suit your needs. 
+                username and password elements can be omitted sometimes depending on your JBoss security settings.
+                 
+                <configuration>
+                    <hostname>127.0.0.1</hostname>
+                    <port>9999</port>
+                    <username>admin</username>
+                    <password>secret</password>
+                </configuration>
+            -->
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${jboss.as.plugin.version}</version>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
