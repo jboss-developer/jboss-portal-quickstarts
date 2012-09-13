@@ -56,7 +56,7 @@
             feature.
         </importTypeDescription>
         <tags>central</tags>
-        <icon path="icons/gatein.png" />
+        <icon path="icons/jboss.png" />
     </project>
     <project>
         <category>GateIn Portal Quickstarts</category>
@@ -105,6 +105,6 @@
             feature.
         </importTypeDescription>
         <tags>central</tags>
-        <icon path="icons/gatein.png" />
+        <icon path="icons/jboss.png" />
     </project>
 </projects>
