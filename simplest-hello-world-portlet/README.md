@@ -5,7 +5,7 @@ Simplest Hello World Portlet
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: The very essence of every possible Portlet.
+Summary: The very essence of every possible portlet.
 
 
 What is it?

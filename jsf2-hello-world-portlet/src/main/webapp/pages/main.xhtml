@@ -1,0 +1,45 @@
+<f:view xmlns="http://www.w3.org/1999/xhtml"  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+    <!-- the f:view above prevents an erroneous <html> within <body> coming from portal. -->
+    <!-- <h:head /> and <h:body> in the following are always needed otherwise JSF Facelets won't work -->
+    <h:head />
+    <h:body styleClass="jsf2HelloWorldPortlet">
+        <h:outputStylesheet library="css" name="style.css" />
+        <h2>JSF2 Hello World Portlet</h2>
+        <p>
+            This example demonstrates adding ajax processing and updating to a standard JSF component.
+        </p>
+
+        <p>
+            In the example below, we have a standard JSF inputText with a nested ajax tag. This ajax tag
+            triggers an ajax request on every "keyup" event from the input box. The value of the input box is sent
+            to the server where the backing bean is updated, and the "output" panelGroup is re-rendered, without
+            requiring a full-page refresh.
+        </p>
+        <p>
+            To see this example in action, begin typing in the input box, and watch as your text is echoed with
+            html generated from the application server using an ajax call.
+        </p>
+        <h:form id="jsf2HelloWorldPortlet">
+            <h:outputLabel value="Name" for="nameInput"/>
+            <h:inputText id="nameInput" value="#{helloBean.name}">
+                <f:ajax render="output" event="keyup"/>
+            </h:inputText>
+            <br />
+            
+            <p>
+                <h:panelGroup id="output">
+                    <strong><h:outputText value="Hello #{helloBean.name}!" rendered="#{not empty helloBean.name}"/></strong>
+                </h:panelGroup>
+            </p>
+            
+            <h:commandButton id="reset" value="Reset" actionListener="#{helloBean.reset}">
+                <f:ajax render="@form" />
+            </h:commandButton> - Calls helloBean.reset() on the server side, refreshes the form, but not the whole page.
+            <br />
+            <h:commandButton id="reload" value="Reload" /> - Reloads the whole page, doesn't reset the string.
+            <br />
+            
+            <h:messages />
+        </h:form>
+    </h:body>
+</f:view>

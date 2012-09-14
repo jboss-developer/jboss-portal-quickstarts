@@ -1,12 +1,12 @@
 <#-- This file is handled as a FreeMarker template by gatein-portal-quickstarts-parent/pom.xml -->
 <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/${.template_name} -->
 
-Simplest Hello World Portlet
+${project.name}
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: The very essence of every possible Portlet.
+Summary: ${project.description}
 
 
 What is it?

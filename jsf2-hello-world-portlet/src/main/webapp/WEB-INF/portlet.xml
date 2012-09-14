@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+   http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
     <portlet>
-        <description>A simple JSF 2.0 portlet.</description>
-        <portlet-name>Jsf2HelloWorldPortlet</portlet-name>
+        <description>A simple JSF2 portlet.</description>
+        <portlet-name>jsf2HelloWorldPortlet</portlet-name>
+        <display-name>JSF2 Hello World Portlet</display-name>
         <portlet-class>javax.portlet.faces.GenericFacesPortlet</portlet-class>
         <init-param>
             <name>javax.portlet.faces.defaultViewId.view</name>
-            <value>/jsf/welcome.jsp</value>
+            <value>/pages/main.xhtml</value>
         </init-param>
 
         <init-param>
             <name>javax.portlet.faces.defaultViewId.edit</name>
-            <value>/jsf/edit.jsp</value>
+            <value>/pages/edit.xhtml</value>
         </init-param>
 
         <init-param>
             <name>javax.portlet.faces.defaultViewId.help</name>
-            <value>/jsf/help.jsp</value>
+            <value>/pages/help.xhtml</value>
         </init-param>
+
+        <init-param>
+            <name>javax.portlet.faces.preserveActionParams</name>
+            <value>true</value>
+        </init-param>
+
+        <expiration-cache>0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
-            <portlet-mode>view</portlet-mode>
-            <portlet-mode>edit</portlet-mode>
-            <portlet-mode>help</portlet-mode>
+            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>EDIT</portlet-mode>
+            <portlet-mode>HELP</portlet-mode>
         </supports>
         <portlet-info>
             <title>JSF2 Hello World Portlet</title>
         </portlet-info>
+        <container-runtime-option>
+            <name>org.gatein.pc.remotable</name>
+            <value>true</value>
+        </container-runtime-option>
     </portlet>
 </portlet-app>
+
+   

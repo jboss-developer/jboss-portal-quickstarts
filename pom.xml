@@ -49,40 +49,43 @@
         <module>simplest-hello-world-portlet</module>
         <module>jsf2-hello-world-portlet</module>
     </modules>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.gmaven</groupId>
-                <artifactId>gmaven-plugin</artifactId>
-                <version>${org.codehaus.gmaven.version}</version>
-                <executions>
-                    <execution>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>execute</goal>
-                        </goals>
-                        <configuration>
-                            <classpath>
-                                <element>
-                                    <groupId>org.freemarker</groupId>
-                                    <artifactId>freemarker</artifactId>
-                                    <version>${org.freemarker.version}</version>
-                                </element>
-                                <element>
-                                    <artifactId>maven-model</artifactId>
-                                    <groupId>org.apache.maven</groupId>
-                                    <version>${maven.version}</version>
-                                </element>
-                            </classpath>
-                            <source>${project.basedir}/src/build/groovy/FreeMarkerMerger.groovy</source>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
     <profiles>
+        <profile>
+            <id>generate-readmes</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>gmaven-plugin</artifactId>
+                        <version>${org.codehaus.gmaven.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <classpath>
+                                        <element>
+                                            <groupId>org.freemarker</groupId>
+                                            <artifactId>freemarker</artifactId>
+                                            <version>${org.freemarker.version}</version>
+                                        </element>
+                                        <element>
+                                            <artifactId>maven-model</artifactId>
+                                            <groupId>org.apache.maven</groupId>
+                                            <version>${maven.version}</version>
+                                        </element>
+                                    </classpath>
+                                    <source>${project.basedir}/src/build/groovy/FreeMarkerMerger.groovy</source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>publish-zips</id>
             <build>

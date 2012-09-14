@@ -1,20 +1,17 @@
 <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
 
-Simplest Hello World Portlet
+JSF2 Hello World Portlet
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: The very essence of every possible Portlet.
+Summary: A simple JSF2 portlet.
 
 
 What is it?
 -----------
 
-This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
-
-You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
-
+This project demonstrates how to create a simplest portlet using JavaServer Faces 2.
 
 <!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
 
@@ -67,13 +64,13 @@ To ensure that the example portlet has been deployed successfully do the followi
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After having done so, you should
-see the newly imported JSF 2.0 Hello World Portlet under the jsf2-hello-world-portlet Category.
+see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
   * If you have chosen (a) to add the portlet to a new page:
     * Go to Top Menu > Group Editor > Add New Page
     * In the Page Creation Wizard, fill in:
       * Node Name: jsf2-hello-world-portlet
-      * Display Name: JSF 2.0 Hello World Portlet
+      * Display Name: JSF2 Hello World Portlet
     * Click Next
     * Leave Empty Layout as it is and hit Mext
     * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
