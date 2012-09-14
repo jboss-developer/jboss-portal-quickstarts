@@ -5,7 +5,7 @@ ${project.name}
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
-Technologies: Portlet, JSF2, Portlet Bridge
+Technologies: Portlet, JSF2, Portlet Bridge  
 Summary: ${project.description}
 
 
