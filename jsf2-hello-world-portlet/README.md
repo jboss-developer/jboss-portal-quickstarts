@@ -2,9 +2,9 @@
 
 JSF2 Hello World Portlet
 ============================
-Author: Thomas Heute, Peter Palaga  
+Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
-Technologies: Portlet  
+Technologies: Portlet, JSF2, Portlet Bridge
 Summary: A simple JSF2 portlet.
 
 
