@@ -28,7 +28,7 @@
 
     <portlet-skin>
         <application-name>web</application-name>
-        <portlet-name>jsf2portlet</portlet-name>
+        <portlet-name>jsf2HelloWorldPortlet</portlet-name>
         <skin-name>Default</skin-name>
         <css-path>/skin/Default.css</css-path>
     </portlet-skin>

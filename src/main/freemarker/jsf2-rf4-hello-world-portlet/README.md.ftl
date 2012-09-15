@@ -5,13 +5,13 @@ ${project.name}
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
-Technologies: JSF2, Portlet Bridge  
+Technologies: RF4, JSF2, Portlet Bridge  
 Summary: ${project.description}
 
 
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
+This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1 and RichFaces 4.2.
 
 <#include "/include/portlet-general.md.ftl">

@@ -4,14 +4,14 @@ JSF2 Hello World Portlet
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
-Technologies: JSF2, Portlet Bridge  
-Summary: A simple portlet using JavaServer Faces 2.
+Technologies: Portlet, JSF2, Portlet Bridge
+Summary: A simple JSF2 portlet.
 
 
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
+This project demonstrates how to create a simplest portlet using JavaServer Faces 2.
 
 <!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
 

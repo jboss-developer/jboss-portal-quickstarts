@@ -13,12 +13,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jsf2-hello-world-portlet</artifactId>
+    <artifactId>jsf2-rf4-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>JSF2 Hello World Portlet</name>
+    <name>JSF2+RF4 Hello World Portlet</name>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>A simple portlet using JavaServer Faces 2.</description>
+    <description>A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.</description>
     <url>http://www.gatein.org</url>
     <licenses>
         <license>
@@ -81,6 +81,20 @@
             <artifactId>portletbridge-impl</artifactId>
             <scope>runtime</scope>
         </dependency>
+        
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.ui</groupId>
+            <artifactId>richfaces-components-ui</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.richfaces.core</groupId>
+            <artifactId>richfaces-core-impl</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

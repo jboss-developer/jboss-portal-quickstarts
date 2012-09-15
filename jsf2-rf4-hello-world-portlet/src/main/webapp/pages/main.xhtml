@@ -1,10 +1,11 @@
-<f:view xmlns="http://www.w3.org/1999/xhtml"  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+<f:view xmlns="http://www.w3.org/1999/xhtml"  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" 
+    xmlns:a4j="http://richfaces.org/a4j" xmlns:rich="http://richfaces.org/rich">
     <!-- the f:view above prevents an erroneous <html> within <body> coming from portal. -->
     <!-- <h:head /> and <h:body> in the following are always needed otherwise JSF Facelets won't work -->
     <h:head />
-    <h:body styleClass="jsf2HelloWorldPortlet">
+    <h:body styleClass="jsf2Rf4HelloWorldPortlet">
         <h:outputStylesheet library="css" name="style.css" />
-        <h2>JSF2+RF4 Hello World Portlet</h2>
+        <h2>JSF2 Hello World Portlet</h2>
         <p>
             This example demonstrates adding ajax processing and updating to a standard JSF component.
         </p>
@@ -20,11 +21,25 @@
             html generated from the application server using an ajax call.
         </p>
         <h:form id="jsf2HelloWorldPortlet">
-            <h:outputLabel value="Name" for="nameInput"/>
-            <h:inputText id="nameInput" value="#{helloBean.name}">
-                <f:ajax render="output" event="keyup"/>
-            </h:inputText>
-            <br />
+            <h:panelGrid columns="3">
+                <h:outputText value="Greeting" />
+                <rich:select id="greeting" value="#{helloBean.greeting}">
+                    <f:selectItems value="#{helloBean.greetings}" />
+                </rich:select>
+                <rich:message for="greeting" ajaxRendered="true" />
+                
+                <h:outputLabel value="Name" for="nameInput"/>
+                <h:inputText id="nameInput" value="#{helloBean.name}">
+                    <f:validateLength minimum="1" maximum="50" />
+                    <f:ajax render="nameInput" event="keyup"/>
+                </h:inputText>
+                <rich:message for="nameInput" ajaxRendered="true" />
+                
+                <f:facet name="footer">
+                    <a4j:commandButton value="Ajax Validate" />
+                </f:facet>
+            </h:panelGrid>
+            
             
             <p>
                 <h:panelGroup id="output">
