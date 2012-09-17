@@ -1,17 +1,17 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-rf4-hello-world-portlet/README.md.ftl -->
 
-JSF2 Hello World Portlet
+JSF2+RF4 Hello World Portlet
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
-Technologies: Portlet, JSF2, Portlet Bridge
-Summary: A simple JSF2 portlet.
+Technologies: RF4, JSF2, Portlet Bridge  
+Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.
 
 
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.
+This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1 and RichFaces 4.2.
 
 <!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
 
@@ -53,7 +53,7 @@ Configuration section above.
 
         mvn clean package jboss-as:deploy
 
-4. This will deploy `target/jsf2-hello-world-portlet.war` to the running instance of the portal.
+4. This will deploy `target/jsf2-rf4-hello-world-portlet.war` to the running instance of the portal.
 
 
 Access the deployed Portlet
@@ -64,13 +64,13 @@ To ensure that the example portlet has been deployed successfully do the followi
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After having done so, you should
-see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portlet Category.
+see the newly imported JSF2+RF4 Hello World Portlet under the jsf2-rf4-hello-world-portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
   * If you have chosen (a) to add the portlet to a new page:
     * Go to Top Menu > Group Editor > Add New Page
     * In the Page Creation Wizard, fill in:
-      * Node Name: jsf2-hello-world-portlet
-      * Display Name: JSF2 Hello World Portlet
+      * Node Name: jsf2-rf4-hello-world-portlet
+      * Display Name: JSF2+RF4 Hello World Portlet
     * Click Next
     * Leave Empty Layout as it is and hit Mext
     * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
