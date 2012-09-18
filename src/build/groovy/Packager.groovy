@@ -135,6 +135,9 @@ for (module in project.modules){
 
 }
 
-
-writeDom(descriptorDom, "target/assembly/project-examples-gatein-"+ project.properties.get("org.jboss.ide.target.version") +".xml")
+String descriptorPath = "target/assembly/project-examples-gatein-" +
+        project.properties.get("org.jboss.ide.target.version") +
+        project.properties.get("org.gatein.portal.quickstarts.descriptor.suffix") + 
+        ".xml"
+writeDom(descriptorDom, descriptorPath)
 

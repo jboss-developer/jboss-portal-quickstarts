@@ -31,6 +31,10 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
+        <!-- descriptor.suffix history:
+             JBT 4.0.0.Alpha1 - <empty>
+             JBT 4.0.0.Alpha2 - '-001' -->
+        <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
         <compatibility.gatein.version>3.4</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
 
