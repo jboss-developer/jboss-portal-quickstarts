@@ -31,7 +31,7 @@
     <properties>
     
         <!-- JBoss dependency versions -->
-        <org.jboss.bom.gatein-3.4-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-3.4-bom.version>
+        <org.jboss.bom.gatein-3.4-bom.version>1.0.0.Alpha02PBR310a1</org.jboss.bom.gatein-3.4-bom.version>
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
     
         <!-- maven-compiler-plugin -->
