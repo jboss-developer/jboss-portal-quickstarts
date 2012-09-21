@@ -2,12 +2,6 @@ import freemarker.template.*
 import org.apache.maven.model.Model
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader
 
-class Callee {
-    void hello() {
-       println "hello, world"
-    }
-}
-
 /* Do the usual FreeMarker stuff */
 def mergeReadme(cfg, templateRoot, templatePath, model) {
     String outputPath = templatePath.replaceAll("\\.ftl\$", "")

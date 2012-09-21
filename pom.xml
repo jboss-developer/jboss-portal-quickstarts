@@ -31,6 +31,7 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001' -->
@@ -44,6 +45,7 @@
         <com.google.code.maven-replacer-plugin>1.5.0</com.google.code.maven-replacer-plugin>
         <org.codehaus.gmaven.version>1.4</org.codehaus.gmaven.version>
         <org.freemarker.version>2.3.19</org.freemarker.version>
+        <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
         <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
 
@@ -56,6 +58,37 @@
     </modules>
 
     <profiles>
+        <profile>
+            <id>reset-bom-version</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.google.code.maven-replacer-plugin</groupId>
+                        <artifactId>replacer</artifactId>
+                        <version>${maven.replacer.plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>replace</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <includes>
+                                <include>*/pom.xml</include>
+                            </includes>
+                            <replacements>
+                                <replacement>
+                                    <token>&lt;org.jboss.bom.gatein-bom.version>[^&lt;]*&lt;/org.jboss.bom.gatein-bom.version></token>
+                                    <value>&lt;org.jboss.bom.gatein-bom.version>${org.jboss.bom.gatein-bom.version}&lt;/org.jboss.bom.gatein-bom.version></value>
+                                </replacement>
+                            </replacements>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
         <profile>
             <id>generate-readmes</id>
             <build>
