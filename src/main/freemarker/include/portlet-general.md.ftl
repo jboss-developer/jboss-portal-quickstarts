@@ -38,8 +38,8 @@ Build and Deploy the Quickstart
         mvn clean package jboss-as:deploy
 
    To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
-   just after &lt;version>${r"${jboss.as.plugin.version}"}&lt;/version> and adjust it to suit your needs.
-   username and password elements can be omitted sometimes, depending on your JBoss security settings.
+   just after `&lt;version>${r"${jboss.as.plugin.version}"}&lt;/version>` in the pom.xml file and adjust it to suit your needs.
+   `username` and `password` elements can be omitted sometimes, depending on your JBoss security settings.
                  
         <configuration>
             <hostname>127.0.0.1</hostname>
