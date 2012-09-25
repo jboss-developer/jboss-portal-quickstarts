@@ -28,7 +28,8 @@ to support the coming EPP version 6.
 Maven Configuration
 -------------------
 
-No special settings are needed to be made in settings.xml. All necessary artifacts are available over public repositories.
+You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
+repositories.
 
 
 Start the Portal
@@ -54,12 +55,12 @@ Build and Deploy the Quickstart
    just after &lt;version>${jboss.as.plugin.version}&lt;/version> and adjust it to suit your needs.
    username and password elements can be omitted sometimes, depending on your JBoss security settings.
                  
-                 &lt;configuration>
-                    &lt;hostname>127.0.0.1&lt;/hostname>
-                    &lt;port>9999&lt;/port>
-                    &lt;username>admin&lt;/username>
-                    &lt;password>secret&lt;/password>
-                &lt;/configuration>
+        <configuration>
+            <hostname>127.0.0.1</hostname>
+            <port>9999</port>
+            <username>admin</username>
+            <password>secret</password>
+        </configuration>
 
    This will deploy `target/jsf2-hello-world-portlet.war` to the running instance of the portal.
 
