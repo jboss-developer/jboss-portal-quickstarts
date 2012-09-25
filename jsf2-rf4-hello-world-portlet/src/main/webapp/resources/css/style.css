@@ -1,3 +1,16 @@
 div.jsf2Rf4HelloWorldPortlet {
     padding: 10px;
 }
+.jsf2Rf4HelloWorldPortlet td {
+    padding-top: 5px;
+}
+
+/* Workaround for https://issues.jboss.org/browse/RF-12499 */
+.jsf2Rf4HelloWorldPortlet input[type="text"] {
+    margin: 0;
+}
+
+/* Workaround for https://issues.jboss.org/browse/RF-12499 */
+.rf-sel-cntr {
+    font-size: 9px;
+}
