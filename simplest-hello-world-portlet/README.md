@@ -31,7 +31,7 @@ to support the coming EPP version 6.
 Maven Configuration
 -------------------
 
-TODO
+No special settings are needed to be made in settings.xml. All necessary artifacts are available over public repositories.
 
 
 Start the Portal
@@ -47,16 +47,24 @@ Start the Portal
 Build and Deploy the Quickstart
 -------------------------------
 
-_NOTE: The following build command assumes you have configured your Maven user settings. If you have not please refer to Maven 
-Configuration section above.
-
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
         mvn clean package jboss-as:deploy
 
-4. This will deploy `target/simplest-hello-world-portlet.war` to the running instance of the portal.
+   To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
+   just after &lt;version>${jboss.as.plugin.version}&lt;/version> and adjust it to suit your needs.
+   username and password elements can be omitted sometimes, depending on your JBoss security settings.
+                 
+                 &lt;configuration>
+                    &lt;hostname>127.0.0.1&lt;/hostname>
+                    &lt;port>9999&lt;/port>
+                    &lt;username>admin&lt;/username>
+                    &lt;password>secret&lt;/password>
+                &lt;/configuration>
+
+   This will deploy `target/simplest-hello-world-portlet.war` to the running instance of the portal.
 
 
 Access the deployed Portlet
@@ -66,7 +74,7 @@ To ensure that the example portlet has been deployed successfully do the followi
 * Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
-* Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After having done so, you should
+* Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
 see the newly imported Simplest Hello World Portlet under the simplest-hello-world-portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
   * If you have chosen (a) to add the portlet to a new page:

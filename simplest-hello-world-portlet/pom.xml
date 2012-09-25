@@ -70,23 +70,11 @@
     <build>
         <finalName>${artifactId}</finalName>
         <plugins>
-            <!-- To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
-                just after <version>${jboss.as.plugin.version}</version> and adjust it to suit your needs. 
-                username and password elements can be omitted sometimes depending on your JBoss security settings.
-                 
-                <configuration>
-                    <hostname>127.0.0.1</hostname>
-                    <port>9999</port>
-                    <username>admin</username>
-                    <password>secret</password>
-                </configuration>
-            -->
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${jboss.as.plugin.version}</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -97,4 +85,21 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
