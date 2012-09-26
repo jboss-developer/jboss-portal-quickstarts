@@ -1,12 +1,12 @@
 <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/simplest-hello-world-portlet/README.md.ftl -->
 
-Simplest Hello World Portlet
+simplest-hello-world-portlet: Simplest Hello World Portlet
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: The very essence of every possible portlet.
-
+Summary: The very essence of every possible portlet.  
+Target Product: 3.4
 
 What is it?
 -----------
@@ -28,8 +28,8 @@ JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform 
 to support the coming EPP version 6.
 
 
-Maven Configuration
--------------------
+Configure Maven
+---------------
 
 You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
@@ -48,7 +48,7 @@ Start the Portal
 Build and Deploy the Quickstart
 -------------------------------
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the Portal as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 

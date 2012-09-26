@@ -27,8 +27,8 @@ JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform 
 to support the coming EPP version ${compatibility.epp.version}.
 
 
-Maven Configuration
--------------------
+Configure Maven
+---------------
 
 You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
@@ -47,7 +47,7 @@ Start the Portal
 Build and Deploy the Quickstart
 -------------------------------
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the Portal as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 

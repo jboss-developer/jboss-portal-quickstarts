@@ -17,13 +17,13 @@
  -->
 <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/${.template_name} -->
 
-${project.name}
+${project.artifactId}: ${project.name}
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: ${project.description}
-
+Summary: ${project.description}  
+Target Product: ${compatibility.gatein.version}
 
 What is it?
 -----------

@@ -1,17 +1,24 @@
 <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-rf4-hello-world-portlet/README.md.ftl -->
 
-JSF2+RF4 Hello World Portlet
+jsf2-rf4-hello-world-portlet: JSF2+RF4 Hello World Portlet
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
 Technologies: RF4, JSF2, Portlet Bridge  
-Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.
-
+Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
+Target Product: 3.4
 
 What is it?
 -----------
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1 and RichFaces 4.2.
+
+Known Issues
+------------
+
+[https://issues.jboss.org/browse/GTNPORTAL-2581](GTNPORTAL-2581): When adding this portlet to a page for the first time, 
+there comes an alert saying "RichFaces is not defined". The alert can be ignored. Just close it and refresh the page with F5.
+A fix is underway for GateIn 3.5.0.Beta01.
 
 <!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
 
@@ -25,8 +32,8 @@ JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform 
 to support the coming EPP version 6.
 
 
-Maven Configuration
--------------------
+Configure Maven
+---------------
 
 You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
@@ -45,7 +52,7 @@ Start the Portal
 Build and Deploy the Quickstart
 -------------------------------
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the Portal as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 

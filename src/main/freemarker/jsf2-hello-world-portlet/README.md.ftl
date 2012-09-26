@@ -17,13 +17,13 @@
  -->
  <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/${.template_name} -->
 
-${project.name}
+${project.artifactId}: ${project.name}
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
-Summary: ${project.description}
-
+Summary: ${project.description}  
+Target Product: ${compatibility.gatein.version}
 
 What is it?
 -----------

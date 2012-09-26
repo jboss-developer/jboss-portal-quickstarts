@@ -1,12 +1,12 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
+ <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
 
-JSF2 Hello World Portlet
+jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
-Summary: A simple portlet using JavaServer Faces 2.
-
+Summary: A simple portlet using JavaServer Faces 2.  
+Target Product: 3.4
 
 What is it?
 -----------
@@ -25,8 +25,8 @@ JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform 
 to support the coming EPP version 6.
 
 
-Maven Configuration
--------------------
+Configure Maven
+---------------
 
 You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
@@ -45,7 +45,7 @@ Start the Portal
 Build and Deploy the Quickstart
 -------------------------------
 
-1. Make sure you have started the JBoss Server as described above.
+1. Make sure you have started the Portal as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
 3. Type this command to build and deploy the archive:
 
