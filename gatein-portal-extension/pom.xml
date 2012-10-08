@@ -18,36 +18,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>simple-portal-extension-root</artifactId>
+
+    <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>GateIn Portal Simple Portal Extension</name>
     <version>0.0.1-SNAPSHOT</version>
-    <description>GateIn Sample Extension Root Pom</description>
+    <name>GateIn Portal Sample Extension</name>
     <packaging>pom</packaging>
-    <modules>
-        <module>config</module>
-        <module>war</module>
-        <module>ear</module>
-    </modules>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <distribution>repo</distribution>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-        </license>
-    </licenses>
+    <description>GateIn Sample Extension Root Pom</description>
 
     <properties>
     
         <!-- JBoss dependency versions -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha03</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04-SNAPSHOT</org.jboss.bom.gatein-bom.version>
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
     
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
-
+    
+    <modules>
+        <module>config</module>
+        <module>war</module>
+        <module>ear</module>
+    </modules>
+    
     <dependencyManagement>
         <dependencies>
          <!-- Define the version of JBoss' Java EE 6 APIs we want to use -->
@@ -65,20 +60,30 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>org.gatein.portal</groupId>
+                <artifactId>exo.portal.component.web.api</artifactId>
+                <version>3.5.0.Beta01-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <finalName>${artifactId}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    
+    <repositories>
+        <repository>
+            <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
+            <id>jboss-public-repository-group</id>
+            <name>JBoss Public Maven Repository Group</name>
+            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>    
+    
 </project>

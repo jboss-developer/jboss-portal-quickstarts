@@ -79,7 +79,7 @@
                            <string>gatein-wsrp-integration</string>
                         </value>-->
 								<value>
-									<string>sample-ext</string>
+									<string>gatein-portal-extension</string>
 								</value>
 							</collection>
 						</field>
