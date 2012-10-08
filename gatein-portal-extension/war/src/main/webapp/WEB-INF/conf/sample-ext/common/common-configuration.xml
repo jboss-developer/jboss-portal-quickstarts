@@ -1,56 +1,53 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!--
-
-    Copyright (C) 2009 eXo Platform SAS.
+    JBoss, Home of Professional Open Source
+    Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
+    contributors by the @authors tag. See the copyright.txt in the 
+    distribution for a full listing of individual contributors.
     
-    This is free software; you can redistribute it and/or modify it
-    under the terms of the GNU Lesser General Public License as
-    published by the Free Software Foundation; either version 2.1 of
-    the License, or (at your option) any later version.
-    
-    This software is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-    Lesser General Public License for more details.
-    
-    You should have received a copy of the GNU Lesser General Public
-    License along with this software; if not, write to the Free
-    Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
-    02110-1301 USA, or see the FSF site: http://www.fsf.org.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,  
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
 
--->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.exoplaform.org/xml/ns/kernel_1_2.xsd http://www.exoplaform.org/xml/ns/kernel_1_2.xsd" xmlns="http://www.exoplaform.org/xml/ns/kernel_1_2.xsd">
 
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.exoplaform.org/xml/ns/kernel_1_2.xsd http://www.exoplaform.org/xml/ns/kernel_1_2.xsd"
-	xmlns="http://www.exoplaform.org/xml/ns/kernel_1_2.xsd">
-
-	<external-component-plugins>
+    <external-component-plugins>
 		<!-- The full qualified name of the ResourceBundleService -->
-		<target-component>org.exoplatform.services.resources.ResourceBundleService</target-component>
-		<component-plugin>
+        <target-component>org.exoplatform.services.resources.ResourceBundleService</target-component>
+        <component-plugin>
 			<!-- The name of the plugin -->
-			<name>Sample ResourceBundle Plugin</name>
+            <name>Sample ResourceBundle Plugin</name>
 			<!-- The name of the method to call on the ResourceBundleService in order to register the ResourceBundles -->
-			<set-method>addResourceBundle</set-method>
+            <set-method>addResourceBundle</set-method>
 			<!-- The full qualified name of the BaseResourceBundlePlugin -->
-			<type>org.exoplatform.services.resources.impl.BaseResourceBundlePlugin</type>
-			<init-params>
+            <type>org.exoplatform.services.resources.impl.BaseResourceBundlePlugin</type>
+            <init-params>
 				<!--values-param>
 					<name>classpath.resources</name>
 					<description>The resources that start with the following package name should be load from file system</description>
 					<value>locale.portlet</value>
-				</values-param-->			
-				<values-param>
-					<name>init.resources</name>
-					<description>Store the following resources into the db for the first launch </description>
-					<value>locale.portal.sample</value>
-				</values-param>
-				<values-param>
-					<name>portal.resource.names</name>
-					<description>The properties files of the portal , those file will be merged
-						into one ResoruceBundle properties </description>
-					<value>locale.portal.sample</value>
-				</values-param>
-			</init-params>
-		</component-plugin>
-	</external-component-plugins>
+				</values-param-->
+                <values-param>
+                    <name>init.resources</name>
+                    <description>Store the following resources into the db for the first launch </description>
+                    <value>locale.portal.sample</value>
+                </values-param>
+                <values-param>
+                    <name>portal.resource.names</name>
+                    <description>The properties files of the portal , those file will be merged
+                        into one ResoruceBundle properties
+                    </description>
+                    <value>locale.portal.sample</value>
+                </values-param>
+            </init-params>
+        </component-plugin>
+    </external-component-plugins>
 </configuration>
