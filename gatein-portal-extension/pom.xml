@@ -60,11 +60,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.gatein.portal</groupId>
-                <artifactId>exo.portal.component.web.api</artifactId>
-                <version>3.5.0.Beta01-SNAPSHOT</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
     
