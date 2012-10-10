@@ -30,7 +30,15 @@
     <url>http://www.exoplatform.org</url>
     <description>GateIn Sample Extension War</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.gatein.common</groupId>
+            <artifactId>common-common</artifactId>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>gatein-portal-extension</finalName>
     </build>
+
 </project>

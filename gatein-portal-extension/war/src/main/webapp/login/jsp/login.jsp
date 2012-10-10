@@ -22,56 +22,55 @@
 <%@ page import="java.util.ResourceBundle"%>
 <%@ page import="org.gatein.common.text.EntityEncoder"%>
 <%@ page language="java"%>
-<%@ page contentType="text/html; charset=utf-8"%>
 <%
   String contextPath = request.getContextPath() ;
 
-  String username = (String)request.getParameter("username");
-  if(username == null) username = "";
- 	String password = (String)request.getParameter("password");
- 	if(password == null) password = "";
+  String username = request.getParameter("username");
+  if(username == null) {
+    username = "";
+  } else {
+    EntityEncoder encoder = EntityEncoder.FULL;
+    username = encoder.encode(username);
+  }
 
- PortalContainer portalContainer = PortalContainer.getCurrentInstance(session.getServletContext());	
-  ResourceBundleService service = (ResourceBundleService) portalContainer.getComponentInstanceOfType(ResourceBundleService.class);
+  ResourceBundleService service = (ResourceBundleService) PortalContainer.getCurrentInstance(session.getServletContext())
+                                                        .getComponentInstanceOfType(ResourceBundleService.class);
   ResourceBundle res = service.getResourceBundle(service.getSharedResourceBundleNames(), request.getLocale()) ;
   
-  String uri = (String)request.getAttribute("org.gatein.portal.login.initial_uri");
-
   Cookie cookie = new Cookie(org.exoplatform.web.login.LoginServlet.COOKIE_NAME, "");
-	cookie.setPath(request.getContextPath());
-	cookie.setMaxAge(0);
-	response.addCookie(cookie);
+    cookie.setPath(request.getContextPath());
+    cookie.setMaxAge(0);
+    response.addCookie(cookie);
+
+  //
+  String uri = (String)request.getAttribute("org.gatein.portal.login.initial_uri");
+  boolean error = request.getAttribute("org.gatein.portal.login.error") != null;
+
+  response.setCharacterEncoding("UTF-8"); 
+  response.setContentType("text/html; charset=UTF-8");
 %>
 <!DOCTYPE html 
     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title><%=res.getString("UILoginForm.label.Signin")%></title>
-<link rel="shortcut icon" type="image/x-icon" href="/<%=portalContainer.getName()%>/favicon.ico" />
-<link rel='stylesheet' type='text/css' href='/<%=portalContainer.getName()%>/login/skin/Stylesheet.css' />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" type="image/x-icon" href="<%=contextPath%>/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="<%=contextPath%>/login/skin/Stylesheet.css" />
 </head>
-<body style="text-align: center; background: #f5f5f5; font-family: arial, tahoma, verdana">
+<body style="text-align: center; background: #b5b6b6; font-family: arial, tahoma, verdana">
     <div class="UILogin">
-        <div class="LoginHeader"><%=res.getString("UILoginForm.label.Signin")%></div>
+        <div class="LoginHeader"></div>
         <div class="LoginContent">
-            <div class="WelcomeText"><%=res.getString("UILoginForm.label.welcome")%></div>
             <div class="CenterLoginContent">
+                <span style="color: #f6a933; font-weight: bold;">This modified login form comes from gatein-portal-extension.</span>
                 <%/*Begin form*/%>
-                <%
-            if(username.length() > 0 || password.length() > 0) {
-               EntityEncoder encoder = EntityEncoder.FULL;
-               username = encoder.encode(username);
-          %>
-                <font color="red"><%=res.getString("UILoginForm.label.SigninFail")%></font>
-                <%}%>
-                <form class="ClearFix" name="loginForm" action="<%= contextPath + "/login"%>" method="post" style="margin: 0px;">
-                    <% if (uri != null) { 
-                   uri = EntityEncoder.FULL.encode(uri);
-                %>
-                    <input type="hidden" name="initialURI" value="<%=uri%>" />
-                    <% } %>
+                <% if(error) { %>
+                <span style="color: #ff0000"><%=res.getString("UILoginForm.label.SigninFail")%></span>
+                <% } %>
+                <form class="ClearFix" id="loginForm" action="<%= contextPath + "/login"%>" method="post" style="margin: 0px;">
                     <table>
                         <tr class="FieldContainer">
                             <td class="FieldLabel"><%=res.getString("UILoginForm.label.UserName")%></td>
@@ -87,17 +86,20 @@
                         </tr>
                     </table>
                     <div class="LoginButton">
-                        <div class="LoginButtonContainer">
-                            <div class="Button">
-                                <input type="submit" name="signIn" value="<%=res.getString("UILoginForm.label.Signin")%>"></input>
-                            </div>
-                        </div>
+                        <table class="LoginButtonContainer">
+                            <tr>
+                                <td class="Button"><input type="submit" name="signIn"
+                                    value="<%=res.getString("UILoginForm.label.Signin")%>"></input> <% if (uri != null) { 
+                               uri = EntityEncoder.FULL.encode(uri);
+                            %> <input type="hidden" name="initialURI" value="<%=uri%>" /> <% } %></td>
+                            </tr>
+                        </table>
                     </div>
                 </form>
                 <%/*End form*/%>
             </div>
         </div>
     </div>
-    <span style="margin: 10px 0px 0px 5px; font-size: 11px; color: #6f6f6f; text-align: center"><%=res.getString("UILoginForm.label.Copyright")%></span>
+    <p style="font-size: 11px; color: #3f3f3f; text-align: center"><%=res.getString("UILoginForm.label.Copyright")%></p>
 </body>
 </html>
