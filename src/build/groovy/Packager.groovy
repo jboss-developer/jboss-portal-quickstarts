@@ -100,7 +100,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile) {
     setTextContent(projectNode, "shortDescription", moduleProject.name)
     setTextContent(projectNode, "description", moduleProject.description)
     setTextContent(projectNode, "size", String.valueOf(zipFile.length()))
-    setTextContent(projectNode, "url", "https://github.com/downloads/ppalaga/gatein-portal-quickstart/"+ zipFile.getName())
+    setTextContent(projectNode, "url", "https://github.com/downloads/gatein/gatein-portal-quickstart/"+ zipFile.getName())
 
 }
 

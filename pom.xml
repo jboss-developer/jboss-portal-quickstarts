@@ -25,7 +25,7 @@
     <name>GateIn Portal Quickstarts Parent</name>
     <url>http://gatein.org</url>
     <scm>
-        <url>https://github.com/ppalaga/gatein-portal-quickstart</url>
+        <url>https://github.com/gatein/gatein-portal-quickstart</url>
     </scm>
     <licenses>
         <license>
@@ -40,8 +40,10 @@
         <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04-SNAPSHOT</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
-             JBT 4.0.0.Alpha2 - '-001' -->
-        <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
+             JBT 4.0.0.Alpha2 - '-001' 
+             JBT 4.0.0.Beta1 - '-002'
+             -->
+        <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
         <compatibility.gatein.version>3.4</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
 
