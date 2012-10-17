@@ -55,6 +55,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
+                <version>2.8</version>
                 <configuration>
                     <displayName>sample-portal</displayName>
                     <modules>
