@@ -24,7 +24,7 @@
         <node>
             <uri>sample-user</uri>
             <name>sample-user</name>
-            <label>Sample-Ext Page User</label>
+            <label>Sample Page for root</label>
             <page-reference>user::root::sampledashboard</page-reference>
         </node>
     </page-nodes>

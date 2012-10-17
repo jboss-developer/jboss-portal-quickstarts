@@ -69,25 +69,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.faces</groupId>
-            <artifactId>jsf-api</artifactId>
+            <groupId>org.jboss.spec.javax.faces</groupId>
+            <artifactId>jboss-jsf-api_2.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <dependency>
-            <groupId>javax.portlet</groupId>
-            <artifactId>portlet-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.portletbridge</groupId>
-            <artifactId>portletbridge-impl</artifactId>
-            <scope>runtime</scope>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
