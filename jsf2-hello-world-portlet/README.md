@@ -1,4 +1,4 @@
- <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-hello-world-portlet/README.md.ftl -->
+ <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl -->
 
 jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================
@@ -6,14 +6,14 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
-Target Product: 3.4
+Target Product: GateIn 3.4
 
 What is it?
 -----------
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
 
 System requirements
 -------------------

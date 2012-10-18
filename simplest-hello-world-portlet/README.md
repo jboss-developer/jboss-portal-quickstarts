@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/simplest-hello-world-portlet/README.md.ftl -->
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/simplest-hello-world-portlet/README.md.ftl -->
 
 simplest-hello-world-portlet: Simplest Hello World Portlet
 ============================
@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: 3.4
+Target Product: GateIn 3.4
 
 What is it?
 -----------
@@ -16,7 +16,7 @@ This project demonstrates how to create the simplest possible portlet compliant 
 You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
 
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
 
 System requirements
 -------------------
