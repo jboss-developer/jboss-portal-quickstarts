@@ -15,7 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/${.template_name} -->
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} -->
 
 ${project.artifactId}: ${project.name}
 ============================
@@ -23,7 +23,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: GateIn, Portal Extension  
 Summary: ${project.description}  
-Target Product: ${compatibility.gatein.version}
+Target Product: ${compatibility.target.product}
 
 What is it?
 -----------

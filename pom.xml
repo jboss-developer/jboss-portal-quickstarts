@@ -46,6 +46,7 @@
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
         <compatibility.gatein.version>3.4</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
+        <compatibility.target.product>GateIn ${compatibility.gatein.version}</compatibility.target.product>
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>

@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/jsf2-rf4-hello-world-portlet/README.md.ftl -->
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-rf4-hello-world-portlet/README.md.ftl -->
 
 jsf2-rf4-hello-world-portlet: JSF2+RF4 Hello World Portlet
 ============================
@@ -6,7 +6,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: RF4, JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
-Target Product: 3.4
+Target Product: GateIn 3.4
 
 What is it?
 -----------
@@ -20,7 +20,7 @@ Known Issues
 there comes an alert saying "RichFaces is not defined". The alert can be ignored. Just close it and refresh the page with F5.
 A fix is underway for GateIn 3.5.0.Beta01.
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portlet-general.md.ftl -->
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
 
 System requirements
 -------------------

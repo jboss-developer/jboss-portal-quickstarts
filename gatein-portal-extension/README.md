@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/readme/gatein-portal-extension/README.md.ftl -->
+<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-portal-extension/README.md.ftl -->
 
 gatein-portal-extension: GateIn Portal Sample Extension
 ============================
@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: GateIn, Portal Extension  
 Summary: GateIn Portal Sample Extension  
-Target Product: 3.4
+Target Product: GateIn 3.4
 
 What is it?
 -----------
@@ -20,7 +20,7 @@ It customizes the default portal available at: http://localhost:8080/portal by d
 
 This shows how one can extend and customize the portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/readme/include/portal-extension-general.md.ftl -->
+<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portal-extension-general.md.ftl -->
 
 System requirements
 -------------------
