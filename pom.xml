@@ -37,7 +37,7 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001' 
