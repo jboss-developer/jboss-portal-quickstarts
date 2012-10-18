@@ -62,11 +62,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>org.gatein.common</groupId>
-                <artifactId>common-common</artifactId>
-                <version>2.1.0.Alpha04</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
     
