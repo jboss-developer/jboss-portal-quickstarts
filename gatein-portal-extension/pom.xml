@@ -24,7 +24,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>GateIn Portal Sample Extension</name>
     <packaging>pom</packaging>
-    <description>GateIn Sample Extension Root Pom</description>
+    <description>GateIn Portal Sample Extension</description>
 
     <properties>
     
