@@ -6,14 +6,14 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: GateIn 3.4
+Target Product: GateIn 3.5
 
 What is it?
 -----------
 
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
-You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
+You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.5.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
 
 
 <!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
@@ -23,7 +23,7 @@ System requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portlet application this project produces is designed to be deployed on GateIn Portal 3.4 running on either
+The portlet application this project produces is designed to be deployed on GateIn Portal 3.5 running on either
 JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
 to support the coming EPP version 6.
 

@@ -37,7 +37,7 @@
     <properties>
     
         <!-- JBoss dependency versions -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
     
         <!-- maven-compiler-plugin -->
@@ -58,7 +58,7 @@
             just JBoss AS 7! -->
             <dependency>
                 <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.4-bom</artifactId>
+                <artifactId>gatein-3.5-bom</artifactId>
                 <version>${org.jboss.bom.gatein-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

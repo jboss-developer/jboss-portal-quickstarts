@@ -6,7 +6,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
-Target Product: GateIn 3.4
+Target Product: GateIn 3.5
 
 What is it?
 -----------
@@ -20,7 +20,7 @@ System requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portlet application this project produces is designed to be deployed on GateIn Portal 3.4 running on either
+The portlet application this project produces is designed to be deployed on GateIn Portal 3.5 running on either
 JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
 to support the coming EPP version 6.
 

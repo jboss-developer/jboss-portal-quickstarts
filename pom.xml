@@ -37,14 +37,14 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001' 
              JBT 4.0.0.Beta1 - '-002'
              -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
-        <compatibility.gatein.version>3.4</compatibility.gatein.version>
+        <compatibility.gatein.version>3.5</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
         <compatibility.target.product>GateIn ${compatibility.gatein.version}</compatibility.target.product>
 
@@ -56,7 +56,7 @@
         <org.freemarker.version>2.3.19</org.freemarker.version>
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
-        <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.4.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
+        <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.5.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
 
     </properties>
 
