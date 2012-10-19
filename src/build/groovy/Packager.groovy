@@ -112,9 +112,17 @@ ant.mkdir(dir: "target/assembly")
 Document descriptorDom = readDom("src/main/project-examples-xml/project-examples-gatein.xml")
 XPath xPath = XPathFactory.newInstance().newXPath();
 
+/* Pack them all together for GateIn Downloads */
+String gateinQuickstartsZipPath = "target/assembly/GateIn-"+ project.properties.get("compatibility.gatein.version") +"-Quickstarts.zip"
+ant.zip (
+    destfile: gateinQuickstartsZipPath,
+    basedir: "${project.basedir}",
+    includes: "README.md, LICENSE.txt",
+)
+
 
 MavenXpp3Reader pomReader = new MavenXpp3Reader()
-for (module in project.modules){
+for (module in project.modules) {
     
     String pomPath = "${project.basedir}${File.separator}${module}${File.separator}pom.xml"
     Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)),"utf-8")
@@ -124,6 +132,14 @@ for (module in project.modules){
     String zipPath = "target/assembly/${module}.zip"
     ant.zip (
         destfile: zipPath,
+        basedir: "${project.basedir}",
+        includes: "${module}/**",
+        excludes: "${module}/target/**, .*/**"
+    )
+    
+    ant.zip (
+        update: true,
+        destfile: gateinQuickstartsZipPath,
         basedir: "${project.basedir}",
         includes: "${module}/**",
         excludes: "${module}/target/**, .*/**"
