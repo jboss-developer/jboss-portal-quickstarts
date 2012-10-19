@@ -15,18 +15,17 @@
     limitations under the License.
  -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <artifactId>gatein-sample-portal</artifactId>
-        <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+      <groupId>org.gatein.portal</groupId>
+      <version>3.5.0.Beta01-SNAPSHOT</version>
+      <artifactId>exo.portal.sample.portal.root</artifactId>
+  </parent> 
 
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>gatein-sample-portal-config</artifactId>
-    <name>GateIn Sample Portal Configuration</name>
-    <packaging>jar</packaging>
-    <url>http://www.gatein.org</url>
-    <description>GateIn Sample Portal Configuration</description>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>exo.portal.sample.portal.config</artifactId>
+  <name>GateIn Portal Sample Portal Configuration</name>
+  <packaging>jar</packaging>
+  <url>http://www.exoplatform.org</url> 
+  <description>GateIn Sample Portal Configuration</description>
 </project>

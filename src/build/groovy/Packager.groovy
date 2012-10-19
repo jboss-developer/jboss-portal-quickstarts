@@ -137,6 +137,7 @@ for (module in project.modules) {
         excludes: "${module}/target/**, .*/**"
     )
     
+    /* And the same thing once again for GateIn Downloads */
     ant.zip (
         update: true,
         destfile: gateinQuickstartsZipPath,
