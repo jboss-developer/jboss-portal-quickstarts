@@ -24,18 +24,13 @@ import org.exoplatform.services.listener.Listener;
 import javax.servlet.ServletContextEvent;
 
 /**
- * Created by The eXo Platform SAS
- * Author : Nicolas Filotto 
- *          nicolas.filotto@exoplatform.com
- * 28 sept. 2009  
+ * Created by The eXo Platform SAS Author : Nicolas Filotto nicolas.filotto@exoplatform.com 28 sept. 2009
  */
-public class SampleContextDestroyedListener extends Listener<PortalContainer, ServletContextEvent>
-{
+public class SampleContextDestroyedListener extends Listener<PortalContainer, ServletContextEvent> {
 
-   @Override
-   public void onEvent(Event<PortalContainer, ServletContextEvent> event) throws Exception
-   {
-      System.out.println("Destroying the context of the 'sample-portal'");
-   }
+    @Override
+    public void onEvent(Event<PortalContainer, ServletContextEvent> event) throws Exception {
+        System.out.println("Destroying the context of the 'sample-portal'");
+    }
 
 }

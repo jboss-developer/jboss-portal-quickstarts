@@ -16,24 +16,22 @@
     limitations under the License.
  -->
 
-<page-set
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3"
+<page-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3"
     xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_3">
-  <page>
-    <name>sampledashboard</name>
-    <title>Sample Dashboard</title>
-    <access-permissions>*:/platform/users</access-permissions>
-    <edit-permission>*:/platform/administrators</edit-permission>
-    <portlet-application>
-      <portlet>
-        <application-ref>dashboard</application-ref>
-        <portlet-ref>DashboardPortlet</portlet-ref>
-      </portlet>
-      <title>Dashboard</title>
-      <access-permissions>*:/platform/users</access-permissions>
-      <show-info-bar>false</show-info-bar>
-    </portlet-application>
-  </page>
+    <page>
+        <name>sampledashboard</name>
+        <title>Sample Dashboard</title>
+        <access-permissions>*:/platform/users</access-permissions>
+        <edit-permission>*:/platform/administrators</edit-permission>
+        <portlet-application>
+            <portlet>
+                <application-ref>dashboard</application-ref>
+                <portlet-ref>DashboardPortlet</portlet-ref>
+            </portlet>
+            <title>Dashboard</title>
+            <access-permissions>*:/platform/users</access-permissions>
+            <show-info-bar>false</show-info-bar>
+        </portlet-application>
+    </page>
 </page-set>
 
