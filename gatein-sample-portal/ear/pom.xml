@@ -64,8 +64,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-ear-plugin</artifactId>
+                <version>${maven.ear.plugin.version}</version>
                 <configuration>
                     <displayName>sample-portal</displayName>
+                    <version>6</version>
+                    <archive>
+                        <manifestEntries>
+                            <Dependencies>org.gatein.pc,org.gatein.common,org.hibernate,org.jboss.security.negotiation,org.gatein.sso</Dependencies>
+                        </manifestEntries>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
                     <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
                     <modules>
                         <jarModule>
