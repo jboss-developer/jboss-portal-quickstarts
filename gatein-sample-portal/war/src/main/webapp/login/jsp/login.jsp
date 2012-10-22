@@ -21,8 +21,8 @@
 <%@ page import="org.exoplatform.services.resources.ResourceBundleService"%>
 <%@ page import="java.util.ResourceBundle"%>
 <%@ page import="org.gatein.common.text.EntityEncoder"%>
-<%@ page language="java" %>
-<%@ page contentType="text/html; charset=utf-8" %>
+<%@ page language="java"%>
+<%@ page contentType="text/html; charset=utf-8"%>
 <%
   String contextPath = request.getContextPath() ;
 
@@ -47,56 +47,57 @@
            "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title><%=res.getString("UILoginForm.label.Signin")%></title>
-    <link rel="shortcut icon" type="image/x-icon"  href="/<%=portalContainer.getName()%>/favicon.ico" />
-    <link rel='stylesheet' type='text/css' href='/<%=portalContainer.getName()%>/login/skin/Stylesheet.css'/>
-  </head>
-  <body style="text-align: center; background: #f5f5f5; font-family: arial, tahoma, verdana">
+<head>
+<title><%=res.getString("UILoginForm.label.Signin")%></title>
+<link rel="shortcut icon" type="image/x-icon" href="/<%=portalContainer.getName()%>/favicon.ico" />
+<link rel='stylesheet' type='text/css' href='/<%=portalContainer.getName()%>/login/skin/Stylesheet.css' />
+</head>
+<body style="text-align: center; background: #f5f5f5; font-family: arial, tahoma, verdana">
     <div class="UILogin">
-      <div class="LoginHeader"><%=res.getString("UILoginForm.label.Signin")%></div>
-      <div class="LoginContent">
-        <div class="WelcomeText"><%=res.getString("UILoginForm.label.welcome")%></div>
-        <div class="CenterLoginContent">
-          <%/*Begin form*/%>
-          <%
+        <div class="LoginHeader"><%=res.getString("UILoginForm.label.Signin")%></div>
+        <div class="LoginContent">
+            <div class="WelcomeText"><%=res.getString("UILoginForm.label.welcome")%></div>
+            <div class="CenterLoginContent">
+                <%/*Begin form*/%>
+                <%
             if(username.length() > 0 || password.length() > 0) {
                EntityEncoder encoder = EntityEncoder.FULL;
                username = encoder.encode(username);
           %>
-            <font color="red"><%=res.getString("UILoginForm.label.SigninFail")%></font><%}%>
-          <form class="ClearFix" name="loginForm" action="<%= contextPath + "/login"%>" method="post" style="margin: 0px;">    
-                <% if (uri != null) { 
+                <font color="red"><%=res.getString("UILoginForm.label.SigninFail")%></font>
+                <%}%>
+                <form class="ClearFix" name="loginForm" action="<%= contextPath + "/login"%>" method="post" style="margin: 0px;">
+                    <% if (uri != null) { 
                    uri = EntityEncoder.FULL.encode(uri);
                 %>
-                <input type="hidden" name="initialURI" value="<%=uri%>"/>
-                <% } %>
-          		<table>
-	              <tr class="FieldContainer">
-		              <td class="FieldLabel"><%=res.getString("UILoginForm.label.UserName")%></td>
-		              <td><input class="UserName" name="username" value="<%=username%>"/></td>
-			          </tr>
-		            <tr class="FieldContainer" id="UIPortalLoginFormControl">
-		              <td class="FieldLabel"><%=res.getString("UILoginForm.label.password")%></td>
-		              <td><input class="Password" type="password" name="password" value=""/></td>
-		            </tr>
-		            <tr class="FieldContainer">
-		              <td class="FieldLabel"><input type="checkbox" name="rememberme" value="true"/></td>
-		              <td><%=res.getString("UILoginForm.label.RememberOnComputer")%></td>
-		            </tr>
-		          </table>
-		          <div class="LoginButton">
-		            <div class="LoginButtonContainer">
-		              <div class="Button">
-		              	<input type="submit" name="signIn" value="<%=res.getString("UILoginForm.label.Signin")%>"></input>
-		              </div>
-		            </div>
-		          </div>
-		        </form>
-		        <%/*End form*/%>
+                    <input type="hidden" name="initialURI" value="<%=uri%>" />
+                    <% } %>
+                    <table>
+                        <tr class="FieldContainer">
+                            <td class="FieldLabel"><%=res.getString("UILoginForm.label.UserName")%></td>
+                            <td><input class="UserName" name="username" value="<%=username%>" /></td>
+                        </tr>
+                        <tr class="FieldContainer" id="UIPortalLoginFormControl">
+                            <td class="FieldLabel"><%=res.getString("UILoginForm.label.password")%></td>
+                            <td><input class="Password" type="password" name="password" value="" /></td>
+                        </tr>
+                        <tr class="FieldContainer">
+                            <td class="FieldLabel"><input type="checkbox" name="rememberme" value="true" /></td>
+                            <td><%=res.getString("UILoginForm.label.RememberOnComputer")%></td>
+                        </tr>
+                    </table>
+                    <div class="LoginButton">
+                        <div class="LoginButtonContainer">
+                            <div class="Button">
+                                <input type="submit" name="signIn" value="<%=res.getString("UILoginForm.label.Signin")%>"></input>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <%/*End form*/%>
+            </div>
         </div>
-      </div>
     </div>
     <span style="margin: 10px 0px 0px 5px; font-size: 11px; color: #6f6f6f; text-align: center"><%=res.getString("UILoginForm.label.Copyright")%></span>
-  </body>
+</body>
 </html>

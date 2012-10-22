@@ -24,18 +24,13 @@ import org.exoplatform.services.listener.Listener;
 import javax.servlet.http.HttpSessionEvent;
 
 /**
- * Created by The eXo Platform SAS
- * Author : Nicolas Filotto 
- *          nicolas.filotto@exoplatform.com
- * 28 sept. 2009  
+ * Created by The eXo Platform SAS Author : Nicolas Filotto nicolas.filotto@exoplatform.com 28 sept. 2009
  */
-public class SampleHttpSessionCreatedListener extends Listener<PortalContainer, HttpSessionEvent>
-{
+public class SampleHttpSessionCreatedListener extends Listener<PortalContainer, HttpSessionEvent> {
 
-   @Override
-   public void onEvent(Event<PortalContainer, HttpSessionEvent> event) throws Exception
-   {
-      System.out.println("Creating a new session of the 'sample-portal'");
-   }
+    @Override
+    public void onEvent(Event<PortalContainer, HttpSessionEvent> event) throws Exception {
+        System.out.println("Creating a new session of the 'sample-portal'");
+    }
 
 }

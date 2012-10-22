@@ -27,26 +27,18 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * Created by The eXo Platform SAS
- * Author : Nicolas Filotto 
- *          nicolas.filotto@exoplatform.com
- * 28 sept. 2009  
+ * Created by The eXo Platform SAS Author : Nicolas Filotto nicolas.filotto@exoplatform.com 28 sept. 2009
  */
-public class SampleFilter implements Filter
-{
+public class SampleFilter implements Filter {
 
-   public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
-      ServletException
-   {
-      System.out.println("SampleFilter start of the 'sample-portal'");
-      try
-      {
-         chain.doFilter(request, response);
-      }
-      finally
-      {
-         System.out.println("SampleFilter end of the 'sample-portal'");
-      }
-   }
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
+            ServletException {
+        System.out.println("SampleFilter start of the 'sample-portal'");
+        try {
+            chain.doFilter(request, response);
+        } finally {
+            System.out.println("SampleFilter end of the 'sample-portal'");
+        }
+    }
 
 }
