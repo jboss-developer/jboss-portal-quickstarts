@@ -32,6 +32,7 @@
         <!-- JBoss dependency versions -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
+        <maven.ear.plugin.version>2.8</maven.ear.plugin.version>
     
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -40,7 +41,6 @@
 
     <modules>
         <module>config</module>
-        <module>jar</module>
         <module>war</module>
         <module>rest-war</module>
         <module>ear</module>
