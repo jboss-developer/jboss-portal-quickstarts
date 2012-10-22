@@ -17,13 +17,13 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
-      <groupId>org.gatein.portal</groupId>
+      <groupId>org.gatein.portal.quickstarts</groupId>
       <version>3.5.0.Beta01-SNAPSHOT</version>
-      <artifactId>exo.portal.sample.portal.root</artifactId>
+      <artifactId>gatein-sample-portal</artifactId>
   </parent> 
 	
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>exo.portal.sample.portal.rest-war</artifactId>
+  <artifactId>gatein-sample-portal-rest-war</artifactId>
   <packaging>war</packaging>
   <name>GateIn Portal Sample Portal Rest War</name>
   <url>http://www.exoplatform.org</url>
