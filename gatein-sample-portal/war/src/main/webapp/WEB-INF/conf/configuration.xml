@@ -21,5 +21,4 @@
     <import>war:/conf/sample-portal/common/common-configuration.xml</import>
     <import>war:/conf/sample-portal/jcr/jcr-configuration.xml</import>
     <import>war:/conf/sample-portal/portal/portal-configuration.xml</import>
-    <import>war:/conf/sample-portal/web/web-inf-extension-configuration.xml</import>
 </configuration>
