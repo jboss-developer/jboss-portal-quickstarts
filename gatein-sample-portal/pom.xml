@@ -15,15 +15,16 @@
     limitations under the License.
  -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.gatein.portal.quickstarts</groupId>
-  <version>3.5.0.Beta01-SNAPSHOT</version>
-  <artifactId>gatein-sample-portal</artifactId>
-  <name>GateIn Portal Sample Portal</name>
-  <packaging>pom</packaging>
-  <description>GateIn Sample Portal Root Pom</description>
+    <groupId>org.gatein.portal.quickstarts</groupId>
+    <version>3.5.0.Beta01-SNAPSHOT</version>
+    <artifactId>gatein-sample-portal</artifactId>
+    <name>GateIn Portal Sample Portal</name>
+    <packaging>pom</packaging>
+    <description>GateIn Sample Portal Root Pom</description>
 
     <properties>
         <version.org.gatein>3.5.0.Beta01-SNAPSHOT</version.org.gatein>
@@ -36,7 +37,7 @@
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
     </properties>
-    
+
     <modules>
         <module>config</module>
         <module>jar</module>
@@ -44,7 +45,7 @@
         <module>rest-war</module>
         <module>ear</module>
     </modules>
-    
+
     <dependencyManagement>
         <dependencies>
          <!-- Define the version of JBoss' Java EE 6 APIs we want to use -->
@@ -81,7 +82,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    
+
     <repositories>
         <repository>
             <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
@@ -98,6 +99,6 @@
                 <updatePolicy>never</updatePolicy>
             </snapshots>
         </repository>
-    </repositories>    
-  
+    </repositories>
+
 </project>
