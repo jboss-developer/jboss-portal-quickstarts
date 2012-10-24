@@ -21,18 +21,6 @@
     version="3.0">
     <display-name>sample-portal</display-name>
 
-    <context-param>
-        <description>Binary assets workspace name</description>
-        <param-name>org.exoplatform.frameworks.jcr.command.web.fckeditor.digitalAssetsWorkspace</param-name>
-        <param-value>portal</param-value>
-    </context-param>
-
-    <context-param>
-        <description>Binary assets path</description>
-        <param-name>org.exoplatform.frameworks.jcr.command.web.fckeditor.digitalAssetsPath</param-name>
-        <param-value>/</param-value>
-    </context-param>
-
 	<!-- ================================================================== -->
 	<!--   RESOURCE FILTER TO CACHE MERGED JAVASCRIPT AND CSS               -->
 	<!-- ================================================================== -->
@@ -177,12 +165,6 @@
         <servlet-class>org.exoplatform.web.login.LoginServlet</servlet-class>
     </servlet>
 
-    <servlet>
-        <servlet-name>GateInServlet</servlet-name>
-        <servlet-class>org.gatein.wci.api.GateInServlet</servlet-class>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
-	
 	<!--  =================================================================  -->
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -204,11 +186,6 @@
     <servlet-mapping>
         <servlet-name>Controller</servlet-name>
         <url-pattern>/connector</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>GateInServlet</servlet-name>
-        <url-pattern>/gateinservlet</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
