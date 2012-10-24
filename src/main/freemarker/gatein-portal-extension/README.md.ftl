@@ -15,7 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
 
 ${project.artifactId}: ${project.name}
 ============================
@@ -36,5 +36,6 @@ It customizes the default portal available at: http://localhost:8080/portal by d
 4. Add a few pages
 
 This shows how one can extend and customize the portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
+
 
 <#include "/include/portal-extension-general.md.ftl">

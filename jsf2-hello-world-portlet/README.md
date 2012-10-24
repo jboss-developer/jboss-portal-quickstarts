@@ -1,4 +1,4 @@
- <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
 
 jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================
@@ -13,18 +13,20 @@ What is it?
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
 
-System requirements
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+System Requirements
 -------------------
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portlet application this project produces is designed to be deployed on GateIn Portal 3.5 running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
-to support the coming EPP version 6.
+The project is designed to be deployed on GateIn Portal 3.5 running on either
+JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
+but this example projects will evolve to support the upcoming EPP version 6.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
@@ -32,6 +34,7 @@ You do not need to touch you settings.xml because of this quickstart. All necess
 repositories.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 Start the Portal
 ----------------
 
@@ -108,6 +111,7 @@ tools, refer to the
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 Debug the Application
 ---------------------
 

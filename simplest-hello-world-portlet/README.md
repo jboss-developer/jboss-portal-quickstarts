@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/simplest-hello-world-portlet/README.md.ftl -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/simplest-hello-world-portlet/README.md.ftl ~-->
 
 simplest-hello-world-portlet: Simplest Hello World Portlet
 ============================
@@ -16,18 +16,19 @@ This project demonstrates how to create the simplest possible portlet compliant 
 You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.5.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
 
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl -->
-
-System requirements
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+System Requirements
 -------------------
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portlet application this project produces is designed to be deployed on GateIn Portal 3.5 running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
-to support the coming EPP version 6.
+The project is designed to be deployed on GateIn Portal 3.5 running on either
+JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
+but this example projects will evolve to support the upcoming EPP version 6.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
@@ -35,6 +36,7 @@ You do not need to touch you settings.xml because of this quickstart. All necess
 repositories.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 Start the Portal
 ----------------
 
@@ -111,6 +113,7 @@ tools, refer to the
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 Debug the Application
 ---------------------
 

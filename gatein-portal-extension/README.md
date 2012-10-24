@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-portal-extension/README.md.ftl -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-portal-extension/README.md.ftl ~-->
 
 gatein-portal-extension: GateIn Portal Sample Extension
 ============================
@@ -20,18 +20,20 @@ It customizes the default portal available at: http://localhost:8080/portal by d
 
 This shows how one can extend and customize the portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
 
-<!-- The following content is included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portal-extension-general.md.ftl -->
 
-System requirements
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portal-extension-general.md.ftl ~-->
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+System Requirements
 -------------------
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The portal extension of this example is designed to be deployed on GateIn Portal 3.5 running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, but this example projects will evolve
-to support the coming EPP version 6.
+The project is designed to be deployed on GateIn Portal 3.5 running on either
+JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
+but this example projects will evolve to support the upcoming EPP version 6.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
@@ -40,7 +42,7 @@ repositories.
 
 
 Build and Deploy the Portal Extension
--------------------------------
+-------------------------------------
 
 1. Make sure you the Portal is not running. Portal extensions are not hot-deployable and require a cold start.
 2. Open a command line and navigate to the root directory of this quickstart.
@@ -52,6 +54,7 @@ Build and Deploy the Portal Extension
 4. Copy this file into the GateIn extension deployment folder: JBOSS_HOME/gatein/extensions
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 Start the Portal
 ----------------
 
@@ -62,8 +65,8 @@ Start the Portal
         For Windows: JBOSS_HOME\bin\standalone.bat
 
 
-Access the extension
----------------------------
+Access the Extension
+--------------------
 
 To ensure that the portal extension has been deployed successfully do the following: 
 * Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
@@ -87,6 +90,7 @@ Use JBoss Developer Studio or Eclipse to Run this Quickstart
 Portal extensions are not directly deployable from JBoss Developer Studio nor Eclipse at this time.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 Debug the Application
 ---------------------
 
