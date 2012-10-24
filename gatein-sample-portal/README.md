@@ -1,24 +1,24 @@
-<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-portal-extension/README.md.ftl ~-->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
 
-gatein-portal-extension: GateIn Portal Sample Extension
+gatein-sample-portal: GateIn Portal Sample Portal
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
-Technologies: GateIn, Portal Extension  
-Summary: GateIn Portal Sample Extension  
+Technologies: GateIn, Portal  
+Summary: GateIn Sample Portal  
 Target Product: GateIn 3.5
 
 What is it?
 -----------
 
-This project demonstrates a simple portal extension.
+This project demonstrates a how to create a new portal.
 It customizes the default portal available at: http://localhost:8080/portal by doing few changes:
 1. Replace the front page image
 2. Customize the login page
 3. Change few translation strings
 4. Add a few pages
 
-This shows how one can extend and customize the portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
+This shows how one can create a new portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portal-extension-general.md.ftl ~-->
@@ -50,7 +50,7 @@ Build and Deploy the Portal Extension
 
         mvn clean package
 
-   This will create `ear/target/gatein-portal-extension.ear`.
+   This will create `ear/target/gatein-sample-portal.ear`.
 4. Copy this file into the GateIn extension deployment folder: JBOSS_HOME/gatein/extensions
 
 
@@ -80,7 +80,7 @@ Undeploy the Archive
 
 The extension writing content to the database (such as adding new pages), it is not completely reversible.
 To delete the extension, you can still:
-1. Delete JBOSS_HOME/gatein/extensions/gatein-portal-extension.ear
+1. Delete JBOSS_HOME/gatein/extensions/gatein-sample-portal.ear
 2. Restart JBoss Application Server
 
 

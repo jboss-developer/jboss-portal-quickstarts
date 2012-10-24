@@ -21,16 +21,21 @@ ${project.artifactId}: ${project.name}
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
-Technologies: Portlet  
+Technologies: GateIn, Portal  
 Summary: ${project.description}  
 Target Product: ${compatibility.target.product}
 
 What is it?
 -----------
 
-This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
+This project demonstrates a how to create a new portal.
+It customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+1. Replace the front page image
+2. Customize the login page
+3. Change few translation strings
+4. Add a few pages
 
-You might want to read our [Portlet Primer](${org.gatein.portlet.primer.url}) to get some basic information about Portlets.
+This shows how one can create a new portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
 
 
-<#include "/include/portlet-general.md.ftl">
+<#include "/include/portal-extension-general.md.ftl">

@@ -26,8 +26,9 @@ import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import java.util.regex.Pattern;
 
-
+final Pattern COMMENT_PATTERN = Pattern.compile("<!--~.*?~-->\r?\n?", Pattern.DOTALL | Pattern.MULTILINE);
 
 def readDom(String path) {
     File f = new File(path)
@@ -104,10 +105,39 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile) {
 
 }
 
-
+def stripMdFile(path, pattern) {
+    Reader r = null
+    f = new File(path);
+    StringBuilder sb = new StringBuilder(1024)
+    try {
+        r = new InputStreamReader(new FileInputStream(f), "utf-8")
+        int ch = 0
+        while ((ch = r.read()) >= 0) {
+            sb.append((char) ch);
+        }
+    }
+    finally {
+        if (r != null) {
+            r.close()
+        }
+    }
+    Writer w = null;
+    try {
+        w = new OutputStreamWriter(new FileOutputStream(f), "utf-8")
+        w.write(pattern.matcher(sb).replaceAll(""))
+    }
+    finally {
+        if (w != null) {
+            w.close()
+        }
+    }
+}
 
 ant.delete(dir: "target/assembly")
 ant.mkdir(dir: "target/assembly")
+
+ant.delete(dir: "target/assembly-prepare")
+ant.mkdir(dir: "target/assembly-prepare")
 
 Document descriptorDom = readDom("src/main/project-examples-xml/project-examples-gatein.xml")
 XPath xPath = XPathFactory.newInstance().newXPath();
@@ -117,12 +147,30 @@ String gateinQuickstartsZipPath = "target/assembly/GateIn-"+ project.properties.
 ant.zip (
     destfile: gateinQuickstartsZipPath,
     basedir: "${project.basedir}",
-    includes: "README.md, LICENSE.txt",
+    includes: "README.md, LICENSE.txt"
 )
+
 
 
 MavenXpp3Reader pomReader = new MavenXpp3Reader()
 for (module in project.modules) {
+    
+    ant.property(
+        name: "ant.regexp.regexpimpl",
+        value: "org.apache.tools.ant.util.regexp.JakartaRegexpRegexp"
+    )
+    
+    ant.copy(
+        todir: "target/assembly-prepare",
+    ) {
+        ant.fileset(
+            dir: "${project.basedir}",
+            includes: "${module}/**",
+            excludes: "${module}/target/**, .*/**"
+        )
+    }
+    
+    stripMdFile("${project.basedir}/target/assembly-prepare/${module}/README.md", COMMENT_PATTERN)
     
     String pomPath = "${project.basedir}${File.separator}${module}${File.separator}pom.xml"
     Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)),"utf-8")
@@ -132,7 +180,7 @@ for (module in project.modules) {
     String zipPath = "target/assembly/${module}.zip"
     ant.zip (
         destfile: zipPath,
-        basedir: "${project.basedir}",
+        basedir: "target/assembly-prepare",
         includes: "${module}/**",
         excludes: "${module}/target/**, .*/**"
     )
@@ -141,7 +189,7 @@ for (module in project.modules) {
     ant.zip (
         update: true,
         destfile: gateinQuickstartsZipPath,
-        basedir: "${project.basedir}",
+        basedir: "target/assembly-prepare",
         includes: "${module}/**",
         excludes: "${module}/target/**, .*/**"
     )
