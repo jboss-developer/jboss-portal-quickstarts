@@ -65,6 +65,7 @@
         <module>jsf2-hello-world-portlet</module>
         <module>jsf2-rf4-hello-world-portlet</module>
         <module>gatein-portal-extension</module>
+        <module>gatein-sample-portal</module>
     </modules>
 
     <profiles>

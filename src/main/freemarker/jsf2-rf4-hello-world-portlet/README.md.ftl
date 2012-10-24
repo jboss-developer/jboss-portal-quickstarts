@@ -15,7 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
 
 ${project.artifactId}: ${project.name}
 ============================
@@ -36,5 +36,6 @@ Known Issues
 [https://issues.jboss.org/browse/GTNPORTAL-2581](GTNPORTAL-2581): When adding this portlet to a page for the first time, 
 there comes an alert saying "RichFaces is not defined". The alert can be ignored. Just close it and refresh the page with F5.
 A fix is underway for GateIn 3.5.0.Beta01.
+
 
 <#include "/include/portlet-general.md.ftl">

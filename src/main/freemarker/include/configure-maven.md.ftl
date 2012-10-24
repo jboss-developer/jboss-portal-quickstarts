@@ -1,4 +1,4 @@
-<#-- This file is handled as a FreeMarker template by gatein-portal-quickstarts-parent/pom.xml -->
+<#-- This file is handled as a FreeMarker template gatein-portal-quickstarts-parent/pom.xml -->
 <#--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
@@ -15,22 +15,9 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
+Configure Maven
+---------------
 
-${project.artifactId}: ${project.name}
-============================
-Author: Thomas Heute, Peter Palaga  
-Level: Beginner  
-Technologies: Portlet  
-Summary: ${project.description}  
-Target Product: ${compatibility.target.product}
-
-What is it?
------------
-
-This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
-
-You might want to read our [Portlet Primer](${org.gatein.portlet.primer.url}) to get some basic information about Portlets.
-
-
-<#include "/include/portlet-general.md.ftl">
+You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
+repositories.

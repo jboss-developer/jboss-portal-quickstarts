@@ -15,7 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
- <!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} -->
+<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
 
 ${project.artifactId}: ${project.name}
 ============================
@@ -29,5 +29,6 @@ What is it?
 -----------
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
+
 
 <#include "/include/portlet-general.md.ftl">
