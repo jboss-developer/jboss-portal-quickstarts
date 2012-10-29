@@ -44,9 +44,18 @@
              JBT 4.0.0.Beta1 - '-002'
              -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
-        <compatibility.gatein.version>3.5</compatibility.gatein.version>
+        <compatibility.gatein.major.version>3</compatibility.gatein.major.version>
+        <compatibility.gatein.minor.version>5</compatibility.gatein.minor.version>
+        <compatibility.gatein.version>${compatibility.gatein.major.version}.${compatibility.gatein.minor.version}</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
-        <compatibility.target.product>GateIn ${compatibility.gatein.version}</compatibility.target.product>
+        <compatibility.target.productName>GateIn</compatibility.target.productName>
+        <compatibility.target.product>${compatibility.target.productName} ${compatibility.gatein.version}</compatibility.target.product>
+        
+        <compatibility.as.major.version>7</compatibility.as.major.version>
+        <compatibility.as.minor.version>1</compatibility.as.minor.version>
+        <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
+        <compatibility.as.name>JBoss AS</compatibility.as.name>
+        <compatibility.target.as>${compatibility.as.name} ${compatibility.as.version}</compatibility.target.as>
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>
@@ -56,7 +65,11 @@
         <org.freemarker.version>2.3.19</org.freemarker.version>
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
-        <org.gatein.portlet.primer.url>http://docs.jboss.com/gatein/portal/3.5.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer</org.gatein.portlet.primer.url>
+        <!-- External links used in READMEs -->
+        <org.gatein.portlet.primer.url>https://docs.jboss.org/author/display/GTNPORTAL${compatibility.gatein.major.version}${compatibility.gatein.minor.version}/Portlet+Primer</org.gatein.portlet.primer.url>
+        <jboss.admin.guide.url>https://docs.jboss.org/author/display/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
+        <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
+        <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
 
     </properties>
 
