@@ -37,7 +37,7 @@ but this example projects will evolve to support the upcoming EPP version 6.
 Configure Maven
 ---------------
 
-You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
+You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
 
 

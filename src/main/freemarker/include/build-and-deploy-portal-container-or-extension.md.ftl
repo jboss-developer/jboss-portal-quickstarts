@@ -15,25 +15,22 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<#include "/include/start-the-portal.md.ftl">
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
+Build and Deploy
+----------------
 
+Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
+`mvn jboss-as:deploy` or copying to the default ${compatibility.as.name} deployment folder when 
+${compatibility.target.productName} is running. Instead of that you will need to:
 
-Undeploy the Archive
---------------------
+1. Make sure that the Portal is not running, e.g. by running 
 
-To delete a Portal Extension or Portal Container:
-1. Delete JBOSS_HOME/gatein/extensions/${project.artifactId}.ear
-2. Restart ${compatibility.target.productName}
+      $JBOSS_HOME/bin/jboss-cli.sh --connect controller=127.0.0.1:9999 command=:shutdown
 
-Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
-reversible.
+2. Open a command line and navigate to the root directory of this quickstart.
+3. Run the following command to build the archive:
 
+      mvn clean package
 
-Use JBoss Developer Studio or Eclipse to Run this Quickstart
-------------------------------------------------------------
-
-Portal Extensions and Portal Containers are not directly deployable from JBoss Developer Studio nor Eclipse at this time. 
-See Build and Deploy section above for an alternative.  
-
-
-<#include "/include/debug.md.ftl">
+   This will create `ear/target/${project.artifactId}.ear`.
+4. Copy this file into the ${compatibility.target.productName} extension deployment folder: $JBOSS_HOME/gatein/extensions

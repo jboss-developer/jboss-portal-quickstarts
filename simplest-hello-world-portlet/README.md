@@ -13,7 +13,7 @@ What is it?
 
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
-You might want to read our [Portlet Primer](http://docs.jboss.com/gatein/portal/3.5.0.M01/reference-guide/en-US/html/chap-Reference_Guide-Portlet_development.html#sect-Reference_Guide-Portlet_Primer) to get some basic information about Portlets.
+You might want to read our [Portlet Primer](https://docs.jboss.org/author/display/GTNPORTAL35/Portlet+Primer) to get some basic information about Portlets.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -32,7 +32,7 @@ but this example projects will evolve to support the upcoming EPP version 6.
 Configure Maven
 ---------------
 
-You do not need to touch you settings.xml because of this quickstart. All necessary artifacts are available in public
+You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
 repositories.
 
 
