@@ -22,9 +22,9 @@
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>GateIn Portal Sample Extension</name>
+    <name>GateIn Portal Extension</name>
     <packaging>pom</packaging>
-    <description>GateIn Portal Sample Extension</description>
+    <description>GateIn Portal Extension</description>
 
     <properties>
     

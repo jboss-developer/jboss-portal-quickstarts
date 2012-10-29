@@ -25,17 +25,40 @@ Technologies: GateIn, Portal Extension
 Summary: ${project.description}  
 Target Product: ${compatibility.target.product}
 
+
 What is it?
 -----------
 
-This project demonstrates a simple portal extension.
-It customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+This project demonstrates a simple Portal Extension. It shows how it is possible to extend and customize a portal without 
+modifying the files included in gatein.ear. The main advantage of this approach to customization is that upgrades to new 
+versions of ${compatibility.target.productName} will be easier to handle as all the customization can be embedded in separate 
+deployable packages.
+
+${project.name} customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+
 1. Replace the front page image
 2. Customize the login page
 3. Change few translation strings
 4. Add a few pages
 
-This shows how one can extend and customize the portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
+<#include "/include/system-requirements.md.ftl">
+
+
+<#include "/include/configure-maven.md.ftl">
+
+
+<#include "/include/build-and-deploy-portal-container-or-extension.md.ftl">
+
+
+Access the Extension
+--------------------
+
+To ensure that the Portal Extension has been deployed successfully, visit the the base URL of your Portal. Which is 
+[http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal/) in the most cases.
+
+You should see some differences compared to the original Portal.
 
 
 <#include "/include/portal-extension-general.md.ftl">

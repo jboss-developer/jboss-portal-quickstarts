@@ -38,4 +38,40 @@ It customizes the default portal available at: http://localhost:8080/portal by d
 This shows how one can create a new portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
 
 
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
+<#include "/include/system-requirements.md.ftl">
+
+
+<#include "/include/configure-maven.md.ftl">
+
+
+<#include "/include/build-and-deploy-portal-container-or-extension.md.ftl">
+
+
+Setup JBoss Datasources and Security Policies
+---------------------------------------------  
+
+The most modern JBoss school of thought says that Datasources and Security Policies need to be defined on the level of 
+Application Server and that they cannot[*] be defined within EARs because centralized management is the thing you 
+need more than flexibility. This is the reason why it is not enough just to deploy `${project.artifactId}.ear`. You also need 
+to define the Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
+
+The `standalone.xml` available in the out-of-the-box ${compatibility.target.product} installation contains the needed pieces 
+of XML commented out. Please search for `Uncommented this when deploying ${project.artifactId}` in the file and uncomment the 
+necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
+
+> Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as 
+> described in [${compatibility.target.as} Admin Guide](${jboss.admin.guide.ds.url}) 
+
+[*] Datasources can be defined in EARs but such ones are not managed, see 
+[${compatibility.target.as} Admin Guide](${jboss.admin.guide.ds.files.url}).
+
+
+Access the Sample Portal
+------------------------
+
+To ensure that the Sample Portal has been deployed successfully visit 
+[http://127.0.0.1:8080/sample-portal](http://127.0.0.1:8080/sample-portal/)) with your web browser.
+
+
 <#include "/include/portal-extension-general.md.ftl">
