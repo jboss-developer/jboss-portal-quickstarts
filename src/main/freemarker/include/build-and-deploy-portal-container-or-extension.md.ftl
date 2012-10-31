@@ -20,8 +20,8 @@ Build and Deploy
 ----------------
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
-`mvn jboss-as:deploy` or copying to the default ${compatibility.as.name} deployment folder when 
-${compatibility.target.productName} is running. Instead of that you will need to:
+`mvn jboss-as:deploy` or copying to the default ${compatibility.as.product} deployment folder when 
+${compatibility.target.product} is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
 
@@ -33,4 +33,4 @@ ${compatibility.target.productName} is running. Instead of that you will need to
       mvn clean package
 
    This will create `ear/target/${project.artifactId}.ear`.
-4. Copy this file into the ${compatibility.target.productName} extension deployment folder: $JBOSS_HOME/gatein/extensions
+4. Copy this file into the ${compatibility.target.product} extension deployment folder: $JBOSS_HOME/gatein/extensions

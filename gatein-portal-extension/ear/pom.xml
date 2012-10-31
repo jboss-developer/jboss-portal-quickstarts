@@ -52,11 +52,18 @@
                 <version>${maven.ear.plugin.version}</version>
                 <configuration>
                     <version>6</version>
+                    <archive>
+                        <manifestEntries>
+                            <Dependencies>org.gatein.common</Dependencies>
+                        </manifestEntries>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
                     <modules>
                         <jarModule>
                             <groupId>org.gatein.portal.quickstarts</groupId>
                             <artifactId>gatein-portal-extension-config</artifactId>
                             <includeInApplicationXml>true</includeInApplicationXml>
+                            <bundleDir>lib</bundleDir>
                         </jarModule>
                         <webModule>
                             <groupId>org.gatein.portal.quickstarts</groupId>

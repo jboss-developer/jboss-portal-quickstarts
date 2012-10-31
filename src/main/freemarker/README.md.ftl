@@ -15,7 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<!-- ${derivedFileNotice}${.template_name} -->
+<!--~ ${derivedFileNotice}${.template_name} ~-->
 
 Portal Quickstarts
 ==================

@@ -1,67 +1,199 @@
-import freemarker.template.*
-import org.apache.maven.model.Model
-import org.apache.maven.model.io.xpp3.MavenXpp3Reader
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+import java.util.StringTokenizer;
 
-/* Do the usual FreeMarker stuff */
-def mergeReadme(cfg, templateRoot, templatePath, model) {
-    String outputPath = templatePath.replaceAll("\\.ftl\$", "")
-    log.info("Merging '${templateRoot}${File.separator}${templatePath}' -> '${outputPath}'.")
-    Template temp = cfg.getTemplate(templatePath)
-    Writer out = new OutputStreamWriter(new FileOutputStream(new File(outputPath)), "utf-8")
-    temp.process(model, out)
-    out.close()
+import org.apache.maven.model.Model;
+import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+
+import freemarker.template.Configuration;
+import freemarker.template.DefaultObjectWrapper;
+import freemarker.template.SimpleHash;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
+import freemarker.template.TemplateHashModelEx;
+import freemarker.template.TemplateModel;
+import freemarker.template.TemplateModelException;
+import freemarker.template.TemplateScalarModel;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.Reader;
+import java.io.Writer;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+import java.util.StringTokenizer;
+
+import org.apache.maven.model.Model;
+import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
+import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
+
+import freemarker.template.Configuration;
+import freemarker.template.DefaultObjectWrapper;
+import freemarker.template.SimpleHash;
+import freemarker.template.Template;
+import freemarker.template.TemplateException;
+import freemarker.template.TemplateHashModelEx;
+import freemarker.template.TemplateModel;
+import freemarker.template.TemplateModelException;
+import freemarker.template.TemplateScalarModel;
+/**
+ * Makes saving hierarchical keys possible. Both org.example and org.example.key1 can be used as keys.
+ * */
+private static class ModelNode extends HashMap<String, Object> {
+    private String value = null;
+
+    public ModelNode() {
+    }
+
+    public ModelNode(String value) {
+        this.value = value;
+    }
+
+    @Override
+    public Object put(String key, Object value) {
+        throw new UnsupportedOperationException();
+    }
+
+    public void putModel(String key, Object value) {
+        super.put(key, value);
+    }
+
+    public void putNode(String key, ModelNode node) {
+        super.put(key, node);
+    }
+
+    /**
+     * Put the properties from the top pom.xml into the FreeMarker model and do in the FreeMarker way - i.e. hierarchically
+     */
+    public void putProperties(Properties properties) {
+        for (Map.Entry<Object, Object> prop : properties.entrySet()) {
+            StringTokenizer st = new StringTokenizer((String) prop.getKey(), ".");
+            ModelNode parent = this;
+            while (st.hasMoreTokens()) {
+                String token = st.nextToken();
+                if (st.hasMoreTokens()) {
+                    ModelNode nextParent = (ModelNode) parent.get(token);
+                    if (nextParent == null) {
+                        nextParent = new ModelNode();
+                        parent.putNode(token, nextParent);
+                    }
+                    parent = nextParent;
+                } else {
+                    parent.putString(token, (String) prop.getValue());
+                }
+                // log.info("   handling prop segment '${token}'.")
+            }
+        }
+    }
+
+    public void putString(String key, String value) {
+        Object node = get(key);
+        if (node instanceof ModelNode) {
+            ((ModelNode) node).value = value;
+        } else {
+            super.put(key, new ModelNode(value));
+        }
+    }
+
+    public String toString() {
+        return value;
+    }
 }
 
-/* Put the properties from the top pom.xml into the FreeMarker model
- * and do in the FreeMarker way - i.e. hierarchically */
-def putProperties(properties, model) {
-    for (prop in properties){
-        StringTokenizer st = new StringTokenizer(prop.getKey(), ".")
-        Map parent = model
-        while (st.hasMoreTokens()) {
-            String token = st.nextToken()
-            if (st.hasMoreTokens()) {
-                Object nextParent = parent.get(token)
-                if (nextParent == null) {
-                    nextParent = new HashMap()
-                    parent.put(token, nextParent)
-                }
-                parent = nextParent
-            }
-            else {
-                parent.put(token, prop.getValue())
-            }
-            // log.info("   handling prop segment '${token}'.")
+private static class ModelNodeRepresentation extends SimpleHash implements freemarker.template.TemplateScalarModel,
+        TemplateHashModelEx {
+    private ModelNode node;
+
+    public ModelNodeRepresentation(ModelNode o) {
+        super(o);
+        this.node = o;
+    }
+
+    public TemplateModel get(String key) throws TemplateModelException {
+        Object o = node.get(key);
+        if (o instanceof ModelNode) {
+            return new ModelNodeRepresentation((ModelNode) o);
+        } else {
+            return super.get(key);
+        }
+    }
+
+    public String getAsString() {
+        return node.toString();
+    }
+}
+
+private static class ModelNodeWrapper extends DefaultObjectWrapper {
+    public TemplateModel wrap(Object o) throws TemplateModelException {
+        if (o instanceof ModelNode) {
+            return new ModelNodeRepresentation((ModelNode) o);
+        } else {
+            return super.wrap(o);
         }
     }
 }
 
+
+/** Do the usual FreeMarker stuff */
+public static void mergeReadme(Configuration cfg, String templateRoot, String templatePath, ModelNode model,
+        String outputDir) throws IOException, TemplateException {
+    String outputPath = outputDir + "/" + templatePath.replaceAll("\\.ftl\$", "");
+    // log.info("Merging '${templateRoot}/${templatePath}' -> '${outputPath}'.");
+    Template temp = cfg.getTemplate(templatePath);
+    Writer out = new OutputStreamWriter(new FileOutputStream(new File(outputPath)), "utf-8");
+    temp.process(model, out);
+    out.close();
+}
+
+String topDir = "${project.basedir}";
+
+MavenXpp3Reader pomReader = new MavenXpp3Reader();
+/* The following is needed only if run standalone */
+//Reader rr = new InputStreamReader(new FileInputStream(new File(topDir + "/pom.xml")), "utf-8");
+//Model project = pomReader.read(rr);
+//rr.close();
+
 /* FreeMarker configuration */
-Configuration cfg = new Configuration()
-String templateRoot = "${project.basedir}${File.separator}src/main/freemarker"
-cfg.setDirectoryForTemplateLoading(new File(templateRoot))
-cfg.setObjectWrapper(new DefaultObjectWrapper())
+Configuration cfg = new Configuration();
+String templateRoot = topDir + "/src/main/freemarker";
+cfg.setDirectoryForTemplateLoading(new File(templateRoot));
+cfg.setObjectWrapper(new ModelNodeWrapper());
 
 /* Create a data model to merge with FreeMarker templates */
-Map model = new HashMap()
-model.put("project", project)
-model.put("derivedFileNotice", "Do not edit this derived file! Rather edit the master file ${project.artifactId}/src/main/freemarker/")
+ModelNode model = new ModelNode();
+model.putModel("project", project);
+model.putString("derivedFileNotice", "Do not edit this derived file! See ${project.artifactId}/src/main/freemarker/");
 
-putProperties(project.properties, model)
+model.putProperties(project.getProperties());
 
 /* Merge the top level README */
-mergeReadme(cfg, templateRoot, "README.md.ftl", model)
+mergeReadme(cfg, templateRoot, "README.md.ftl", model, topDir);
 
 /* Handle the individual example projects */
-MavenXpp3Reader pomReader = new MavenXpp3Reader()
-for (module in project.modules){
-    
-    String pomPath = "${project.basedir}${File.separator}${module}${File.separator}pom.xml"
-    Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)),"utf-8")
-    Model moduleProject = pomReader.read(r)
-    r.close()
+for (String module : project.getModules()) {
+
+    String pomPath = topDir + "/" + module + "/pom.xml";
+    Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)), "utf-8");
+    Model moduleProject = pomReader.read(r);
+    r.close();
     /* overwrite "project" with this module's project model */
-    model.put("project", moduleProject)
-    
-    mergeReadme(cfg, templateRoot, "${module}${File.separator}README.md.ftl", model)
+    model.putModel("project", moduleProject);
+
+    mergeReadme(cfg, templateRoot, module + "/README.md.ftl", model, topDir);
 }
+

@@ -1,18 +1,19 @@
-<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
 
-gatein-sample-portal: GateIn Portal Sample Portal
+gatein-sample-portal: GateIn Sample Portal
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
-Technologies: GateIn, Portal  
+Technologies: GateIn, Portal Container  
 Summary: GateIn Sample Portal  
 Target Product: GateIn 3.5
+
 
 What is it?
 -----------
 
-This project demonstrates a how to create a new portal.
-It customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+This project demonstrates a how to create a new Portal Container from scratch.
+
 1. Replace the front page image
 2. Customize the login page
 3. Change few translation strings
@@ -64,6 +65,7 @@ GateIn is running. Instead of that you will need to:
 Setup JBoss Datasources and Security Policies
 ---------------------------------------------  
 
+TODO: Be less ironic
 The most modern JBoss school of thought says that Datasources and Security Policies need to be defined on the level of 
 Application Server and that they cannot[*] be defined within EARs because centralized management is the thing you 
 need more than flexibility. This is the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need 

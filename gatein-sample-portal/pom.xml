@@ -22,7 +22,7 @@
     <groupId>org.gatein.portal.quickstarts</groupId>
     <version>0.0.1-SNAPSHOT</version>
     <artifactId>gatein-sample-portal</artifactId>
-    <name>GateIn Portal Sample Portal</name>
+    <name>GateIn Sample Portal</name>
     <packaging>pom</packaging>
     <description>GateIn Sample Portal</description>
 

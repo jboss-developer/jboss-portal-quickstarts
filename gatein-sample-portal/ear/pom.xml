@@ -69,7 +69,6 @@
                         </manifestEntries>
                         <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>
-                    <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
                     <modules>
                         <jarModule>
                             <groupId>org.gatein.portal.quickstarts</groupId>

@@ -1,4 +1,4 @@
-<!--~ Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
 
 jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================

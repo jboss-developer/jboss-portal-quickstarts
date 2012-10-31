@@ -48,14 +48,14 @@
         <compatibility.gatein.minor.version>5</compatibility.gatein.minor.version>
         <compatibility.gatein.version>${compatibility.gatein.major.version}.${compatibility.gatein.minor.version}</compatibility.gatein.version>
         <compatibility.epp.version>6</compatibility.epp.version>
-        <compatibility.target.productName>GateIn</compatibility.target.productName>
-        <compatibility.target.product>${compatibility.target.productName} ${compatibility.gatein.version}</compatibility.target.product>
+        <compatibility.target.product>GateIn</compatibility.target.product>
+        <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.gatein.version}</compatibility.target.productAndVersion>
         
         <compatibility.as.major.version>7</compatibility.as.major.version>
         <compatibility.as.minor.version>1</compatibility.as.minor.version>
         <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
-        <compatibility.as.name>JBoss AS</compatibility.as.name>
-        <compatibility.target.as>${compatibility.as.name} ${compatibility.as.version}</compatibility.target.as>
+        <compatibility.as.product>JBoss AS</compatibility.as.product>
+        <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>
@@ -67,6 +67,7 @@
 
         <!-- External links used in READMEs -->
         <org.gatein.portlet.primer.url>https://docs.jboss.org/author/display/GTNPORTAL${compatibility.gatein.major.version}${compatibility.gatein.minor.version}/Portlet+Primer</org.gatein.portlet.primer.url>
+        
         <jboss.admin.guide.url>https://docs.jboss.org/author/display/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
         <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
         <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>

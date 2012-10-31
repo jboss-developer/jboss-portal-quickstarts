@@ -1,4 +1,4 @@
-<!-- Do not edit this derived file! Rather edit the master file gatein-portal-quickstarts-parent/src/main/freemarker/README.md.ftl -->
+<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/README.md.ftl ~-->
 
 Portal Quickstarts
 ==================

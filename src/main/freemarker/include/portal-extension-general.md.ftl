@@ -23,7 +23,7 @@ Undeploy the Archive
 
 To delete a Portal Extension or Portal Container:
 1. Delete JBOSS_HOME/gatein/extensions/${project.artifactId}.ear
-2. Restart ${compatibility.target.productName}
+2. Restart ${compatibility.target.product}
 
 Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
 reversible.
