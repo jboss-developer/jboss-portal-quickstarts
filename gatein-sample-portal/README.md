@@ -16,13 +16,12 @@ This project demonstrates a how to create a new Portal Container from scratch. I
 creation, such as:
 
 * Custom Home Page Portlet
-* Custom Logo
 * Translation resource bundles
 * Pages and Site Layouts
 * Navigation Definitions
 * Custom Sign In Page
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
+
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
 System Requirements
 -------------------

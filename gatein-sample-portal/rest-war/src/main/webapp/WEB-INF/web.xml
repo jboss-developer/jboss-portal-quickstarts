@@ -53,7 +53,7 @@
     </filter-mapping>
 
     <servlet>
-        <description>eXo - Platform REST Server</description>
+        <description>REST Service</description>
         <servlet-name>RestServer</servlet-name>
         <servlet-class>org.exoplatform.services.rest.servlet.RestServlet</servlet-class>
         <load-on-startup>4</load-on-startup>
