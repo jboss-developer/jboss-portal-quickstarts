@@ -12,15 +12,15 @@ Target Product: GateIn 3.5
 What is it?
 -----------
 
-This project demonstrates a how to create a new Portal Container from scratch.
+This project demonstrates a how to create a new Portal Container from scratch. It covers many aspects of new Portal Container
+creation, such as:
 
-1. Replace the front page image
-2. Customize the login page
-3. Change few translation strings
-4. Add a few pages
-
-This shows how one can create a new portal without modifying the files included in gatein.ear. By doing such customization, further updates for new versions of GateIn will be easier to handle as all the customization can be embedded in separate deployable packages.
-
+* Custom Home Page Portlet
+* Custom Logo
+* Translation resource bundles
+* Pages and Site Layouts
+* Navigation Definitions
+* Custom Sign In Page
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->

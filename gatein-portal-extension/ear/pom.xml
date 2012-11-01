@@ -62,7 +62,7 @@
                         <jarModule>
                             <groupId>org.gatein.portal.quickstarts</groupId>
                             <artifactId>gatein-portal-extension-config</artifactId>
-                            <includeInApplicationXml>true</includeInApplicationXml>
+                            <includeInApplicationXml>false</includeInApplicationXml>
                             <bundleDir>lib</bundleDir>
                         </jarModule>
                         <webModule>
