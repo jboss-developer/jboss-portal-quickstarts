@@ -26,5 +26,12 @@
         <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
     </portlet-skin>
 
+    <portlet-skin>
+        <application-name>gatein-portal-extension</application-name>
+        <portlet-name>AwesomePortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/templates/skin/webui/component/UIAwesomePortlet/DefaultStylesheet.css</css-path>
+    </portlet-skin>
+    
 </gatein-resources>
 
