@@ -1,0 +1,4 @@
+<div id="<%=uicomponent.getId()%>" class="UIAwesomePortlet UIApplication">
+    <p class="UIAwesomePortletAwesomeText"><%=_ctx.appRes("UIAwesomePortlet.Label.ThatIsWhatWeAre")%></p>
+    <p><%=_ctx.appRes("UIAwesomePortlet.Label.DefinedIn")%></p>
+</div>

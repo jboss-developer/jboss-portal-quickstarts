@@ -44,4 +44,22 @@
         </portlet-application>
     </page>
 
+    <page>
+        <name>coolPage</name>
+        <title>Cool Page</title>
+        <access-permissions>Everyone</access-permissions>
+        <edit-permission>*:/platform/administrators</edit-permission>
+        <portlet-application>
+            <portlet>
+                <application-ref>sample-portal</application-ref>
+                <portlet-ref>CoolPortlet</portlet-ref>
+            </portlet>
+            <title>Cool Portlet</title>
+            <access-permissions>Everyone</access-permissions>
+            <show-info-bar>false</show-info-bar>
+            <show-application-state>false</show-application-state>
+            <show-application-mode>false</show-application-mode>
+        </portlet-application>
+    </page>
+
 </page-set>

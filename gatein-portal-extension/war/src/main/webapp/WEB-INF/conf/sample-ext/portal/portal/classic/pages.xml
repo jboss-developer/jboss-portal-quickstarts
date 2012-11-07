@@ -43,5 +43,22 @@
             <show-application-mode>false</show-application-mode>
         </portlet-application>
     </page>
+    <page>
+        <name>awesomePage</name>
+        <title>Awesome Page</title>
+        <access-permissions>Everyone</access-permissions>
+        <edit-permission>*:/platform/administrators</edit-permission>
+        <portlet-application>
+            <portlet>
+                <application-ref>gatein-portal-extension</application-ref>
+                <portlet-ref>AwesomePortlet</portlet-ref>
+            </portlet>
+            <title>Awesome Portlet</title>
+            <access-permissions>Everyone</access-permissions>
+            <show-info-bar>false</show-info-bar>
+            <show-application-state>false</show-application-state>
+            <show-application-mode>false</show-application-mode>
+        </portlet-application>
+    </page>
 
 </page-set>
