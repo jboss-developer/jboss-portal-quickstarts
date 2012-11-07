@@ -1,0 +1,4 @@
+<div id="<%=uicomponent.getId()%>" class="UICoolPortlet UIApplication">
+    <p class="UICoolPortletCoolText"><%=_ctx.appRes("UICoolPortlet.Label.ThatIsWhatWeAre")%></p>
+    <p><%=_ctx.appRes("UICoolPortlet.Label.DefinedIn")%></p>
+</div>

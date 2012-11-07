@@ -27,7 +27,7 @@
     <description>GateIn Sample Portal</description>
 
     <properties>
-        <version.org.gatein>3.5.0.Beta01-SNAPSHOT</version.org.gatein>
+        <version.org.gatein>3.5.0.Beta01</version.org.gatein>
     
         <!-- JBoss dependency versions -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>

@@ -27,5 +27,12 @@
         <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
     </portlet-skin>
 
+    <portlet-skin>
+        <application-name>sample-portal</application-name>
+        <portlet-name>CoolPortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/templates/skin/webui/component/UICoolPortlet/DefaultStylesheet.css</css-path>
+    </portlet-skin>
+
 </gatein-resources>
 
