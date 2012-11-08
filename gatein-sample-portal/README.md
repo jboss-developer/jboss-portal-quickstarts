@@ -21,6 +21,9 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
+For more details, see [Portal Containers and Extensions](https://docs.jboss.org/author/display/GTNPORTAL35/GDG-Portal+Containers+and+Extensions) page of 
+GateIn Developer Guide.
+
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
 System Requirements
@@ -126,3 +129,10 @@ commands to pull them into your local repository. The IDE should then detect the
 
         mvn dependency:sources
         mvn dependency:resolve -Dclassifier=javadoc
+
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
+Feedback
+--------
+
+Please post feedback on this quickstart or GateIn on [User Forum](https://community.jboss.org/en/gatein?view=discussions).

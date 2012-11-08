@@ -92,3 +92,6 @@ or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jb
 
 
 <#include "/include/debug.md.ftl">
+
+
+<#include "/include/feedback.md.ftl">

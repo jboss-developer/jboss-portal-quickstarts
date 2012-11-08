@@ -66,9 +66,18 @@
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
         <!-- External links used in READMEs -->
-        <org.gatein.portlet.primer.url>https://docs.jboss.org/author/display/GTNPORTAL${compatibility.gatein.major.version}${compatibility.gatein.minor.version}/Portlet+Primer</org.gatein.portlet.primer.url>
         
-        <jboss.admin.guide.url>https://docs.jboss.org/author/display/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
+        <gatein.user.forum.url>https://community.jboss.org/en/gatein?view=discussions</gatein.user.forum.url>
+
+        <jboss.confluence.root.url>https://docs.jboss.org/author/display</jboss.confluence.root.url>
+
+        <gatein.docs.url>${jboss.confluence.root.url}/GTNPORTAL${compatibility.gatein.major.version}${compatibility.gatein.minor.version}</gatein.docs.url>
+        <gatein.devguide.url>${gatein.docs.url}/Developer+Guide</gatein.devguide.url>
+        <gatein.devguide.containers.extensions.url>${gatein.docs.url}/GDG-Portal+Containers+and+Extensions</gatein.devguide.containers.extensions.url>
+
+        <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Portlet+Primer</gatein.refguide.portlet.primer.url>
+        
+        <jboss.admin.guide.url>${jboss.confluence.root.url}/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
         <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
         <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
 

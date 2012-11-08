@@ -38,6 +38,9 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
+For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of 
+${compatibility.target.product} Developer Guide.
+
 
 <#include "/include/system-requirements.md.ftl">
 

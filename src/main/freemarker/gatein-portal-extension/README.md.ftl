@@ -36,13 +36,15 @@ deployable packages.
 
 ${project.name} customizes the default portal available at: http://localhost:8080/portal by doing few changes:
 
-1. Replace the front page image
-2. Customize the login page
-3. Change few translation strings
-4. Add a few pages
+* Replace the front page image
+* Customize the login page
+* Change few translation strings
+* Add a few pages
+
+For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of 
+${compatibility.target.product} Developer Guide.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/${.template_name} ~-->
 <#include "/include/system-requirements.md.ftl">
 
 

@@ -37,3 +37,6 @@ See Build and Deploy section above for an alternative.
 
 
 <#include "/include/debug.md.ftl">
+
+
+<#include "/include/feedback.md.ftl">

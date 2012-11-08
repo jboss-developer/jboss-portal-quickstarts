@@ -19,13 +19,15 @@ deployable packages.
 
 GateIn Portal Extension customizes the default portal available at: http://localhost:8080/portal by doing few changes:
 
-1. Replace the front page image
-2. Customize the login page
-3. Change few translation strings
-4. Add a few pages
+* Replace the front page image
+* Customize the login page
+* Change few translation strings
+* Add a few pages
+
+For more details, see [Portal Containers and Extensions](https://docs.jboss.org/author/display/GTNPORTAL35/GDG-Portal+Containers+and+Extensions) page of 
+GateIn Developer Guide.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/gatein-portal-extension/README.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
 System Requirements
 -------------------
@@ -112,3 +114,10 @@ commands to pull them into your local repository. The IDE should then detect the
 
         mvn dependency:sources
         mvn dependency:resolve -Dclassifier=javadoc
+
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
+Feedback
+--------
+
+Please post feedback on this quickstart or GateIn on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
