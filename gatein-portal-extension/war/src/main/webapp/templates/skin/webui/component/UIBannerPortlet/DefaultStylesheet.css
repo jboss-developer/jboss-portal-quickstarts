@@ -1,0 +1,114 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2010, Red Hat Middleware LLC, and individual contributors
+ * by the @authors tag. See the copyright.txt in the distribution for a
+ * full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#banner {
+	border-top: 1px solid #b5b6b6;
+}	
+
+.UIBannerPortlet {
+	zoom: 100%;
+	background: #B5B6B6;
+}
+
+.UIBannerPortlet .LeftBanner {
+	border-top: 1px solid #b5b6b6;
+	padding-left: 10px; /* orientation=lt */
+	padding-right: 10px; /* orientation=rt */
+}
+
+.UIBannerPortlet .RightBanner {
+	background: url('DefaultSkin/background/gatein-portal-extension-logo.png') no-repeat left 11px; /* orientation=lt */
+	background: url('DefaultSkin/background/gatein-portal-extension-logo.png') no-repeat right -39px; /* orientation=rt */
+}
+
+.UIBannerPortlet .MiddleBanner {
+	height: 43px;
+}
+
+.UIBannerPortlet .LeftLoginContainer {
+	float: right; /* orientation=lt */
+	float: left; /* orientation=rt */
+}
+
+.UIBannerPortlet .RightLoginContainer {
+}
+
+.UIBannerPortlet .MiddleLoginContainer {
+	padding: 5px 15px 1px;
+}
+
+.UIBannerPortlet .Signin {
+
+}
+
+.UIBannerPortlet .MiddleLoginContainer a {
+	color: #0d62af;
+	outline: none;
+}
+
+.UIBannerPortlet .MiddleLoginContainer a:hover {
+	color: #e7e7e7;
+}
+
+.UIBannerPortlet .MiddleLoginContainer .Name {
+	text-align: left;	 
+	color: #666666;
+	margin-bottom: 6px;
+	line-height: 35px;
+	float: left;
+}
+
+.UIBannerPortlet .MiddleLoginContainer .Logout {
+	margin-right: 12px;
+	cursor: pointer;
+	float: left;	
+	font-weight: bold;
+	display: block;
+	line-height: 35px;
+	color: white;
+}
+
+.UIBannerPortlet .MiddleLoginContainer .Login {
+	margin-right: 12px;	
+	cursor: pointer;
+	float: left;	 	
+	font-weight: bold;
+	display: block;
+	line-height: 35px;
+	color: white;
+	background: none;
+}
+
+.UIBannerPortlet .MiddleLoginContainer .Register {
+	margin-right: 12px;	
+	cursor: pointer;
+	float: left;	 	
+	font-weight: bold;
+	display: block;
+	line-height: 35px;
+	color: white;
+	background: none;
+}
+ 
+.UIBannerPortlet .MiddleLoginContainer .Language {
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+	display: block;
+	line-height: 35px;
+	color: white;
+}
