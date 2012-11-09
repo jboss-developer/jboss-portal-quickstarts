@@ -24,7 +24,6 @@
         <p>
             This example demonstrates adding ajax processing and updating to a standard JSF component.
         </p>
-
         <p>
             In the example below, we have a standard JSF inputText with a nested ajax tag. This ajax tag
             triggers an ajax request on every "keyup" event from the input box. The value of the input box is sent
@@ -32,11 +31,15 @@
             requiring a full-page refresh.
         </p>
         <p>
+            The form labels and buttons use localized labels from resource bundles which we have declared in 
+            WEB-INF/faces-config.xml
+        </p>
+        <p>
             To see this example in action, begin typing in the input box, and watch as your text is echoed with
             html generated from the application server using an ajax call.
         </p>
         <h:form id="jsf2HelloWorldPortlet">
-            <h:outputLabel value="Name" for="nameInput"/>
+            <h:outputLabel value="#{msgs.Name}" for="nameInput"/>
             <h:inputText id="nameInput" value="#{helloBean.name}">
                 <f:ajax render="output" event="keyup"/>
             </h:inputText>
@@ -44,15 +47,19 @@
             
             <p>
                 <h:panelGroup id="output">
-                    <strong><h:outputText value="Hello #{helloBean.name}!" rendered="#{not empty helloBean.name}"/></strong>
+                    <strong>
+                        <h:outputFormat value="#{msgs.Hello_0}" rendered="#{not empty helloBean.name}">
+                            <f:param value="#{helloBean.name}" />
+                        </h:outputFormat>
+                    </strong>
                 </h:panelGroup>
             </p>
             
-            <h:commandButton id="reset" value="Reset" actionListener="#{helloBean.reset}">
+            <h:commandButton id="reset" value="#{msgs.Reset}" actionListener="#{helloBean.reset}">
                 <f:ajax render="@form" />
-            </h:commandButton> - Calls helloBean.reset() on the server side, refreshes the form, but not the whole page.
+            </h:commandButton> - #{msgs.ResetComment}
             <br />
-            <h:commandButton id="reload" value="Reload" /> - Reloads the whole page, doesn't reset the string.
+            <h:commandButton id="reload" value="#{msgs.Reload}" /> - #{msgs.ReloadComment}
             <br />
             
             <h:messages />

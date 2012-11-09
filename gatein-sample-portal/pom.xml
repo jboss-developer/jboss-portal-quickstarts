@@ -30,7 +30,7 @@
         <version.org.gatein>3.5.0.Beta01</version.org.gatein>
     
         <!-- JBoss dependency versions -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha02</org.jboss.bom.gatein-bom.version>
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
         <maven.ear.plugin.version>2.8</maven.ear.plugin.version>
     
