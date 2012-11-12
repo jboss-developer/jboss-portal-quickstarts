@@ -142,11 +142,22 @@ ant.mkdir(dir: "target/assembly-prepare")
 Document descriptorDom = readDom("src/main/project-examples-xml/project-examples-gatein.xml")
 XPath xPath = XPathFactory.newInstance().newXPath();
 
+ant.copy(
+    todir: "target/assembly-prepare",
+) {
+    ant.fileset(
+        dir: "${project.basedir}",
+        includes: "README.md, LICENSE.txt"
+    )
+}
+stripMdFile("${project.basedir}/target/assembly-prepare/README.md", COMMENT_PATTERN)
+
+
 /* Pack them all together for GateIn Downloads */
 String gateinQuickstartsZipPath = "target/assembly/GateIn-"+ project.properties.get("compatibility.gatein.version") +"-Quickstarts.zip"
 ant.zip (
     destfile: gateinQuickstartsZipPath,
-    basedir: "${project.basedir}",
+    basedir: "target/assembly-prepare",
     includes: "README.md, LICENSE.txt"
 )
 
