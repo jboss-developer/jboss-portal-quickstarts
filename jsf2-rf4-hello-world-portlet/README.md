@@ -11,7 +11,8 @@ Target Product: GateIn 3.5
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1 and RichFaces 4.2.
+This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1, 
+RichFaces 4.2.3.Final and Portlet Bridge 3.1.0.Final.
 
 Known Issues
 ------------

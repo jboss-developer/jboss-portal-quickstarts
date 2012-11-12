@@ -28,7 +28,8 @@ Target Product: ${compatibility.target.productAndVersion}
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1 and RichFaces 4.2.
+This project demonstrates how to create a simplest portlet using JavaServer Faces ${version.javax["faces-api"]}, 
+RichFaces ${version.org.richfaces} and Portlet Bridge ${version.org.jboss.portletbridge}.
 
 Known Issues
 ------------

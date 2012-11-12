@@ -15,6 +15,11 @@ import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
+import org.sonatype.aether.util.artifact.DefaultArtifact;
+import org.sonatype.aether.repository.LocalArtifactRequest;
+import org.sonatype.aether.repository.RemoteRepository;
+import org.sonatype.aether.repository.LocalArtifactResult;
+
 import freemarker.template.Configuration;
 import freemarker.template.DefaultObjectWrapper;
 import freemarker.template.SimpleHash;
@@ -55,6 +60,8 @@ import freemarker.template.TemplateScalarModel;
  * Makes saving hierarchical keys possible. Both org.example and org.example.key1 can be used as keys.
  * */
 private static class ModelNode extends HashMap<String, Object> {
+    private MavenXpp3Reader pomReader = null;
+    
     private String value = null;
 
     public ModelNode() {
@@ -69,12 +76,33 @@ private static class ModelNode extends HashMap<String, Object> {
         throw new UnsupportedOperationException();
     }
 
-    public void putModel(String key, Object value) {
-        super.put(key, value);
+    public void putModel(Object value) {
+        super.put("project", value);
     }
 
     public void putNode(String key, ModelNode node) {
         super.put(key, node);
+    }
+    
+    public MavenXpp3Reader getPomReader() {
+        if (this.pomReader == null) {
+            this.pomReader = new MavenXpp3Reader();
+        }
+        return this.pomReader;
+    }
+    
+    public Model loadPom(File file) {
+        System.out.println("loading: "+ file);
+        Reader r = null;
+        try {
+            r = new InputStreamReader(new FileInputStream(file), "utf-8");
+            return getPomReader().read(r);
+        }
+        finally {
+            if (r != null) {
+                r.close();
+            }
+        }
     }
 
     /**
@@ -100,7 +128,20 @@ private static class ModelNode extends HashMap<String, Object> {
             }
         }
     }
-
+    
+    public void putProperties(session, String groupId, String artifactId, String version) {
+        //    for (Repository repo : model.getRepositories()) {
+        //        System.out.println("repo: "+ repo.getUrl());
+        //    }
+        def repoSession = session.getRepositorySession();
+        def localRepoManager = repoSession.getLocalRepositoryManager();
+        def artifact = new DefaultArtifact(groupId, artifactId, "pom", version);
+        def request = new LocalArtifactRequest(artifact, new ArrayList<RemoteRepository>(), null);
+        def LocalArtifactResult result = localRepoManager.find(repoSession, request);
+        def pom = loadPom(result.getFile());
+        putProperties(pom.getProperties());
+    }
+        
     public void putString(String key, String value) {
         Object node = get(key);
         if (node instanceof ModelNode) {
@@ -159,10 +200,9 @@ public static void mergeReadme(Configuration cfg, String templateRoot, String te
     temp.process(model, out);
     out.close();
 }
-
+        
 String topDir = "${project.basedir}";
 
-MavenXpp3Reader pomReader = new MavenXpp3Reader();
 /* The following is needed only if run standalone */
 //Reader rr = new InputStreamReader(new FileInputStream(new File(topDir + "/pom.xml")), "utf-8");
 //Model project = pomReader.read(rr);
@@ -176,9 +216,10 @@ cfg.setObjectWrapper(new ModelNodeWrapper());
 
 /* Create a data model to merge with FreeMarker templates */
 ModelNode model = new ModelNode();
-model.putModel("project", project);
+model.putModel(project);
 model.putString("derivedFileNotice", "Do not edit this derived file! See ${project.artifactId}/src/main/freemarker/");
 
+model.putProperties(session, "org.jboss.bom", "gatein-3.5-bom", project.getProperties().get("org.jboss.bom.gatein-bom.version"));
 model.putProperties(project.getProperties());
 
 /* Merge the top level README */
@@ -188,11 +229,7 @@ mergeReadme(cfg, templateRoot, "README.md.ftl", model, topDir);
 for (String module : project.getModules()) {
 
     String pomPath = topDir + "/" + module + "/pom.xml";
-    Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)), "utf-8");
-    Model moduleProject = pomReader.read(r);
-    r.close();
-    /* overwrite "project" with this module's project model */
-    model.putModel("project", moduleProject);
+    model.putModel(model.loadPom(new File(pomPath)));
 
     mergeReadme(cfg, templateRoot, module + "/README.md.ftl", model, topDir);
 }

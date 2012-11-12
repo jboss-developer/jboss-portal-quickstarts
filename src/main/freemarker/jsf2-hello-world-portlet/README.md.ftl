@@ -28,7 +28,8 @@ Target Product: ${compatibility.target.productAndVersion}
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
+This project demonstrates how to create a simple portlet using JavaServer Faces ${version.javax["faces-api"]} 
+and Portlet Bridge ${version.org.jboss.portletbridge}.
 
 
 <#include "/include/portlet-general.md.ftl">

@@ -37,7 +37,7 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha02</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha03</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001' 
@@ -50,12 +50,15 @@
         <compatibility.epp.version>6</compatibility.epp.version>
         <compatibility.target.product>GateIn</compatibility.target.product>
         <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.gatein.version}</compatibility.target.productAndVersion>
-        
+
         <compatibility.as.major.version>7</compatibility.as.major.version>
         <compatibility.as.minor.version>1</compatibility.as.minor.version>
         <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
         <compatibility.as.product>JBoss AS</compatibility.as.product>
         <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
+
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha03</org.jboss.bom.gatein-bom.version>
+        <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>
@@ -63,10 +66,10 @@
         <com.google.code.maven-replacer-plugin>1.5.0</com.google.code.maven-replacer-plugin>
         <org.codehaus.gmaven.version>1.4</org.codehaus.gmaven.version>
         <org.freemarker.version>2.3.19</org.freemarker.version>
+        <aether.version>1.13.1</aether.version>
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
         <!-- External links used in READMEs -->
-        
         <gatein.user.forum.url>https://community.jboss.org/en/gatein?view=discussions</gatein.user.forum.url>
 
         <jboss.confluence.root.url>https://docs.jboss.org/author/display</jboss.confluence.root.url>
@@ -76,7 +79,7 @@
         <gatein.devguide.containers.extensions.url>${gatein.docs.url}/GDG-Portal+Containers+and+Extensions</gatein.devguide.containers.extensions.url>
 
         <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Portlet+Primer</gatein.refguide.portlet.primer.url>
-        
+
         <jboss.admin.guide.url>${jboss.confluence.root.url}/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
         <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
         <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
@@ -148,6 +151,16 @@
                                             <artifactId>maven-model</artifactId>
                                             <groupId>org.apache.maven</groupId>
                                             <version>${maven.version}</version>
+                                        </element>
+                                        <element>
+                                            <groupId>org.sonatype.aether</groupId>
+                                            <artifactId>aether-api</artifactId>
+                                            <version>${aether.version}</version>
+                                        </element>
+                                        <element>
+                                            <groupId>org.sonatype.aether</groupId>
+                                            <artifactId>aether-util</artifactId>
+                                            <version>${aether.version}</version>
                                         </element>
                                     </classpath>
                                     <source>${project.basedir}/src/build/groovy/FreeMarkerMerger.groovy</source>

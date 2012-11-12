@@ -11,7 +11,8 @@ Target Product: GateIn 3.5
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1.
+This project demonstrates how to create a simple portlet using JavaServer Faces 2.1 
+and Portlet Bridge 3.1.0.Final.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
