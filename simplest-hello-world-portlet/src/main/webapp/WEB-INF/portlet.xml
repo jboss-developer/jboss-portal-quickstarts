@@ -25,6 +25,10 @@
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
+            <!-- You can uncomment the other modes when your portlet-class supports them
+            <portlet-mode>edit</portlet-mode>
+            <portlet-mode>help</portlet-mode>
+            -->
         </supports>
         <portlet-info>
             <title>Simplest Hello World Portlet</title>
