@@ -19,9 +19,12 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     <display-name>jsf2-hello-world-portlet</display-name>
     <context-param>
+        <description>See https://docs.jboss.org/author/display/PBR/Render+Policy</description>
         <param-name>javax.portlet.faces.RENDER_POLICY</param-name>
         <param-value>ALWAYS_DELEGATE</param-value>
     </context-param>
+    
+    <!-- The following params are documented here: http://myfaces.apache.org/core21/myfaces-impl/webconfig.html -->
     <context-param>
         <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
         <param-value>*.xhtml</param-value>
@@ -34,6 +37,7 @@
         <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
         <param-value>.xhtml</param-value>
     </context-param>
+    
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>

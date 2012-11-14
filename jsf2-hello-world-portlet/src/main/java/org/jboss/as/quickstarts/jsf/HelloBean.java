@@ -25,10 +25,8 @@ import javax.faces.event.ActionEvent;
 
 /**
  * <p>
- * {@link HelloBean} is the JSF backing bean for the application, holding the input data to be
- * re-displayed.
+ * {@link HelloBean} is the JSF backing bean for the application, holding the input data to be re-displayed.
  * </p>
- * 
  */
 @ManagedBean(name = "helloBean")
 @SessionScoped
@@ -36,23 +34,44 @@ public class HelloBean implements Serializable {
 
     private static final long serialVersionUID = -6239437588285327644L;
 
+    /**
+     * Stores the name which will be used to greet the application user.
+     */
     private String name;
 
+    /**
+     * Initializes {@link #name} with the value {@code "World"}.
+     */
     @PostConstruct
     public void postContruct() {
         this.name = "World";
     }
 
+    /**
+     * Returns {@link #name}.
+     * 
+     * @return {@link #name}
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Set {@link #name}.
+     * 
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
-    
+
+    /**
+     * Resets {@link #name} to the default value {@code "World"}.
+     * 
+     * @param ae ignored
+     */
     public void reset(ActionEvent ae) {
         this.name = "World";
     }
-    
+
 }
