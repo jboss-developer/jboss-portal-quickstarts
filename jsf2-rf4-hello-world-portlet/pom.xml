@@ -16,7 +16,7 @@
     limitations under the License.
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jsf2-rf4-hello-world-portlet</artifactId>
@@ -35,28 +35,26 @@
     </licenses>
 
     <properties>
-    
-        <!-- JBoss dependency versions -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha03</org.jboss.bom.gatein-bom.version>
+        <!-- GateIn Bill of Materials (BOM) version -->
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        
+        <!-- Plugin versions and settings -->
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
-    
         <!-- maven-compiler-plugin -->
+        <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
-
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-         <!-- Define the version of JBoss' Java EE 6 APIs we want to use -->
-         <!-- JBoss distributes a complete set of Java EE 6 APIs including
-            a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
-            a collection) of artifacts. We use this here so that we always get the correct
-            versions of artifacts. Here we use the jboss-javaee-6.0 stack (you can
-            read this as the JBoss stack of the Java EE 6 APIs). You can actually
-            use this stack with any version of JBoss AS that implements Java EE 6, not
-            just JBoss AS 7! -->
+            <!--
+                Define the version of GateIn we build for. In its dependencyManagement,
+                GateIn Bill of Materials (BOM) specifies the versions, types and scopes
+                of dependencies which are granted to be compatible with (or indeed 
+                in many cases provided by) GateIn Portal.
+            -->
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>gatein-3.5-bom</artifactId>
@@ -68,29 +66,30 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- 
+            The versions, scopes and types of these dependencies are managed in gatein-*-bom.
+            You need to name only groupId and artifactId here.
+            Name only those artifacts you refer to in your code.
+            Look at gatein-*-bom POM file for the complete list of available artifacts.
+        -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-extension-richfaces</artifactId>
-            <scope>runtime</scope>
         </dependency>
-
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-api</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-ui</artifactId>
@@ -112,7 +111,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
@@ -120,6 +119,7 @@
             </plugin>
         </plugins>
     </build>
+
     <repositories>
         <repository>
             <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
@@ -137,4 +137,5 @@
             </snapshots>
         </repository>
     </repositories>
+
 </project>

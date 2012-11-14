@@ -31,6 +31,6 @@
     <description>GateIn Sample Portal War</description>
 
     <build>
-        <finalName>${parent.artifactId}</finalName>
+        <finalName>${project.parent.artifactId}</finalName>
     </build>
 </project>

@@ -83,10 +83,10 @@ Undeploy the Archive
         mvn jboss-as:undeploy
 
 
-Use JBoss Developer Studio or Eclipse to Run this Quickstart
-------------------------------------------------------------
-You can also deploy the quickstarts from Eclipse using JBoss tools. For more information on how to set up Maven and the JBoss 
-tools, refer to the 
+Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
+-----------------------------------------------------------------------------
+You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the 
 [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
