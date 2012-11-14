@@ -15,31 +15,32 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>jsf2-hello-world-portlet</display-name>
-  <context-param>
-    <param-name>javax.portlet.faces.RENDER_POLICY</param-name>
-    <param-value>ALWAYS_DELEGATE</param-value>
-  </context-param>
-  <context-param>
-    <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
-    <param-value>*.xhtml</param-value>
-  </context-param>
-  <context-param>
-    <param-name>facelets.DEVELOPMENT</param-name>
-    <param-value>false</param-value>
-  </context-param>
-  <context-param>
-    <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
-    <param-value>.xhtml</param-value>
-  </context-param>
-  <servlet>
-    <servlet-name>Faces Servlet</servlet-name>
-    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Faces Servlet</servlet-name>
-    <url-pattern>*.faces</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+    <display-name>jsf2-hello-world-portlet</display-name>
+    <context-param>
+        <param-name>javax.portlet.faces.RENDER_POLICY</param-name>
+        <param-value>ALWAYS_DELEGATE</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
+        <param-value>*.xhtml</param-value>
+    </context-param>
+    <context-param>
+        <param-name>facelets.DEVELOPMENT</param-name>
+        <param-value>false</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.xhtml</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.faces</url-pattern>
+    </servlet-mapping>
 </web-app>

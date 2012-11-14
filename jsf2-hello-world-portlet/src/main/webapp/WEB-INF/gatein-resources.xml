@@ -21,13 +21,11 @@
 
 
 	<!-- Skins for portlets in 'jsf2portlet' application -->
-
     <portlet-skin>
         <application-name>web</application-name>
         <portlet-name>jsf2HelloWorldPortlet</portlet-name>
         <skin-name>Default</skin-name>
         <css-path>/skin/Default.css</css-path>
     </portlet-skin>
-
 
 </gatein-resources>

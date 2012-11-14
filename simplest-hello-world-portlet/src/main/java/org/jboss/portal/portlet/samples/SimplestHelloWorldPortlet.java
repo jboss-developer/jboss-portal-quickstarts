@@ -24,7 +24,18 @@ import javax.portlet.GenericPortlet;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
+/**
+ * The simplest posible Portlet.
+ * 
+ * @author Peter Palaga
+ */
 public class SimplestHelloWorldPortlet extends GenericPortlet {
+    /**
+     * Serves the VIEW mode. Writes "Hello World !" to the response writer.
+     * 
+     * @see javax.portlet.GenericPortlet#doView(javax.portlet.RenderRequest, javax.portlet.RenderResponse)
+     */
+    @Override
     public void doView(RenderRequest request, RenderResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
         writer.write("Hello World !");
