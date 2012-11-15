@@ -14,12 +14,12 @@ What is it?
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1, 
 RichFaces 4.2.3.Final and Portlet Bridge 3.1.0.Final.
 
-Known Issues
-------------
-
-[https://issues.jboss.org/browse/GTNPORTAL-2581](GTNPORTAL-2581): When adding this portlet to a page for the first time, 
-there comes an alert saying "RichFaces is not defined". The alert can be ignored. Just close it and refresh the page with F5.
-A fix is underway for GateIn 3.5.0.Beta01.
+An introduction and some background information to this quickstart can be found in the following chapters 
+of GateIn Developer Guide:
+* [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL35/Starting+a+Portlet+Project)
+* [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development)
+* [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development)
+* [JSF portlet development with RichFaces](https://docs.jboss.org/author/display/GTNPORTAL35/JSF+portlet+development+with+RichFaces)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -113,8 +113,8 @@ Undeploy the Archive
 
 Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
 -----------------------------------------------------------------------------
-You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and the JBoss 
-tools, refer to the 
+You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the 
 [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 

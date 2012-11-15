@@ -24,9 +24,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.event.ActionEvent;
 
 /**
- * <p>
  * {@link HelloBean} is the JSF backing bean for the application, holding the input data to be re-displayed.
- * </p>
  */
 @ManagedBean(name = "helloBean")
 @SessionScoped

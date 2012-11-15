@@ -30,7 +30,10 @@ What is it?
 
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
-You might want to read our [Portlet Primer](${gatein.refguide.portlet.primer.url}) to get some basic information about Portlets.
+An introduction and some background information to this quickstart can be found in the following chapters 
+of ${compatibility.target.product} Developer Guide:
+* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
+* [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
 
 
 <#include "/include/portlet-general.md.ftl">

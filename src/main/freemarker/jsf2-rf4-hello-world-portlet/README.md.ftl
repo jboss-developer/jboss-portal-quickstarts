@@ -31,12 +31,12 @@ What is it?
 This project demonstrates how to create a simplest portlet using JavaServer Faces ${version.javax["faces-api"]}, 
 RichFaces ${version.org.richfaces} and Portlet Bridge ${version.org.jboss.portletbridge}.
 
-Known Issues
-------------
-
-[https://issues.jboss.org/browse/GTNPORTAL-2581](GTNPORTAL-2581): When adding this portlet to a page for the first time, 
-there comes an alert saying "RichFaces is not defined". The alert can be ignored. Just close it and refresh the page with F5.
-A fix is underway for GateIn 3.5.0.Beta01.
+An introduction and some background information to this quickstart can be found in the following chapters 
+of ${compatibility.target.product} Developer Guide:
+* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
+* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
+* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
+* [JSF portlet development with RichFaces](${gatein.devguide.jsf.rf.portlet.url})
 
 
 <#include "/include/portlet-general.md.ftl">

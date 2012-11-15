@@ -14,6 +14,12 @@ What is it?
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1 
 and Portlet Bridge 3.1.0.Final.
 
+An introduction and some background information to this quickstart can be found in the following chapters 
+of GateIn Developer Guide:
+* [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL35/Starting+a+Portlet+Project)
+* [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development)
+* [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development)
+
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -106,8 +112,8 @@ Undeploy the Archive
 
 Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
 -----------------------------------------------------------------------------
-You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and the JBoss 
-tools, refer to the 
+You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the 
 [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 

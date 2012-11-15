@@ -72,20 +72,21 @@
             Name only those artifacts you refer to in your code.
             Look at gatein-*-bom POM file for the complete list of available artifacts.
         -->
+        <!-- General JSF dependencies -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.portletbridge</groupId>
-            <artifactId>portletbridge-extension-richfaces</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
         </dependency>
 
+        <!-- RF-sprecific dependencies -->
+        <dependency>
+            <groupId>org.jboss.portletbridge</groupId>
+            <artifactId>portletbridge-extension-richfaces</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.richfaces.ui</groupId>
             <artifactId>richfaces-components-api</artifactId>

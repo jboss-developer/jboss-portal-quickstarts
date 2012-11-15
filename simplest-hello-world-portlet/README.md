@@ -13,7 +13,10 @@ What is it?
 
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
-You might want to read our [Portlet Primer](https://docs.jboss.org/author/display/GTNPORTAL35/Portlet+Primer) to get some basic information about Portlets.
+An introduction and some background information to this quickstart can be found in the following chapters 
+of GateIn Developer Guide:
+* [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL35/Starting+a+Portlet+Project)
+* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL35/Standard+Portlet+Development+%28JSR-286%29)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -107,8 +110,8 @@ Undeploy the Archive
 
 Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
 -----------------------------------------------------------------------------
-You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and the JBoss 
-tools, refer to the 
+You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the 
 [JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 

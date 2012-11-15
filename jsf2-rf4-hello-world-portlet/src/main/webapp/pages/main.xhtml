@@ -20,13 +20,11 @@
     <!-- <h:head /> and <h:body> in the following are always needed otherwise JSF Facelets won't work -->
     <h:head />
     <h:body styleClass="jsf2Rf4HelloWorldPortlet">
-        <h:outputStylesheet library="css" name="style.css" />
         <h2>JSF2+RF4 Hello World Portlet</h2>
         <p>
             This example demonstrates adding ajax processing and updating to standard JSF components combined with RichFaces 
             components.
         </p>
-
         <p>
             In the example below, we have a rich:select component with options loaded from helloBean.greetings and 
             standard JSF inputText with a nested ajax tag. Both components 
@@ -35,18 +33,22 @@
             requiring a full-page refresh.
         </p>
         <p>
+            The form labels and buttons use localized labels from resource bundles which we have declared in 
+            WEB-INF/faces-config.xml
+        </p>
+        <p>
             To see this example in action, change the greeting or begin typing in the input box, and watch as your text is echoed with
             html generated from the application server using an ajax call.
         </p>
         <h:form id="jsf2HelloWorldPortlet">
             <h:panelGrid columns="2">
-                <h:outputLabel value="Greeting" for="greeting"/>
+                <h:outputLabel value="#{msgs.Greeting}" for="greeting"/>
                 <rich:select id="greeting" value="#{helloBean.greeting}">
                     <f:selectItems value="#{helloBean.greetings}" />
                     <f:ajax render="output" event="selectitem"/>
                 </rich:select>
                 
-                <h:outputLabel value="Name" for="nameInput"/>
+                <h:outputLabel value="#{msgs.Name}" for="nameInput"/>
                 <h:inputText id="nameInput" value="#{helloBean.name}">
                     <f:validateLength minimum="1" maximum="50" />
                     <f:ajax render="output" event="keyup"/>
@@ -58,12 +60,12 @@
                 </h:panelGroup>
             </p>
             <p>
-                <h:commandButton id="reset" value="Reset" actionListener="#{helloBean.reset}">
+                <h:commandButton id="reset" value="#{msgs.Reset}" actionListener="#{helloBean.reset}">
                     <f:ajax render="@form" />
-                </h:commandButton> - Calls helloBean.reset() on the server side, refreshes the form, but not the whole page.
+                </h:commandButton> - #{msgs.ResetComment}
             </p>
             <p>
-                <h:commandButton id="reload" value="Reload" /> - Reloads the whole page, doesn't reset the string.
+                <h:commandButton id="reload" value="#{msgs.Reload}" /> - #{msgs.ReloadComment}
             </p>
         </h:form>
     </h:body>
