@@ -16,7 +16,12 @@
  */
 div.jsf2HelloWorldPortlet {
     padding: 10px;
-    background: url('background/jsf-logo.png') no-repeat;
+    /* In the following we use a JSF Expression Language expression rather then plain relative path. 
+       Plain relative paths do not work in JSF portlets. The expression #{resource['...']} is 
+       dynamically evaluated to a proper public URL. The path '/css/background/jsf-logo.png' 
+       used in the expression is relative to  resources folder of this web application.
+       See https://docs.jboss.org/author/display/PBR/Resource+Serving */
+    background: url(#{resource['/css/background/jsf-logo.png']}) no-repeat;
     background-position-x: 753px;
     background-position-y: 10px;
 }
