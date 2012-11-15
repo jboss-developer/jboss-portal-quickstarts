@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
@@ -16,16 +16,21 @@
     limitations under the License.
  -->
 <gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_0 http://www.gatein.org/xml/ns/gatein_resources_1_0"
-    xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_0">
+    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_3 http://www.gatein.org/xml/ns/gatein_resources_1_3"
+    xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
 
-
-	<!-- Skins for portlets in 'jsf2portlet' application -->
+    <!-- Portal will load this CSS whenever jsf2HelloWorldPortlet is requested. -->
     <portlet-skin>
-        <application-name>web</application-name>
+        <!-- 
+            The name of the web application containing the portlet.xml file in which 
+            jsf2HelloWorldPortlet is definded. The application name is usually 
+            the same as the name of the WAR through which the application was deployed. 
+        -->
+        <application-name>jsf2-hello-world-portlet</application-name>
+        <!-- <portlet-name> value from the portlet.xml referenced above -->
         <portlet-name>jsf2HelloWorldPortlet</portlet-name>
         <skin-name>Default</skin-name>
-        <css-path>/skin/Default.css</css-path>
+        <css-path>/skin/Default/jsf2-hello-world-portlet.css</css-path>
     </portlet-skin>
 
 </gatein-resources>

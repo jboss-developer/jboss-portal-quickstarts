@@ -30,7 +30,13 @@
     <!-- GateIn will load this CSS for BannerPortlet instead of the default one. 
          We do it like this because we want to replace the default logo with ours. -->
     <portlet-skin>
+        <!-- 
+            The name of the web application containing the portlet.xml file in which
+            BannerPortlet is definded. The application name is usually the same as 
+            the name of the WAR through which the application was deployed. 
+        -->
         <application-name>web</application-name>
+        <!-- <portlet-name> value from the portlet.xml referenced above -->
         <portlet-name>BannerPortlet</portlet-name>
         <skin-name>Default</skin-name>
         <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>

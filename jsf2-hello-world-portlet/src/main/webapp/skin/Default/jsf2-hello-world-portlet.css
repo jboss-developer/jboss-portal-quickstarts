@@ -16,4 +16,10 @@
  */
 div.jsf2HelloWorldPortlet {
     padding: 10px;
+    background: url('background/jsf-logo.png') no-repeat;
+    background-position-x: 753px;
+    background-position-y: 10px;
+}
+div.jsf2HelloWorldPortlet p {
+    width: 713px; 
 }

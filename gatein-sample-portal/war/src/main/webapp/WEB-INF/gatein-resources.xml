@@ -21,7 +21,13 @@
     xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
 
     <portlet-skin>
+        <!-- 
+            The name of the web application containing the portlet.xml file in which 
+            HomePagePortlet is definded. The application name is usually the same as 
+            the name of the WAR through which the application was deployed. 
+        -->
         <application-name>web</application-name>
+        <!-- <portlet-name> value from the portlet.xml referenced above -->
         <portlet-name>HomePagePortlet</portlet-name>
         <skin-name>Default</skin-name>
         <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
