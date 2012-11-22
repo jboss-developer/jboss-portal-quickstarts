@@ -4,24 +4,6 @@
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
     <div class="TRContainer">
         <div class="PortletDecoration">
-            <div class="GuideText"><%=_ctx.appRes("UIHomePagePortlet.Label.ExtendedHomePage")%></div>
-            <a class="VersionIcon" href="http://www.jboss.org/gatein/" target="_blank"></a>
-        </div>
-    </div>
-    <div class="TLContainer">
-        <div class="PortletDecoration">
-        
-            <div class="HomePortletAdBackround">
-                <div class="AdImageLeft">
-                    <div class="AdImageRight">
-                        <div class="EmptyBlock"><%=_ctx.appRes("UIHomePagePortlet.Label.Slogan")%></div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="HomePortletContent">
-                <div class="LeftAccountsContainer">
-                    <div class="RightAccountsContainer">
                         <div class="MiddleAccountsContainer">
                             <div class="InstructionTitle"><%=_ctx.appRes("UIHomePagePortlet.Label.Title")%></div>
                             <div class="AccountsContainerDeco ClearFix">
@@ -74,6 +56,24 @@
                                 </div>
                             </div>
                         </div>
+        </div>
+    </div>
+    <div class="TLContainer">
+        <div class="PortletDecoration">
+        
+            <div class="HomePortletAdBackround">
+                <div class="AdImageLeft">
+                    <div class="AdImageRight">
+                        <div class="EmptyBlock"><%=_ctx.appRes("UIHomePagePortlet.Label.Slogan")%></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="HomePortletContent">
+                <div class="LeftAccountsContainer">
+                    <div class="RightAccountsContainer">
+                        <div class="GuideText"><%=_ctx.appRes("UIHomePagePortlet.Label.ExtendedHomePage")%></div>
+                        <a class="VersionIcon" href="http://www.jboss.org/gatein/" target="_blank"></a>
                     </div>
                 </div>
             </div>
