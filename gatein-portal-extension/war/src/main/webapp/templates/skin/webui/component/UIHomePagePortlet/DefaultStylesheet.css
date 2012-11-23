@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-.UIHomePagePortlet .TRContainer a {
+.UIHomePagePortlet a {
     text-decoration: none;
     color: #2C6FBD;
 }
@@ -107,11 +107,12 @@
     text-align: left;
     font-family: arial;
     font-weight: bold;
-    padding: 50px 20px;
+    padding: 41px 20px;
 }
 
 .UIHomePagePortlet .AdImageLeft .EmptyBlock div {
-    font-size: 19px;
+    font-size: 16px;
+    font-weight: normal;
 }
 
 .UIHomePagePortlet .AdImageLeft .ProductSlogan {
@@ -129,7 +130,21 @@
 }
 
 .UIHomePagePortlet .HomePortletContent {
-    margin-top: 8px;
+    margin: 20px;
+    font-size: 12px;
+}
+
+.UIHomePagePortlet .HomePortletContent h2 {
+    font-size: 14px;
+}
+
+.UIHomePagePortlet .HomePortletContent h3 {
+    font-size: 13px;
+}
+
+.UIHomePagePortlet .HomePortletContent pre {
+    padding: 10px;
+    border: 1px dashed #808185;
 }
 
 .UIHomePagePortlet .LeftAccountsContainer {

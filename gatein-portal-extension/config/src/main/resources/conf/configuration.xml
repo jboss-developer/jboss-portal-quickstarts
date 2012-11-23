@@ -49,7 +49,14 @@
                         <field name="externalSettingsPath">
                             <string>configuration.properties</string>
                         </field>
-                        <!-- All the dependencies of the portal container ordered by loading priority -->
+                        <!--
+                            The list of all the context names that are needed to initialize the Portal Container properly.
+                            The order of the dependencies will define the initialization order and also the order for 
+                            loading resources. When a resource with the same path, say /dir/subdir/resource, is available 
+                            in more than one of the listed contexts, the one from the context closest to the end of this list 
+                            will be chosen. Here we want the resources available in gatein-portal-extension to win over all 
+                            other resources. Therefore we have added gatein-portal-extension as the last element of the list.
+                        -->
                         <field name="dependencies">
                             <collection type="java.util.ArrayList">
                                 <value>
