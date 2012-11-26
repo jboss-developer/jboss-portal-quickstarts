@@ -21,15 +21,6 @@
 
     <!-- GateIn will load this CSS for HomePagePortlet instead of the default one. -->
     <portlet-skin>
-        <application-name>web</application-name>
-        <portlet-name>HomePagePortlet</portlet-name>
-        <skin-name>Default</skin-name>
-        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
-    </portlet-skin>
-
-    <!-- GateIn will load this CSS for BannerPortlet instead of the default one. 
-         We do it like this because we want to replace the default logo with ours. -->
-    <portlet-skin>
         <!-- 
             The name of the web application containing the portlet.xml file in which
             BannerPortlet is definded. The application name is usually the same as 
@@ -37,6 +28,17 @@
         -->
         <application-name>web</application-name>
         <!-- <portlet-name> value from the portlet.xml referenced above -->
+        <portlet-name>HomePagePortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
+    </portlet-skin>
+
+    <!-- 
+        GateIn will load this CSS for BannerPortlet instead of the default one. 
+        We want to replace the default logo with ours.
+    -->
+    <portlet-skin>
+        <application-name>web</application-name>
         <portlet-name>BannerPortlet</portlet-name>
         <skin-name>Default</skin-name>
         <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>
