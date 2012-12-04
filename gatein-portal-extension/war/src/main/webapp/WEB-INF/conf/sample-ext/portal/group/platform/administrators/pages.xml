@@ -17,18 +17,23 @@
  -->
 <page-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3"
     xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_3">
+    <!-- 
+        adminsSitemap page contains just SiteMapPortlet. There is nothing special about it. 
+        It is here just to demonstrate the adding of nodes to group navigation in the sibling 
+        navigation.xml file.
+    -->
     <page>
-        <name>sitemap</name>
-        <title>Site Map</title>
-        <access-permissions>*:/platform/users</access-permissions>
+        <name>adminsSitemap</name>
+        <title>Admins' Sitemap</title>
+        <access-permissions>*:/platform/administrators</access-permissions>
         <edit-permission>*:/platform/administrators</edit-permission>
         <portlet-application>
             <portlet>
                 <application-ref>web</application-ref>
                 <portlet-ref>SiteMapPortlet</portlet-ref>
             </portlet>
-            <title>SiteMap</title>
-            <access-permissions>*:/platform/users</access-permissions>
+            <title>Sitemap</title>
+            <access-permissions>*:/platform/administrators</access-permissions>
             <show-info-bar>false</show-info-bar>
         </portlet-application>
     </page>

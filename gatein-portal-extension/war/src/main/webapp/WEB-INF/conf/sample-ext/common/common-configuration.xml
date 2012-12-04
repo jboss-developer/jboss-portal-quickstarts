@@ -31,12 +31,22 @@
             <init-params>
                 <values-param>
                     <name>init.resources</name>
-                    <description>Store the following resources into the db for the first launch </description>
+                    <description>Initiate the following resources during the first launch.</description>
                     <value>locale.portal.extension</value>
+                    <value>locale.navigation.user.root</value>
+                    <!-- 
+                        Note that we actually do not need to name locale.navigation.portal.classic and 
+                        locale.navigation.group.platform.administrators here as they are in init.resources 
+                        of the default GateIn installation. But it makes no harm to include them once again here.
+                    -->
+                    <value>locale.navigation.portal.classic</value>
+                    <value>locale.navigation.group.platform.administrators</value>
                 </values-param>
                 <values-param>
                     <name>portal.resource.names</name>
-                    <description>The properties files of the portal, those file will be merged into one ResourceBundle properties </description>
+                    <description>These resources are merged to a single resource bundle which is accessible from anywhere 
+                        in GateIn. All these keys are located in the same bundle, which is separated from the navigation 
+                        resource bundles.</description>
                     <value>locale.portal.extension</value>
                 </values-param>
             </init-params>

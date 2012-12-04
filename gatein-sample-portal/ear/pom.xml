@@ -65,7 +65,7 @@
                     <version>6</version>
                     <archive>
                         <manifestEntries>
-                            <Dependencies>org.gatein.pc,org.gatein.common,org.hibernate,org.jboss.security.negotiation,org.gatein.sso</Dependencies>
+                            <Dependencies>org.gatein.pc,org.gatein.common,org.hibernate,org.gatein.sso</Dependencies>
                         </manifestEntries>
                         <addMavenDescriptor>false</addMavenDescriptor>
                     </archive>

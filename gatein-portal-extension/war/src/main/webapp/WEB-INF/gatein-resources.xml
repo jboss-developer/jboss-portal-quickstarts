@@ -44,13 +44,5 @@
         <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>
     </portlet-skin>
 
-    <!-- CSS for AwesomePortlet which we define within this Portal Extension -->
-    <portlet-skin>
-        <application-name>gatein-portal-extension</application-name>
-        <portlet-name>AwesomePortlet</portlet-name>
-        <skin-name>Default</skin-name>
-        <css-path>/templates/skin/webui/component/UIAwesomePortlet/DefaultStylesheet.css</css-path>
-    </portlet-skin>
-    
 </gatein-resources>
 

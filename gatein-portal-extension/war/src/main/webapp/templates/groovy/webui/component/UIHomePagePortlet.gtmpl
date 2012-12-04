@@ -16,6 +16,11 @@
      * limitations under the License.
      */
      
+    /**
+     * This Groovy template overrides the template available in the default GateIn installation 
+     * under portal.war/templates/groovy/webui/component/UIHomePagePortlet.gtmpl. 
+     */
+     
     String initialURI = _ctx.getRequestContext().getParentAppRequestContext().getInitialURI();
     String devGuideBaseUrl = "https://docs.jboss.org/author/display/GTNPORTAL35";
 %>
@@ -118,7 +123,7 @@
                     </ul>
                 </p>
                 <p>
-                    See also <a href="">Custom Groovy Template for a Portlet</a> section of
+                    See also <a href="<%=devGuideBaseUrl%>/Custom+Groovy+Template+for+a+Portlet">Custom Groovy Template for a Portlet</a> section of
                     <a href="<%=devGuideBaseUrl%>/Developer+Guide">GateIn Developer Guide</a>.
                 </p>
                 
@@ -135,18 +140,27 @@
                     </ul>
                 </p>
                 <p>
-                    See also <a href="">Custom Groovy Template for a Portlet</a> section of
+                    See also <a href="<%=devGuideBaseUrl%>/Custom+Skin+for+a+Portlet">Custom Skin for a Portlet</a> section of
                     <a href="<%=devGuideBaseUrl%>/Developer+Guide">GateIn Developer Guide</a>.
                 </p>
                 
                 <h3>3. Custom Navigation and Pages</h3>
-                <p>The result can be seen on the navigation bar above.</p>
+                <p>
+                    In this Portal Extension, we have added a couple of navigation nodes and pages to ones available in the 
+                    default GateIn installation.
+                </p>
                 <p>
                     Important files:
                     <ul>
+                        <li><code>war/src/main/webapp/WEB-INF/conf/sample-ext/portal/portal-configuration.xml</code></li>
                         <li><code>page.xml</code> and <code>navigation.xml</code> files under <code>war/src/main/webapp/WEB-INF/conf/sample-ext/portal</code></li>
+                        <li><code>war/src/main/webapp/WEB-INF/conf/sample-ext/common/common-configuration.xml</code></li>
                         <li><code>*.properties</code> files under <code>war/src/main/webapp/WEB-INF/classes/locale/navigation</code></li>
                     </ul>
+                </p>
+                <p>
+                    See also <a href="<%=devGuideBaseUrl%>/Custom+Navigation+and+Pages">Custom Navigation and Pages</a> section of
+                    <a href="<%=devGuideBaseUrl%>/Developer+Guide">GateIn Developer Guide</a>.
                 </p>
                 
                 <h3>4. Custom Internationalization Resource Bundles</h3>
@@ -161,9 +175,13 @@
                 <p>
                     Important files:
                     <ul>
-                        <li><code>war/src/main/webapp/WEB-INF/classes/locale/portal/extension_en.properties</code></li>
                         <li><code>war/src/main/webapp/WEB-INF/conf/sample-ext/common/common-configuration.xml</code></li>
+                        <li><code>war/src/main/webapp/WEB-INF/classes/locale/portal/extension_en.properties</code></li>
                     </ul>
+                </p>
+                <p>
+                    See also <a href="<%=devGuideBaseUrl%>/Custom+Internationalization+Resource+Bundles">Custom Internationalization Resource Bundles</a> section of
+                    <a href="<%=devGuideBaseUrl%>/Developer+Guide">GateIn Developer Guide</a>.
                 </p>
                 
                 <h3>5. Custom Login Page</h3>
@@ -175,7 +193,6 @@
                     Important file:
                     <ul>
                         <li><code>war/src/main/webapp/login/jsp/login.jsp</code></li>
-                        <li><code>war/src/main/webapp/WEB-INF/conf/sample-ext/common/common-configuration.xml</code></li>
                     </ul>
                 </p>
                 <hr/>

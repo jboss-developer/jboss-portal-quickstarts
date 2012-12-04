@@ -18,14 +18,14 @@
 
 <node-navigation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3" xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_3">
-    <priority>3</priority>
+    <!-- Priority has no significance in user navigations. But it is required. See GTNPORTAL-2751 -->
+    <priority>1</priority>
 
     <page-nodes>
         <node>
-            <uri>sample-user</uri>
-            <name>sample-user</name>
-            <label>Sample Page for root</label>
-            <page-reference>user::root::sampledashboard</page-reference>
+            <name>roots-extra-dashboard</name>
+            <label>#{user.root.RootsExtraDashboard}</label>
+            <page-reference>user::root::roots-dashboard</page-reference>
         </node>
     </page-nodes>
 </node-navigation>

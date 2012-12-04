@@ -18,9 +18,14 @@
 
 <page-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_3 http://www.gatein.org/xml/ns/gatein_objects_1_3"
     xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_3">
+    <!-- 
+        roots-dashboard page contains just DashboardPortlet. There is nothing special about it. 
+        It is here just to demonstrate the adding of nodes to user navigation in the sibling 
+        navigation.xml file.
+    -->
     <page>
-        <name>sampledashboard</name>
-        <title>Sample Dashboard</title>
+        <name>roots-dashboard</name>
+        <title>Root's Extra Dashboard</title>
         <access-permissions>*:/platform/users</access-permissions>
         <edit-permission>*:/platform/administrators</edit-permission>
         <portlet-application>
@@ -28,7 +33,7 @@
                 <application-ref>dashboard</application-ref>
                 <portlet-ref>DashboardPortlet</portlet-ref>
             </portlet>
-            <title>Dashboard</title>
+            <title>Root's Extra Dashboard</title>
             <access-permissions>*:/platform/users</access-permissions>
             <show-info-bar>false</show-info-bar>
         </portlet-application>

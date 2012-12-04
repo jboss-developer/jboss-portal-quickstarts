@@ -45,10 +45,11 @@
                         <field name="ownerType">
                             <string>portal</string>
                         </field>
-                        <field name="templateLocation">
+                        <field name="location">
                             <string>war:/conf/sample-ext/portal</string>
                         </field>
                         <field name="importMode">
+                            <!-- Imported nodes will be added to the nodes available in default GateIn installation. -->
                             <string>merge</string>
                         </field>
                     </object>
@@ -60,14 +61,14 @@
                         <field name="predefinedOwner">
                             <collection type="java.util.HashSet">
                                 <value>
-                                    <string>/platform/users</string>
+                                    <string>/platform/administrators</string>
                                 </value>
                             </collection>
                         </field>
                         <field name="ownerType">
                             <string>group</string>
                         </field>
-                        <field name="templateLocation">
+                        <field name="location">
                             <string>war:/conf/sample-ext/portal</string>
                         </field>
                         <field name="importMode">
@@ -89,7 +90,7 @@
                         <field name="ownerType">
                             <string>user</string>
                         </field>
-                        <field name="templateLocation">
+                        <field name="location">
                             <string>war:/conf/sample-ext/portal</string>
                         </field>
                         <field name="importMode">
