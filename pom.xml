@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>3.5.0.Final-SNAPSHOT</version>
+    <version>3.5.0.Final</version>
     <packaging>pom</packaging>
     <name>GateIn Portal Quickstarts Parent</name>
     <url>http://gatein.org</url>

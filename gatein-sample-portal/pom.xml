@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.5.0.Final-SNAPSHOT</version>
+    <version>3.5.0.Final</version>
     <artifactId>gatein-sample-portal</artifactId>
     <name>GateIn Sample Portal</name>
     <packaging>pom</packaging>
