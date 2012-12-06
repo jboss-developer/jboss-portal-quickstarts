@@ -92,7 +92,7 @@ private static class ModelNode extends HashMap<String, Object> {
     }
     
     public Model loadPom(File file) {
-        System.out.println("loading: "+ file);
+        //System.out.println("loading: "+ file);
         Reader r = null;
         try {
             r = new InputStreamReader(new FileInputStream(file), "utf-8");
@@ -133,6 +133,7 @@ private static class ModelNode extends HashMap<String, Object> {
         //    for (Repository repo : model.getRepositories()) {
         //        System.out.println("repo: "+ repo.getUrl());
         //    }
+        //System.out.println("putProperties( session, "+ groupId +", "+ artifactId+", "+ version+")");
         def repoSession = session.getRepositorySession();
         def localRepoManager = repoSession.getLocalRepositoryManager();
         def artifact = new DefaultArtifact(groupId, artifactId, "pom", version);

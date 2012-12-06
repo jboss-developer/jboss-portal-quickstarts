@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.5.0.Final-SNAPSHOT</version>
     <artifactId>gatein-sample-portal</artifactId>
     <name>GateIn Sample Portal</name>
     <packaging>pom</packaging>
@@ -30,7 +30,7 @@
         <version.org.gatein>3.5.0.Beta01</version.org.gatein>    
         
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         
         <!-- Plugin versions and settings -->
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>

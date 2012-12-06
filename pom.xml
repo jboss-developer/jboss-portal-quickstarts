@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.5.0.Final-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GateIn Portal Quickstarts Parent</name>
     <url>http://gatein.org</url>
@@ -37,12 +37,12 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001' 
              JBT 4.0.0.Beta1 - '-002'
-             -->
+        -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
         <compatibility.gatein.major.version>3</compatibility.gatein.major.version>
         <compatibility.gatein.minor.version>5</compatibility.gatein.minor.version>
@@ -57,7 +57,6 @@
         <compatibility.as.product>JBoss AS</compatibility.as.product>
         <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
 
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
         <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>

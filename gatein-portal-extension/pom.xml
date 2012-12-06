@@ -21,14 +21,14 @@
 
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.5.0.Final-SNAPSHOT</version>
     <name>GateIn Portal Extension</name>
     <packaging>pom</packaging>
     <description>GateIn Portal Extension</description>
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         
         <!-- Plugin versions and settings -->
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
@@ -82,23 +82,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
-            <id>jboss-public-repository-group</id>
-            <name>JBoss Public Maven Repository Group</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-            <layout>default</layout>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>

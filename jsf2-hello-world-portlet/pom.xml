@@ -22,7 +22,7 @@
     <artifactId>jsf2-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>JSF2 Hello World Portlet</name>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>3.5.0.Final-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>A simple portlet using JavaServer Faces 2.</description>
     <url>http://www.gatein.org</url>
@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha04</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         
         <!-- Plugin versions and settings -->
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
@@ -101,23 +101,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <!-- This repository will not be necessary when JBoss Portlet Bridge will be mirrored on Maven Central -->
-            <id>jboss-public-repository-group</id>
-            <name>JBoss Public Maven Repository Group</name>
-            <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-            <layout>default</layout>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
 
 </project>
