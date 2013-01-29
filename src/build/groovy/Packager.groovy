@@ -44,7 +44,7 @@ def readDom(String path) {
     finally {
         r.close()
     }
-    
+
 }
 
 def writeDom(Document document, String path) {
@@ -54,7 +54,7 @@ def writeDom(Document document, String path) {
         w = new OutputStreamWriter(new FileOutputStream(f), "utf-8")
         DOMSource src = new DOMSource(document);
         StreamResult rslt = new StreamResult(w);
-        
+
         TransformerFactory tf = TransformerFactory.newInstance();
 //      if (ident) {
 //          tf.setAttribute(XslConst.INDENT_NUMBER, XslConst.INDENT_NUMBER_DEFAULT);
@@ -64,12 +64,12 @@ def writeDom(Document document, String path) {
         t.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
         t.setOutputProperty(OutputKeys.METHOD, "xml");
         t.transform(src, rslt);
-    
+
     }
     finally {
         w.close()
     }
-    
+
 }
 
 def setTextContent(parent, nodeName, textContent) {
@@ -87,7 +87,7 @@ def setTextContent(parent, nodeName, textContent) {
     myNode.setTextContent(textContent)
 }
 
-def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile) {
+def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, product, productVersion) {
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
         projectNode = descriptorDom.createElement("project")
@@ -95,8 +95,8 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile) {
         projectsNode.appendChild(projectNode)
         setTextContent(projectNode, "name", moduleProject.artifactId)
     }
-    
-    setTextContent(projectNode, "category", "GateIn Portal Quickstarts")
+
+    setTextContent(projectNode, "category", "${product} ${productVersion} Quickstarts")
     setTextContent(projectNode, "included-projects", moduleProject.artifactId)
     setTextContent(projectNode, "shortDescription", moduleProject.name)
     setTextContent(projectNode, "description", moduleProject.description)
@@ -152,9 +152,11 @@ ant.copy(
 }
 stripMdFile("${project.basedir}/target/assembly-prepare/README.md", COMMENT_PATTERN)
 
+String product = project.properties.get("compatibility.target.product");
+String productVersion = project.properties.get("compatibility.target.productVersion");
 
 /* Pack them all together for GateIn Downloads */
-String gateinQuickstartsZipPath = "target/assembly/GateIn-"+ project.properties.get("compatibility.gatein.version") +"-Quickstarts.zip"
+String gateinQuickstartsZipPath = "target/assembly/"+ product +"-"+ productVersion +"-Quickstarts.zip"
 ant.zip (
     destfile: gateinQuickstartsZipPath,
     basedir: "target/assembly-prepare",
@@ -165,12 +167,12 @@ ant.zip (
 
 MavenXpp3Reader pomReader = new MavenXpp3Reader()
 for (module in project.modules) {
-    
+
     ant.property(
         name: "ant.regexp.regexpimpl",
         value: "org.apache.tools.ant.util.regexp.JakartaRegexpRegexp"
     )
-    
+
     ant.copy(
         todir: "target/assembly-prepare",
     ) {
@@ -180,9 +182,9 @@ for (module in project.modules) {
             excludes: "${module}/target/**, .*/**"
         )
     }
-    
+
     stripMdFile("${project.basedir}/target/assembly-prepare/${module}/README.md", COMMENT_PATTERN)
-    
+
     String pomPath = "${project.basedir}${File.separator}${module}${File.separator}pom.xml"
     Reader r = new InputStreamReader(new FileInputStream(new File(pomPath)),"utf-8")
     Model moduleProject = pomReader.read(r)
@@ -195,7 +197,7 @@ for (module in project.modules) {
         includes: "${module}/**",
         excludes: "${module}/target/**, .*/**"
     )
-    
+
     /* And the same thing once again for GateIn Downloads */
     ant.zip (
         update: true,
@@ -204,16 +206,16 @@ for (module in project.modules) {
         includes: "${module}/**",
         excludes: "${module}/target/**, .*/**"
     )
-    
+
     File zipFile = new File(zipPath)
-    
-    enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile)
+
+    enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, product, productVersion)
 
 }
 
 String descriptorPath = "target/assembly/project-examples-gatein-" +
         project.properties.get("org.jboss.ide.target.version") +
-        project.properties.get("org.gatein.portal.quickstarts.descriptor.suffix") + 
+        project.properties.get("org.gatein.portal.quickstarts.descriptor.suffix") +
         ".xml"
 writeDom(descriptorDom, descriptorPath)
 

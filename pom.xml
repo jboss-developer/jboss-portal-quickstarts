@@ -2,15 +2,15 @@
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the 
+    contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     http://www.apache.org/licenses/LICENSE-2.0
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,  
+    distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
@@ -40,16 +40,15 @@
         <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
-             JBT 4.0.0.Alpha2 - '-001' 
+             JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
         -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
-        <compatibility.gatein.major.version>3</compatibility.gatein.major.version>
-        <compatibility.gatein.minor.version>5</compatibility.gatein.minor.version>
-        <compatibility.gatein.version>${compatibility.gatein.major.version}.${compatibility.gatein.minor.version}</compatibility.gatein.version>
-        <compatibility.epp.version>6</compatibility.epp.version>
-        <compatibility.target.product>GateIn</compatibility.target.product>
-        <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.gatein.version}</compatibility.target.productAndVersion>
+        <compatibility.target.productVersionMajor>3</compatibility.target.productVersionMajor>
+        <compatibility.target.productVersionMinor>5</compatibility.target.productVersionMinor>
+        <compatibility.target.productVersion>${compatibility.target.productVersionMajor}.${compatibility.target.productVersionMinor}</compatibility.target.productVersion>
+        <compatibility.target.product>GateIn Portal</compatibility.target.product>
+        <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.target.productVersion}</compatibility.target.productAndVersion>
 
         <compatibility.as.major.version>7</compatibility.as.major.version>
         <compatibility.as.minor.version>1</compatibility.as.minor.version>
@@ -73,7 +72,7 @@
 
         <jboss.confluence.root.url>https://docs.jboss.org/author/display</jboss.confluence.root.url>
 
-        <gatein.docs.url>${jboss.confluence.root.url}/GTNPORTAL${compatibility.gatein.major.version}${compatibility.gatein.minor.version}</gatein.docs.url>
+        <gatein.docs.url>${jboss.confluence.root.url}/GTNPORTAL${compatibility.target.productVersionMajor}${compatibility.target.productVersionMinor}</gatein.docs.url>
         <gatein.devguide.url>${gatein.docs.url}/Developer+Guide</gatein.devguide.url>
         <gatein.devguide.containers.extensions.url>${gatein.docs.url}/GDG-Portal+Containers+and+Extensions</gatein.devguide.containers.extensions.url>
 

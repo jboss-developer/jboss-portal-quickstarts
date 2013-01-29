@@ -1,12 +1,12 @@
 <!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
 
-gatein-sample-portal: GateIn Sample Portal
+gatein-sample-portal: Sample Portal
 ============================
-Author: Thomas Heute, Peter Palaga  
-Level: Beginner  
-Technologies: GateIn, Portal Container  
-Summary: GateIn Sample Portal  
-Target Product: GateIn 3.5
+Author: Thomas Heute, Peter Palaga
+Level: Beginner
+Technologies: GateIn Portal, Portal Container
+Summary: Sample Portal
+Target Product: GateIn Portal 3.5
 
 
 What is it?
@@ -21,8 +21,8 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](https://docs.jboss.org/author/display/GTNPORTAL35/GDG-Portal+Containers+and+Extensions) page of 
-GateIn Developer Guide.
+For more details, see [Portal Containers and Extensions](https://docs.jboss.org/author/display/GTNPORTAL35/GDG-Portal+Containers+and+Extensions) page of
+GateIn Portal Developer Guide.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -31,9 +31,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on GateIn Portal 3.5 running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
-but this example projects will evolve to support the upcoming EPP version 6.
+The project is designed to be deployed on GateIn Portal 3.5 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -50,7 +48,7 @@ Build and Deploy
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
 `mvn jboss-as:deploy` or copying to the default JBoss AS deployment folder when 
-GateIn is running. Instead of that you will need to:
+GateIn Portal is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
 
@@ -62,32 +60,31 @@ GateIn is running. Instead of that you will need to:
       mvn clean package
 
    This will create `ear/target/gatein-sample-portal.ear`.
-4. Copy this file into the GateIn extension deployment folder: $JBOSS_HOME/gatein/extensions
+4. Copy this file into the GateIn Portal extension deployment folder: $JBOSS_HOME/gatein/extensions
 
 Setup JBoss Datasources and Security Policies
----------------------------------------------  
+---------------------------------------------
 
-TODO: Be less ironic
-The most modern JBoss school of thought says that Datasources and Security Policies need to be defined on the level of 
-Application Server and that they cannot[*] be defined within EARs because centralized management is the thing you 
-need more than flexibility. This is the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need 
-to define the Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
+In JBoss, Datasources and Security Policies need to be defined on the level of Application Server and they
+cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is 
+the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need to define the 
+Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box GateIn 3.5 installation contains the needed pieces 
-of XML commented out. Please search for `Uncommented this when deploying gatein-sample-portal` in the file and uncomment the 
+The `standalone.xml` available in the out-of-the-box GateIn Portal 3.5 installation contains the needed pieces
+of XML commented out. Please search for `Uncommented this when deploying gatein-sample-portal` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
-> Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as 
-> described in [JBoss AS 7.1 Admin Guide](https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-Datasources) 
+> Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
+> described in [JBoss AS 7.1 Admin Guide](https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-Datasources)
 
-[*] Datasources can be defined in EARs but such ones are not managed, see 
+[*] Datasources can be defined in EARs but such ones are not managed, see
 [JBoss AS 7.1 Admin Guide](https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-Deploymentof%5Cds.xmlfiles).
 
 
 Access the Sample Portal
 ------------------------
 
-To ensure that the Sample Portal has been deployed successfully visit 
+To ensure that the Sample Portal has been deployed successfully visit
 [http://127.0.0.1:8080/sample-portal](http://127.0.0.1:8080/sample-portal/)) with your web browser.
 
 
@@ -107,7 +104,7 @@ Undeploy the Archive
 
 To delete a Portal Extension or Portal Container:
 1. Delete JBOSS_HOME/gatein/extensions/gatein-sample-portal.ear
-2. Restart GateIn
+2. Restart GateIn Portal
 
 Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
 reversible.
@@ -135,4 +132,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or GateIn on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
+Please post feedback on this quickstart or GateIn Portal on [User Forum](https://community.jboss.org/en/gatein?view=discussions).

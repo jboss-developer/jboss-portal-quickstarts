@@ -2,15 +2,15 @@
 <#--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the 
+    contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     http://www.apache.org/licenses/LICENSE-2.0
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,  
+    distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
@@ -34,10 +34,10 @@ Build and Deploy the Quickstart
 
         mvn clean package jboss-as:deploy
 
-   To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
+   To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
    just after `<version>${r"${jboss.as.plugin.version}"}</version>` in the pom.xml file and adjust it to suit your needs.
    `username` and `password` elements can be omitted sometimes, depending on your JBoss security settings.
-                 
+
         <configuration>
             <hostname>127.0.0.1</hostname>
             <port>9999</port>
@@ -51,8 +51,8 @@ Build and Deploy the Quickstart
 Access the deployed Portlet
 ---------------------------
 
-To ensure that the example portlet has been deployed successfully do the following: 
-* Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
+To ensure that the example portlet has been deployed successfully, do the following:
+* Point your web browser at the base URL of your portal (URL of a default local ${compatibility.target.product} installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
@@ -86,8 +86,8 @@ Undeploy the Archive
 Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
 -----------------------------------------------------------------------------
 You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
-refer to the 
-[JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
+refer to the
+[JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/)
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 

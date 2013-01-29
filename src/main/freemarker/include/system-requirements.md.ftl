@@ -2,15 +2,15 @@
 <#--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the 
+    contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     http://www.apache.org/licenses/LICENSE-2.0
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,  
+    distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
@@ -21,6 +21,4 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on GateIn Portal ${compatibility.gatein.version} running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
-but this example projects will evolve to support the upcoming EPP version ${compatibility.epp.version}.
+The project is designed to be deployed on ${compatibility.target.product} ${compatibility.target.productVersion} running on ${compatibility.as.product}.

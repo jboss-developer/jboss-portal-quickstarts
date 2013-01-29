@@ -6,7 +6,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: RF4, JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
-Target Product: GateIn 3.5
+Target Product: GateIn Portal 3.5
 
 What is it?
 -----------
@@ -15,7 +15,7 @@ This project demonstrates how to create a simplest portlet using JavaServer Face
 RichFaces 4.2.3.Final and Portlet Bridge 3.1.1.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
-of GateIn Developer Guide:
+of GateIn Portal Developer Guide:
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL35/Starting+a+Portlet+Project)
 * [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development)
 * [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development)
@@ -29,9 +29,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on GateIn Portal 3.5 running on either
-JBoss AS or JBoss EAP. There is no support for JBoss Enterprise Portal Platform (EPP) yet, 
-but this example projects will evolve to support the upcoming EPP version 6.
+The project is designed to be deployed on GateIn Portal 3.5 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -62,10 +60,10 @@ Build and Deploy the Quickstart
 
         mvn clean package jboss-as:deploy
 
-   To deploy to other than default localhost:9999 JBoss instance, copy the following configuration 
+   To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
    just after `<version>${jboss.as.plugin.version}</version>` in the pom.xml file and adjust it to suit your needs.
    `username` and `password` elements can be omitted sometimes, depending on your JBoss security settings.
-                 
+
         <configuration>
             <hostname>127.0.0.1</hostname>
             <port>9999</port>
@@ -79,7 +77,7 @@ Build and Deploy the Quickstart
 Access the deployed Portlet
 ---------------------------
 
-To ensure that the example portlet has been deployed successfully do the following: 
+To ensure that the example portlet has been deployed successfully, do the following:
 * Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
@@ -114,8 +112,8 @@ Undeploy the Archive
 Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart
 -----------------------------------------------------------------------------
 You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
-refer to the 
-[JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/) 
+refer to the
+[JBoss Enterprise Application Platform 6 Development Guide](https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/)
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 
@@ -134,4 +132,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or GateIn on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
+Please post feedback on this quickstart or GateIn Portal on [User Forum](https://community.jboss.org/en/gatein?view=discussions).

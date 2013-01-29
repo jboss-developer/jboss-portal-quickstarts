@@ -10,5 +10,4 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with GateIn Portal 3.5. There is no support for JBoss Enterprise Portal 
-Platform (EPP) yet, but the included example projects will evolve to support the coming EPP version 6.
+This release of Portal Quickstarts is compatible with GateIn Portal 3.5 running on JBoss AS.

@@ -2,15 +2,15 @@
 <#--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
-    contributors by the @authors tag. See the copyright.txt in the 
+    contributors by the @authors tag. See the copyright.txt in the
     distribution for a full listing of individual contributors.
-    
+
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
     http://www.apache.org/licenses/LICENSE-2.0
     Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,  
+    distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Thomas Heute, Peter Palaga  
-Level: Beginner  
-Technologies: GateIn, Portal Container  
-Summary: ${project.description}  
+Author: Thomas Heute, Peter Palaga
+Level: Beginner
+Technologies: ${compatibility.target.product}, Portal Container
+Summary: ${project.description}
 Target Product: ${compatibility.target.productAndVersion}
 
 
@@ -38,7 +38,7 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of 
+For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of
 ${compatibility.target.product} Developer Guide.
 
 
@@ -52,29 +52,28 @@ ${compatibility.target.product} Developer Guide.
 
 
 Setup JBoss Datasources and Security Policies
----------------------------------------------  
+---------------------------------------------
 
-TODO: Be less ironic
-The most modern JBoss school of thought says that Datasources and Security Policies need to be defined on the level of 
-Application Server and that they cannot[*] be defined within EARs because centralized management is the thing you 
-need more than flexibility. This is the reason why it is not enough just to deploy `${project.artifactId}.ear`. You also need 
-to define the Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
+In JBoss, Datasources and Security Policies need to be defined on the level of Application Server and they
+cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is 
+the reason why it is not enough just to deploy `${project.artifactId}.ear`. You also need to define the 
+Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box ${compatibility.target.productAndVersion} installation contains the needed pieces 
-of XML commented out. Please search for `Uncommented this when deploying ${project.artifactId}` in the file and uncomment the 
+The `standalone.xml` available in the out-of-the-box ${compatibility.target.productAndVersion} installation contains the needed pieces
+of XML commented out. Please search for `Uncommented this when deploying ${project.artifactId}` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
-> Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as 
-> described in [${compatibility.as.productAndVersion} Admin Guide](${jboss.admin.guide.ds.url}) 
+> Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
+> described in [${compatibility.as.productAndVersion} Admin Guide](${jboss.admin.guide.ds.url})
 
-[*] Datasources can be defined in EARs but such ones are not managed, see 
+[*] Datasources can be defined in EARs but such ones are not managed, see
 [${compatibility.as.productAndVersion} Admin Guide](${jboss.admin.guide.ds.files.url}).
 
 
 Access the Sample Portal
 ------------------------
 
-To ensure that the Sample Portal has been deployed successfully visit 
+To ensure that the Sample Portal has been deployed successfully visit
 [http://127.0.0.1:8080/sample-portal](http://127.0.0.1:8080/sample-portal/)) with your web browser.
 
 
