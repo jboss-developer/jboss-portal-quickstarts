@@ -27,19 +27,21 @@
     <description>Sample Portal</description>
 
     <properties>
-        <version.org.gatein>3.5.0.Beta01</version.org.gatein>
+        <version.org.gatein>3.5.1.Final-redhat-1</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-1</org.jboss.bom.gatein-bom.version>
 
         <!-- Plugin versions and settings -->
-        <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
-        <maven.ear.plugin.version>2.8</maven.ear.plugin.version>
+        <jboss.as.plugin.version>7.1.3.Final-redhat-4</jboss.as.plugin.version>
+        <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>2.3.2-redhat-1</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <version.org.apache.maven.surefire.plugin>2.10-redhat-1</version.org.apache.maven.surefire.plugin>
     </properties>
 
     <modules>
@@ -102,6 +104,16 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
+
+          <!--
+          The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
+          -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${version.org.apache.maven.surefire.plugin}</version>
+          </plugin>
+
         </plugins>
     </build>
 

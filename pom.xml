@@ -37,23 +37,23 @@
 
     <properties>
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-1</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
         -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
-        <compatibility.target.productVersionMajor>3</compatibility.target.productVersionMajor>
-        <compatibility.target.productVersionMinor>5</compatibility.target.productVersionMinor>
+        <compatibility.target.productVersionMajor>6</compatibility.target.productVersionMajor>
+        <compatibility.target.productVersionMinor>0</compatibility.target.productVersionMinor>
         <compatibility.target.productVersion>${compatibility.target.productVersionMajor}.${compatibility.target.productVersionMinor}</compatibility.target.productVersion>
-        <compatibility.target.product>GateIn Portal</compatibility.target.product>
+        <compatibility.target.product>JBoss Portal Platform</compatibility.target.product>
         <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.target.productVersion}</compatibility.target.productAndVersion>
 
-        <compatibility.as.major.version>7</compatibility.as.major.version>
-        <compatibility.as.minor.version>1</compatibility.as.minor.version>
+        <compatibility.as.major.version>6</compatibility.as.major.version>
+        <compatibility.as.minor.version>0.1</compatibility.as.minor.version>
         <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
-        <compatibility.as.product>JBoss AS</compatibility.as.product>
+        <compatibility.as.product>Application Platform</compatibility.as.product>
         <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
 
         <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
@@ -98,6 +98,15 @@
         <module>gatein-sample-portal</module>
     </modules>
 
+    <dependencies>
+      <dependency>
+        <groupId>org.jboss.bom</groupId>
+        <artifactId>gatein-3.5-bom</artifactId>
+        <version>${org.jboss.bom.gatein-bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
     <profiles>
         <profile>
             <id>reset-bom-version</id>
