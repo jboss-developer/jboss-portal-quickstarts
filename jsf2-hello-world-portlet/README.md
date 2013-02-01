@@ -6,7 +6,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
-Target Product: JBoss Portal Platform 6.0
+Target Product: JBoss Portal Platform (JPP) 6.0
 
 What is it?
 -----------
@@ -15,10 +15,10 @@ This project demonstrates how to create a simple portlet using JavaServer Faces 
 and Portlet Bridge 3.1.2.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
-of JBoss Portal Platform Developer Guide:
-* [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL60/Starting+a+Portlet+Project)
-* [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL60/JSF2+Portlet+Development)
-* [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL60/Basic+JSF+Portlet+Development)
+of JBoss Portal Platform (JPP) Developer Guide:
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-819805.html)
+* [JSF2 Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html)
+* [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -28,7 +28,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on JBoss Portal Platform 6.0 running on Application Platform.
+The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -77,7 +77,7 @@ Access the deployed Portlet
 ---------------------------
 
 To ensure that the example portlet has been deployed successfully, do the following:
-* Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform installation is
+* Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform (JPP) installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
@@ -131,4 +131,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or JBoss Portal Platform on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
+Please post feedback on this quickstart or JBoss Portal Platform (JPP) on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).

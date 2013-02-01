@@ -4,9 +4,9 @@ gatein-sample-portal: Sample Portal
 ============================
 Author: Thomas Heute, Peter Palaga
 Level: Beginner
-Technologies: JBoss Portal Platform, Portal Container
+Technologies: JBoss Portal Platform (JPP), Portal Container
 Summary: Sample Portal
-Target Product: JBoss Portal Platform 6.0
+Target Product: JBoss Portal Platform (JPP) 6.0
 
 
 What is it?
@@ -21,8 +21,8 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](https://docs.jboss.org/author/display/GTNPORTAL60/GDG-Portal+Containers+and+Extensions) page of
-JBoss Portal Platform Developer Guide.
+For more details, see [Portal Containers and Extensions](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html) page of
+JBoss Portal Platform (JPP) Developer Guide.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -31,7 +31,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on JBoss Portal Platform 6.0 running on Application Platform.
+The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -47,8 +47,8 @@ Build and Deploy
 ----------------
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
-`mvn jboss-as:deploy` or copying to the default Application Platform deployment folder when 
-JBoss Portal Platform is running. Instead of that you will need to:
+`mvn jboss-as:deploy` or copying to the default JBoss Application Platform deployment folder when 
+JBoss Portal Platform (JPP) is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
 
@@ -60,7 +60,7 @@ JBoss Portal Platform is running. Instead of that you will need to:
       mvn clean package
 
    This will create `ear/target/gatein-sample-portal.ear`.
-4. Copy this file into the JBoss Portal Platform extension deployment folder: $JBOSS_HOME/gatein/extensions
+4. Copy this file into the JBoss Portal Platform (JPP) extension deployment folder: $JBOSS_HOME/gatein/extensions
 
 Setup JBoss Datasources and Security Policies
 ---------------------------------------------
@@ -70,15 +70,15 @@ cannot[*] be defined within EARs because otherwise centralized management would 
 the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need to define the 
 Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box JBoss Portal Platform 6.0 installation contains the needed pieces
+The `standalone.xml` available in the out-of-the-box JBoss Portal Platform (JPP) 6.0 installation contains the needed pieces
 of XML commented out. Please search for `Uncommented this when deploying gatein-sample-portal` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [Application Platform 6.0.1 Admin Guide](https://docs.jboss.org/author/display/AS60.1/Admin+Guide#AdminGuide-Datasources)
+> described in [JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[Application Platform 6.0.1 Admin Guide](https://docs.jboss.org/author/display/AS60.1/Admin+Guide#AdminGuide-Deploymentof%5Cds.xmlfiles).
+[JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
 
 
 Access the Sample Portal
@@ -104,7 +104,7 @@ Undeploy the Archive
 
 To delete a Portal Extension or Portal Container:
 1. Delete JBOSS_HOME/gatein/extensions/gatein-sample-portal.ear
-2. Restart JBoss Portal Platform
+2. Restart JBoss Portal Platform (JPP)
 
 Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
 reversible.
@@ -132,4 +132,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or JBoss Portal Platform on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
+Please post feedback on this quickstart or JBoss Portal Platform (JPP) on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).

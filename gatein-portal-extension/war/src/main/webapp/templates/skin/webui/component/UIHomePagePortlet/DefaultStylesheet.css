@@ -26,7 +26,7 @@
 }
 
 .UIHomePagePortlet .TRContainer .PortletDecoration {
-    
+
 }
 
 .UIHomePagePortlet .TRContainer {
@@ -84,7 +84,7 @@
 }
 
 .UIHomePagePortlet .HomePortletAdBackround {
-    
+
 }
 
 .UIHomePagePortlet .AdImageLeft {
@@ -93,7 +93,7 @@
 }
 
 * html .UIHomePagePortlet .AdImageLeft {
-    
+
 }
 
 .UIHomePagePortlet .AdImageRight {
@@ -103,7 +103,7 @@
 
 .UIHomePagePortlet .AdImageLeft .EmptyBlock {
     font-size: 21px;
-    color: #616161;
+    color: #ffffff;
     text-align: left;
     font-family: arial;
     font-weight: bold;
@@ -215,7 +215,7 @@ _html .UIHomePagePortlet .RightAccountsContainer {
 }
 
 .UIHomePagePortlet .SeparatorLine {
-    
+
 }
 
 .UIHomePagePortlet .AccountInfos {

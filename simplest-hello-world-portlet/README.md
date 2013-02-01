@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: JBoss Portal Platform 6.0
+Target Product: JBoss Portal Platform (JPP) 6.0
 
 What is it?
 -----------
@@ -14,9 +14,9 @@ What is it?
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
-of JBoss Portal Platform Developer Guide:
-* [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL60/Starting+a+Portlet+Project)
-* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL60/Standard+Portlet+Development+%28JSR-286%29)
+of JBoss Portal Platform (JPP) Developer Guide:
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-819805.html)
+* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477012.html)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -26,7 +26,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on JBoss Portal Platform 6.0 running on Application Platform.
+The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -75,7 +75,7 @@ Access the deployed Portlet
 ---------------------------
 
 To ensure that the example portlet has been deployed successfully, do the following:
-* Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform installation is
+* Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform (JPP) installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
@@ -129,4 +129,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or JBoss Portal Platform on [User Forum](https://community.jboss.org/en/gatein?view=discussions).
+Please post feedback on this quickstart or JBoss Portal Platform (JPP) on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).

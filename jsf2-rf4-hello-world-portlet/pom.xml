@@ -22,7 +22,7 @@
     <artifactId>jsf2-rf4-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>JSF2+RF4 Hello World Portlet</name>
-    <version>3.5.0.Final</version>
+    <version>3.5.0.Final-redhat-1</version>
     <packaging>war</packaging>
     <description>A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.</description>
     <url>http://www.gatein.org</url>

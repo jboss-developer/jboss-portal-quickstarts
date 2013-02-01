@@ -20,9 +20,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>3.5.0.Final</version>
+    <version>3.5.0.Final-redhat-1</version>
     <packaging>pom</packaging>
-    <name>GateIn Portal Quickstarts Parent</name>
+    <name>JPP Quickstarts Parent</name>
     <url>http://gatein.org</url>
     <scm>
         <url>https://github.com/gatein/gatein-portal-quickstart</url>
@@ -47,13 +47,13 @@
         <compatibility.target.productVersionMajor>6</compatibility.target.productVersionMajor>
         <compatibility.target.productVersionMinor>0</compatibility.target.productVersionMinor>
         <compatibility.target.productVersion>${compatibility.target.productVersionMajor}.${compatibility.target.productVersionMinor}</compatibility.target.productVersion>
-        <compatibility.target.product>JBoss Portal Platform</compatibility.target.product>
+        <compatibility.target.product>JBoss Portal Platform (JPP)</compatibility.target.product>
         <compatibility.target.productAndVersion>${compatibility.target.product} ${compatibility.target.productVersion}</compatibility.target.productAndVersion>
 
         <compatibility.as.major.version>6</compatibility.as.major.version>
-        <compatibility.as.minor.version>0.1</compatibility.as.minor.version>
+        <compatibility.as.minor.version>0</compatibility.as.minor.version>
         <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
-        <compatibility.as.product>Application Platform</compatibility.as.product>
+        <compatibility.as.product>JBoss Application Platform</compatibility.as.product>
         <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
 
         <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
@@ -68,25 +68,45 @@
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
         <!-- External links used in READMEs -->
-        <gatein.user.forum.url>https://community.jboss.org/en/gatein?view=discussions</gatein.user.forum.url>
+        <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
+        <!-- https://community.jboss.org/en/gatein?view=discussions -->
+        <gatein.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</gatein.user.forum.url>
 
-        <jboss.confluence.root.url>https://docs.jboss.org/author/display</jboss.confluence.root.url>
+		<!-- https://docs.jboss.org/author/display -->
+        <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url>
+		<!-- ${jboss.confluence.root.url}/GTNPORTAL${compatibility.target.productVersionMajor}${compatibility.target.productVersionMinor} -->
+        <gatein.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.target.productVersionMajor}/html</gatein.docs.url>
+        <!-- ${gatein.docs.url}/Developer+Guide -->
+        <gatein.devguide.url>${gatein.docs.url}/Developer_Guide</gatein.devguide.url>
+        <!-- GDG-Portal+Containers+and+Extensions -->
+        <gatein.devguide.containers.extensions.url>${gatein.docs.url}/Developer_Guide/sid-8094155.html</gatein.devguide.containers.extensions.url>
+        <!-- /Custom+Groovy+Template+for+a+Portlet -->
+        <gatein.devguide.custom.groovy.template.url>${gatein.docs.url}/Developer_Guide/sid-8094155.html#Custom_Groovy_Template_For_Portlet</gatein.devguide.custom.groovy.template.url>
+        <!-- /Custom+Skin+for+a+Portlet -->
+        <gatein.devguide.custom.portlet.skin.url>${gatein.docs.url}/Developer_Guide/sid-8094155.html#Custom_Skin_For_Portlet</gatein.devguide.custom.portlet.skin.url>
+        <!-- /Custom+Navigation+and+Pages -->
+        <gatein.devguide.nav.pages.url>${gatein.docs.url}/Developer_Guide/sid-8094155.html#Custom_Navigation_And_Pages</gatein.devguide.nav.pages.url>
+        <!-- /Custom+Internationalization+Resource+Bundles -->
+        <gatein.devguide.i18n.url>${gatein.docs.url}/Developer_Guide/sid-8094155.html#Custom_Internationalization_Resource_Bundles</gatein.devguide.i18n.url>
 
-        <gatein.docs.url>${jboss.confluence.root.url}/GTNPORTAL${compatibility.target.productVersionMajor}${compatibility.target.productVersionMinor}</gatein.docs.url>
-        <gatein.devguide.url>${gatein.docs.url}/Developer+Guide</gatein.devguide.url>
-        <gatein.devguide.containers.extensions.url>${gatein.docs.url}/GDG-Portal+Containers+and+Extensions</gatein.devguide.containers.extensions.url>
-
-        <gatein.devguide.starting.portlet.project.url>${gatein.docs.url}/Starting+a+Portlet+Project</gatein.devguide.starting.portlet.project.url>
-        <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.url}/Standard+Portlet+Development+%28JSR-286%29</gatein.devguide.jsf.plain.jsr268.portlet.url>
-        <gatein.devguide.jsf.portlets.url>${gatein.docs.url}/JSF2+Portlet+Development</gatein.devguide.jsf.portlets.url>
-        <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.url}/Basic+JSF+Portlet+Development</gatein.devguide.jsf.basic.portlet.url>
-        <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.url}/JSF+portlet+development+with+RichFaces</gatein.devguide.jsf.rf.portlet.url>
-
-        <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Portlet+Primer</gatein.refguide.portlet.primer.url>
-
-        <jboss.admin.guide.url>${jboss.confluence.root.url}/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
-        <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
-        <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
+		<!-- Starting+a+Portlet+Project -->
+        <gatein.devguide.starting.portlet.project.url>${gatein.docs.url}/Developer_Guide/sid-819805.html</gatein.devguide.starting.portlet.project.url>
+        <!-- /Standard+Portlet+Development+%28JSR-286%29 -->
+        <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.url}/Developer_Guide/sid-55477012.html</gatein.devguide.jsf.plain.jsr268.portlet.url>
+        <!-- /JSF2+Portlet+Development -->
+        <gatein.devguide.jsf.portlets.url>${gatein.docs.url}/Developer_Guide/sid-55477014.html</gatein.devguide.jsf.portlets.url>
+        <!-- /Basic+JSF+Portlet+Development -->
+        <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.url}/Developer_Guide/sid-55477014.html#sid-55477016</gatein.devguide.jsf.basic.portlet.url>
+        <!-- /JSF+portlet+development+with+RichFaces -->
+        <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.url}/Developer_Guide/sid-55477018.html</gatein.devguide.jsf.rf.portlet.url>
+		<!-- TODO: portlet primer also in the prod docs? -->
+        <gatein.refguide.portlet.primer.url>https://docs.jboss.org/author/pages/viewpage.action?pageId=54264602</gatein.refguide.portlet.primer.url>
+		<!-- /AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide -->
+        <jboss.admin.guide.url>${jboss.confluence.root.url}/${compatibility.as.major.version}/html/Administration_and_Configuration_Guide</jboss.admin.guide.url>
+        <!-- #AdminGuide-Datasources -->
+        <jboss.admin.guide.ds.url>${jboss.admin.guide.url}/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
+        <!-- #AdminGuide-Deploymentof%5Cds.xmlfiles -->
+        <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}/chap-Datasource_Management.html#Deployment_of_-ds.xml_files</jboss.admin.guide.ds.files.url>
 
     </properties>
 

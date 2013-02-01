@@ -27,4 +27,4 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with GateIn Portal ${compatibility.target.productVersion} running on ${compatibility.as.product}.
+This release of Portal Quickstarts is compatible with ${compatibility.target.productAndVersion} running on ${compatibility.as.product}.

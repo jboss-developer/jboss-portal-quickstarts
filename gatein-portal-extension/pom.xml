@@ -21,7 +21,7 @@
 
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.5.0.Final</version>
+    <version>3.5.0.Final-redhat-1</version>
     <name>Portal Extension</name>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
