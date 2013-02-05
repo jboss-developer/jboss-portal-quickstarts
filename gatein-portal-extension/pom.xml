@@ -34,11 +34,11 @@
         <jboss.as.plugin.version>7.1.3.Final-redhat-4</jboss.as.plugin.version>
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.3.2-redhat-1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <version.org.apache.maven.surefire.plugin>2.10-redhat-1</version.org.apache.maven.surefire.plugin>
+        <version.org.apache.maven.surefire.plugin>2.10</version.org.apache.maven.surefire.plugin>
     </properties>
 
     <modules>
