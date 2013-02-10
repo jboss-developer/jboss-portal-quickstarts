@@ -85,20 +85,6 @@
                 <version>${version.org.gatein}</version>
                 <scope>provided</scope>
             </dependency>
-
-            <!--TODO:  Workaroud: remove after update exo ws to reference core CP01 -->
-            <dependency>
-                <groupId>org.exoplatform.core</groupId>
-                <artifactId>exo.core.component.xml-processing</artifactId>
-                <version>2.5.1-CP01-redhat-1</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.exoplatform.core</groupId>
-                <artifactId>exo.core.component.script.groovy</artifactId>
-                <version>2.5.1-CP01-redhat-1</version>
-                <scope>provided</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
