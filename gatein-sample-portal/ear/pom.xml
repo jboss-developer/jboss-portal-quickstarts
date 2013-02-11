@@ -19,7 +19,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.5.0.Final-redhat-1</version>
+        <version>3.5.2.Final-redhat-1</version>
         <artifactId>gatein-sample-portal</artifactId>
     </parent>
 
@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-config</artifactId>
-            <version>3.5.0.Final-redhat-1</version>
+            <version>3.5.2.Final-redhat-1</version>
         </dependency>
         <dependency>
             <groupId>org.gatein.portal</groupId>
@@ -43,13 +43,13 @@
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-war</artifactId>
-            <version>3.5.0.Final-redhat-1</version>
+            <version>3.5.2.Final-redhat-1</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-rest-war</artifactId>
-            <version>3.5.0.Final-redhat-1</version>
+            <version>3.5.2.Final-redhat-1</version>
             <type>war</type>
         </dependency>
     </dependencies>
