@@ -27,7 +27,7 @@
     <description>Sample Portal</description>
 
     <properties>
-        <version.org.gatein>3.5.2.Final-redhat-1</version.org.gatein>
+        <version.org.gatein>3.5.2.Final-redhat-2</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-2</org.jboss.bom.gatein-bom.version>
