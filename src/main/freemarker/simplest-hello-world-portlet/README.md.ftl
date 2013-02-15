@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Thomas Heute, Peter Palaga  
-Level: Beginner  
-Technologies: Portlet  
-Summary: ${project.description}  
+Author: Thomas Heute, Peter Palaga  <#-- br -->
+Level: Beginner  <#-- br -->
+Technologies: Portlet  <#-- br -->
+Summary: ${project.description}  <#-- br -->
 Target Product: ${compatibility.target.productAndVersion}
 
 What is it?

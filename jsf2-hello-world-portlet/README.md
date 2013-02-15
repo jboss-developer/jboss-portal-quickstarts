@@ -16,8 +16,8 @@ and Portlet Bridge 3.1.2.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
 of JBoss Portal Platform (JPP) Developer Guide:
-* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-819805.html)
-* [JSF2 Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html)
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
+* [JSF2 Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html)
 * [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016)
 
 
@@ -89,17 +89,18 @@ see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portl
       * Node Name: jsf2-hello-world-portlet
       * Display Name: JSF2 Hello World Portlet
     * Click Next
-    * Leave Empty Layout as it is and hit Mext
-    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+    * Leave Empty Layout as it is and hit Next
+    * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
     * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
   * If you have chosen (b) to add the portlet to an existing page:
     * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
-    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+    * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
     * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
 
 
 Undeploy the Archive
 --------------------
+
 
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.

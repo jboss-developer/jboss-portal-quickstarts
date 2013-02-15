@@ -11,3 +11,13 @@ Compatibility Information
 -------------------------
 
 This release of Portal Quickstarts is compatible with JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.
+
+<a id="toc"></a>
+Available Quickstarts
+---------------------
+
+* [Simplest Hello World Portlet](simplest-hello-world-portlet/README.html)
+* [JSF2 Hello World Portlet](jsf2-hello-world-portlet/README.html)
+* [JSF2+RF4 Hello World Portlet](jsf2-rf4-hello-world-portlet/README.html)
+* [Portal Extension](gatein-portal-extension/README.html)
+* [Sample Portal](gatein-sample-portal/README.html)

@@ -34,9 +34,10 @@
     String compatibility_target_productVersion = "6.0";
     String compatibility_target_productVersionMajor = "6";
     String compatibility_target_productVersionMinor = "0";
-    String gatein_devguide_containers_extensions_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html";
+    String gatein_devguide_containers_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Containers.html";
     String gatein_devguide_custom_groovy_template_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html#Custom_Groovy_Template_For_Portlet";
     String gatein_devguide_custom_portlet_skin_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html#Custom_Skin_For_Portlet";
+    String gatein_devguide_extensions_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html";
     String gatein_devguide_i18n_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html#Custom_Internationalization_Resource_Bundles";
     String gatein_devguide_jsf_basic_portlet_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016";
     String gatein_devguide_jsf_plain_jsr268_portlet_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477012.html";
@@ -133,8 +134,7 @@
                 </p>
                 <p>
                     Please read the
-                    <a href="<%=gatein_devguide_containers_extensions_url%>">Portal
-                    Containers and Extensions</a> section of
+                    <a href="<%=gatein_devguide_extensions_url%>">Portal Extension</a> section of
                     <a href="<%=gatein_devguide_url%>"><%=compatibility_target_product%> Developer Guide</a>
                     to learn how the Extension Mechanism works.
                 </p>

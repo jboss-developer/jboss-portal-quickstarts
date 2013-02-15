@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Peter Palaga, Brian Leathem, Ken Finnigan  
-Level: Beginner  
-Technologies: RF4, JSF2, Portlet Bridge  
-Summary: ${project.description}  
+Author: Peter Palaga, Brian Leathem, Ken Finnigan  <#-- br -->
+Level: Beginner  <#-- br -->
+Technologies: RF4, JSF2, Portlet Bridge  <#-- br -->  
+Summary: ${project.description}  <#-- br -->
 Target Product: ${compatibility.target.productAndVersion}
 
 What is it?

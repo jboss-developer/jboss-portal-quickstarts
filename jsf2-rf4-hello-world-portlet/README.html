@@ -1,0 +1,127 @@
+<html><head><title>README</title><link href="https://raw.github.com/pmuir/github-flavored-markdown/gh-pages/shared/css/documentation.css" rel="stylesheet"></link><link href="https://raw.github.com/github/github-flavored-markdown/gh-pages/shared/css/pygments.css" rel="stylesheet"></link></head><body><!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-rf4-hello-world-portlet/README.html.ftl ~-->
+
+<h1 id="toc_0">jsf2-rf4-hello-world-portlet: JSF2+RF4 Hello World Portlet</h1>
+
+<p>Author: Peter Palaga, Brian Leathem, Ken Finnigan<br/>
+Level: Beginner<br/>
+Technologies: RF4, JSF2, Portlet Bridge<br/>
+Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.<br/>
+Target Product: JBoss Portal Platform (JPP) 6.0</p>
+
+<h2 id="toc_1">What is it?</h2>
+
+<p>This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1, 
+RichFaces 4.2.3.Final and Portlet Bridge 3.1.2.Final-redhat-1.</p>
+
+<p>An introduction and some background information to this quickstart can be found in the following chapters 
+of JBoss Portal Platform (JPP) Developer Guide:
+* <a href="http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1">Starting a Portlet Project</a>
+* <a href="http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html">JSF2 Portlet Development</a>
+* <a href="http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016">Basic JSF Portlet Development</a>
+* <a href="http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477018.html">JSF portlet development with RichFaces</a></p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+
+<h2 id="toc_2">System Requirements</h2>
+
+<p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
+
+<p>The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
+
+<h2 id="toc_3">Configure Maven</h2>
+
+<p>You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
+repositories.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
+
+<h2 id="toc_4">Start the Portal</h2>
+
+<ol>
+<li>Open a command line and navigate to the root of the JBoss server directory.</li>
+<li><p>The following shows the command line to start the server with the web profile:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="p">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span> <span class="n">JBOSS_HOME</span><span class="o">\</span><span class="n">bin</span><span class="o">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+</pre></div></li>
+</ol>
+
+<h2 id="toc_5">Build and Deploy the Quickstart</h2>
+
+<ol>
+<li>Make sure you have started the Portal as described above.</li>
+<li>Open a command line and navigate to the root directory of this quickstart.</li>
+<li><p>Type this command to build and deploy the archive:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span>
+</pre></div>
+<p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
+just after <code>&lt;version&gt;${jboss.as.plugin.version}&lt;/version&gt;</code> in the pom.xml file and adjust it to suit your needs.
+<code>username</code> and <code>password</code> elements can be omitted sometimes, depending on your JBoss security settings.</p>
+<div class="highlight"><pre><span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;hostname&gt;</span>127.0.0.1<span class="nt">&lt;/hostname&gt;</span>
+    <span class="nt">&lt;port&gt;</span>9999<span class="nt">&lt;/port&gt;</span>
+    <span class="nt">&lt;username&gt;</span>admin<span class="nt">&lt;/username&gt;</span>
+    <span class="nt">&lt;password&gt;</span>secret<span class="nt">&lt;/password&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+<p>This will deploy <code>target/jsf2-rf4-hello-world-portlet.war</code> to the running instance of the portal.</p></li>
+</ol>
+
+<h2 id="toc_6">Access the deployed Portlet</h2>
+
+<p>To ensure that the example portlet has been deployed successfully, do the following:
+* Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform (JPP) installation is
+<a href="http://127.0.0.1:8080/portal/classic">http://127.0.0.1:8080/portal/classic</a>).
+* Sign in as root or other user with manager:/platform/administrators permissions.
+* Go to Top Menu &gt; Group &gt; Administration &gt; Application Registry and hit Import Applications. After that, you should
+see the newly imported JSF2+RF4 Hello World Portlet under the jsf2-rf4-hello-world-portlet Category.
+* Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
+  * If you have chosen (a) to add the portlet to a new page:
+    * Go to Top Menu &gt; Group Editor &gt; Add New Page
+    * In the Page Creation Wizard, fill in:
+      * Node Name: jsf2-rf4-hello-world-portlet
+      * Display Name: JSF2+RF4 Hello World Portlet
+    * Click Next
+    * Leave Empty Layout as it is and hit Next
+    * Drag-and-Drop JSF2+RF4 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+  * If you have chosen (b) to add the portlet to an existing page:
+    * Navigate to the page where you want to add the portlet and go to Top Menu &gt; Group Editor &gt; Edit Page
+    * Drag-and-Drop JSF2+RF4 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.</p>
+
+<h2 id="toc_7">Undeploy the Archive</h2>
+
+<ol>
+<li>Make sure you have started the JBoss Server as described above.</li>
+<li>Open a command line and navigate to the root directory of this quickstart.</li>
+<li><p>When you are finished testing, type this command to undeploy the archive:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">undeploy</span>
+</pre></div></li>
+</ol>
+
+<h2 id="toc_8">Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart</h2>
+
+<p>You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the
+<a href="https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/">JBoss Enterprise Application Platform 6 Development Guide</a>
+or <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Get Started Developing Applications">Get Started Developing Applications</a>.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
+
+<h2 id="toc_9">Debug the Application</h2>
+
+<p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
+commands to pull them into your local repository. The IDE should then detect them.</p>
+<div class="highlight"><pre>    <span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">sources</span>
+    <span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="p">=</span><span class="n">javadoc</span>
+</pre></div>
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
+
+<h2 id="toc_10">Feedback</h2>
+
+<p>Please post feedback on this quickstart or JBoss Portal Platform (JPP) on <a href="https://access.redhat.com/groups/jboss-enterprise-middleware">Online User Group</a>.</p>
+</body></html>

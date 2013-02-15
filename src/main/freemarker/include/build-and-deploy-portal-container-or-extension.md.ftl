@@ -32,5 +32,5 @@ ${compatibility.target.product} is running. Instead of that you will need to:
 
       mvn clean package
 
-   This will create `ear/target/${project.artifactId}.ear`.
+    This will create `ear/target/${project.artifactId}.ear`.
 4. Copy this file into the ${compatibility.target.product} extension deployment folder: $JBOSS_HOME/gatein/extensions

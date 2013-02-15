@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Thomas Heute, Peter Palaga
-Level: Beginner
-Technologies: ${compatibility.target.product}, Portal Container
-Summary: ${project.description}
+Author: Thomas Heute, Peter Palaga  <#-- br -->
+Level: Beginner  <#-- br -->
+Technologies: ${compatibility.target.product}, Portal Container  <#-- br -->
+Summary: ${project.description}  <#-- br -->
 Target Product: ${compatibility.target.productAndVersion}
 
 
@@ -38,7 +38,7 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of
+For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.url}) page of
 ${compatibility.target.product} Developer Guide.
 
 

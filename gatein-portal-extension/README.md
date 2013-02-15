@@ -2,10 +2,10 @@
 
 gatein-portal-extension: Portal Extension
 ============================
-Author: Thomas Heute, Peter Palaga
-Level: Beginner
-Technologies: JBoss Portal Platform (JPP), Portal Extension
-Summary: Portal Extension
+Author: Thomas Heute, Peter Palaga  
+Level: Beginner  
+Technologies: JBoss Portal Platform (JPP), Portal Extension  
+Summary: Portal Extension  
 Target Product: JBoss Portal Platform (JPP) 6.0
 
 
@@ -17,14 +17,14 @@ modifying the files included in gatein.ear. The main advantage of this approach 
 versions of JBoss Portal Platform (JPP) will be easier to handle as all the customization can be embedded in separate
 deployable packages.
 
-Portal Extension customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+Portal Extension customizes the default portal available at [http://localhost:8080/portal](http://localhost:8080/portal) by doing few changes:
 
 * Replace the front page image
 * Customize the login page
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Containers and Extensions](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html) page of
+For more details, see [Portal Containers and Extensions](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html) page of
 JBoss Portal Platform (JPP) Developer Guide.
 
 
@@ -62,14 +62,14 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:
 
       mvn clean package
 
-   This will create `ear/target/gatein-portal-extension.ear`.
+    This will create `ear/target/gatein-portal-extension.ear`.
 4. Copy this file into the JBoss Portal Platform (JPP) extension deployment folder: $JBOSS_HOME/gatein/extensions
 
 Access the Extension
 --------------------
 
 To ensure that the Portal Extension has been deployed successfully, visit the the base URL of your Portal. Which is
-[http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal/) in the most cases.
+[http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal/) in the most common case.
 
 You should see some differences compared to the original Portal.
 
@@ -89,6 +89,7 @@ Undeploy the Archive
 --------------------
 
 To delete a Portal Extension or Portal Container:
+
 1. Delete JBOSS_HOME/gatein/extensions/gatein-portal-extension.ear
 2. Restart JBoss Portal Platform (JPP)
 

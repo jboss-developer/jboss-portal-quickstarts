@@ -2,10 +2,10 @@
 
 gatein-sample-portal: Sample Portal
 ============================
-Author: Thomas Heute, Peter Palaga
-Level: Beginner
-Technologies: JBoss Portal Platform (JPP), Portal Container
-Summary: Sample Portal
+Author: Thomas Heute, Peter Palaga  
+Level: Beginner  
+Technologies: JBoss Portal Platform (JPP), Portal Container  
+Summary: Sample Portal  
 Target Product: JBoss Portal Platform (JPP) 6.0
 
 
@@ -21,7 +21,7 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-8094155.html) page of
+For more details, see [Portal Containers and Extensions](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Containers.html) page of
 JBoss Portal Platform (JPP) Developer Guide.
 
 
@@ -59,7 +59,7 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:
 
       mvn clean package
 
-   This will create `ear/target/gatein-sample-portal.ear`.
+    This will create `ear/target/gatein-sample-portal.ear`.
 4. Copy this file into the JBoss Portal Platform (JPP) extension deployment folder: $JBOSS_HOME/gatein/extensions
 
 Setup JBoss Datasources and Security Policies
@@ -103,6 +103,7 @@ Undeploy the Archive
 --------------------
 
 To delete a Portal Extension or Portal Container:
+
 1. Delete JBOSS_HOME/gatein/extensions/gatein-sample-portal.ear
 2. Restart JBoss Portal Platform (JPP)
 

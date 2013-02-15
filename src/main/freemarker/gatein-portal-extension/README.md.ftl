@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Thomas Heute, Peter Palaga
-Level: Beginner
-Technologies: ${compatibility.target.product}, Portal Extension
-Summary: ${project.description}
+Author: Thomas Heute, Peter Palaga  <#-- br -->
+Level: Beginner  <#-- br -->
+Technologies: ${compatibility.target.product}, Portal Extension  <#-- br -->
+Summary: ${project.description}  <#-- br -->
 Target Product: ${compatibility.target.productAndVersion}
 
 
@@ -34,14 +34,14 @@ modifying the files included in gatein.ear. The main advantage of this approach 
 versions of ${compatibility.target.product} will be easier to handle as all the customization can be embedded in separate
 deployable packages.
 
-${project.name} customizes the default portal available at: http://localhost:8080/portal by doing few changes:
+${project.name} customizes the default portal available at [http://localhost:8080/portal](http://localhost:8080/portal) by doing few changes:
 
 * Replace the front page image
 * Customize the login page
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.extensions.url}) page of
+For more details, see [Portal Containers and Extensions](${gatein.devguide.extensions.url}) page of
 ${compatibility.target.product} Developer Guide.
 
 
@@ -58,7 +58,7 @@ Access the Extension
 --------------------
 
 To ensure that the Portal Extension has been deployed successfully, visit the the base URL of your Portal. Which is
-[http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal/) in the most cases.
+[http://127.0.0.1:8080/portal](http://127.0.0.1:8080/portal/) in the most common case.
 
 You should see some differences compared to the original Portal.
 

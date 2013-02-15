@@ -15,8 +15,8 @@ This project demonstrates how to create the simplest possible portlet compliant 
 
 An introduction and some background information to this quickstart can be found in the following chapters 
 of JBoss Portal Platform (JPP) Developer Guide:
-* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-819805.html)
-* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477012.html)
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
+* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Standard_Portlet_Development_JSR-286_1.html)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -87,7 +87,7 @@ see the newly imported Simplest Hello World Portlet under the simplest-hello-wor
       * Node Name: simplest-hello-world-portlet
       * Display Name: Simplest Hello World Portlet
     * Click Next
-    * Leave Empty Layout as it is and hit Mext
+    * Leave Empty Layout as it is and hit Next
     * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
     * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
   * If you have chosen (b) to add the portlet to an existing page:
@@ -98,6 +98,7 @@ see the newly imported Simplest Hello World Portlet under the simplest-hello-wor
 
 Undeploy the Archive
 --------------------
+
 
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.

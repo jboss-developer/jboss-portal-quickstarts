@@ -64,17 +64,18 @@ see the newly imported ${project.name} under the ${project.artifactId} Category.
       * Node Name: ${project.artifactId}
       * Display Name: ${project.name}
     * Click Next
-    * Leave Empty Layout as it is and hit Mext
-    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+    * Leave Empty Layout as it is and hit Next
+    * Drag-and-Drop ${project.name} from the Page Editor dialog to the middle of the Page Creation Wizard
     * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
   * If you have chosen (b) to add the portlet to an existing page:
     * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
-    * Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+    * Drag-and-Drop ${project.name} from the Page Editor dialog to a place of your choice within the page.
     * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
 
 
 Undeploy the Archive
 --------------------
+
 
 1. Make sure you have started the JBoss Server as described above.
 2. Open a command line and navigate to the root directory of this quickstart.
