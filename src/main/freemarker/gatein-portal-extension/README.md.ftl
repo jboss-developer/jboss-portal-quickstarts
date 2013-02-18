@@ -21,9 +21,9 @@ ${project.artifactId}: ${project.name}
 ============================
 Author: Thomas Heute, Peter Palaga  <#-- br -->
 Level: Beginner  <#-- br -->
-Technologies: ${compatibility.target.product}, Portal Extension  <#-- br -->
+Technologies: ${compatibility.portal.projectName}, Portal Extension  <#-- br -->
 Summary: ${project.description}  <#-- br -->
-Target Product: ${compatibility.target.productAndVersion}
+Target Product: ${compatibility.portal.projectNameAndVersion}
 
 
 What is it?
@@ -31,7 +31,7 @@ What is it?
 
 This project demonstrates a simple Portal Extension. It shows how it is possible to extend and customize a portal without
 modifying the files included in gatein.ear. The main advantage of this approach to customization is that upgrades to new
-versions of ${compatibility.target.product} will be easier to handle as all the customization can be embedded in separate
+versions of ${compatibility.portal.projectName} will be easier to handle as all the customization can be embedded in separate
 deployable packages.
 
 ${project.name} customizes the default portal available at [http://localhost:8080/portal](http://localhost:8080/portal) by doing few changes:
@@ -41,8 +41,8 @@ ${project.name} customizes the default portal available at [http://localhost:808
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Containers and Extensions](${gatein.devguide.extensions.url}) page of
-${compatibility.target.product} Developer Guide.
+For more details, see [Portal Extension](${gatein.devguide.extensions.url}) page of
+${compatibility.portal.projectName} Developer Guide.
 
 
 <#include "/include/system-requirements.md.ftl">

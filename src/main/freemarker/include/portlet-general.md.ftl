@@ -52,25 +52,26 @@ Access the deployed Portlet
 ---------------------------
 
 To ensure that the example portlet has been deployed successfully, do the following:
-* Point your web browser at the base URL of your portal (URL of a default local ${compatibility.target.product} installation is
+
+* Point your web browser at the base URL of your portal (URL of a default local ${compatibility.portal.projectName} installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
 see the newly imported ${project.name} under the ${project.artifactId} Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
-  * If you have chosen (a) to add the portlet to a new page:
-    * Go to Top Menu > Group Editor > Add New Page
-    * In the Page Creation Wizard, fill in:
-      * Node Name: ${project.artifactId}
-      * Display Name: ${project.name}
-    * Click Next
-    * Leave Empty Layout as it is and hit Next
-    * Drag-and-Drop ${project.name} from the Page Editor dialog to the middle of the Page Creation Wizard
-    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
-  * If you have chosen (b) to add the portlet to an existing page:
-    * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
-    * Drag-and-Drop ${project.name} from the Page Editor dialog to a place of your choice within the page.
-    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+    * If you have chosen (a) to add the portlet to a new page:
+        * Go to Top Menu > Group Editor > Add New Page
+        * In the Page Creation Wizard, fill in:
+            * Node Name: ${project.artifactId}
+            * Display Name: ${project.name}
+        * Click Next
+        * Leave Empty Layout as it is and hit Next
+        * Drag-and-Drop ${project.name} from the Page Editor dialog to the middle of the Page Creation Wizard
+        * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+    * If you have chosen (b) to add the portlet to an existing page:
+        * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
+        * Drag-and-Drop ${project.name} from the Page Editor dialog to a place of your choice within the page.
+        * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
 
 
 Undeploy the Archive

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <profiles>
+
+    <!--
+      Configure the path to JPP Maven repository.
+      Note that the zipped distribution of JPP Maven repository can be downloaded 
+      from https://access.redhat.com/
+      Downloads > JBoss Enterprise Middleware > Portal Platform
+    -->
+    <profile>
+      <id>jpp-maven-repository</id>
+      <repositories>
+        <repository>
+          <id>jpp</id>
+          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
+          <url>file:///path/to/repo/jpp-6.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>jpp-maven-plugin-repository</id>
+          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
+          <url>file:///path/to/repo/jpp-6.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+
+  </profiles>
+
+  <activeProfiles>
+    <!-- Optionally, make the repository active by default -->
+    <activeProfile>jpp-maven-repository</activeProfile>
+  </activeProfiles>
+
+</settings>

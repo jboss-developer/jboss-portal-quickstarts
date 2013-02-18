@@ -22,5 +22,5 @@ Debug the Application
 If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.
 
-        mvn dependency:sources
-        mvn dependency:resolve -Dclassifier=javadoc
+    mvn dependency:sources
+    mvn dependency:resolve -Dclassifier=javadoc

@@ -16,6 +16,7 @@ and Portlet Bridge 3.1.2.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
 of JBoss Portal Platform (JPP) Developer Guide:
+
 * [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
 * [JSF2 Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html)
 * [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016)
@@ -32,11 +33,39 @@ The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 runnin
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
-Configure Maven
----------------
+Configure Maven for JBoss Portal Platform (JPP) 6.0
+---------------------------------------
 
-You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
-repositories.
+If you are using the JBoss Portal Platform (JPP) 6.0, you need to download and configure the Maven 
+repository from [Red Hat Customer Portal](https://access.redhat.com/), Downloads > JBoss Enterprise Middleware > Portal Platform.
+
+1. Download the JBoss Portal Platform (JPP) 6.0 Maven repository distribution ZIP and unzip it into a 
+   directory of your choice.
+
+2. Modify the `example-settings.xml` file located in the root directory of quickstarts.
+    * Replace all occurences of `path/to/repo/jpp-6.0-maven-repository` within `file:///path/to/repo/jpp-6.0-maven-repository` 
+      with the fully qualified path of the directory where you unpacked the zipped Maven repository in the previous step.
+    * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified 
+      path. For example:
+
+            file:///home/username/Quickstarts/jpp-6.0-quickstarts
+3. Configure the Maven user settings. 
+    * _Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio._
+    * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
+
+            For Linux or Mac: ~/.m2/settings.xml
+            For Windows:       \Documents and Settings\USER_NAME\.m2\settings.xml or \Users\USER_NAME\.m2\settings.xml
+    * If you have an existing `settings.xml` file, modify it with the configuration information from the `example-settings.xml` 
+      file.
+    * If there is no `settings.xml` file, copy the modified `example-settings.xml` file to the `m2` directory for your operating 
+      system and rename it to `settings.xml`.
+
+4. If you choose not to configure the `settings.xml` file described in the previous step, you must append 
+   `-s PATH_TO_QUICKSTARTS/example-settings.xml` to every Maven command. 
+    * _Note: This only valid only when you run the quickstarts using the command line._  
+    * The following is an example of a deployment passing the Maven settings using the command line:
+
+            mvn jboss-as:deploy -s PATH_TO_QUICKSTARTS/example-settings.xml
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
@@ -77,25 +106,26 @@ Access the deployed Portlet
 ---------------------------
 
 To ensure that the example portlet has been deployed successfully, do the following:
+
 * Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform (JPP) installation is
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
 see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
-  * If you have chosen (a) to add the portlet to a new page:
-    * Go to Top Menu > Group Editor > Add New Page
-    * In the Page Creation Wizard, fill in:
-      * Node Name: jsf2-hello-world-portlet
-      * Display Name: JSF2 Hello World Portlet
-    * Click Next
-    * Leave Empty Layout as it is and hit Next
-    * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
-    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
-  * If you have chosen (b) to add the portlet to an existing page:
-    * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
-    * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
-    * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+    * If you have chosen (a) to add the portlet to a new page:
+        * Go to Top Menu > Group Editor > Add New Page
+        * In the Page Creation Wizard, fill in:
+            * Node Name: jsf2-hello-world-portlet
+            * Display Name: JSF2 Hello World Portlet
+        * Click Next
+        * Leave Empty Layout as it is and hit Next
+        * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+        * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
+    * If you have chosen (b) to add the portlet to an existing page:
+        * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
+        * Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+        * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
 
 
 Undeploy the Archive
@@ -124,8 +154,8 @@ Debug the Application
 If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.
 
-        mvn dependency:sources
-        mvn dependency:resolve -Dclassifier=javadoc
+    mvn dependency:sources
+    mvn dependency:resolve -Dclassifier=javadoc
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->

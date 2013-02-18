@@ -152,8 +152,8 @@ ant.copy(
 }
 stripMdFile("${project.basedir}/target/assembly-prepare/README.md", COMMENT_PATTERN)
 
-String product = project.properties.get("compatibility.target.product");
-String productVersion = project.properties.get("compatibility.target.productVersion");
+String product = project.properties.get("compatibility.portal.projectName");
+String productVersion = project.properties.get("compatibility.portal.version");
 
 /* Pack them all together for GateIn Downloads */
 String gateinQuickstartsZipPath = "target/assembly/"+ product +"-"+ productVersion +"-Quickstarts.zip"

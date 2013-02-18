@@ -23,7 +23,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan  <#-- br -->
 Level: Beginner  <#-- br -->
 Technologies: RF4, JSF2, Portlet Bridge  <#-- br -->  
 Summary: ${project.description}  <#-- br -->
-Target Product: ${compatibility.target.productAndVersion}
+Target Product: ${compatibility.portal.projectNameAndVersion}
 
 What is it?
 -----------
@@ -32,7 +32,8 @@ This project demonstrates how to create a simplest portlet using JavaServer Face
 RichFaces ${version.org.richfaces} and Portlet Bridge ${version.org.jboss.portletbridge}.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
-of ${compatibility.target.product} Developer Guide:
+of ${compatibility.portal.projectName} Developer Guide:
+
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
 * [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
 * [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})

@@ -20,14 +20,14 @@
 Portal Quickstarts
 ==================
 
-The quickstarts demonstrate several ways how to create Portlets for ${compatibility.target.product}. They provide small, specific, working
+The quickstarts demonstrate several ways how to create Portlets for ${compatibility.portal.projectName}. They provide small, specific, working
 examples that can be used as a reference for your own project.
 
 <a id="compatibility"></a>
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with ${compatibility.target.productAndVersion} running on ${compatibility.as.product}.
+This release of Portal Quickstarts is compatible with ${compatibility.portal.projectNameAndVersion} running on ${compatibility.as.product}.
 
 <a id="toc"></a>
 Available Quickstarts

@@ -23,7 +23,7 @@ Author: Thomas Heute, Peter Palaga  <#-- br -->
 Level: Beginner  <#-- br -->
 Technologies: Portlet  <#-- br -->
 Summary: ${project.description}  <#-- br -->
-Target Product: ${compatibility.target.productAndVersion}
+Target Product: ${compatibility.portal.projectNameAndVersion}
 
 What is it?
 -----------
@@ -31,7 +31,8 @@ What is it?
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
-of ${compatibility.target.product} Developer Guide:
+of ${compatibility.portal.projectName} Developer Guide:
+
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
 * [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
 

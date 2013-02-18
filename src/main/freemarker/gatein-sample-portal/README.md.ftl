@@ -21,9 +21,9 @@ ${project.artifactId}: ${project.name}
 ============================
 Author: Thomas Heute, Peter Palaga  <#-- br -->
 Level: Beginner  <#-- br -->
-Technologies: ${compatibility.target.product}, Portal Container  <#-- br -->
+Technologies: ${compatibility.portal.projectName}, Portal Container  <#-- br -->
 Summary: ${project.description}  <#-- br -->
-Target Product: ${compatibility.target.productAndVersion}
+Target Product: ${compatibility.portal.projectNameAndVersion}
 
 
 What is it?
@@ -38,8 +38,8 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers and Extensions](${gatein.devguide.containers.url}) page of
-${compatibility.target.product} Developer Guide.
+For more details, see [Portal Containers](${gatein.devguide.containers.url}) page of
+${compatibility.portal.projectName} Developer Guide.
 
 
 <#include "/include/system-requirements.md.ftl">
@@ -59,7 +59,7 @@ cannot[*] be defined within EARs because otherwise centralized management would 
 the reason why it is not enough just to deploy `${project.artifactId}.ear`. You also need to define the 
 Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box ${compatibility.target.productAndVersion} installation contains the needed pieces
+The `standalone.xml` available in the out-of-the-box ${compatibility.portal.projectNameAndVersion} installation contains the needed pieces
 of XML commented out. Please search for `Uncommented this when deploying ${project.artifactId}` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
