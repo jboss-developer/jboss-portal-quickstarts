@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
   <profiles>
@@ -9,18 +8,18 @@
     <!--
       This is the harder way. Use it if you cannot use settings-hosted-repo.xml for some reason.
 
-      Setup with zipped repositories downloaded from 
-      
-        https://access.redhat.com/ Downloads > JBoss Enterprise Middleware
-        
-      See the sibling README file for more information. 
+      Setup with zipped repositories downloaded from
+
+      https://access.redhat.com/ Downloads > JBoss Enterprise Middleware
+
+      See the sibling README file for more information.
     -->
     <profile>
       <id>jboss-local-repositories</id>
       <repositories>
         <repository>
           <id>jpp</id>
-          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
+          <!-- Change this to where you have unpacked the zipped JPP 6.0.0 Maven repository -->
           <url>file:///path/to/repo/jpp-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
@@ -31,7 +30,7 @@
         </repository>
         <repository>
           <id>wfk</id>
-          <!-- Change this to where you have unpacked the zipped Web Framework Kit Maven repository -->
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.1.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
@@ -41,8 +40,8 @@
           </snapshots>
         </repository>
         <repository>
-          <id>eap</id>
-          <!-- Change this to where you have unpacked the zipped Application Platform Maven repository -->
+          <id>eap601</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.0.1-maven-repository</url>
           <releases>
             <enabled>true</enabled>
@@ -51,9 +50,20 @@
             <enabled>false</enabled>
           </snapshots>
         </repository>
+        <repository>
+          <id>eap600</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.0.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
       </repositories>
-      
-      
+
+
       <pluginRepositories>
         <pluginRepository>
           <id>jpp-plugins</id>
@@ -78,9 +88,20 @@
           </snapshots>
         </pluginRepository>
         <pluginRepository>
-          <id>eap-plugins</id>
-          <!-- Change this to where you have unpacked the zipped Application Platform Maven repository -->
+          <id>eap601-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.0.1-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>eap600-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>

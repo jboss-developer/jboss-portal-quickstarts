@@ -38,13 +38,9 @@ of JBoss Portal Platform (JPP) Developer Guide:</p>
 
 <h3 id="toc_4">A. Use hosted Maven repository</h3>
 
-<p>This is the easier and thus recommended option.</p>
-
-<ol>
-<li><p>Configure the Maven user settings. </p>
+<p>This is the easier and thus recommended option. You need to configure the Maven user settings as follows:</p>
 
 <ul>
-<li><em>Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio.</em></li>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
 <div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="p">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
 <span class="n">For</span> <span class="n">Windows</span><span class="p">:</span>       <span class="o">\</span><span class="n">Users</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="o">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
@@ -53,17 +49,7 @@ of JBoss Portal Platform (JPP) Developer Guide:</p>
 file located in the root folder of JBoss Portal Platform (JPP) quickstarts.</p></li>
 <li><p>If there is no <code>settings.xml</code> file, copy the modified <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your 
 operating system and rename it to <code>settings.xml</code>.</p></li>
-</ul></li>
-<li><p>If you choose not to configure the <code>settings.xml</code> file described in the previous step, you must append 
-<code>-s PATH_TO_QUICKSTARTS/settings-hosted-repo.xml</code> to every Maven command. </p>
-
-<ul>
-<li><em>Note: This only valid only when you run the quickstarts using the command line.</em><br/></li>
-<li><p>The following is an example of a deployment passing the Maven settings using the command line:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span> <span class="o">-</span><span class="n">s</span> <span class="n">PATH_TO_QUICKSTARTS</span><span class="o">/</span><span class="n">settings</span><span class="o">-</span><span class="n">hosted</span><span class="o">-</span><span class="n">repo</span><span class="p">.</span><span class="n">xml</span>
-</pre></div></li>
-</ul></li>
-</ol>
+</ul>
 
 <h3 id="toc_5">B. Download &amp; setup zipped Maven repositories</h3>
 
@@ -75,6 +61,7 @@ Downloads &gt; JBoss Enterprise Middleware:</p>
 <li>JBoss Portal Platform (JPP) 6.0 Maven Repository </li>
 <li>Web Framework Kit 2.1.0 Maven Repository</li>
 <li>Application Platform 6.0.1 Maven Repository</li>
+<li>Application Platform 6.0.0 Maven Repository</li>
 </ul>
 
 <p>Unpack each of these files to a separate directory.</p></li>
@@ -92,10 +79,9 @@ path. For example:</p>
 <div class="highlight"><pre><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">home</span><span class="o">/</span><span class="n">joedoe</span><span class="o">/</span><span class="n">Quickstarts</span><span class="o">/</span><span class="n">jpp</span><span class="o">-</span><span class="mf">6.0</span><span class="o">-</span><span class="n">quickstarts</span>
 </pre></div></li>
 </ul></li>
-<li><p>Configure the Maven user settings. </p>
+<li><p>Configure the Maven user settings.</p>
 
 <ul>
-<li><em>Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio.</em></li>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
 <div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="p">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
 <span class="n">For</span> <span class="n">Windows</span><span class="p">:</span>       <span class="o">\</span><span class="n">Users</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="o">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
@@ -104,15 +90,6 @@ path. For example:</p>
 file.</p></li>
 <li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>.m2</code> directory for your 
 operating system and rename it to <code>settings.xml</code>.</p></li>
-</ul></li>
-<li><p>If you choose not to configure the <code>settings.xml</code> file described in the previous step, you must append 
-<code>-s PATH_TO_QUICKSTARTS/example-settings.xml</code> to every Maven command. </p>
-
-<ul>
-<li><em>Note: This only valid only when you run the quickstarts using the command line.</em><br/></li>
-<li><p>The following is an example of a deployment passing the Maven settings using the command line:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span> <span class="o">-</span><span class="n">s</span> <span class="n">PATH_TO_QUICKSTARTS</span><span class="o">/</span><span class="n">example</span><span class="o">-</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-</pre></div></li>
 </ul></li>
 </ol>
 
