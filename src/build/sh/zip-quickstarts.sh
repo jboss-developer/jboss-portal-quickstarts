@@ -6,8 +6,10 @@ set -e
 QUICKSTARTS_ROOT_DIR="$1"
 OUTPUT_ZIP="$2"
 
+ZIPPED_DIR="$QUICKSTARTS_ROOT_DIR/target/assembly-prepare/$(basename "$OUTPUT_ZIP" .zip)"
+
 rm -Rf "$QUICKSTARTS_ROOT_DIR/target/assembly-prepare"
-mkdir -p "$QUICKSTARTS_ROOT_DIR/target/assembly-prepare"
+mkdir -p "$ZIPPED_DIR"
 
 function stripInclusionComments {
     for f in "$@"
@@ -21,13 +23,15 @@ cd "$QUICKSTARTS_ROOT_DIR"
 find . -type f \
     | grep -v "/dist/" | grep -v "/target/" | grep -v "\./src/" | grep -v "\./pom.xml$" \
     | grep -v "/\.[^/][^/]*$" | grep -v "/\.[^/][^/]*/" \
-    | xargs tar cf - | (cd "$QUICKSTARTS_ROOT_DIR/target/assembly-prepare" && tar xf - )
+    | xargs tar cf - | (cd "$ZIPPED_DIR" && tar xf - )
 
-cd "$QUICKSTARTS_ROOT_DIR/target/assembly-prepare"
+cd "$ZIPPED_DIR"
 
 for f in $(find . -iname readme.md -type f)
 do
     stripInclusionComments "$f"
 done
 
-zip -rq "$OUTPUT_ZIP" .
+cd "$QUICKSTARTS_ROOT_DIR/target/assembly-prepare"
+
+zip -rq "$OUTPUT_ZIP" "$(basename "$ZIPPED_DIR")"
