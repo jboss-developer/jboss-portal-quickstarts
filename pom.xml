@@ -47,27 +47,39 @@
         
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
         <compatibility.portal.community.versionMinor>5</compatibility.portal.community.versionMinor>
-        <compatibility.portal.community.version>${compatibility.portal.community.versionMajor}.${compatibility.portal.community.versionMinor}</compatibility.portal.community.version>
+        <compatibility.portal.community.versionMicro>2</compatibility.portal.community.versionMicro>
+        <compatibility.portal.community.versionMm>${compatibility.portal.community.versionMajor}.${compatibility.portal.community.versionMinor}</compatibility.portal.community.versionMm>
+        <compatibility.portal.community.versionMmm>${compatibility.portal.community.versionMm}.${compatibility.portal.community.versionMicro}</compatibility.portal.community.versionMmm>
         <compatibility.portal.community.projectName>GateIn Portal</compatibility.portal.community.projectName>
-        <compatibility.portal.community.projectNameAndVersion>${compatibility.portal.community.projectName} ${compatibility.portal.community.version}</compatibility.portal.community.projectNameAndVersion>
+        <compatibility.portal.community.projectNameAndVersion>${compatibility.portal.community.projectName} ${compatibility.portal.community.versionMm}</compatibility.portal.community.projectNameAndVersion>
 
         <compatibility.portal.product.versionMajor>6</compatibility.portal.product.versionMajor>
         <compatibility.portal.product.versionMinor>0</compatibility.portal.product.versionMinor>
-        <compatibility.portal.product.version>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.version>
+        <compatibility.portal.product.versionMicro>0</compatibility.portal.product.versionMicro>
+        <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
+        <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
         <compatibility.portal.product.projectName>JBoss Portal Platform (JPP)</compatibility.portal.product.projectName>
-        <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.version}</compatibility.portal.product.projectNameAndVersion>
+        <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
         <compatibility.portal.versionMinor>${compatibility.portal.product.versionMinor}</compatibility.portal.versionMinor>
-        <compatibility.portal.version>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.version>
+        <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
+        <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
         <compatibility.portal.projectName>${compatibility.portal.product.projectName}</compatibility.portal.projectName>
-        <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.version}</compatibility.portal.projectNameAndVersion>
+        <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
         
         <compatibility.as.major.version>6</compatibility.as.major.version>
         <compatibility.as.minor.version>0</compatibility.as.minor.version>
+        <compatibility.as.versionMicro>1</compatibility.as.versionMicro>
         <compatibility.as.version>${compatibility.as.major.version}.${compatibility.as.minor.version}</compatibility.as.version>
+        <compatibility.as.versionMmm>${compatibility.as.version}.${compatibility.as.versionMicro}</compatibility.as.versionMmm>
         <compatibility.as.product>JBoss Application Platform</compatibility.as.product>
         <compatibility.as.productAndVersion>${compatibility.as.product} ${compatibility.as.version}</compatibility.as.productAndVersion>
+
+        <compatibility.wfk.versionMajor>2</compatibility.wfk.versionMajor>
+        <compatibility.wfk.versionMinor>1</compatibility.wfk.versionMinor>
+        <compatibility.wfk.versionMicro>0</compatibility.wfk.versionMicro>
+        <compatibility.wfk.versionMmm>${compatibility.wfk.versionMajor}.${compatibility.wfk.versionMinor}.${compatibility.wfk.versionMicro}</compatibility.wfk.versionMmm>
 
         <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
 
@@ -81,6 +93,8 @@
         <maven.replacer.plugin.version>1.5.1</maven.replacer.plugin.version>
 
         <!-- External links used in READMEs -->
+        <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
+        
         <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
         <!-- https://community.jboss.org/en/gatein?view=discussions -->
         <gatein.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</gatein.user.forum.url>

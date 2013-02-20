@@ -17,7 +17,7 @@ mdconv=~/git/jboss-as-quickstart/dist/github-flavored-markdown.rb
 
 rm -Rf dist/target
 mkdir -p dist/target
-touch target/toc.html
+touch dist/target/toc.html
 
 rootDir="$(pwd)"
 

@@ -33,34 +33,66 @@ The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 runnin
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
-Configure Maven for JBoss Portal Platform (JPP) 6.0
----------------------------------------
+Configure Maven
+---------------
 
-If you are using the JBoss Portal Platform (JPP) 6.0, you need to download and configure the Maven 
-repository from [Red Hat Customer Portal](https://access.redhat.com/), Downloads > JBoss Enterprise Middleware > Portal Platform.
+You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download & setup zipped Maven repository.
 
-1. Download the JBoss Portal Platform (JPP) 6.0 Maven repository distribution ZIP and unzip it into a 
-   directory of your choice.
+### A. Use hosted Maven repository
 
-2. Modify the `example-settings.xml` file located in the root directory of quickstarts.
-    * Replace all occurences of `path/to/repo/jpp-6.0-maven-repository` within `file:///path/to/repo/jpp-6.0-maven-repository` 
-      with the fully qualified path of the directory where you unpacked the zipped Maven repository in the previous step.
-    * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified 
-      path. For example:
+This is the easier and thus recommended option.
 
-            file:///home/username/Quickstarts/jpp-6.0-quickstarts
-3. Configure the Maven user settings. 
+1.  Configure the Maven user settings. 
     * _Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio._
     * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
 
             For Linux or Mac: ~/.m2/settings.xml
-            For Windows:       \Documents and Settings\USER_NAME\.m2\settings.xml or \Users\USER_NAME\.m2\settings.xml
+            For Windows:       \Users\USER_NAME\.m2\settings.xml or \Documents and Settings\USER_NAME\.m2\settings.xml
+    * If you have an existing `settings.xml` file, modify it with the configuration information from the `settings-hosted-repo.xml` 
+      file located in the root folder of JBoss Portal Platform (JPP) quickstarts.
+    * If there is no `settings.xml` file, copy the modified `settings-hosted-repo.xml` file to the `.m2` directory for your 
+      operating system and rename it to `settings.xml`.
+
+2.  If you choose not to configure the `settings.xml` file described in the previous step, you must append 
+    `-s PATH_TO_QUICKSTARTS/settings-hosted-repo.xml` to every Maven command. 
+    * _Note: This only valid only when you run the quickstarts using the command line._  
+    * The following is an example of a deployment passing the Maven settings using the command line:
+
+            mvn jboss-as:deploy -s PATH_TO_QUICKSTARTS/settings-hosted-repo.xml
+
+### B. Download & setup zipped Maven repositories
+
+1.  Download the following zipped Maven repositories from [Red Hat Customer Portal](https://access.redhat.com/), 
+    Downloads > JBoss Enterprise Middleware:
+    * JBoss Portal Platform (JPP) 6.0 Maven Repository 
+    * Web Framework Kit 2.1.0 Maven Repository
+    * Application Platform 6.0.1 Maven Repository
+    
+    Unpack each of these files to a separate directory.
+
+2.  Modify the `settings-zipped-repos.xml` file located in the root directory of JBoss Portal Platform (JPP) 
+    quickstarts:
+    * For each zipped repository unpacked in the previous step, replace `/path/to/repo/` within `file:///path/to/repo/...`
+      with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous 
+      step.
+    * Note that path to each repository needs tobe set twice: one within `<repository>` tag and one within
+      `<pluginRepository>` tag.
+    * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified 
+      path. For example:
+
+            file:///home/joedoe/Quickstarts/jpp-6.0-quickstarts
+3.  Configure the Maven user settings. 
+    * _Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio._
+    * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
+
+            For Linux or Mac: ~/.m2/settings.xml
+            For Windows:       \Users\USER_NAME\.m2\settings.xml or \Documents and Settings\USER_NAME\.m2\settings.xml
     * If you have an existing `settings.xml` file, modify it with the configuration information from the `example-settings.xml` 
       file.
-    * If there is no `settings.xml` file, copy the modified `example-settings.xml` file to the `m2` directory for your operating 
-      system and rename it to `settings.xml`.
+    * If there is no `settings.xml` file, copy the modified `example-settings.xml` file to the `.m2` directory for your 
+      operating system and rename it to `settings.xml`.
 
-4. If you choose not to configure the `settings.xml` file described in the previous step, you must append 
+4.  If you choose not to configure the `settings.xml` file described in the previous step, you must append 
    `-s PATH_TO_QUICKSTARTS/example-settings.xml` to every Maven command. 
     * _Note: This only valid only when you run the quickstarts using the command line._  
     * The following is an example of a deployment passing the Maven settings using the command line:

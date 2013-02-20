@@ -7,18 +7,15 @@
   <profiles>
 
     <!--
-      Configure the path to JPP Maven repository.
-      Note that the zipped distribution of JPP Maven repository can be downloaded 
-      from https://access.redhat.com/
-      Downloads > JBoss Enterprise Middleware > Portal Platform
+      The easier and thus prefered option:
+      Use Maven repository hosted at maven.repository.redhat.com
     -->
     <profile>
-      <id>jpp-maven-repository</id>
+      <id>rh-hosted-repo</id>
       <repositories>
         <repository>
-          <id>jpp</id>
-          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
-          <url>file:///path/to/repo/jpp-6.0-maven-repository</url>
+          <id>rh-all</id>
+          <url>http://maven.repository.redhat.com/techpreview/all</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -27,11 +24,11 @@
           </snapshots>
         </repository>
       </repositories>
+      
       <pluginRepositories>
         <pluginRepository>
-          <id>jpp-maven-plugin-repository</id>
-          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
-          <url>file:///path/to/repo/jpp-6.0-maven-repository</url>
+          <id>rh-all-plugins</id>
+          <url>http://maven.repository.redhat.com/techpreview/all</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -45,8 +42,8 @@
   </profiles>
 
   <activeProfiles>
-    <!-- Optionally, make the repository active by default -->
-    <activeProfile>jpp-maven-repository</activeProfile>
+    <!-- Make the repository active by default -->
+    <activeProfile>rh-hosted-repo</activeProfile>
   </activeProfiles>
 
 </settings>

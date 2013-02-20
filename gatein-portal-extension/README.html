@@ -37,22 +37,64 @@ JBoss Portal Platform (JPP) Developer Guide.</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 
-<h2 id="toc_3">Configure Maven for JBoss Portal Platform (JPP) 6.0</h2>
+<h2 id="toc_3">Configure Maven</h2>
 
-<p>If you are using the JBoss Portal Platform (JPP) 6.0, you need to download and configure the Maven 
-repository from <a href="https://access.redhat.com/">Red Hat Customer Portal</a>, Downloads &gt; JBoss Enterprise Middleware &gt; Portal Platform.</p>
+<p>You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download &amp; setup zipped Maven repository.</p>
+
+<h3 id="toc_4">A. Use hosted Maven repository</h3>
+
+<p>This is the easier and thus recommended option.</p>
 
 <ol>
-<li><p>Download the JBoss Portal Platform (JPP) 6.0 Maven repository distribution ZIP and unzip it into a 
-directory of your choice.</p></li>
-<li><p>Modify the <code>example-settings.xml</code> file located in the root directory of quickstarts.</p>
+<li><p>Configure the Maven user settings. </p>
 
 <ul>
-<li>Replace all occurences of <code>path/to/repo/jpp-6.0-maven-repository</code> within <code>file:///path/to/repo/jpp-6.0-maven-repository</code> 
-with the fully qualified path of the directory where you unpacked the zipped Maven repository in the previous step.</li>
+<li><em>Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio.</em></li>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="p">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span>       <span class="o">\</span><span class="n">Users</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="o">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code> 
+file located in the root folder of JBoss Portal Platform (JPP) quickstarts.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your 
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul></li>
+<li><p>If you choose not to configure the <code>settings.xml</code> file described in the previous step, you must append 
+<code>-s PATH_TO_QUICKSTARTS/settings-hosted-repo.xml</code> to every Maven command. </p>
+
+<ul>
+<li><em>Note: This only valid only when you run the quickstarts using the command line.</em><br/></li>
+<li><p>The following is an example of a deployment passing the Maven settings using the command line:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span> <span class="o">-</span><span class="n">s</span> <span class="n">PATH_TO_QUICKSTARTS</span><span class="o">/</span><span class="n">settings</span><span class="o">-</span><span class="n">hosted</span><span class="o">-</span><span class="n">repo</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+</ul></li>
+</ol>
+
+<h3 id="toc_5">B. Download &amp; setup zipped Maven repositories</h3>
+
+<ol>
+<li><p>Download the following zipped Maven repositories from <a href="https://access.redhat.com/">Red Hat Customer Portal</a>, 
+Downloads &gt; JBoss Enterprise Middleware:</p>
+
+<ul>
+<li>JBoss Portal Platform (JPP) 6.0 Maven Repository </li>
+<li>Web Framework Kit 2.1.0 Maven Repository</li>
+<li>Application Platform 6.0.1 Maven Repository</li>
+</ul>
+
+<p>Unpack each of these files to a separate directory.</p></li>
+<li><p>Modify the <code>settings-zipped-repos.xml</code> file located in the root directory of JBoss Portal Platform (JPP) 
+quickstarts:</p>
+
+<ul>
+<li>For each zipped repository unpacked in the previous step, replace <code>/path/to/repo/</code> within <code>file:///path/to/repo/...</code>
+with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous 
+step.</li>
+<li>Note that path to each repository needs tobe set twice: one within <code>&lt;repository&gt;</code> tag and one within
+<code>&lt;pluginRepository&gt;</code> tag.</li>
 <li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified 
 path. For example:</p>
-<div class="highlight"><pre><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">home</span><span class="o">/</span><span class="n">username</span><span class="o">/</span><span class="n">Quickstarts</span><span class="o">/</span><span class="n">jpp</span><span class="o">-</span><span class="mf">6.0</span><span class="o">-</span><span class="n">quickstarts</span>
+<div class="highlight"><pre><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">home</span><span class="o">/</span><span class="n">joedoe</span><span class="o">/</span><span class="n">Quickstarts</span><span class="o">/</span><span class="n">jpp</span><span class="o">-</span><span class="mf">6.0</span><span class="o">-</span><span class="n">quickstarts</span>
 </pre></div></li>
 </ul></li>
 <li><p>Configure the Maven user settings. </p>
@@ -61,12 +103,12 @@ path. For example:</p>
 <li><em>Note:This is the recommended approach and is required if you are running the quickstarts in JBoss Developer Studio.</em></li>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
 <div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="p">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span>       <span class="o">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="o">\</span><span class="n">Users</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span>       <span class="o">\</span><span class="n">Users</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="o">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="o">\</span><span class="n">USER_NAME</span><span class="o">\</span><span class="p">.</span><span class="n">m2</span><span class="o">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code> 
 file.</p></li>
-<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>m2</code> directory for your operating 
-system and rename it to <code>settings.xml</code>.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>.m2</code> directory for your 
+operating system and rename it to <code>settings.xml</code>.</p></li>
 </ul></li>
 <li><p>If you choose not to configure the <code>settings.xml</code> file described in the previous step, you must append 
 <code>-s PATH_TO_QUICKSTARTS/example-settings.xml</code> to every Maven command. </p>
@@ -81,7 +123,7 @@ system and rename it to <code>settings.xml</code>.</p></li>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/build-and-deploy-portal-container-or-extension.md.ftl ~-->
 
-<h2 id="toc_4">Build and Deploy</h2>
+<h2 id="toc_6">Build and Deploy</h2>
 
 <p>Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
 <code>mvn jboss-as:deploy</code> or copying to the default JBoss Application Platform deployment folder when 
@@ -99,7 +141,7 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:</p>
 <li><p>Copy this file into the JBoss Portal Platform (JPP) extension deployment folder: <code>$JBOSS_HOME/gatein/extensions</code></p></li>
 </ol>
 
-<h2 id="toc_5">Access the Extension</h2>
+<h2 id="toc_7">Access the Extension</h2>
 
 <p>To ensure that the Portal Extension has been deployed successfully, visit the the base URL of your Portal. Which is
 <a href="http://127.0.0.1:8080/portal/">http://127.0.0.1:8080/portal</a> in the most common case.</p>
@@ -108,7 +150,7 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 
-<h2 id="toc_6">Start the Portal</h2>
+<h2 id="toc_8">Start the Portal</h2>
 
 <ol>
 <li>Open a command line and navigate to the root of the JBoss server directory.</li>
@@ -118,7 +160,7 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:</p>
 </pre></div></li>
 </ol>
 
-<h2 id="toc_7">Undeploy the Archive</h2>
+<h2 id="toc_9">Undeploy the Archive</h2>
 
 <p>To delete a Portal Extension or Portal Container:</p>
 
@@ -130,14 +172,14 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:</p>
 <p>Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
 reversible.</p>
 
-<h2 id="toc_8">Use JBoss Developer Studio or Eclipse to Run this Quickstart</h2>
+<h2 id="toc_10">Use JBoss Developer Studio or Eclipse to Run this Quickstart</h2>
 
 <p>Portal Extensions and Portal Containers are not directly deployable from JBoss Developer Studio nor Eclipse at this time. 
 See Build and Deploy section above for an alternative.  </p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 
-<h2 id="toc_9">Debug the Application</h2>
+<h2 id="toc_11">Debug the Application</h2>
 
 <p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.</p>
@@ -146,7 +188,7 @@ commands to pull them into your local repository. The IDE should then detect the
 </pre></div>
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 
-<h2 id="toc_10">Feedback</h2>
+<h2 id="toc_12">Feedback</h2>
 
 <p>Please post feedback on this quickstart or JBoss Portal Platform (JPP) on <a href="https://access.redhat.com/groups/jboss-enterprise-middleware">Online User Group</a>.</p>
 </body></html>
