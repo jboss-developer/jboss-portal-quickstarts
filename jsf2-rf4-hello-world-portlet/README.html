@@ -117,7 +117,7 @@ operating system and rename it to <code>settings.xml</code>.</p></li>
 <div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span>
 </pre></div>
 <p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
-just after <code>&lt;version&gt;${jboss.as.plugin.version}&lt;/version&gt;</code> in the pom.xml file and adjust it to suit your needs.
+just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</code> in the pom.xml file and adjust it to suit your needs.
 <code>username</code> and <code>password</code> elements can be omitted sometimes, depending on your JBoss security settings.</p>
 <div class="highlight"><pre><span class="nt">&lt;configuration&gt;</span>
     <span class="nt">&lt;hostname&gt;</span>127.0.0.1<span class="nt">&lt;/hostname&gt;</span>

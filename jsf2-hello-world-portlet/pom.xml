@@ -38,8 +38,6 @@
         <!-- GateIn Bill of Materials (BOM) version -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-2</org.jboss.bom.gatein-bom.version>
 
-        <!-- Plugin versions and settings -->
-        <jboss.as.plugin.version>7.1.3.Final-redhat-4</jboss.as.plugin.version>
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
@@ -110,7 +108,6 @@
           <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${jboss.as.plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
