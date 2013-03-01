@@ -120,10 +120,10 @@ of XML commented out. Please search for `Uncommented this when deploying gatein-
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
+> described in [JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
+[JBoss Application Platform 6.0 Admin Guide](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
 
 
 Access the Sample Portal

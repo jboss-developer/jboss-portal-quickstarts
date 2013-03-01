@@ -38,6 +38,7 @@ of ${compatibility.portal.projectName} Developer Guide:
 * [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
 * [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
 * [JSF portlet development with RichFaces](${gatein.devguide.jsf.rf.portlet.url})
+* [Portlet Bridge](${gatein.refguide.pbr.url})
 
 
 <#include "/include/portlet-general.md.ftl">

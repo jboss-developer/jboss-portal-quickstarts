@@ -18,9 +18,10 @@ An introduction and some background information to this quickstart can be found 
 of JBoss Portal Platform (JPP) Developer Guide:
 
 * [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
-* [JSF2 Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html)
-* [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477014.html#sid-55477016)
-* [JSF portlet development with RichFaces](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/sid-55477018.html)
+* [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development)
+* [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development)
+* [JSF portlet development with RichFaces](https://docs.jboss.org/author/display/GTNPORTAL35/JSF+Portlet+Development+with+RichFaces)
+* [Portlet Bridge](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
