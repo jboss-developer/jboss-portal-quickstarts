@@ -20,7 +20,7 @@
         <repository>
           <id>jpp</id>
           <!-- Change this to where you have unpacked the zipped JPP 6.0.0 Maven repository -->
-          <url>file:///path/to/repo/jpp-6.0.0-maven-repository</url>
+          <url>file:///path/to/repo/jboss-jpp-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -29,9 +29,20 @@
           </snapshots>
         </repository>
         <repository>
-          <id>wfk</id>
+          <id>wfk210</id>
           <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>wfk200</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -68,7 +79,7 @@
         <pluginRepository>
           <id>jpp-plugins</id>
           <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
-          <url>file:///path/to/repo/jpp-6.0.0-maven-repository</url>
+          <url>file:///path/to/repo/jboss-jpp-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -77,9 +88,20 @@
           </snapshots>
         </pluginRepository>
         <pluginRepository>
-          <id>wfk-plugins</id>
-          <!-- Change this to where you have unpacked the zipped Web Framework Kit Maven repository -->
+          <id>wfk210-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>wfk200-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>

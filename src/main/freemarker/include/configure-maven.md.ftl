@@ -40,6 +40,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     Downloads > JBoss Enterprise Middleware:
     * ${compatibility.portal.product.projectNameAndVersion} Maven Repository 
     * Web Framework Kit ${compatibility.wfk.versionMmm} Maven Repository
+    * Web Framework Kit 2.0.0 Maven Repository
     * Application Platform ${compatibility.as.versionMmm} Maven Repository
     * Application Platform 6.0.0 Maven Repository
     

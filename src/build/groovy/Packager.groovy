@@ -87,22 +87,45 @@ def setTextContent(parent, nodeName, textContent) {
     myNode.setTextContent(textContent)
 }
 
-def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, product, productVersion) {
+def setTextContentByXPath(xPath, xPathExpression, parent, textContent) {
+	Node n = xPath.evaluate(xPathExpression, parent, XPathConstants.NODE);
+	n.setTextContent(textContent);
+}
+
+def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, project) {
+	String product = project.properties.get("compatibility.portal.projectName");
+	String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
+	String majorVersion = project.properties.get("compatibility.portal.versionMajor");
+	String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url");
+	
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
         projectNode = descriptorDom.createElement("project")
         Node projectsNode = xPath.evaluate("/projects", descriptorDom, XPathConstants.NODE).appendChild(projectNode)
         projectsNode.appendChild(projectNode)
-        setTextContent(projectNode, "name", moduleProject.artifactId)
     }
 
-    setTextContent(projectNode, "category", "${product} ${productVersion} Quickstarts")
+    setTextContent(projectNode, "name", productNameShort.toLowerCase() + majorVersion + "-" + moduleProject.artifactId)
+    //setTextContent(projectNode, "category", "${product} "+ project.properties.get("compatibility.portal.versionMajor") +".x Quickstarts")
+    setTextContent(projectNode, "category", "Portal Quickstarts")
     setTextContent(projectNode, "included-projects", moduleProject.artifactId)
-    setTextContent(projectNode, "shortDescription", moduleProject.name)
+    setTextContent(projectNode, "shortDescription", productNameShort +" " + majorVersion + ": " + moduleProject.name)
     setTextContent(projectNode, "description", moduleProject.description)
     setTextContent(projectNode, "size", String.valueOf(zipFile.length()))
-    setTextContent(projectNode, "url", "https://github.com/downloads/gatein/gatein-portal-quickstart/"+ zipFile.getName())
-
+    setTextContent(projectNode, "url", "${downloadsRootUrl}/"+ zipFile.getName())
+	
+    setTextContentByXPath(xPath, "fixes/fix[@type='wtpruntime']/property[@name='description']", 
+			projectNode, "This project example requires ${product} ${majorVersion}.x");
+	
+	String runtimeInfix = productNameShort.equals("GateIn") ? "" : "eap.";
+	setTextContentByXPath(
+			xPath, 
+			"fixes/fix[@type='wtpruntime']/property[@name='allowed-types']", 
+			projectNode, 
+			"org.jboss.ide.eclipse.as.runtime.${runtimeInfix}"+ 
+			project.properties.get("compatibility.as.major.version") +
+			project.properties.get("compatibility.as.minor.version")
+	);
 }
 
 def stripMdFile(path, pattern) {
@@ -152,17 +175,21 @@ ant.copy(
 }
 stripMdFile("${project.basedir}/target/assembly-prepare/README.md", COMMENT_PATTERN)
 
+
+/* Pack them all together for GateIn Downloads */
 String product = project.properties.get("compatibility.portal.projectName");
 String productVersion = project.properties.get("compatibility.portal.versionMm");
 
-/* Pack them all together for GateIn Downloads */
-String gateinQuickstartsZipPath = "target/assembly/"+ product +"-"+ productVersion +"-Quickstarts.zip"
+String gateinQuickstartsZipPath = "target/assembly/"+ 
+	project.properties.get("compatibility.portal.projectNameShort") +
+	"-"+ 
+	productVersion +"-Quickstarts.zip";
+	
 ant.zip (
     destfile: gateinQuickstartsZipPath,
     basedir: "target/assembly-prepare",
     includes: "README.md, LICENSE.txt"
 )
-
 
 
 MavenXpp3Reader pomReader = new MavenXpp3Reader()
@@ -179,7 +206,7 @@ for (module in project.modules) {
         ant.fileset(
             dir: "${project.basedir}",
             includes: "${module}/**",
-            excludes: "${module}/target/**, .*/**"
+            excludes: "${module}/target/**, **/.*, **/.*/**"
         )
     }
 
@@ -195,7 +222,7 @@ for (module in project.modules) {
         destfile: zipPath,
         basedir: "target/assembly-prepare",
         includes: "${module}/**",
-        excludes: "${module}/target/**, .*/**"
+        excludes: "${module}/target/**, **/.*, **/.*/**"
     )
 
     /* And the same thing once again for GateIn Downloads */
@@ -204,16 +231,19 @@ for (module in project.modules) {
         destfile: gateinQuickstartsZipPath,
         basedir: "target/assembly-prepare",
         includes: "${module}/**",
-        excludes: "${module}/target/**, .*/**"
+        excludes: "${module}/target/**, **/.*, **/.*/**"
     )
 
     File zipFile = new File(zipPath)
 
-    enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, product, productVersion)
+    enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, project)
 
 }
 
-String descriptorPath = "target/assembly/project-examples-gatein-" +
+String descriptorPath = "target/assembly/project-examples-" +
+        project.properties.get("compatibility.portal.projectNameShort").toLowerCase() +
+        project.properties.get("compatibility.portal.versionMm") +
+        "-jbt" +
         project.properties.get("org.jboss.ide.target.version") +
         project.properties.get("org.gatein.portal.quickstarts.descriptor.suffix") +
         ".xml"

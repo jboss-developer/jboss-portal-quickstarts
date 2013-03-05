@@ -33,6 +33,7 @@
     String compatibility_as_versionMmm = "6.0.1";
     String compatibility_portal_community_projectName = "GateIn Portal";
     String compatibility_portal_community_projectNameAndVersion = "GateIn Portal 3.5";
+    String compatibility_portal_community_projectNameShort = "GateIn";
     String compatibility_portal_community_versionMajor = "3";
     String compatibility_portal_community_versionMicro = "2";
     String compatibility_portal_community_versionMinor = "5";
@@ -40,6 +41,7 @@
     String compatibility_portal_community_versionMmm = "3.5.2";
     String compatibility_portal_product_projectName = "JBoss Portal Platform (JPP)";
     String compatibility_portal_product_projectNameAndVersion = "JBoss Portal Platform (JPP) 6.0";
+    String compatibility_portal_product_projectNameShort = "JPP";
     String compatibility_portal_product_versionMajor = "6";
     String compatibility_portal_product_versionMicro = "0";
     String compatibility_portal_product_versionMinor = "0";
@@ -47,6 +49,7 @@
     String compatibility_portal_product_versionMmm = "6.0.0";
     String compatibility_portal_projectName = "JBoss Portal Platform (JPP)";
     String compatibility_portal_projectNameAndVersion = "JBoss Portal Platform (JPP) 6.0";
+    String compatibility_portal_projectNameShort = "JPP";
     String compatibility_portal_versionMajor = "6";
     String compatibility_portal_versionMinor = "0";
     String compatibility_portal_versionMm = "6.0";
@@ -55,29 +58,30 @@
     String compatibility_wfk_versionMicro = "0";
     String compatibility_wfk_versionMinor = "1";
     String compatibility_wfk_versionMmm = "2.1.0";
-    String gatein_devguide_containers_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Containers.html";
-    String gatein_devguide_custom_groovy_template_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Groovy_Template_For_Portlet.html";
-    String gatein_devguide_custom_portlet_skin_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Skin_For_Portlet.html";
-    String gatein_devguide_extensions_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html";
-    String gatein_devguide_i18n_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Internationalization_Resource_Bundles.html";
+    String gatein_devguide_containers_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Containers.html";
+    String gatein_devguide_custom_groovy_template_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Groovy_Template_For_Portlet.html";
+    String gatein_devguide_custom_portlet_skin_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Skin_For_Portlet.html";
+    String gatein_devguide_extensions_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html";
+    String gatein_devguide_i18n_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Internationalization_Resource_Bundles.html";
     String gatein_devguide_jsf_basic_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development";
-    String gatein_devguide_jsf_plain_jsr268_portlet_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Standard_Portlet_Development_JSR-286_1.html";
-    String gatein_devguide_jsf_portlets_url = "https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development";
+    String gatein_devguide_jsf_plain_jsr268_portlet_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Standard_Portlet_Development_JSR-286_1.html";
+    String gatein_devguide_jsf_portlets_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html";
     String gatein_devguide_jsf_rf_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL35/JSF+Portlet+Development+with+RichFaces";
-    String gatein_devguide_nav_pages_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Navigation_And_Pages.html";
-    String gatein_devguide_starting_portlet_project_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1";
-    String gatein_devguide_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide";
-    String gatein_docs_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html";
-    String gatein_refguide_pbr_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html";
-    String gatein_refguide_portlet_primer_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Portlet_Primer.html";
+    String gatein_devguide_nav_pages_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Custom_Navigation_And_Pages.html";
+    String gatein_devguide_starting_portlet_project_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1";
+    String gatein_devguide_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide";
+    String gatein_docs_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html";
+    String gatein_quickstarts_downloads_url = "http://downloads.jboss.org/gatein/quickstarts/jpp-6.0";
+    String gatein_refguide_pbr_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html";
+    String gatein_refguide_portlet_primer_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Portlet_Primer.html";
     String gatein_user_forum_url = "https://access.redhat.com/groups/jboss-enterprise-middleware";
-    String jboss_admin_guide_ds_files_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files";
-    String jboss_admin_guide_ds_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html";
-    String jboss_admin_guide_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide";
-    String jboss_confluence_root_url = "http://documentation-devel.engineering.redhat.com/docs/en-US";
-    String jboss_docs_url = "http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/6/html";
+    String jboss_admin_guide_ds_files_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files";
+    String jboss_admin_guide_ds_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html";
+    String jboss_admin_guide_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Enterprise_Application_Platform/6/html/Administration_and_Configuration_Guide";
+    String jboss_confluence_root_url = "https://access.redhat.com/knowledge/docs/en-US";
+    String jboss_docs_url = "https://access.redhat.com/knowledge/docs/en-US/JBoss_Enterprise_Application_Platform/6/html";
     String mvnrepo_redhat_all_url = "http://maven.repository.redhat.com/techpreview/all";
-
+    
 %>
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
     <div class="TRContainer">

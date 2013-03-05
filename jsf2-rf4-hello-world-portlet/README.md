@@ -12,16 +12,13 @@ What is it?
 -----------
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1, 
-RichFaces 4.2.3.Final-redhat-1 and Portlet Bridge 3.1.2.Final-redhat-1.
+RichFaces 4.2.3.Final-redhat-1 and [Portlet Bridge](https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html) 3.1.2.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
 of JBoss Portal Platform (JPP) Developer Guide:
 
-* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
-* [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development)
-* [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development)
-* [JSF portlet development with RichFaces](https://docs.jboss.org/author/display/GTNPORTAL35/JSF+Portlet+Development+with+RichFaces)
-* [Portlet Bridge](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html)
+* [Starting a Portlet Project](https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portlet_Development_1.html#Starting_a_Portlet_Project_1)
+* [JSF2 Portlet Development](https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/JSF2_Portlet_Development.html)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -59,6 +56,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     Downloads > JBoss Enterprise Middleware:
     * JBoss Portal Platform (JPP) 6.0 Maven Repository 
     * Web Framework Kit 2.1.0 Maven Repository
+    * Web Framework Kit 2.0.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository
     

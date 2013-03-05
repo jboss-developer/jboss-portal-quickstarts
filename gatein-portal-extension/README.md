@@ -24,7 +24,7 @@ Portal Extension customizes the default portal available at [http://localhost:80
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Extension](http://documentation-devel.engineering.redhat.com/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html) page of
+For more details, see [Portal Extension](https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html) page of
 JBoss Portal Platform (JPP) Developer Guide.
 
 
@@ -62,6 +62,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     Downloads > JBoss Enterprise Middleware:
     * JBoss Portal Platform (JPP) 6.0 Maven Repository 
     * Web Framework Kit 2.1.0 Maven Repository
+    * Web Framework Kit 2.0.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository
     

@@ -39,11 +39,14 @@
         <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
         <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-2</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
+            GateIn:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
+            JPP:
+             JBT 4.0.0.Final - '-001'
         -->
-        <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
+        <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
         
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
         <compatibility.portal.community.versionMinor>5</compatibility.portal.community.versionMinor>
@@ -51,6 +54,7 @@
         <compatibility.portal.community.versionMm>${compatibility.portal.community.versionMajor}.${compatibility.portal.community.versionMinor}</compatibility.portal.community.versionMm>
         <compatibility.portal.community.versionMmm>${compatibility.portal.community.versionMm}.${compatibility.portal.community.versionMicro}</compatibility.portal.community.versionMmm>
         <compatibility.portal.community.projectName>GateIn Portal</compatibility.portal.community.projectName>
+        <compatibility.portal.community.projectNameShort>GateIn</compatibility.portal.community.projectNameShort>
         <compatibility.portal.community.projectNameAndVersion>${compatibility.portal.community.projectName} ${compatibility.portal.community.versionMm}</compatibility.portal.community.projectNameAndVersion>
 
         <compatibility.portal.product.versionMajor>6</compatibility.portal.product.versionMajor>
@@ -59,6 +63,7 @@
         <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
         <compatibility.portal.product.projectName>JBoss Portal Platform (JPP)</compatibility.portal.product.projectName>
+        <compatibility.portal.product.projectNameShort>JPP</compatibility.portal.product.projectNameShort>
         <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
@@ -66,6 +71,7 @@
         <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
         <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
         <compatibility.portal.projectName>${compatibility.portal.product.projectName}</compatibility.portal.projectName>
+        <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
         
         <compatibility.as.major.version>6</compatibility.as.major.version>
@@ -95,12 +101,16 @@
         <!-- External links used in READMEs -->
         <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
         
+        <!-- https://github.com/downloads/gatein/gatein-portal-quickstart -->
+        <gatein.quickstarts.downloads.url>http://downloads.jboss.org/gatein/quickstarts/jpp-6.0</gatein.quickstarts.downloads.url>
+        
         <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
         <!-- https://community.jboss.org/en/gatein?view=discussions -->
         <gatein.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</gatein.user.forum.url>
 
 		<!-- https://docs.jboss.org/author/display -->
-        <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url>
+        <!-- http://documentation-devel.engineering.redhat.com/docs/en-US -->
+        <jboss.confluence.root.url>https://access.redhat.com/knowledge/docs/en-US</jboss.confluence.root.url>
 		<!-- ${jboss.confluence.root.url}/GTNPORTAL${compatibility.portal.versionMajor}${compatibility.portal.versionMinor} -->
         <gatein.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMajor}/html</gatein.docs.url>
         <!-- ${gatein.docs.url}/Developer+Guide -->
@@ -125,7 +135,7 @@
         <!-- /Standard+Portlet+Development+%28JSR-286%29 -->
         <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.url}/Developer_Guide/Standard_Portlet_Development_JSR-286_1.html</gatein.devguide.jsf.plain.jsr268.portlet.url>
         <!-- /JSF2+Portlet+Development -->
-        <gatein.devguide.jsf.portlets.url>https://docs.jboss.org/author/display/GTNPORTAL35/JSF2+Portlet+Development</gatein.devguide.jsf.portlets.url>
+        <gatein.devguide.jsf.portlets.url>${gatein.docs.url}/Developer_Guide/JSF2_Portlet_Development.html</gatein.devguide.jsf.portlets.url>
         <!-- /Basic+JSF+Portlet+Development -->
         <gatein.devguide.jsf.basic.portlet.url>https://docs.jboss.org/author/display/GTNPORTAL35/Basic+JSF+Portlet+Development</gatein.devguide.jsf.basic.portlet.url>
         <!-- /JSF+portlet+development+with+RichFaces -->
