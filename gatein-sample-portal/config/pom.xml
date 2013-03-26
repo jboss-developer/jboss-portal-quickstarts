@@ -19,7 +19,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.5.2.Final-redhat-2</version>
+        <version>3.6.0.Alpha01-SNAPSHOT</version>
         <artifactId>gatein-sample-portal</artifactId>
     </parent>
 

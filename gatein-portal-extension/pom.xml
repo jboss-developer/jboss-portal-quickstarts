@@ -21,14 +21,14 @@
 
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.5.2.Final-redhat-2</version>
+    <version>3.6.0.Alpha01-SNAPSHOT</version>
     <name>Portal Extension</name>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-2</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
 
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
@@ -56,7 +56,7 @@
             -->
             <dependency>
                 <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.5-bom</artifactId>
+                <artifactId>gatein-3.6-bom</artifactId>
                 <version>${org.jboss.bom.gatein-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

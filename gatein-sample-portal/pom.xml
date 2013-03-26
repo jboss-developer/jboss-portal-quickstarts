@@ -20,18 +20,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.5.2.Final-redhat-2</version>
+    <version>3.6.0.Alpha01-SNAPSHOT</version>
     <artifactId>gatein-sample-portal</artifactId>
     <name>Sample Portal</name>
     <packaging>pom</packaging>
     <description>Sample Portal</description>
 
     <properties>
-        <version.org.gatein>3.5.2.Final-redhat-4</version.org.gatein>
+        <version.org.gatein>3.6.0.MO1-SNAPSHOT</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Final-redhat-2</org.jboss.bom.gatein-bom.version>
-        <version.org.gatein.common>2.1.0.Final-redhat-1</version.org.gatein.common>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <!-- <version.org.gatein.common>2.1.0.Final-redhat-1</version.org.gatein.common> -->
+        <version.org.gatein.common>2.1.0.Final</version.org.gatein.common>
 
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
@@ -61,7 +62,7 @@
             -->
             <dependency>
                 <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.5-bom</artifactId>
+                <artifactId>gatein-3.6-bom</artifactId>
                 <version>${org.jboss.bom.gatein-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>

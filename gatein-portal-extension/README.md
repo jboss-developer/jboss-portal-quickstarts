@@ -4,9 +4,9 @@ gatein-portal-extension: Portal Extension
 ============================
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
-Technologies: JBoss Portal Platform (JPP), Portal Extension  
+Technologies: GateIn Portal, Portal Extension  
 Summary: Portal Extension  
-Target Product: JBoss Portal Platform (JPP) 6.0
+Target Product: GateIn Portal ${compatibility.community.versionMajor}.6
 
 
 What is it?
@@ -14,7 +14,7 @@ What is it?
 
 This project demonstrates a simple Portal Extension. It shows how it is possible to extend and customize a portal without
 modifying the files included in gatein.ear. The main advantage of this approach to customization is that upgrades to new
-versions of JBoss Portal Platform (JPP) will be easier to handle as all the customization can be embedded in separate
+versions of GateIn Portal will be easier to handle as all the customization can be embedded in separate
 deployable packages.
 
 Portal Extension customizes the default portal available at [http://localhost:8080/portal](http://localhost:8080/portal) by doing few changes:
@@ -24,8 +24,8 @@ Portal Extension customizes the default portal available at [http://localhost:80
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Extension](https://access.redhat.com/knowledge/docs/en-US/JBoss_Portal_Platform/6/html/Developer_Guide/Portal_Extension.html) page of
-JBoss Portal Platform (JPP) Developer Guide.
+For more details, see [Portal Extension](https://docs.jboss.org/author/display/GTNPORTAL36/GDG-Portal+Containers+and+Extensions) page of
+GateIn Portal Developer Guide.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -34,60 +34,15 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on JBoss Portal Platform (JPP) 6.0 running on JBoss Application Platform.
+The project is designed to be deployed on GateIn Portal ${compatibility.community.versionMajor}.6 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
-You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download & setup zipped Maven repository.
-
-### A. Use hosted Maven repository
-
-This is the easier and thus recommended option. You need to configure the Maven user settings as follows:
-
-* Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
-
-        For Linux or Mac: ~/.m2/settings.xml
-        For Windows:       \Users\USER_NAME\.m2\settings.xml or \Documents and Settings\USER_NAME\.m2\settings.xml
-* If you have an existing `settings.xml` file, modify it with the configuration information from the `settings-hosted-repo.xml` 
-  file located in the root folder of JBoss Portal Platform (JPP) quickstarts.
-* If there is no `settings.xml` file, copy the modified `settings-hosted-repo.xml` file to the `.m2` directory for your 
-  operating system and rename it to `settings.xml`.
-
-### B. Download & setup zipped Maven repositories
-
-1.  Download the following zipped Maven repositories from [Red Hat Customer Portal](https://access.redhat.com/), 
-    Downloads > JBoss Enterprise Middleware:
-    * JBoss Portal Platform (JPP) 6.0 Maven Repository 
-    * Web Framework Kit 2.1.0 Maven Repository
-    * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 6.0.1 Maven Repository
-    * Application Platform 6.0.0 Maven Repository
-    
-    Unpack each of these files to a separate directory.
-
-2.  Modify the `settings-zipped-repos.xml` file located in the root directory of JBoss Portal Platform (JPP) 
-    quickstarts:
-    * For each zipped repository unpacked in the previous step, replace `/path/to/repo/` within `file:///path/to/repo/...`
-      with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous 
-      step.
-    * Note that path to each repository needs tobe set twice: one within `<repository>` tag and one within
-      `<pluginRepository>` tag.
-    * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified 
-      path. For example:
-
-            file:///home/joedoe/Quickstarts/jpp-6.0-quickstarts
-3.  Configure the Maven user settings.
-    * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
-
-            For Linux or Mac: ~/.m2/settings.xml
-            For Windows:       \Users\USER_NAME\.m2\settings.xml or \Documents and Settings\USER_NAME\.m2\settings.xml
-    * If you have an existing `settings.xml` file, modify it with the configuration information from the `example-settings.xml` 
-      file.
-    * If there is no `settings.xml` file, copy the modified `example-settings.xml` file to the `.m2` directory for your 
-      operating system and rename it to `settings.xml`.
+You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
+repositories.
 
 
 
@@ -96,8 +51,8 @@ Build and Deploy
 ----------------
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
-`mvn jboss-as:deploy` or copying to the default JBoss Application Platform deployment folder when 
-JBoss Portal Platform (JPP) is running. Instead of that you will need to:
+`mvn jboss-as:deploy` or copying to the default JBoss AS deployment folder when 
+GateIn Portal is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
 
@@ -109,7 +64,7 @@ JBoss Portal Platform (JPP) is running. Instead of that you will need to:
         mvn clean package
 
     This will create `ear/target/gatein-portal-extension.ear`.
-4. Copy this file into the JBoss Portal Platform (JPP) extension deployment folder: `$JBOSS_HOME/gatein/extensions`
+4. Copy this file into the GateIn Portal extension deployment folder: `$JBOSS_HOME/gatein/extensions`
 
 Access the Extension
 --------------------
@@ -137,7 +92,7 @@ Undeploy the Archive
 To delete a Portal Extension or Portal Container:
 
 1. Delete `JBOSS_HOME/gatein/extensions/gatein-portal-extension.ear`
-2. Restart JBoss Portal Platform (JPP)
+2. Restart GateIn Portal
 
 Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
 reversible.
@@ -165,4 +120,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or JBoss Portal Platform (JPP) on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).
+Please post feedback on this quickstart or GateIn Portal on [GateIn Forums](https://community.jboss.org/en/gatein?view=discussions).

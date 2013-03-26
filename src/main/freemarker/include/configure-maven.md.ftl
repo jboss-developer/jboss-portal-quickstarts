@@ -19,6 +19,10 @@
 Configure Maven
 ---------------
 
+<#if compatibility.portal.projectNameShort == "GateIn">
+You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
+repositories.
+<#else>
 You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download & setup zipped Maven repository.
 
 ### A. Use hosted Maven repository
@@ -66,4 +70,5 @@ This is the easier and thus recommended option. You need to configure the Maven 
       file.
     * If there is no `settings.xml` file, copy the modified `example-settings.xml` file to the `.m2` directory for your 
       operating system and rename it to `settings.xml`.
+</#if>  
 

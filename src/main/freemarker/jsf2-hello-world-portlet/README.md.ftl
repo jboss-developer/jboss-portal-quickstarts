@@ -36,6 +36,8 @@ of ${compatibility.portal.projectName} Developer Guide:
 
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
 * [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
-
+<#if compatibility.portal.projectNameShort == "GateIn">
+* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
+</#if>  
 
 <#include "/include/portlet-general.md.ftl">
