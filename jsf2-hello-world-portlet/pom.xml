@@ -55,7 +55,8 @@
         -->
         <m2eclipse.wtp.contextRoot>/portal/classic</m2eclipse.wtp.contextRoot>
 
-        <version.org.apache.maven.surefire.plugin>2.10</version.org.apache.maven.surefire.plugin>
+        <version.surefire.plugin>2.10</version.surefire.plugin>
+        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
     </properties>
 
     <dependencyManagement>
@@ -102,12 +103,13 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
-            <version>${version.org.apache.maven.surefire.plugin}</version>
+            <version>${version.surefire.plugin}</version>
           </plugin>
 
           <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>${version.org.jboss.as.plugins.maven.plugin}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

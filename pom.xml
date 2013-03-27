@@ -141,15 +141,18 @@
         <module>gatein-sample-portal</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.bom</groupId>
-            <artifactId>gatein-3.6-bom</artifactId>
-            <version>${org.jboss.bom.gatein-bom.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.jboss.bom</groupId>
+                <artifactId>gatein-3.6-bom</artifactId>
+                <version>${org.jboss.bom.gatein-bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <profiles>
         <profile>
             <id>product</id>
