@@ -123,6 +123,7 @@
         <gatein.devguide.jsf.portlets.url>${gatein.docs.url}/JSF2+Portlet+Development</gatein.devguide.jsf.portlets.url>
         <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.url}/Basic+JSF+Portlet+Development</gatein.devguide.jsf.basic.portlet.url>
         <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.url}/JSF+portlet+development+with+RichFaces</gatein.devguide.jsf.rf.portlet.url>
+        <gatein.devguide.api.portal.url>${gatein.docs.url}/Portal+API</gatein.devguide.api.portal.url>
         <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Portlet+Primer</gatein.refguide.portlet.primer.url>
         <!-- FIXME: -->
         <gatein.refguide.pbr.url>${gatein.docs.url}/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html</gatein.refguide.pbr.url>
@@ -139,6 +140,7 @@
         <module>jsf2-rf4-hello-world-portlet</module>
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>
+        <module>navigation-api-portlet</module>
     </modules>
 
     <dependencyManagement>

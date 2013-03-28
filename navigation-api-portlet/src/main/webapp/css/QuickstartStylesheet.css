@@ -1,0 +1,276 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright <Year>, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the 
+ * distribution for a full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,  
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+.gtnQuickstartNavigationPortlet {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+/*
+    Topmenu section
+*/
+.gtnQuickstartNavigationPortlet .topmenu {
+    display: block;
+    background: #023866;
+    border-radius: 0.6em;
+    list-style: none;
+    padding: 0.5em;
+}
+
+/* Common nodes */
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem {
+    display: inline-block;
+    position: relative;
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+    color: yellow;
+    background: #225886;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > a {
+    padding: .5em 1em;
+    display: inline-block;
+    height: 1.25em;
+    position: relative;
+    font-weight: bold;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem a,
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a {
+    color: inherit;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a.caret {
+    border-left: 1px solid #124876;
+}
+
+/* Basic node */
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem:not(.multilevel):hover,
+/* Page with children - page */
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a:first-child:hover,
+/* Page with children - caret */
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a.caret:hover {
+    background: #0f69a7;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a:first-child:hover {
+    border-radius: .5em 0 0 .5em;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel a.caret:hover {
+    border-radius: 0 .5em .5em 0;
+}
+
+/* Currently visited Node */
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.active {
+    background: green;
+    color: black;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.active:hover {
+    background: #1f79b7;
+}
+
+/*  Down-arrow in top-menu */
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem i {
+    display: inline-block;
+    position: relative;
+    text-indent: -99999px;
+    width: 0;
+    height: 0;
+    top: .15em;
+    border-left: 0.35em solid transparent;
+    border-right: 0.35em solid transparent;
+    border-top: 0.35em solid white;
+    border-bottom: 0.35em solid transparent;
+    overflow: hidden;
+}
+
+/*
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.active > a > i {
+    border-top-color: #0f69a7;
+}
+
+*/
+/*  Right-arrow in top-menu */
+/*
+.gtnQuickstartNavigationPortlet .submenu i {
+    position: absolute;
+    text-indent: -99999px;
+    width: 0em;
+
+    right: .35em;
+    top: .35em;
+
+    border-left: 0.35em solid #023866;
+    border-right: 0.35em solid transparent;
+    border-top: 0.35em solid transparent;
+    border-bottom: 0.35em solid transparent;
+}
+
+
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuiteml > a:first-child{
+    border-radius: .5em;
+    bottom: 0;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel > a:first-child{
+    border-radius: .5em 0 0 .5em;
+    bottom: 0;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > a.caret{
+    background: #0f69a7;
+    color: white;
+    width: 0;
+    border-radius: 0 .5em .5em 0;
+    margin-left: -0.25em;
+    border-left: 1px solid #023866;
+}
+
+.gtnQuickstartNavigationPortlet .submenu .menuitem > a:not(.menucaret):first-child {
+    display: inline-block;
+    width: 100%;
+}
+
+.gtnQuickstartNavigationPortlet .submenu .menuitem > a:not(.menucaret):first-child:hover {
+    background: #0f69a7;
+}
+
+.gtnQuickstartNavigationPortlet .submenu a.caret{
+
+    position: absolute;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    width: 1em;
+    border-radius: 0 .5em .5em 0;
+
+    border-left: 1px solid #ccc;
+
+    width: 1.5em;
+    height: 1em;
+    right: 0;
+}
+
+.gtnQuickstartNavigationPortlet .submenu a.menuhandler > i {
+    top: auto;
+}
+
+.gtnQuickstartNavigationPortlet .submenu a.caret i{
+    top: .15em;
+
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.multilevel > a:first-child:hover {
+    background: yellow;
+    border-radius: .5em 0 0 .5em;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > a.caret:hover {
+    background: #1f79b7;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.active {
+    background: #fff;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem.active > a {
+    color: #f57a00;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem:hover {
+    background: #0f69a7;
+    color: white;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > a.caret:hover > i {
+    border-top-color: white;
+}
+*/
+/*
+*   Submenu section
+*/
+
+.gtnQuickstartNavigationPortlet .submenu {
+    list-style: none;
+    padding: 0.5em;
+    position: absolute;
+    background-color: white;
+    border-radius: 0.4em;
+    border: 0.0625em solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3em 0.62em rgba(0, 0, 0, 0.4);
+    left: auto;
+    top: .5em;
+    min-width: 10em;
+    position: absolute;
+    z-index: 1000;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > .submenu {
+    left: 0;
+    top: 2.25em;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > .submenu:before,
+ .gtnQuickstartNavigationPortlet .topmenu > .menuitem > .submenu:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > .submenu:before {
+    border-bottom: 0.4375em solid rgba(0, 0, 0, 0.2);
+    border-left: 0.4375em solid transparent;
+    border-right: 0.4375em solid transparent;
+    left: 0.3em;
+    top: -0.4375em;
+}
+
+.gtnQuickstartNavigationPortlet .topmenu > .menuitem > .submenu:after {
+    border-bottom: 0.375em solid #FFF;
+    border-left: 0.375em solid transparent;
+    border-right: 0.375em solid transparent;
+    left: 0.3625em;
+    top: -0.375em;
+}
+
+.gtnQuickstartNavigationPortlet .submenu .submenu {
+    top: 0;
+    left: 100%;
+    position: absolute;
+}
+
+.gtnQuickstartNavigationPortlet .submenu i {
+    display: inline-block;
+
+    position: relative;
+    text-indent: -99999px;
+
+    width: 0em;
+    height: 0em;
+
+    right: 0;
+    top: 0;
+
+    border-left: 0.35em solid transparent;
+    border-right: 0.35em solid transparent;
+    border-top: 0.35em solid white;
+    border-bottom: 0.35em solid transparent;
+}
