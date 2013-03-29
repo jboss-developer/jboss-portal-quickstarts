@@ -6,7 +6,7 @@ Author: Viliam Rockai
 Level: Beginner 
 Technologies: Portlet, JSP, JQuery 
 Summary: The simple navigation portlet using Portal API. 
-Target Product: GateIn Portal ${compatibility.community.versionMajor}.6 
+Target Product: GateIn Portal 3.6 
 
 What is it?
 -----------
@@ -26,7 +26,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on GateIn Portal ${compatibility.community.versionMajor}.6 running on JBoss AS.
+The project is designed to be deployed on GateIn Portal 3.6 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->

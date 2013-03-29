@@ -68,8 +68,9 @@
 
         <compatibility.portal.versionMajor>${compatibility.portal.community.versionMajor}</compatibility.portal.versionMajor>
         <compatibility.portal.versionMinor>${compatibility.portal.community.versionMinor}</compatibility.portal.versionMinor>
-        <compatibility.portal.versionMm>${compatibility.community.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
-        <compatibility.portal.versionMmm>${compatibility.community.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
+        <compatibility.portal.versionMicro>${compatibility.portal.community.versionMicro}</compatibility.portal.versionMicro>
+        <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
+        <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
         <compatibility.portal.projectName>${compatibility.portal.community.projectName}</compatibility.portal.projectName>
         <compatibility.portal.projectNameShort>${compatibility.portal.community.projectNameShort}</compatibility.portal.projectNameShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
@@ -273,7 +274,7 @@
                         <version>${org.codehaus.gmaven.version}</version>
                         <executions>
                             <execution>
-                                <phase>generate-resources</phase>
+                                <phase>generate-sources</phase>
                                 <goals>
                                     <goal>execute</goal>
                                 </goals>

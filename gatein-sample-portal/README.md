@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: GateIn Portal, Portal Container  
 Summary: Sample Portal  
-Target Product: GateIn Portal ${compatibility.community.versionMajor}.6
+Target Product: GateIn Portal 3.6
 
 
 What is it?
@@ -31,7 +31,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on GateIn Portal ${compatibility.community.versionMajor}.6 running on JBoss AS.
+The project is designed to be deployed on GateIn Portal 3.6 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -71,7 +71,7 @@ cannot[*] be defined within EARs because otherwise centralized management would 
 the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need to define the 
 Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box GateIn Portal ${compatibility.community.versionMajor}.6 installation contains the needed pieces
+The `standalone.xml` available in the out-of-the-box GateIn Portal 3.6 installation contains the needed pieces
 of XML commented out. Please search for `Uncommented this when deploying gatein-sample-portal` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 

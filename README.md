@@ -10,7 +10,7 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with GateIn Portal ${compatibility.community.versionMajor}.6 running on JBoss AS.
+This release of Portal Quickstarts is compatible with GateIn Portal 3.6 running on JBoss AS.
 
 <a id="toc"></a>
 Available Quickstarts
