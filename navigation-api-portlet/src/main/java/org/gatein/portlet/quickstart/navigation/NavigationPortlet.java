@@ -59,10 +59,9 @@ public class NavigationPortlet extends GenericPortlet {
         PortalRequest portalRequest = PortalRequest.getInstance();
 
         Navigation navigation = PortalRequest.getInstance().getNavigation();
-        
+                
+        // Diving two levels so the information about children count of children nodes is available
         Node rootNode = navigation.getRootNode(Nodes.visitNodes(2));
-        
-        System.out.println(rootNode.isChildrenLoaded());
 
         navigationRootNodeBean = new NavigationNodeBean(rootNode);
 
@@ -94,15 +93,11 @@ public class NavigationPortlet extends GenericPortlet {
     @Override
     public void serveResource(ResourceRequest request, ResourceResponse response) throws PortletException, IOException {
 
-        PortalRequest portalRequest = PortalRequest.getInstance();
-
         Navigation navigation = PortalRequest.getInstance().getNavigation();
         
         String chosenNodeURI = request.getParameter("uri");
 
         Node chosenNode = navigation.getNode(NodePath.fromString(chosenNodeURI), Nodes.visitNodes(2));
-
-        System.out.println(chosenNode.isChildrenLoaded());
         
         request.setAttribute("parentNode", new NavigationNodeBean(chosenNode));
 
