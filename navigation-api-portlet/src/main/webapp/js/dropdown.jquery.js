@@ -19,8 +19,7 @@
  * jQuery drop-down menu plugin for quickstart navigation portlet interface. 
  * Features:
  *  - Basic on-click drop-down support.
- *  - Dynamically respond to window changes, distributes menus not to be outside the window.
- *  - Marking the currently opened node for better orientation.
+ *  - Dynamically respond to window changes, distribute menus not to be outside the window.
  */
 (function($) {
     $.fn.dropdownmenu = function(options) {
@@ -30,24 +29,18 @@
             menuElement: ".menuitem",
             // Selector for the to-be-collapsed element inside this parent element.
             arrowElement: ".menuhandler",
-            // Class which is set to the to-be-collapsed element when it's collapsed.
-            collapsedClass: "expanded",
             // Selector for the submenu element.
             submenuElement: ".submenu",
             // Class which is set to the menu which does not fit on screen.
-            inverseSubmenuClass: "inverse",
-            // Class which is set to the last opened menuitem.
-            lastOpenedClass: "current"
+            inverseSubmenuClass: "inverse"
         }, options);
-
-        console && console.log("Drop-down intialized");
 
         // Remember the topmenu element to be able to check if submenu fits into resized window
         var topmenu = $(this);
 
         // Traverse opened submenus from parent menu and inverse them if needed
         function findAndCheckOpenedSubmenu(parentMenu) {
-            var openedSubmenu = parentMenu.children(settings.menuElement + ":not(." + settings.collapsedClass + ")").children(settings.submenuElement).first();
+            var openedSubmenu = parentMenu.children(settings.menuElement).children(settings.submenuElement).first();
 
             // if no submenu is found, do nothing
             if (openedSubmenu.offset() === null) {
@@ -84,29 +77,8 @@
         function openSubmenu(menuItem) {
             // Close sibling submenus so that only the submenu opened above is present
             menuItem.siblings().each(function() {
-                //console&&console.log("close!!! "+$(this).html());
-                $(this).toggleClass(settings.collapsedClass, true);
+                $(this).children().remove(".submenu");
             });
-
-            // Close all submenus and reset the current class if present in them
-            menuItem.find(settings.menuElement).each(function() {
-                if (!$(this).hasClass(settings.collapsedClass))
-                    $(this).addClass(settings.collapsedClass);
-
-                $(this).removeClass(settings.lastOpenedClass);
-            });
-
-            // Open the submenu under the menu handler
-            menuItem.toggleClass(settings.collapsedClass);
-
-            // Mark current menuitem and unmark its parent
-            if (!menuItem.hasClass(settings.collapsedClass)) {
-                menuItem.addClass(settings.lastOpenedClass);
-                menuItem.parent().parent().removeClass(settings.lastOpenedClass);
-            } else {
-                menuItem.removeClass(settings.lastOpenedClass);
-                menuItem.parent().parent().addClass(settings.lastOpenedClass);
-            }
 
             // Find the newly opened submenu
             var submenuElement = menuItem.children(settings.submenuElement);
@@ -127,25 +99,17 @@
          */
         
         $(this).on("click", settings.arrowElement, function(e) {
-            console && console.log("Click event: " + $(this).attr('href'));
-
-            // Prevent links from opening new pages
-            e.preventDefault();
 
             var menuItem = $(this).parent(settings.menuElement);
 
-            //console && console.log("Children: " + menuItem.children(".submenu").length);
-
             if (menuItem.children(".submenu").length === 0) {
-                console && console.log("Is not collapsed...");
                 $.ajax({
                     type: "POST",
-                    url: $(this).attr('href'),
+                    url: $(this).attr('href').substring(1),
                     cache: false,
                     dataType: "text",
                     success: function(data)
                     {
-                        console && console.log("Ajax done:");
                         menuItem.append(data);
                         openSubmenu(menuItem);
                     },
@@ -155,7 +119,6 @@
                     }
                 });
             } else {
-                console && console.log("Is collapsed...");
                 menuItem.children().remove(".submenu");
             }
         });
