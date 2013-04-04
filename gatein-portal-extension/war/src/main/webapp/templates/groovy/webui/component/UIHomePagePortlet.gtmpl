@@ -274,7 +274,7 @@ public static class LinksAndVersions {
     public static final String gatein_devguide_starting_portlet_project_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project";
     public static final String gatein_devguide_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Developer+Guide";
     public static final String gatein_docs_url = "https://docs.jboss.org/author/display/GTNPORTAL36";
-    public static final String gatein_quickstarts_downloads_url = "https://github.com/downloads/gatein/gatein-portal-quickstart";
+    public static final String gatein_quickstarts_downloads_url = "http://download.jboss.org/gatein/quickstarts/GateIn-3.6";
     public static final String gatein_refguide_pbr_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html";
     public static final String gatein_refguide_portlet_primer_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+Primer";
     public static final String gatein_user_forum_url = "https://community.jboss.org/en/gatein?view=discussions";

@@ -36,13 +36,14 @@
     </licenses>
 
     <properties>
-        <org.jboss.ide.target.version>4.0</org.jboss.ide.target.version>
+        <org.jboss.ide.target.version>4.1</org.jboss.ide.target.version>
         <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
+             JBT 4.1.0.Alpha2 - '-001'
             JPP:
              JBT 4.0.0.Final - '-001'
         -->
@@ -102,7 +103,7 @@
         <!-- External links used in READMEs -->
         <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
 
-        <gatein.quickstarts.downloads.url>https://github.com/downloads/gatein/gatein-portal-quickstart</gatein.quickstarts.downloads.url>
+        <gatein.quickstarts.downloads.url>http://download.jboss.org/gatein/quickstarts/${compatibility.portal.projectNameShort}-${compatibility.portal.versionMm}</gatein.quickstarts.downloads.url>
 
         <gatein.user.forum.label>GateIn Forums</gatein.user.forum.label>
         <gatein.user.forum.url>https://community.jboss.org/en/gatein?view=discussions</gatein.user.forum.url>
