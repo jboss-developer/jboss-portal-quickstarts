@@ -27,7 +27,7 @@
     <description>Sample Portal</description>
 
     <properties>
-        <version.org.gatein>3.6.0.MO1-SNAPSHOT</version.org.gatein>
+        <version.org.gatein>3.6.0.Beta02-SNAPSHOT</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>

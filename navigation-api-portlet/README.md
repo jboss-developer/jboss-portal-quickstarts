@@ -13,8 +13,9 @@ What is it?
 
 This project demonstrates how to create the navigation portlet using the GateIn Portal API with a JSP front-end.
 
-An introduction and some background information to this quickstart can be found in the following chapters 
+An introduction and some background information to this quickstart can be found in the following chapters
 of GateIn Portal Developer Guide:
+
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project)
 * [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
 * [Portal API](https://docs.jboss.org/author/display/GTNPORTAL36/Portal+API)
