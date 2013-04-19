@@ -109,8 +109,8 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     //setTextContent(projectNode, "category", "${product} "+ project.properties.get("compatibility.portal.versionMajor") +".x Quickstarts")
     setTextContent(projectNode, "category", "Portal Applications")
     setTextContent(projectNode, "included-projects", moduleProject.artifactId)
-    setTextContent(projectNode, "shortDescription", productNameShort +" " + majorVersion + ": " + moduleProject.name)
-    setTextContent(projectNode, "description", moduleProject.description)
+    setTextContent(projectNode, "shortDescription", moduleProject.name)
+    setTextContent(projectNode, "description", productNameShort +" " + majorVersion + ": " + moduleProject.description)
     setTextContent(projectNode, "size", String.valueOf(zipFile.length()))
     setTextContent(projectNode, "url", "${downloadsRootUrl}/"+ zipFile.getName())
 
