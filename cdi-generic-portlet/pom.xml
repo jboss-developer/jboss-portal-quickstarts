@@ -19,12 +19,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>simplest-hello-world-portlet</artifactId>
-    <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>Simplest Hello World Portlet</name>
+    <artifactId>cdi-generic-portlet</artifactId>
+    <groupId>org.jboss.portal.examples</groupId>
+    <name>CDI Generic Portlet</name>
     <version>3.6.0.Alpha01-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>The very essence of every possible portlet.</description>
+    <description>An application that demonstrates use of CDI in a non-JSF portlet.</description>
     <url>http://www.gatein.org</url>
     <licenses>
         <license>
@@ -99,7 +99,14 @@
             <groupId>javax.portlet</groupId>
             <artifactId>portlet-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>1.0-SP4</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
+
 
     <build>
         <finalName>${project.artifactId}</finalName>

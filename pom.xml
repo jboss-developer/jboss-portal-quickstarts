@@ -143,6 +143,7 @@
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>
         <module>navigation-api-portlet</module>
+        <module>cdi-generic-portlet</module>
     </modules>
 
     <dependencyManagement>
