@@ -1,26 +1,25 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-rf4-hello-world-portlet/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/cdi-jsf-portlet/README.md.ftl ~-->
 
-jsf2-rf4-hello-world-portlet: JSF2+RF4 Hello World Portlet
+cdi-jsf-portlet: CDI Portlet with JSF
 ============================
-Author: Peter Palaga, Brian Leathem, Ken Finnigan  
-Level: Beginner  
-Technologies: RF4, JSF2, Portlet Bridge    
-Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
+Author: Ken Finnigan  
+Level: Intermediate  
+Technologies: Portlet, CDI, JSF  
+Summary: An application that demonstrates use of JSF 2 RI and CDI in a portlet  
 Target Product: GateIn Portal 3.6
 
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1, 
-RichFaces 4.2.3.Final and [Portlet Bridge](https://docs.jboss.org/author/display/GTNPORTAL36/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html) 3.2.0.Final.
+This project demonstrates how to use CDI in a JSF 2 portlet.
 
-An introduction and some background information to this quickstart can be found in the following chapters 
+An introduction and some background information to this quickstart can be found in the following chapters
 of GateIn Portal Developer Guide:
 
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project)
+* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
 * [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL36/JSF2+Portlet+Development)
 * [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL36/Basic+JSF+Portlet+Development)
-* [JSF portlet development with RichFaces](https://docs.jboss.org/author/display/GTNPORTAL36/JSF+portlet+development+with+RichFaces)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -73,7 +72,7 @@ Build and Deploy the Quickstart
             <password>secret</password>
         </configuration>
 
-   This will deploy `target/jsf2-rf4-hello-world-portlet.war` to the running instance of the portal.
+   This will deploy `target/cdi-jsf-portlet.war` to the running instance of the portal.
 
 
 Access the deployed Portlet
@@ -85,20 +84,20 @@ To ensure that the example portlet has been deployed successfully, do the follow
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
-see the newly imported JSF2+RF4 Hello World Portlet under the jsf2-rf4-hello-world-portlet Category.
+see the newly imported CDI Portlet with JSF under the cdi-jsf-portlet Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
     * If you have chosen (a) to add the portlet to a new page:
         * Go to Top Menu > Group Editor > Add New Page
         * In the Page Creation Wizard, fill in:
-            * Node Name: jsf2-rf4-hello-world-portlet
-            * Display Name: JSF2+RF4 Hello World Portlet
+            * Node Name: cdi-jsf-portlet
+            * Display Name: CDI Portlet with JSF
         * Click Next
         * Leave Empty Layout as it is and hit Next
-        * Drag-and-Drop JSF2+RF4 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard
+        * Drag-and-Drop CDI Portlet with JSF from the Page Editor dialog to the middle of the Page Creation Wizard
         * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
     * If you have chosen (b) to add the portlet to an existing page:
         * Navigate to the page where you want to add the portlet and go to Top Menu > Group Editor > Edit Page
-        * Drag-and-Drop JSF2+RF4 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.
+        * Drag-and-Drop CDI Portlet with JSF from the Page Editor dialog to a place of your choice within the page.
         * Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.
 
 

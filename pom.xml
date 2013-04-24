@@ -140,10 +140,11 @@
         <module>simplest-hello-world-portlet</module>
         <module>jsf2-hello-world-portlet</module>
         <module>jsf2-rf4-hello-world-portlet</module>
-        <module>gatein-portal-extension</module>
-        <module>gatein-sample-portal</module>
         <module>navigation-api-portlet</module>
         <module>cdi-generic-portlet</module>
+        <module>cdi-jsf-portlet</module>
+        <module>gatein-portal-extension</module>
+        <module>gatein-sample-portal</module>
     </modules>
 
     <dependencyManagement>

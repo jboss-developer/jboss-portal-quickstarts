@@ -1,23 +1,23 @@
-<html><head><title>README</title><link href="https://raw.github.com/pmuir/github-flavored-markdown/gh-pages/shared/css/documentation.css" rel="stylesheet"></link><link href="https://raw.github.com/github/github-flavored-markdown/gh-pages/shared/css/pygments.css" rel="stylesheet"></link></head><body><!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.html.ftl ~-->
+<html><head><title>README</title><link href="https://raw.github.com/pmuir/github-flavored-markdown/gh-pages/shared/css/documentation.css" rel="stylesheet"></link><link href="https://raw.github.com/github/github-flavored-markdown/gh-pages/shared/css/pygments.css" rel="stylesheet"></link></head><body><!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/cdi-jsf-portlet/README.html.ftl ~-->
 
-<h1 id="toc_0">jsf2-hello-world-portlet: JSF2 Hello World Portlet</h1>
+<h1 id="toc_0">cdi-jsf-portlet: CDI Portlet with JSF</h1>
 
-<p>Author: Peter Palaga, Brian Leathem, Ken Finnigan<br/>
-Level: Beginner<br/>
-Technologies: JSF2, Portlet Bridge<br/>
-Summary: A simple portlet using JavaServer Faces 2.<br/>
+<p>Author: Ken Finnigan<br/>
+Level: Intermediate<br/>
+Technologies: Portlet, CDI, JSF<br/>
+Summary: An application that demonstrates use of JSF 2 RI and CDI in a portlet<br/>
 Target Product: GateIn Portal 3.6</p>
 
 <h2 id="toc_1">What is it?</h2>
 
-<p>This project demonstrates how to create a simple portlet using JavaServer Faces 2.1 
-and <a href="https://docs.jboss.org/author/display/GTNPORTAL36/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html">Portlet Bridge</a> 3.2.0.Final.</p>
+<p>This project demonstrates how to use CDI in a JSF 2 portlet.</p>
 
-<p>An introduction and some background information to this quickstart can be found in the following chapters 
+<p>An introduction and some background information to this quickstart can be found in the following chapters
 of GateIn Portal Developer Guide:</p>
 
 <ul>
 <li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project">Starting a Portlet Project</a></li>
+<li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29">Standard Portlet Development (JSR-286)</a></li>
 <li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/JSF2+Portlet+Development">JSF2 Portlet Development</a></li>
 <li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/Basic+JSF+Portlet+Development">Basic JSF Portlet Development</a></li>
 </ul>
@@ -69,7 +69,7 @@ just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</cod
     <span class="nt">&lt;password&gt;</span>secret<span class="nt">&lt;/password&gt;</span>
 <span class="nt">&lt;/configuration&gt;</span>
 </pre></div>
-<p>This will deploy <code>target/jsf2-hello-world-portlet.war</code> to the running instance of the portal.</p></li>
+<p>This will deploy <code>target/cdi-jsf-portlet.war</code> to the running instance of the portal.</p></li>
 </ol>
 
 <h2 id="toc_6">Access the deployed Portlet</h2>
@@ -81,7 +81,7 @@ just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</cod
 <a href="http://127.0.0.1:8080/portal/classic">http://127.0.0.1:8080/portal/classic</a>).</li>
 <li>Sign in as root or other user with manager:/platform/administrators permissions.</li>
 <li>Go to Top Menu &gt; Group &gt; Administration &gt; Application Registry and hit Import Applications. After that, you should
-see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portlet Category.</li>
+see the newly imported CDI Portlet with JSF under the cdi-jsf-portlet Category.</li>
 <li>Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
 
 <ul>
@@ -92,19 +92,19 @@ see the newly imported JSF2 Hello World Portlet under the jsf2-hello-world-portl
 <li>In the Page Creation Wizard, fill in:
 
 <ul>
-<li>Node Name: jsf2-hello-world-portlet</li>
-<li>Display Name: JSF2 Hello World Portlet</li>
+<li>Node Name: cdi-jsf-portlet</li>
+<li>Display Name: CDI Portlet with JSF</li>
 </ul></li>
 <li>Click Next</li>
 <li>Leave Empty Layout as it is and hit Next</li>
-<li>Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard</li>
+<li>Drag-and-Drop CDI Portlet with JSF from the Page Editor dialog to the middle of the Page Creation Wizard</li>
 <li>Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.</li>
 </ul></li>
 <li>If you have chosen (b) to add the portlet to an existing page:
 
 <ul>
 <li>Navigate to the page where you want to add the portlet and go to Top Menu &gt; Group Editor &gt; Edit Page</li>
-<li>Drag-and-Drop JSF2 Hello World Portlet from the Page Editor dialog to a place of your choice within the page.</li>
+<li>Drag-and-Drop CDI Portlet with JSF from the Page Editor dialog to a place of your choice within the page.</li>
 <li>Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.</li>
 </ul></li>
 </ul></li>

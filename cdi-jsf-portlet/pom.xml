@@ -19,12 +19,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cdi-generic-portlet</artifactId>
+    <artifactId>cdi-jsf-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>CDI Generic Portlet</name>
+    <name>CDI Portlet with JSF</name>
     <version>3.6.0.Alpha01-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>An application that demonstrates use of CDI in a non-JSF portlet.</description>
+    <description>An application that demonstrates use of JSF 2 RI and CDI in a portlet</description>
     <url>http://www.gatein.org</url>
     <licenses>
         <license>
@@ -57,7 +57,6 @@
 
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
-
     </properties>
 
     <dependencyManagement>
@@ -89,43 +88,50 @@
     </dependencyManagement>
 
     <dependencies>
-        <!--
-            The versions, scopes and types of these dependencies are managed in gatein-*-bom.
-            You need to name only groupId and artifactId here.
-            Name only those artifacts you refer to in your code.
-            Look at gatein-*-bom POM file for the complete list of available artifacts.
-        -->
         <dependency>
-            <groupId>javax.portlet</groupId>
-            <artifactId>portlet-api</artifactId>
+            <groupId>org.jboss.spec.javax.faces</groupId>
+            <artifactId>jboss-jsf-api_2.1_spec</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.portletbridge</groupId>
+            <artifactId>portletbridge-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.gatein</groupId>
+            <artifactId>cdi-portlet-integration</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
+            <scope>provided</scope>
         </dependency>
+
+
     </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        <pluginManagement>
-            <plugins>
+        <plugins>
           <!--
           The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
           -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${version.surefire.plugin}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-
-        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.surefire.plugin}</version>
+            </plugin>
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.org.jboss.as.plugins.maven.plugin}</version>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -137,5 +143,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
