@@ -30,7 +30,7 @@
         <version.org.gatein>3.6.0.Beta02-SNAPSHOT</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
         <!-- <version.org.gatein.common>2.1.0.Final-redhat-1</version.org.gatein.common> -->
         <version.org.gatein.common>2.1.0.Final</version.org.gatein.common>
 
@@ -57,7 +57,7 @@
         <dependencies>
             <!--
                 Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions, types and scopes
+                GateIn Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
                 in many cases provided by) GateIn Portal.
             -->

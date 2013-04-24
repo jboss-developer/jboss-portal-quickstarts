@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -64,7 +64,7 @@
         <dependencies>
             <!--
                 Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions, types and scopes
+                GateIn Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
                 in many cases provided by) GateIn Portal.
             -->
@@ -75,7 +75,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
 
@@ -90,10 +89,12 @@
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <!-- RF-sprecific dependencies -->
@@ -135,11 +136,11 @@
           <!--
           The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
           -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${version.surefire.plugin}</version>
-          </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.surefire.plugin}</version>
+            </plugin>
 
         </plugins>
     </build>

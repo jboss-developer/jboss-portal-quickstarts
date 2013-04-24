@@ -20,7 +20,9 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
     <portlet>
-        <portlet-name>CDI-Portlet</portlet-name>
+        <description>A JSF Portlet using CDI</description>
+        <portlet-name>CDIJSFPortlet</portlet-name>
+        <display-name>CDI JSF Portlet</display-name>
         <portlet-class>javax.portlet.faces.GenericFacesPortlet</portlet-class>
 
         <init-param>
@@ -37,11 +39,11 @@
 
         <supports>
             <mime-type>text/html</mime-type>
-            <portlet-mode>VIEW</portlet-mode>
+            <portlet-mode>view</portlet-mode>
         </supports>
 
         <portlet-info>
-            <title>JSF CDI Portlet</title>
+            <title>CDI JSF Portlet</title>
         </portlet-info>
     </portlet>
 

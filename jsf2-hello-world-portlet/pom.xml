@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -63,7 +63,7 @@
         <dependencies>
             <!--
                 Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions, types and scopes
+                GateIn Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
                 in many cases provided by) GateIn Portal.
             -->
@@ -84,13 +84,16 @@
             Name only those artifacts you refer to in your code.
             Look at gatein-*-bom POM file for the complete list of available artifacts.
         -->
+        <!-- General JSF dependencies -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

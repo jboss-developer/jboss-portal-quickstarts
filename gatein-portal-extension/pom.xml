@@ -28,7 +28,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01-SNAPSHOT</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
 
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
@@ -52,7 +52,7 @@
         <dependencies>
             <!--
                 Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions, types and scopes
+                GateIn Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
                 in many cases provided by) GateIn Portal.
             -->
