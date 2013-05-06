@@ -1,0 +1,13 @@
+<jboss-deployment-structure>
+  <!--
+       Make gatein.ear sub-deployments non-isolated
+  -->
+  <ear-subdeployments-isolated>false</ear-subdeployments-isolated>
+
+  <sub-deployment name="sample-portal.war" >
+    <dependencies>
+      <module name="org.gatein.portal.container-dependencies"/>
+    </dependencies>
+  </sub-deployment>
+
+</jboss-deployment-structure>
