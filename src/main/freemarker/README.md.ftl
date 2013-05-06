@@ -40,3 +40,4 @@ Available Quickstarts
 * [CDI Generic Portlet](cdi-generic-portlet/README.html)
 * [Portal Extension](gatein-portal-extension/README.html)
 * [Sample Portal](gatein-sample-portal/README.html)
+* [Social Portlets](gatein-social-portlets/README.html)
