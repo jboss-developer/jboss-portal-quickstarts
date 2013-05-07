@@ -88,15 +88,15 @@ def setTextContent(parent, nodeName, textContent) {
 }
 
 def setTextContentByXPath(xPath, xPathExpression, parent, textContent) {
-	Node n = xPath.evaluate(xPathExpression, parent, XPathConstants.NODE);
-	n.setTextContent(textContent);
+    Node n = xPath.evaluate(xPathExpression, parent, XPathConstants.NODE);
+    n.setTextContent(textContent);
 }
 
 def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, project) {
-	String product = project.properties.get("compatibility.portal.projectName");
-	String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
-	String majorVersion = project.properties.get("compatibility.portal.versionMajor");
-	String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url").toLowerCase();
+    String product = project.properties.get("compatibility.portal.projectName");
+    String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
+    String majorVersion = project.properties.get("compatibility.portal.versionMajor");
+    String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url").toLowerCase();
 
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
@@ -115,17 +115,21 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     setTextContent(projectNode, "url", "${downloadsRootUrl}/"+ zipFile.getName())
 
     setTextContentByXPath(xPath, "fixes/fix[@type='wtpruntime']/property[@name='description']",
-			projectNode, "This project example requires ${product} ${majorVersion}.x");
+            projectNode, "This project example requires ${product} ${majorVersion}.x");
 
-	String runtimeInfix = productNameShort.equals("GateIn") ? "" : "eap.";
-	setTextContentByXPath(
-			xPath,
-			"fixes/fix[@type='wtpruntime']/property[@name='allowed-types']",
-			projectNode,
-			"org.jboss.ide.eclipse.as.runtime.${runtimeInfix}"+
-			project.properties.get("compatibility.as.major.version") +
-			project.properties.get("compatibility.as.minor.version")
-	);
+    String runtimes =
+            productNameShort.equals("GateIn") ?
+                "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.61" :
+                "org.jboss.ide.eclipse.as.runtime.eap." +
+                    project.properties.get("compatibility.as.major.version") +
+                    project.properties.get("compatibility.as.minor.version")
+    ;
+    setTextContentByXPath(
+            xPath,
+            "fixes/fix[@type='wtpruntime']/property[@name='allowed-types']",
+            projectNode,
+            runtimes
+    );
 }
 
 def stripMdFile(path, pattern) {
@@ -181,9 +185,9 @@ String product = project.properties.get("compatibility.portal.projectName");
 String productVersion = project.properties.get("compatibility.portal.versionMm");
 
 String gateinQuickstartsZipPath = "target/assembly/"+
-	project.properties.get("compatibility.portal.projectNameShort") +
-	"-"+
-	productVersion +"-Quickstarts.zip";
+    project.properties.get("compatibility.portal.projectNameShort") +
+    "-"+
+    productVersion +"-Quickstarts.zip";
 
 ant.zip (
     destfile: gateinQuickstartsZipPath,
