@@ -25,8 +25,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-sample-portal-config</artifactId>
-    <name>JPP Sample Portal Configuration</name>
+    <name>GateIn Sample Portal Configuration</name>
     <packaging>jar</packaging>
     <url>http://gatein.org</url>
-    <description>JPP Sample Portal Configuration</description>
+    <description>GateIn Sample Portal Configuration</description>
 </project>

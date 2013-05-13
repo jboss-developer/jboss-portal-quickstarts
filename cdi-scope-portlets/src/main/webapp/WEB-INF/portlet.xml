@@ -19,10 +19,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
     <portlet>
-        <description>A Generic Portlet using CDI</description>
-        <portlet-name>CDIGenericPortlet</portlet-name>
-        <display-name>CDI Generic Portlet</display-name>
-        <portlet-class>org.gatein.cdi.GenericCDIPortlet</portlet-class>
+        <description>Portlet Using CDI Scope @PortletLifecycleScoped</description>
+        <portlet-name>CDILifecycleScopedPortlet</portlet-name>
+        <display-name>CDI LifecycleScoped Portlet</display-name>
+        <portlet-class>org.gatein.cdi.JSPLifecyclePortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
@@ -30,18 +30,25 @@
         </supports>
 
         <portlet-info>
-            <title>CDI Generic Portlet</title>
+            <title>CDI LifecycleScoped Portlet</title>
         </portlet-info>
     </portlet>
-    <filter>
-        <filter-name>CDIExampleFilter</filter-name>
-        <filter-class>org.gatein.cdi.CDIFilter</filter-class>
-        <lifecycle>RENDER_PHASE</lifecycle>
-    </filter>
-    <filter-mapping>
-        <filter-name>CDIExampleFilter</filter-name>
-        <portlet-name>CDIGenericPortlet</portlet-name>
-    </filter-mapping>
+    <portlet>
+        <description>Portlet Using CDI Scope @PortletRedisplayScoped</description>
+        <portlet-name>CDIRedisplayScopedPortlet</portlet-name>
+        <display-name>CDI RedisplayScoped Portlet</display-name>
+        <portlet-class>org.gatein.cdi.JSPRedisplayPortlet</portlet-class>
+        <expiration-cache>-0</expiration-cache>
+
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>view</portlet-mode>
+        </supports>
+
+        <portlet-info>
+            <title>CDI RedisplayScoped Portlet</title>
+        </portlet-info>
+    </portlet>
 </portlet-app>
 
 

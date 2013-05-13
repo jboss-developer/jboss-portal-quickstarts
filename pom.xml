@@ -22,7 +22,7 @@
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
     <version>3.6.0.Alpha01-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>JPP Quickstarts Parent</name>
+    <name>GateIn Quickstarts Parent</name>
     <url>http://gatein.org</url>
     <scm>
         <url>https://github.com/gatein/gatein-portal-quickstart</url>
@@ -37,14 +37,14 @@
 
     <properties>
         <org.jboss.ide.target.version>4.1</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Beta02</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
              JBT 4.1.0.Alpha2 - '-001'
-            JPP:
+            GateIn:
              JBT 4.0.0.Final - '-001'
         -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
@@ -63,8 +63,8 @@
         <compatibility.portal.product.versionMicro>0</compatibility.portal.product.versionMicro>
         <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
-        <compatibility.portal.product.projectName>JBoss Portal Platform (JPP)</compatibility.portal.product.projectName>
-        <compatibility.portal.product.projectNameShort>JPP</compatibility.portal.product.projectNameShort>
+        <compatibility.portal.product.projectName>JBoss Portal Platform (GateIn)</compatibility.portal.product.projectName>
+        <compatibility.portal.product.projectNameShort>GateIn</compatibility.portal.product.projectNameShort>
         <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.community.versionMajor}</compatibility.portal.versionMajor>
@@ -143,6 +143,7 @@
         <module>navigation-api-portlet</module>
         <module>cdi-generic-portlet</module>
         <module>cdi-jsf-portlet</module>
+        <module>cdi-scope-portlets</module>
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>
     </modules>
@@ -185,7 +186,7 @@
                 <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
 
                     <!-- https://github.com/downloads/gatein/gatein-portal-quickstart -->
-                <gatein.quickstarts.downloads.url>http://downloads.jboss.org/gatein/quickstarts/jpp-6.0</gatein.quickstarts.downloads.url>
+                <gatein.quickstarts.downloads.url>http://downloads.jboss.org/gatein/quickstarts/GateIn-6.0</gatein.quickstarts.downloads.url>
 
                 <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
                     <!-- https://community.jboss.org/en/gatein?view=discussions -->

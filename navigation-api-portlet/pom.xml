@@ -36,7 +36,12 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Alpha01</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Beta02</org.jboss.bom.gatein-bom.version>
+
+        <!-- Other dependencies -->
+        <servlet-api.version>2.5</servlet-api.version>
+        <pc-portlet.version>2.4.0.Beta02</pc-portlet.version>
+        <jstl.version>1.2</jstl.version>
 
         <!-- Plugin versions and settings -->
         <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
@@ -87,10 +92,39 @@
             <groupId>javax.portlet</groupId>
             <artifactId>portlet-api</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.gatein.api</groupId>
-            <artifactId>gatein-api</artifactId>           
+            <artifactId>gatein-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--
+            pc-portlet is here because it contains portlet_2_0.tld tag library descriptor which IDEs
+            (including Eclipse and NetBeans) need to have in class path so that they are able to provide
+            validation and context assist in JSP files using the http://java.sun.com/portlet_2_0 taglib.
+        -->
+        <dependency>
+            <groupId>org.gatein.pc</groupId>
+            <artifactId>pc-portlet</artifactId>
+            <version>${pc-portlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--
+            jstl is here for the same reason as pc-portlet: it contains http://java.sun.com/jsp/jstl/core
+            and http://java.sun.com/jsp/jstl/functions tag library descriptors.
+        -->
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

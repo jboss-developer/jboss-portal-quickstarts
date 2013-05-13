@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
@@ -14,23 +15,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.6.0.Alpha01-SNAPSHOT</version>
-        <artifactId>gatein-sample-portal</artifactId>
-    </parent>
-
-    <modelVersion>4.0.0</modelVersion>
-    <artifactId>gatein-sample-portal-war</artifactId>
-    <packaging>war</packaging>
-    <name>GateIn Sample Portal WAR</name>
-    <url>http://gatein.org</url>
-    <description>GateIn Sample Portal WAR</description>
-
-    <build>
-        <finalName>${project.parent.artifactId}</finalName>
-    </build>
-</project>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+</web-app>

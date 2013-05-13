@@ -19,12 +19,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cdi-jsf-portlet</artifactId>
+    <artifactId>cdi-scope-portlets</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <name>CDI Portlet with JSF</name>
+    <name>Portlets Using CDI Scopes</name>
     <version>3.6.0.Alpha01-SNAPSHOT</version>
     <packaging>war</packaging>
-    <description>An application that demonstrates use of JSF 2 RI and CDI in a portlet</description>
+    <description>Portlets Using CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
     <url>http://www.gatein.org</url>
     <licenses>
         <license>
@@ -37,6 +37,10 @@
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
         <org.jboss.bom.gatein-bom.version>1.0.0.Beta02</org.jboss.bom.gatein-bom.version>
+
+        <!-- Other dependencies -->
+        <pc-portlet.version>2.4.0.Beta02</pc-portlet.version>
+
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -57,6 +61,7 @@
 
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
+
     </properties>
 
     <dependencyManagement>
@@ -88,26 +93,15 @@
     </dependencyManagement>
 
     <dependencies>
+        <!--
+            The versions, scopes and types of these dependencies are managed in gatein-*-bom.
+            You need to name only groupId and artifactId here.
+            Name only those artifacts you refer to in your code.
+            Look at gatein-*-bom POM file for the complete list of available artifacts.
+        -->
         <dependency>
-            <groupId>org.jboss.spec.javax.faces</groupId>
-            <artifactId>jboss-jsf-api_2.1_spec</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.jboss.portletbridge</groupId>
-            <artifactId>portletbridge-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.gatein</groupId>
-            <artifactId>cdi-portlet-integration</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
+            <groupId>javax.portlet</groupId>
+            <artifactId>portlet-api</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -115,25 +109,47 @@
             <artifactId>cdi-api</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.gatein.api</groupId>
+            <artifactId>gatein-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!--
+            pc-portlet is here because it contains portlet_2_0.tld tag library descriptor which IDEs
+            (including Eclipse and NetBeans) need to have in class path so that they are able to provide
+            validation and context assist in JSP files using the portlet taglib.
+        -->
+        <dependency>
+            <groupId>org.gatein.pc</groupId>
+            <artifactId>pc-portlet</artifactId>
+            <version>${pc-portlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
-        <plugins>
+        <pluginManagement>
+            <plugins>
           <!--
           The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
           -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${version.surefire.plugin}</version>
-            </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.surefire.plugin}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.org.jboss.as.plugins.maven.plugin}</version>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -145,4 +161,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

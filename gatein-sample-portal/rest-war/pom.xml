@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-sample-portal-rest-war</artifactId>
     <packaging>war</packaging>
-    <name>JPP Sample Portal REST WAR</name>
+    <name>GateIn Sample Portal REST WAR</name>
     <url>http://gatein.org</url>
-    <description>JPP Sample Portal REST WAR</description>
+    <description>GateIn Sample Portal REST WAR</description>
 
     <build>
         <finalName>rest-sample-portal</finalName>

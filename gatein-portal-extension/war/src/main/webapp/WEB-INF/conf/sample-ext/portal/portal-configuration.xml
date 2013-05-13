@@ -49,7 +49,7 @@
                             <string>war:/conf/sample-ext/portal</string>
                         </field>
                         <field name="importMode">
-                            <!-- Imported nodes will be added to the nodes available in default JPP installation. -->
+                            <!-- Imported nodes will be added to the nodes available in default GateIn installation. -->
                             <string>merge</string>
                         </field>
                     </object>

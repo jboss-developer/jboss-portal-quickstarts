@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-portal-extension-war</artifactId>
     <packaging>war</packaging>
-    <name>JPP Portal Extension WAR</name>
+    <name>GateIn Portal Extension WAR</name>
     <url>http://gatein.org</url>
-    <description>JPP Portal Extension WAR</description>
+    <description>GateIn Portal Extension WAR</description>
 
     <build>
         <finalName>gatein-portal-extension</finalName>
