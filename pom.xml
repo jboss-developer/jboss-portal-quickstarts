@@ -130,9 +130,23 @@
         <!-- FIXME: -->
         <gatein.refguide.pbr.url>${gatein.docs.url}/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html</gatein.refguide.pbr.url>
 
+        <gatein.refguide.oauth.url>${gatein.docs.url}/OAuth+-+Authentication+with+social+network+accounts</gatein.refguide.oauth.url>
+        <gatein.refguide.facebook.url>${gatein.docs.url}/Facebook</gatein.refguide.facebook.url>
+        <gatein.refguide.google.url>${gatein.docs.url}/Google+plus</gatein.refguide.google.url>
+        <gatein.refguide.twitter.url>${gatein.docs.url}/Twitter</gatein.refguide.twitter.url>
+
         <jboss.admin.guide.url>${jboss.confluence.root.url}/AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide</jboss.admin.guide.url>
         <jboss.admin.guide.ds.url>${jboss.admin.guide.url}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
         <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
+
+        <facebook.url>https://www.facebook.com</facebook.url>
+        <facebook.graph.url>https://developers.facebook.com/docs/reference/api/</facebook.graph.url>
+        <facebook.restfb.url>http://restfb.com/</facebook.restfb.url>
+        <google.plus.url>https://plus.google.com/</google.plus.url>
+        <google.oauth.api.url>https://developers.google.com/accounts/docs/OAuth2</google.oauth.api.url>
+        <google.plus.api.url>https://developers.google.com/+/api/latest/</google.plus.api.url>
+        <twitter.url>https://twitter.com/</twitter.url>
+        <twitter.twitter4j.url>http://twitter4j.org/en/index.html</twitter.twitter4j.url>
 
     </properties>
 
@@ -146,6 +160,7 @@
         <module>cdi-scope-portlets</module>
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>
+        <module>gatein-social-portlets</module>
     </modules>
 
     <dependencyManagement>
@@ -228,6 +243,11 @@
                 <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Reference_Guide/chap-Reference_Guide-Portlet_Primer.html</gatein.refguide.portlet.primer.url>
                 <gatein.refguide.pbr.url>${gatein.docs.url}/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html</gatein.refguide.pbr.url>
 
+                <gatein.refguide.oauth.url>${gatein.docs.url}/OAuth+-+Authentication+with+social+network+accounts</gatein.refguide.oauth.url>
+                <gatein.refguide.facebook.url>${gatein.docs.url}/Facebook</gatein.refguide.facebook.url>
+                <gatein.refguide.google.url>${gatein.docs.url}/Google+plus</gatein.refguide.google.url>
+                <gatein.refguide.twitter.url>${gatein.docs.url}/Twitter</gatein.refguide.twitter.url>
+
                 <jboss.docs.url>${jboss.confluence.root.url}/JBoss_Enterprise_Application_Platform/${compatibility.as.major.version}/html</jboss.docs.url>
                     <!-- /AS${compatibility.as.major.version}${compatibility.as.minor.version}/Admin+Guide -->
                 <jboss.admin.guide.url>${jboss.docs.url}/Administration_and_Configuration_Guide</jboss.admin.guide.url>
@@ -235,6 +255,15 @@
                 <jboss.admin.guide.ds.url>${jboss.docs.url}/Administration_and_Configuration_Guide/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
                     <!-- #AdminGuide-Deploymentof%5Cds.xmlfiles -->
                 <jboss.admin.guide.ds.files.url>${jboss.docs.url}/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files</jboss.admin.guide.ds.files.url>
+
+                <facebook.url>https://www.facebook.com</facebook.url>
+                <facebook.graph.url>https://developers.facebook.com/docs/reference/api/</facebook.graph.url>
+                <facebook.restfb.url>http://restfb.com/</facebook.restfb.url>
+                <google.plus.url>https://plus.google.com/</google.plus.url>
+                <google.oauth.api.url>https://developers.google.com/accounts/docs/OAuth2</google.oauth.api.url>
+                <google.plus.api.url>https://developers.google.com/+/api/latest/</google.plus.api.url>
+                <twitter.url>https://twitter.com/</twitter.url>
+                <twitter.twitter4j.url>http://twitter4j.org/en/index.html</twitter.twitter4j.url>
             </properties>
         </profile>
         <profile>

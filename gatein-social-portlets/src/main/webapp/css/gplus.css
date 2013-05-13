@@ -1,0 +1,61 @@
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the
+ * distribution for a full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import url("social.css");
+
+.googleHeader {
+    background-image: url("../img/gplus-32.png");
+}
+
+.googlePaginatorLeft, .googlePaginatorRight {
+    font-size: 14px;
+    color: #666;
+}
+
+.googlePaginatorRight {
+    position: absolute;
+    right: 0;
+}
+
+.googlePaginator {
+    position: relative;
+    margin: 10px 0;
+}
+
+.googleUserPropertyKey {
+    color: #666;
+    font-style: italic;
+}
+
+.googleUserPropertyValue {
+    margin-left: 5px;
+}
+
+.googleUserPropertyKey, .googleUserPropertyValue {
+    font-size: 14px;
+}
+
+.googleUserImage {
+    border-radius: 5px;
+    margin: 0 15px 5px 0;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+    float: left;
+}
+
+.googleUserInfo {
+    margin-left: 120px;
+}

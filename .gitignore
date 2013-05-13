@@ -4,5 +4,10 @@
 bin
 target
 
+.idea
+*.iml
+*.ipr
+*.iws
+
 .faces-config.xml.faceside
 .faces-config.xml.jsfdia

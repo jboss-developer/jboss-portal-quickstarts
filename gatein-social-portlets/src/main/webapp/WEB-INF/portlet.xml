@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    JBoss, Home of Professional Open Source
+    Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+    contributors by the @authors tag. See the copyright.txt in the
+    distribution for a full listing of individual contributors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+ -->
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
+   http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+
+    <portlet>
+        <description>Facebook User Info Portlet</description>
+        <portlet-name>FacebookUserInfoPortlet</portlet-name>
+        <display-name>Facebook User Info Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookUserInfoPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Facebook User Info Portlet</title>
+            <short-title>FB UserInfo Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Facebook Friends Portlet</description>
+        <portlet-name>FacebookFriendsPortlet</portlet-name>
+        <display-name>Facebook Friends Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookFriendsPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Facebook Friends Portlet</title>
+            <short-title>FB Friends Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Facebook Status Update Portlet</description>
+        <portlet-name>FacebookStatusUpdatePortlet</portlet-name>
+        <display-name>Facebook Status Update Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookStatusUpdatePortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Facebook Status Update Portlet</title>
+            <short-title>FB Status Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Twitter Portlet</description>
+        <portlet-name>TwitterPortlet</portlet-name>
+        <display-name>Twitter Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.twitter.TwitterPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Twitter Portlet</title>
+            <short-title>Twitter Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Google User Info Portlet</description>
+        <portlet-name>GoogleUserInfoPortlet</portlet-name>
+        <display-name>Google User Info Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleUserInfoPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Google User Info Portlet</title>
+            <short-title>Google User Info Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Google Activities Portlet</description>
+        <portlet-name>GoogleActivitiesPortlet</portlet-name>
+        <display-name>Google Activities Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleActivitiesPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Google Activities Portlet</title>
+            <short-title>Google Activities Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <description>Google Friends Portlet</description>
+        <portlet-name>GoogleFriendsPortlet</portlet-name>
+        <display-name>Google Friends Portlet</display-name>
+        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleFriendsPortlet</portlet-class>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <portlet-info>
+            <title>Google Friends Portlet</title>
+            <short-title>Google Friends Portlet</short-title>
+            <keywords>Social</keywords>
+        </portlet-info>
+    </portlet>
+
+    <filter>
+        <filter-name>FacebookFilter</filter-name>
+        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <lifecycle>ACTION_PHASE</lifecycle>
+        <lifecycle>RENDER_PHASE</lifecycle>
+        <init-param>
+            <name>accessTokenValidation</name>
+            <value>SKIP</value>
+        </init-param>
+        <init-param>
+            <name>oauthProviderKey</name>
+            <value>FACEBOOK</value>
+        </init-param>
+    </filter>
+
+    <filter>
+        <filter-name>GoogleFilter</filter-name>
+        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <lifecycle>ACTION_PHASE</lifecycle>
+        <lifecycle>RENDER_PHASE</lifecycle>
+        <!-- Validation are useful for Google due to refreshing access token -->
+        <init-param>
+            <name>accessTokenValidation</name>
+            <value>SESSION</value>
+        </init-param>
+        <init-param>
+            <name>oauthProviderKey</name>
+            <value>GOOGLE</value>
+        </init-param>
+    </filter>
+
+    <filter>
+        <filter-name>TwitterFilter</filter-name>
+        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <lifecycle>ACTION_PHASE</lifecycle>
+        <lifecycle>RENDER_PHASE</lifecycle>
+        <init-param>
+            <name>accessTokenValidation</name>
+            <value>SKIP</value>
+        </init-param>
+        <init-param>
+            <name>oauthProviderKey</name>
+            <value>TWITTER</value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FacebookFilter</filter-name>
+        <portlet-name>Facebook*</portlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>GoogleFilter</filter-name>
+        <portlet-name>Google*</portlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>TwitterFilter</filter-name>
+        <portlet-name>Twitter*</portlet-name>
+    </filter-mapping>
+
+</portlet-app>
