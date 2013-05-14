@@ -158,9 +158,9 @@
         <module>cdi-generic-portlet</module>
         <module>cdi-jsf-portlet</module>
         <module>cdi-scope-portlets</module>
+        <module>social-portlets</module>
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>
-        <module>gatein-social-portlets</module>
     </modules>
 
     <dependencyManagement>

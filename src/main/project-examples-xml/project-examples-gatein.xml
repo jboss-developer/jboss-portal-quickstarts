@@ -195,7 +195,7 @@
     </project>
     <project>
         <category></category>
-        <name>gatein-social-portlets</name>
+        <name>social-portlets</name>
         <priority>1</priority>
         <included-projects></included-projects>
         <shortDescription></shortDescription>
