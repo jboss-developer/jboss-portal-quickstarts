@@ -100,9 +100,10 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
 
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
-        projectNode = descriptorDom.createElement("project")
-        Node projectsNode = xPath.evaluate("/projects", descriptorDom, XPathConstants.NODE).appendChild(projectNode)
-        projectsNode.appendChild(projectNode)
+        log.info("Trying to insert <project> node for '${moduleProject.artifactId}'.");
+        projectNode = descriptorDom.createElement("project");
+        Node projectsNode = xPath.evaluate("/projects", descriptorDom, XPathConstants.NODE).appendChild(projectNode);
+        projectsNode.appendChild(projectNode);
     }
 
     setTextContent(projectNode, "name", productNameShort.toLowerCase() + majorVersion + "-" + moduleProject.artifactId)
