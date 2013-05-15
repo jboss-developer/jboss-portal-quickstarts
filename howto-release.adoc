@@ -1,0 +1,66 @@
+= How to Release GateIn Quickstarts
+Peter Palaga
+
+= How to Release GateIn Quickstarts
+
+. Change to the project top directory:
+[source,sh]
+cd ~/git/gatein-portal-quickstart
+
+. Ensure that the READMEs are up to date:
++
+[source,sh]
+----
+mvn clean install -P generate-readmes
+./src/build/sh/md2html.sh # see prerequisites inside md2html.sh
+----
+
+. If the working copy changed after these commands, commit & push.
+
+. Create a new git tag
++
+[source,sh]
+----
+git tag -a [jpp|gatein]-quickstart-[major].[minor].[micro].[qualifier] -m ...
+git push ...
+----
+
+. Generate the distributable files:
+[source,sh]
+mvn clean install -P prepare-zips
+
+. Upload the files to `download.jboss.org/gatein/quickstarts/[jpp|gatein]-[major].[minor]` where JBoss Tools
+and JBoss Developer Studio expect them:
++
+[source,sh]
+----
+cd target/assembly
+ls -l
+total 3248
+-rw-rw-r--. 1 ppalaga ppalaga   14519 May 14 15:35 cdi-generic-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   20507 May 14 15:35 cdi-jsf-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   19236 May 14 15:35 cdi-scope-portlets.zip
+-rw-rw-r--. 1 ppalaga ppalaga 1640427 May 14 15:35 GateIn-3.6-Quickstarts.zip
+-rw-rw-r--. 1 ppalaga ppalaga  827038 May 14 15:35 gatein-portal-extension.zip
+-rw-rw-r--. 1 ppalaga ppalaga  571123 May 14 15:35 gatein-sample-portal.zip
+-rw-rw-r--. 1 ppalaga ppalaga   32647 May 14 15:35 jsf2-hello-world-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   32994 May 14 15:35 jsf2-rf4-hello-world-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   24607 May 14 15:35 navigation-api-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   25808 May 14 15:35 project-examples-gatein3.6-jbt4.1-001.xml
+-rw-rw-r--. 1 ppalaga ppalaga   12145 May 14 15:35 simplest-hello-world-portlet.zip
+-rw-rw-r--. 1 ppalaga ppalaga   81222 May 14 15:35 social-portlets.zip
+
+# in most cases, you want to publish the *-Quickstarts.zip file (which contains all quickstarts)
+# separately under GateIn/JPP Downloads
+mv -t /tmp *-Quickstarts.zip
+# the remainig files belong to download.jboss.org/gatein/quickstarts/[jpp|gatein]-[major].[minor] folder
+rsync * ...
+----
+
+. Upload the `*-Quickstarts.zip` file to GateIn/JPP Downloads:
++
+[source,sh]
+----
+rsync /tmp/*-Quickstarts.zip ...
+rm /tmp/*-Quickstarts.zip
+----
