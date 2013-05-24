@@ -15,20 +15,16 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi.scope;
+
+import java.io.Serializable;
+
+import org.gatein.api.cdi.context.PortletRedisplayScoped;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-public class AbstractBean {
-
-    private String text = null;
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
-    }
+@PortletRedisplayScoped
+public class RedisplayBean extends AbstractBean implements Serializable {
+    private static final long serialVersionUID = 4488694192474531774L;
 }

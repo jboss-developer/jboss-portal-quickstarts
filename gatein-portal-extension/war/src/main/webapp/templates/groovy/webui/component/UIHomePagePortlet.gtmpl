@@ -264,6 +264,9 @@ public static class LinksAndVersions {
     public static final String facebook_restfb_url = "http://restfb.com/";
     public static final String facebook_url = "https://www.facebook.com";
     public static final String gatein_devguide_api_portal_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portal+API";
+    public static final String gatein_devguide_cdi_generic_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL36/GenericPortlet+and+Portlet+Filter+Injection";
+    public static final String gatein_devguide_cdi_scope_portlets_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+CDI+Scopes";
+    public static final String gatein_devguide_cdi_url = "https://docs.jboss.org/author/display/GTNPORTAL36/CDI+Portlet+Development";
     public static final String gatein_devguide_containers_url = "https://docs.jboss.org/author/display/GTNPORTAL36/GDG-Portal+Containers+and+Extensions";
     public static final String gatein_devguide_custom_groovy_template_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Groovy+Template+for+a+Portlet";
     public static final String gatein_devguide_custom_portlet_skin_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Skin+for+a+Portlet";

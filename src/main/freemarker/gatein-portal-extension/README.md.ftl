@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Thomas Heute, Peter Palaga  <#-- br -->
-Level: Beginner  <#-- br -->
-Technologies: ${compatibility.portal.projectName}, Portal Extension  <#-- br -->
-Summary: ${project.description}  <#-- br -->
+Author: Thomas Heute, Peter Palaga  <#-- two spaces mean line break in MD -->
+Level: Beginner  <#-- two spaces mean line break in MD -->
+Technologies: ${compatibility.portal.projectName}, Portal Extension  <#-- two spaces mean line break in MD -->
+Summary: ${project.description}  <#-- two spaces mean line break in MD -->
 Target Product: ${compatibility.portal.projectNameAndVersion}
 
 

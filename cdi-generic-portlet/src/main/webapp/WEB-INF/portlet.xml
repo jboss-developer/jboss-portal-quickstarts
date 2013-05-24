@@ -17,25 +17,24 @@
  -->
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
-   http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
+    http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
     <portlet>
-        <description>A Generic Portlet using CDI</description>
+        <description>A portlet that demonstrates use of CDI</description>
         <portlet-name>CDIGenericPortlet</portlet-name>
         <display-name>CDI Generic Portlet</display-name>
-        <portlet-class>org.gatein.cdi.GenericCDIPortlet</portlet-class>
+        <portlet-class>org.gatein.quickstart.cdi.GenericCDIPortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
         </supports>
-
         <portlet-info>
             <title>CDI Generic Portlet</title>
         </portlet-info>
     </portlet>
     <filter>
         <filter-name>CDIExampleFilter</filter-name>
-        <filter-class>org.gatein.cdi.CDIFilter</filter-class>
+        <filter-class>org.gatein.quickstart.cdi.CDIFilter</filter-class>
         <lifecycle>RENDER_PHASE</lifecycle>
     </filter>
     <filter-mapping>

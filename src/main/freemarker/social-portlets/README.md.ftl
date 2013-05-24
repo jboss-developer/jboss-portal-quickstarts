@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Marek Posolda, Viliam Rockai  <#-- br -->
-Level: Intermediate  <#-- br -->
-Technologies: Portlet, JSP, OAuth, CDI  <#-- br -->
-Summary: ${project.description}  <#-- br -->
+Author: Marek Posolda, Viliam Rockai  <#-- two spaces mean line break in MD -->
+Level: Intermediate  <#-- two spaces mean line break in MD -->
+Technologies: Portlet, JSP, OAuth, CDI  <#-- two spaces mean line break in MD -->
+Summary: ${project.description}  <#-- two spaces mean line break in MD -->
 Target Product: ${compatibility.portal.projectNameAndVersion}
 
 What is it?

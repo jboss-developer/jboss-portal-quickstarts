@@ -19,11 +19,11 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Viliam Rockai <#-- br -->
-Level: Beginner <#-- br -->
-Technologies: Portlet, JSP, JQuery <#-- br -->
-Summary: ${project.description} <#-- br -->
-Target Product: ${compatibility.portal.projectNameAndVersion} <#-- br -->
+Author: Viliam Rockai <#-- two spaces mean line break in MD -->
+Level: Beginner <#-- two spaces mean line break in MD -->
+Technologies: Portlet, JSP, JQuery <#-- two spaces mean line break in MD -->
+Summary: ${project.description} <#-- two spaces mean line break in MD -->
+Target Product: ${compatibility.portal.projectNameAndVersion} <#-- two spaces mean line break in MD -->
 
 What is it?
 -----------

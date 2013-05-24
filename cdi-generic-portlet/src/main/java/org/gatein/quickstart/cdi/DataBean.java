@@ -15,16 +15,27 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi;
 
-import java.io.Serializable;
-
-import org.gatein.api.cdi.context.PortletRedisplayScoped;
+import javax.enterprise.context.RequestScoped;
 
 /**
+ * A simple bean holding {@link #message} which is changed in {@link CDIFilter} and displayed in {@link GenericCDIPortlet}.
+ * {@link DataBean} is annotated with {@code @RequestScoped} which means that a new instance is created by Java EE Container
+ * for each HTTP request.
+ *
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-@PortletRedisplayScoped
-public class RedisplayBean extends AbstractBean implements Serializable {
-    private static final long serialVersionUID = 4488694192474531774L;
+@RequestScoped
+public class DataBean {
+
+    private String message = "Hello from CDI!";
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

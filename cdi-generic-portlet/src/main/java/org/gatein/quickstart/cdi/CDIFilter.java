@@ -15,47 +15,44 @@
  * limitations under the License.
  */
 
-package org.jboss.portletbridge.example.cdi;
+package org.gatein.quickstart.cdi;
 
-import java.io.Serializable;
-
-import javax.annotation.PostConstruct;
-import javax.enterprise.context.Conversation;
-import javax.enterprise.context.ConversationScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
+import javax.portlet.PortletException;
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
+import javax.portlet.filter.FilterChain;
+import javax.portlet.filter.FilterConfig;
+import javax.portlet.filter.RenderFilter;
+import java.io.IOException;
 
 /**
+ * A portlet filter using CDI.
+ *
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-@Named
-@ConversationScoped
-public class IssueController implements Serializable {
+public class CDIFilter implements RenderFilter {
 
-    private static final long serialVersionUID = 3184963917964851211L;
-
+    /**
+     * Java EE Container injects a Request Scoped {@link DataBean} for us here.
+     */
     @Inject
-    private IssueManager mgr;
+    private DataBean bean;
 
-    @Inject
-    private Conversation conversation;
-
-    private String message;
-
-    @PostConstruct
-    public void init() {
-        message = "Hello and welcome to your Issues";
-    }
-
-    public void deleteIssue(Issue issue) {
-        if (conversation.isTransient()) {
-            conversation.begin();
+    @Override
+    public void doFilter(RenderRequest request, RenderResponse response, FilterChain chain) throws IOException,
+            PortletException {
+        if (null != bean) {
+            bean.setMessage("Hello from Filter with CDI!");
         }
-        mgr.deleteIssue(issue);
-        message = "You just deleted Issue #" + issue.getId() + " with a title of '" + issue.getTitle() + "'";
+        chain.doFilter(request, response);
     }
 
-    public String getMessage() {
-        return message;
+    @Override
+    public void init(FilterConfig filterConfig) throws PortletException {
+    }
+
+    @Override
+    public void destroy() {
     }
 }

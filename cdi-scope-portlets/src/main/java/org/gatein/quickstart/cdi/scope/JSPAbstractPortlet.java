@@ -15,7 +15,10 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi.scope;
+
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.portlet.ActionRequest;
 import javax.portlet.ActionResponse;
@@ -26,8 +29,6 @@ import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
@@ -35,13 +36,18 @@ import java.io.PrintWriter;
 public abstract class JSPAbstractPortlet extends GenericPortlet {
 
     public void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException {
+        request.setAttribute("portletName", getPortletName());
         String reset = request.getParameter("reset");
         if ((null != reset || "true".equals(reset)) || null == getBean().getText()) {
             PortletRequestDispatcher prd = getPortletContext().getRequestDispatcher("/jsp/welcome.jsp");
             prd.include(request, response);
         } else {
             PortletRequestDispatcher prd = getPortletContext().getRequestDispatcher("/jsp/hello.jsp");
+            if (null != getResourceBean() && "ResourceBean".equals(getResourceBean().getText())) {
+                getResourceBean().setText("ResourceBean Render");
+            }
             request.setAttribute("bean", getBean());
+            request.setAttribute("resourceBean", getResourceBean());
             prd.include(request, response);
         }
     }
@@ -54,17 +60,30 @@ public abstract class JSPAbstractPortlet extends GenericPortlet {
     @Override
     public void serveResource(ResourceRequest request, ResourceResponse response) throws PortletException, IOException {
         String resourceId = request.getResourceID();
+        String text = getBean().getText();
+        text = text == null ? "null" : "'" + text + "'";
         if ("check".equals(resourceId)) {
             PrintWriter writer = response.getWriter();
-            String text = getBean().getText();
-            writer.write("Bean text currently set to: " + text);
+            writer.write("bean.text is currently set to " + text +".");
         } else if ("set".equals(resourceId)) {
             PrintWriter writer = response.getWriter();
-            String text = getBean().getText();
             getBean().setText("Ajax");
-            writer.write("Bean text was set to: " + text + ", but now set to Ajax!");
+            writer.write("bean.text was set to " + text + ", but is now set to 'Ajax'.");
+        } else if ("resource".equals(resourceId)) {
+            PrintWriter writer = response.getWriter();
+            AbstractBean rBean = getResourceBean();
+            if (null != rBean) {
+                String rbText = rBean.getText();
+                rbText = rbText == null ? "null" : "'" + rbText + "'";
+                rBean.setText("Ajax");
+                writer.write("resourceBean.text was set to " + rbText + ", but now set to 'Ajax'.");
+            } else {
+                writer.write("resourceBean was null.");
+            }
         }
     }
 
     protected abstract AbstractBean getBean();
+
+    protected abstract AbstractBean getResourceBean();
 }

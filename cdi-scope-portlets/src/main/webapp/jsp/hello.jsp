@@ -15,38 +15,52 @@
     limitations under the License.
  -->
 
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-
-<script type="text/javascript">
-    function <portlet:namespace/>callResource(type) {
-        var xhr = new XMLHttpRequest();
-        var url;
-        if (type == 'set') {
-            url = '<portlet:resourceURL id="set" />';
-        } else {
-            url = '<portlet:resourceURL id="check" />';
-        }
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4) {
-                alert(xhr.responseText);
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<div class="CDIScopePortlet">
+    <script type="text/javascript">
+        function <portlet:namespace/>callResource(type) {
+            var xhr = new XMLHttpRequest();
+            var url;
+            if (type == 'set') {
+                url = '<portlet:resourceURL id="set" />';
+            } else if (type == 'check') {
+                url = '<portlet:resourceURL id="check" />';
+            } else if (type == 'resource') {
+                url = '<portlet:resourceURL id="resource" />';
+            } else {
+                url = '<portlet:resourceURL id="null" />';
             }
-        };
-        xhr.open("GET", url, true);
-        xhr.send();
-    }
-</script>
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    alert(xhr.responseText);
+                }
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+        }
+    </script>
+    
+    <h1>${portletName}</h1>
+    <h3>Hello ${bean.getText()}</h3>
+    <p>
+        <a href="#" onclick="<portlet:namespace/>callResource('set');">Set <code>bean.text</code></a> to 'Ajax' using 
+        <code>ResourceRequest</code> of Portlet API 2.0.
+    </p>
+    <p>
+        <a href="#" onclick="<portlet:namespace/>callResource('check');">Get current <code>bean.text</code></a> from server using 
+        <code>ResourceRequest</code> of Portlet API 2.0.
+    </p>
+    
+    <p>
+        <code>resourceBean.text</code> value is <code>"${resourceBean.getText()}"</code><br />
+        <a href="#" onclick="<portlet:namespace/>callResource('resourceBean');">Set <code>resourceBean.text</code></a> to 
+        'Ajax' using <code>ResourceRequest</code> of Portlet API 2.0.
+    </p>
 
-<div class="portlet-section-header">Hello ${bean.getText()}</div>
-
-<br/>
-
-<div class="portlet-font">Update text with <a href="#" onclick="<portlet:namespace/>callResource('set');">ResourceRequest</a></div>
-<div class="portlet-font">Check value with <a href="#" onclick="<portlet:namespace/>callResource('check');">ResourceRequest</a></div>
-
-<br/>
-
-<portlet:renderURL var="myRenderURL">
-    <portlet:param name="reset" value='true'/>
-</portlet:renderURL>
-<a href="<%= myRenderURL %>">Ask me again</a>
-<hr/>
+    <p>
+        <portlet:renderURL var="myRenderURL">
+            <portlet:param name="reset" value='true' />
+        </portlet:renderURL>
+        <a href="<%= myRenderURL %>">Ask me again</a>
+    </p>
+</div>

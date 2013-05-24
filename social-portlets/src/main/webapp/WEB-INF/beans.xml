@@ -16,6 +16,10 @@
     limitations under the License.
  -->
 <beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://jboss.org/schema/cdi/beans_1_0.xsd">
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://jboss.org/schema/cdi/beans_1_0.xsd">
+    <!--
+        There is nothing here intentionally. The existence of this file tells Java EE Container
+        to enable CDI (Contexts and Dependency Injection) for this application.
+    -->
 </beans>
 

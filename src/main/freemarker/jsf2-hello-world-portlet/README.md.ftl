@@ -19,10 +19,10 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Peter Palaga, Brian Leathem, Ken Finnigan  <#-- br -->
-Level: Beginner  <#-- br -->
-Technologies: JSF2, Portlet Bridge  <#-- br -->
-Summary: ${project.description}  <#-- br -->
+Author: Peter Palaga, Brian Leathem, Ken Finnigan  <#-- two spaces mean line break in MD -->
+Level: Beginner  <#-- two spaces mean line break in MD -->
+Technologies: JSF2, Portlet Bridge  <#-- two spaces mean line break in MD -->
+Summary: ${project.description}  <#-- two spaces mean line break in MD -->
 Target Product: ${compatibility.portal.projectNameAndVersion}
 
 What is it?

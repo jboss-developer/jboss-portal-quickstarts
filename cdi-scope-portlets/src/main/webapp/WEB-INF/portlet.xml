@@ -22,7 +22,7 @@
         <description>Portlet Using CDI Scope @PortletLifecycleScoped</description>
         <portlet-name>CDILifecycleScopedPortlet</portlet-name>
         <display-name>CDI LifecycleScoped Portlet</display-name>
-        <portlet-class>org.gatein.cdi.JSPLifecyclePortlet</portlet-class>
+        <portlet-class>org.gatein.quickstart.cdi.scope.JSPLifecyclePortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
@@ -37,7 +37,7 @@
         <description>Portlet Using CDI Scope @PortletRedisplayScoped</description>
         <portlet-name>CDIRedisplayScopedPortlet</portlet-name>
         <display-name>CDI RedisplayScoped Portlet</display-name>
-        <portlet-class>org.gatein.cdi.JSPRedisplayPortlet</portlet-class>
+        <portlet-class>org.gatein.quickstart.cdi.scope.JSPRedisplayPortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
 
         <supports>
@@ -50,5 +50,3 @@
         </portlet-info>
     </portlet>
 </portlet-app>
-
-

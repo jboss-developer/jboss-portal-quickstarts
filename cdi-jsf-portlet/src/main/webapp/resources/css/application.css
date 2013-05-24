@@ -14,14 +14,44 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-html {
-    height: 100%;
+div.CDIJSFPortlet {
+    margin: 10px;
 }
 
-body {
+.CDIJSFPortlet a {
+    color: #2c6fbd;
+}
+.CDIJSFPortlet a:hover {
+    text-decoration: underline;
+}
+
+.CDIJSFPortlet h1 {
+    font-size: 16px;
+    background-color: #dedfdf;
+    padding: 2px 4px;
+    margin-bottom: 2px;
+}
+
+.CDIJSFPortlet h3 {
+    color: #e34b20;
+    padding: 4px;
     margin: 0;
-    padding: 0;
-    font: normal 12px "Lucida Sans Unicode", "Lucida Grande", Geneva, Verdana, Arial, sans-serif;
-    height: 100%;
+}
+
+.CDIJSFPortlet table {
+    border-style: none;
+}
+
+.CDIJSFPortlet th,.CDIJSFPortlet td {
+    padding: 2px;
+    border-style: none;
+    border-collapse: collapse;
+    border-color: #b5b6b6;
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+}
+
+.CDIJSFPortlet td:first-child,.CDIJSFPortlet td:last-child {
+    text-align: center;
 }

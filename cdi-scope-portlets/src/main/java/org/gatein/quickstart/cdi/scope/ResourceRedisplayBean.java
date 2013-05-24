@@ -15,13 +15,20 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi.scope;
 
-import org.gatein.api.cdi.context.PortletLifecycleScoped;
+import org.gatein.api.cdi.context.PortletRedisplayScoped;
+
+import java.io.Serializable;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-@PortletLifecycleScoped
-public class LifecycleBean extends AbstractBean {
+@PortletRedisplayScoped
+public class ResourceRedisplayBean extends AbstractBean implements Serializable {
+    private static final long serialVersionUID = 1084479298651274140L;
+
+    public ResourceRedisplayBean() {
+        setText("ResourceBean");
+    }
 }

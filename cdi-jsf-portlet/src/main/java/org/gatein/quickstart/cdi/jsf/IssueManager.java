@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.jboss.portletbridge.example.cdi;
+package org.gatein.quickstart.cdi.jsf;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -27,7 +27,15 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
 
+import org.gatein.quickstart.cdi.jsf.Issue.IssueStatus;
+
 /**
+ * Holds a {@link List} of {@link Issue}s within the scope of the whole application - note the {@code @ApplicationScoped}
+ * annotation.
+ * <p>
+ * The {@code @Named} annotation is there to be able to use {@code issueManager} in Expression Language (EL) Expressions of JSF
+ * templates - see {@code /src/main/webapp/templates/home.xhtml} in this project.
+ *
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
 @Named
@@ -36,8 +44,15 @@ public class IssueManager implements Serializable {
 
     private static final long serialVersionUID = -6306424542612684236L;
 
+    /**
+     * {@link List} of {@link Issue}s. We made it transient so that {@code @PostConstruct} {@link #loadIssues()} method is not
+     * called on deserialization.
+     */
     transient List<Issue> issues;
 
+    /**
+     * See {@link #issues} why {@code transient}
+     */
     transient int lastUsedId = 0;
 
     @PostConstruct
@@ -56,16 +71,8 @@ public class IssueManager implements Serializable {
         return issues;
     }
 
-    public void createIssue(Issue issue) {
-        issues.add(issue);
-    }
-
     public void createIssue(String title, String description) {
         issues.add(new Issue(++lastUsedId, title, description, IssueStatus.NEW));
-    }
-
-    public int nextIssueId() {
-        return ++lastUsedId;
     }
 
     public void deleteIssue(Issue issue) {

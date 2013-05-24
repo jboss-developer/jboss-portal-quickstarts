@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>3.6.0.Alpha01-SNAPSHOT</version>
+    <version>3.6.0.Beta03-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GateIn Quickstarts Parent</name>
     <url>http://gatein.org</url>
@@ -129,6 +129,10 @@
         <gatein.refguide.portlet.primer.url>${gatein.docs.url}/Portlet+Primer</gatein.refguide.portlet.primer.url>
         <!-- FIXME: -->
         <gatein.refguide.pbr.url>${gatein.docs.url}/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html</gatein.refguide.pbr.url>
+
+        <gatein.devguide.cdi.url>${gatein.docs.url}/CDI+Portlet+Development</gatein.devguide.cdi.url>
+        <gatein.devguide.cdi.generic.portlet.url>${gatein.docs.url}/GenericPortlet+and+Portlet+Filter+Injection</gatein.devguide.cdi.generic.portlet.url>
+        <gatein.devguide.cdi.scope.portlets.url>${gatein.docs.url}/Portlet+CDI+Scopes</gatein.devguide.cdi.scope.portlets.url>
 
         <gatein.refguide.oauth.url>${gatein.docs.url}/OAuth+-+Authentication+with+social+network+accounts</gatein.refguide.oauth.url>
         <gatein.refguide.facebook.url>${gatein.docs.url}/Facebook</gatein.refguide.facebook.url>

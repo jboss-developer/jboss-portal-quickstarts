@@ -22,7 +22,7 @@
     <artifactId>simplest-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Simplest Hello World Portlet</name>
-    <version>3.6.0.Alpha01-SNAPSHOT</version>
+    <version>3.6.0.Beta03-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>The very essence of every possible portlet.</description>
     <url>http://www.gatein.org</url>
@@ -90,8 +90,8 @@
 
     <dependencies>
         <!--
-            The versions, scopes and types of these dependencies are managed in gatein-*-bom.
-            You need to name only groupId and artifactId here.
+            The versions of these dependencies are managed in gatein-*-bom.
+            Note that artifacts managed in gatein-*-bom are <scope>provided</scope> in most cases.
             Name only those artifacts you refer to in your code.
             Look at gatein-*-bom POM file for the complete list of available artifacts.
         -->

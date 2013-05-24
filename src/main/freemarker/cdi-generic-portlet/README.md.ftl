@@ -19,22 +19,29 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Ken Finnigan  <#-- br -->
-Level: Intermediate  <#-- br -->
-Technologies: Portlet, CDI  <#-- br -->
-Summary: ${project.description}  <#-- br -->
+Author: Ken Finnigan, Peter Palaga  <#-- two spaces mean line break in MD -->
+Level: Intermediate  <#-- two spaces mean line break in MD -->
+Technologies: Portlet, CDI  <#-- two spaces mean line break in MD -->
+Summary: ${project.description}  <#-- two spaces mean line break in MD -->
 Target Product: ${compatibility.portal.projectNameAndVersion}
 
 What is it?
 -----------
 
-This project demonstrates how to use CDI in a non-JSF portlet.
+This project demonstrates how to use CDI in Portlets and Portlet Filters. We have made the example as self-explaining as
+possible through commenting all necessary details directly in the included files. We suggest to study the example in the
+following order:
+
+* `pom.xml`
+* Configuration files under `src/main/webapp/WEB-INF`
+* Java source files under `src/main/java`
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
 * [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
+* [Generic CDI Portlet](${gatein.devguide.cdi.generic.portlet.url})
 
 
 <#include "/include/portlet-general.md.ftl">

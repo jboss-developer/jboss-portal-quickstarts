@@ -1,8 +1,8 @@
 /*
  * JBoss, Home of Professional Open Source
- * Copyright 2010, Red Hat Middleware LLC, and individual contributors
- * by the @authors tag. See the copyright.txt in the distribution for a
- * full listing of individual contributors.
+ * Copyright <Year>, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the
+ * distribution for a full listing of individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,20 +15,30 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+div.CDIScopePortlet {
+    margin: 10px;
+}
 
-import javax.inject.Inject;
+.CDIScopePortlet a {
+    color: #2c6fbd;
+}
+.CDIScopePortlet a:hover {
+    text-decoration: underline;
+}
 
-/**
- * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
- */
-public class JSPLifecyclePortlet extends JSPAbstractPortlet {
+.CDIScopePortlet h1 {
+    font-size: 16px;
+    background-color: #dedfdf;
+    padding: 2px 4px;
+    margin-bottom: 2px;
+}
 
-    @Inject
-    LifecycleBean bean;
+.CDIScopePortlet h3 {
+    color: #e34b20;
+    padding: 4px;
+    margin: 0;
+}
 
-    @Override
-    protected AbstractBean getBean() {
-        return bean;
-    }
+.CDIScopePortlet p {
+    margin-left: 4px;
 }

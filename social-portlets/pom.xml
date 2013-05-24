@@ -114,8 +114,8 @@
 
     <dependencies>
         <!--
-            The versions, scopes and types of these dependencies are managed in gatein-*-bom.
-            You need to name only groupId and artifactId here.
+            The versions of these dependencies are managed in gatein-*-bom.
+            Note that artifacts managed in gatein-*-bom are <scope>provided</scope> in most cases.
             Name only those artifacts you refer to in your code.
             Look at gatein-*-bom POM file for the complete list of available artifacts.
         -->

@@ -17,4 +17,9 @@
  -->
 <faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd" version="2.1">
+    <!-- 
+        No settings necessary here for this demo to work properly. The file could actually be removed.
+        We leave faces-config.xml here for the case that you would like to experiment with 
+        e.g. <resource-bundle>s, <locale-config>, etc.
+    -->
 </faces-config>

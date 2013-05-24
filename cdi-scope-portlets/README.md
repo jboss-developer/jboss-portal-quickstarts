@@ -18,6 +18,8 @@ of GateIn Portal Developer Guide:
 
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project)
 * [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
+* [CDI Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL36/CDI+Portlet+Development)
+* [Portlet CDI Scopes](https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+CDI+Scopes)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->

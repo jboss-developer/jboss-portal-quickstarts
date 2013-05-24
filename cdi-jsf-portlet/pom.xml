@@ -22,7 +22,7 @@
     <artifactId>cdi-jsf-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>CDI Portlet with JSF</name>
-    <version>3.6.0.Alpha01-SNAPSHOT</version>
+    <version>3.6.0.Beta03-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>An application that demonstrates use of JSF 2 RI and CDI in a portlet</description>
     <url>http://www.gatein.org</url>
@@ -88,12 +88,12 @@
     </dependencyManagement>
 
     <dependencies>
+        <!-- JSF dependencies -->
         <dependency>
             <groupId>org.jboss.spec.javax.faces</groupId>
             <artifactId>jboss-jsf-api_2.1_spec</artifactId>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.jboss.portletbridge</groupId>
             <artifactId>portletbridge-api</artifactId>
@@ -105,6 +105,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- CDI dependencies -->
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>

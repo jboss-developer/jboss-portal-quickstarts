@@ -15,10 +15,19 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-    <!-- 
-        There is no need to configure any filters, servlets, mapping & co. for this demo to work
-        but maven-war-plugin by default requires this file.
-    -->
-</web-app>
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_3 http://www.gatein.org/xml/ns/gatein_resources_1_3"
+    xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
+    <portlet-skin>
+        <application-name>cdi-scope-portlets</application-name>
+        <portlet-name>CDILifecycleScopedPortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/css/cdi-scope-portlets.css</css-path>
+    </portlet-skin>
+    <portlet-skin>
+        <application-name>cdi-scope-portlets</application-name>
+        <portlet-name>CDIRedisplayScopedPortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/css/cdi-scope-portlets.css</css-path>
+    </portlet-skin>
+</gatein-resources>

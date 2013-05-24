@@ -2,7 +2,7 @@
 
 cdi-jsf-portlet: CDI Portlet with JSF
 ============================
-Author: Ken Finnigan  
+Author: Ken Finnigan, Peter Palaga  
 Level: Intermediate  
 Technologies: Portlet, CDI, JSF  
 Summary: An application that demonstrates use of JSF 2 RI and CDI in a portlet  
@@ -11,7 +11,15 @@ Target Product: GateIn Portal 3.6
 What is it?
 -----------
 
-This project demonstrates how to use CDI in a JSF 2 portlet.
+This project demonstrates how to use CDI and JSF in portlets. We have made the example as self-explaining as
+possible through commenting all necessary details directly in the included files. We suggest to study the example in the
+following order:
+
+* `pom.xml`
+* Configuration files under `src/main/webapp/WEB-INF`
+* Java source files under `src/main/java`
+* JSF templates under `src/main/webapp/templates`
+
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of GateIn Portal Developer Guide:
@@ -20,6 +28,7 @@ of GateIn Portal Developer Guide:
 * [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
 * [JSF2 Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL36/JSF2+Portlet+Development)
 * [Basic JSF Portlet Development](https://docs.jboss.org/author/display/GTNPORTAL36/Basic+JSF+Portlet+Development)
+* [Generic CDI Portlet](https://docs.jboss.org/author/display/GTNPORTAL36/GenericPortlet+and+Portlet+Filter+Injection)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->

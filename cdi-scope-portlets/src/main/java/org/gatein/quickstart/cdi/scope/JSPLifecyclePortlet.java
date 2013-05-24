@@ -15,23 +15,25 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi.scope;
 
-import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-@RequestScoped
-public class DataBean {
+public class JSPLifecyclePortlet extends JSPAbstractPortlet {
 
-    private String message = "Hello from CDI!";
+    @Inject
+    LifecycleBean bean;
 
-    public String getMessage() {
-        return message;
+    @Override
+    protected AbstractBean getBean() {
+        return bean;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    @Override
+    protected AbstractBean getResourceBean() {
+        return null;
     }
 }

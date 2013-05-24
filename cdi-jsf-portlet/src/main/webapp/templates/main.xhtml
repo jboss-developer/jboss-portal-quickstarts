@@ -1,4 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
@@ -15,27 +14,44 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-
-    <h:head>
-        <title>CDI and JSF2 Portlet</title>
-    </h:head>
+<f:view xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    <!-- the f:view above prevents an erroneous <html> within <body> coming from portal. -->
+    <!-- <h:head /> and <h:body> in the following are always needed otherwise JSF Facelets won't work -->
+    <h:head />
 
     <h:body>
         <h:outputStylesheet library="css" name="application.css" />
 
-        <div id="page">
-            <div id="page-content">
-                <div class="content-container">
-                    <ui:insert name="body">
-                        Body content missed
-                    </ui:insert>
-                </div>
-                <div class="clear"></div>
-            </div>
+        <div class="CDIJSFPortlet">
+            <h1>CDI JSF Portlet</h1>
+            <h3>
+                <h:outputText value="#{issueController.message}" />
+            </h3>
+            <h:form>
+                <h:dataTable value="#{issueManager.all}" var="issue">
+                    <h:column>
+                        <f:facet name="header">Issue No</f:facet>
+                        #{issue.id}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Status</f:facet>
+                        #{issue.status}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Title</f:facet>
+                        #{issue.title}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                        #{issue.description}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Actions</f:facet>
+                        <h:commandLink action="#{issueController.deleteIssue(issue)}" value="Delete" />
+                    </h:column>
+                </h:dataTable>
+            </h:form>
         </div>
     </h:body>
-</html>
+</f:view>

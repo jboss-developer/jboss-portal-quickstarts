@@ -15,9 +15,9 @@
     limitations under the License.
  -->
 
-<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet" %>
-
-<script type="text/javascript">
+<%@ taglib uri="http://java.sun.com/portlet_2_0" prefix="portlet"%>
+<div class="CDIScopePortlet">
+    <script type="text/javascript">
     function <portlet:namespace/>callResource(type) {
         var xhr = new XMLHttpRequest();
         var url;
@@ -34,25 +34,22 @@
         xhr.open("GET", url, true);
         xhr.send();
     }
-</script>
+    </script>
+    <h1>${portletName}</h1>
+    <p>
+        <a href="#" onclick="<portlet:namespace/>callResource('set');">Set <code>bean.text</code></a> to 'Ajax' using 
+        <code>ResourceRequest</code> of Portlet API 2.0.
+    </p>
+    <p>
+        <a href="#" onclick="<portlet:namespace/>callResource('check');">Get current <code>bean.text</code></a> from server using 
+        <code>ResourceRequest</code> of Portlet API 2.0.
+    </p>
 
-<div class="portlet-section-header">Welcome !</div>
-
-<br/>
-
-<div class="portlet-font">Welcome to JSP CDI portlet example</div>
-
-<br/>
-
-<div class="portlet-font">Update text with <a href="#" onclick="<portlet:namespace/>callResource('set');">ResourceRequest</a></div>
-<div class="portlet-font">Check value with <a href="#" onclick="<portlet:namespace/>callResource('check');">ResourceRequest</a></div>
-
-<br/>
-
-<portlet:actionURL var="myActionURL"/>
-<form action="<%= myActionURL %>" method="POST">
-         <span class="portlet-form-field-label">Text:</span>
-         <input class="portlet-form-input-field" type="text" name="text"/>
-         <input class="portlet-form-button" type="Submit"/>
-</form>
-<hr/>
+    <portlet:actionURL var="myActionURL" />
+    <form action="<%=myActionURL%>" method="POST">
+        <p>
+            And here, you can set <code>bean.text</code> on server using the coventional form submit.<br />
+            Text:<input type="text" name="text" /> <input type="Submit" />
+        </p>
+    </form>
+</div>

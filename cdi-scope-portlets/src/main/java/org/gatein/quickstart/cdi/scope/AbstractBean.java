@@ -15,20 +15,20 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
-
-import javax.inject.Inject;
+package org.gatein.quickstart.cdi.scope;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-public class JSPRedisplayPortlet extends JSPAbstractPortlet {
+public class AbstractBean {
 
-    @Inject
-    RedisplayBean bean;
+    private String text = null;
 
-    @Override
-    protected AbstractBean getBean() {
-        return bean;
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

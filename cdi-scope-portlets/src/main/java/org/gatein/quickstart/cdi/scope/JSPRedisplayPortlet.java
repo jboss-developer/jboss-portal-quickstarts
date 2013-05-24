@@ -15,26 +15,28 @@
  * limitations under the License.
  */
 
-package org.gatein.cdi;
+package org.gatein.quickstart.cdi.scope;
 
 import javax.inject.Inject;
-import javax.portlet.GenericPortlet;
-import javax.portlet.PortletException;
-import javax.portlet.RenderRequest;
-import javax.portlet.RenderResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
 /**
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
-public class GenericCDIPortlet extends GenericPortlet {
+public class JSPRedisplayPortlet extends JSPAbstractPortlet {
+
     @Inject
-    DataBean bean;
+    RedisplayBean bean;
+
+    @Inject
+    ResourceRedisplayBean resourceBean;
 
     @Override
-    protected void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException {
-        PrintWriter writer = response.getWriter();
-        writer.write("Message from DataBean is: " + bean.getMessage());
+    protected AbstractBean getBean() {
+        return bean;
+    }
+
+    @Override
+    protected AbstractBean getResourceBean() {
+        return resourceBean;
     }
 }

@@ -32,7 +32,7 @@
         <param-value>ALWAYS_DELEGATE</param-value>
     </context-param>
     
-    <!-- The following params are documented here: http://myfaces.apache.org/core21/myfaces-impl/webconfig.html -->
+    <!-- The following params are documented on http://myfaces.apache.org/core21/myfaces-impl/webconfig.html -->
     <context-param>
         <param-name>javax.faces.FACELETS_VIEW_MAPPINGS</param-name>
         <param-value>*.xhtml</param-value>
