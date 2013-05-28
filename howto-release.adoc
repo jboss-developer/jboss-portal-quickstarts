@@ -39,7 +39,7 @@ ls -l
 total 3248
 -rw-rw-r--. 1 ppalaga ppalaga   14519 May 14 15:35 cdi-generic-portlet.zip
 -rw-rw-r--. 1 ppalaga ppalaga   20507 May 14 15:35 cdi-jsf-portlet.zip
--rw-rw-r--. 1 ppalaga ppalaga   19236 May 14 15:35 cdi-scope-portlets.zip
+-rw-rw-r--. 1 ppalaga ppalaga   19236 May 14 15:35 cdi-scopes-portlet.zip
 -rw-rw-r--. 1 ppalaga ppalaga 1640427 May 14 15:35 GateIn-3.6-Quickstarts.zip
 -rw-rw-r--. 1 ppalaga ppalaga  827038 May 14 15:35 gatein-portal-extension.zip
 -rw-rw-r--. 1 ppalaga ppalaga  571123 May 14 15:35 gatein-sample-portal.zip

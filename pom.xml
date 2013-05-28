@@ -161,7 +161,7 @@
         <module>navigation-api-portlet</module>
         <module>cdi-generic-portlet</module>
         <module>cdi-jsf-portlet</module>
-        <module>cdi-scope-portlets</module>
+        <module>cdi-scopes-portlet</module>
         <module>social-portlets</module>
         <module>gatein-portal-extension</module>
         <module>gatein-sample-portal</module>

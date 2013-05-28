@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.StringTokenizer;
+import java.util.regex.Pattern;
 
 import org.apache.maven.model.Model;
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
@@ -196,7 +197,7 @@ private static class ModelNodeWrapper extends DefaultObjectWrapper {
 
 
 /** Do the usual FreeMarker stuff */
-public static void mergeFile(Configuration cfg, String templateRoot, String templatePath, ModelNode model,
+public void mergeFile(Configuration cfg, String templateRoot, String templatePath, ModelNode model,
         String outputDir) throws IOException, TemplateException {
     String outputPath = outputDir + "/" + templatePath.replaceAll("\\.ftl\$", "");
     // log.info("Merging '${templateRoot}/${templatePath}' -> '${outputPath}'.");
@@ -205,8 +206,54 @@ public static void mergeFile(Configuration cfg, String templateRoot, String temp
     temp.process(model, out);
     out.close();
 }
+public void substProps(Configuration cfg, String templateRoot, String templatePath, ModelNode model,
+        String outputDir) throws IOException, TemplateException {
+    String outputPath = outputDir + "/" + templatePath.replaceAll("\\.subst\\.properties\$", "");
+    Properties props = new Properties();
+    InputStream input = new FileInputStream(new File(new File(templateRoot), templatePath));
+    props.load(input);
+    input.close();
+    for (Map.Entry<String, String> en : props.entrySet()) {
+        Template temp = new Template(en.getKey(), new StringReader(en.getValue()), cfg);
+        StringWriter out = new StringWriter();
+        temp.process(model, out);
+        out.close();
+        String replacement = out.toString();
+        //System.out.println("Replacing '"+ en.getKey() +"' -> '${replacement}' in '${outputPath}'.");
+        replaceRegexp(outputPath, Pattern.compile(en.getKey(), Pattern.DOTALL), replacement, "utf-8");
+    }
+}
+public void replaceRegexp(String path, Pattern pattern, String replace, String encoding) {
+    Reader r = null
+    f = new File(path);
+    StringBuilder sb = new StringBuilder(1024)
+    try {
+        r = new InputStreamReader(new FileInputStream(f), encoding)
+        int ch = 0
+        while ((ch = r.read()) >= 0) {
+            sb.append((char) ch);
+        }
+    }
+    finally {
+        if (r != null) {
+            r.close()
+        }
+    }
+    Writer w = null;
+    try {
+        w = new OutputStreamWriter(new FileOutputStream(f), encoding)
+        w.write(pattern.matcher(sb).replaceAll(replace))
+    }
+    finally {
+        if (w != null) {
+            w.close()
+        }
+    }
+}
 
-public static void mergeDirRecursive(Configuration cfg, String templateRoot, String dir, ModelNode model,
+
+
+public void mergeDirRecursive(Configuration cfg, String templateRoot, String dir, ModelNode model,
         String outputDir) throws IOException, TemplateException {
     File absDir = new File(templateRoot + File.separatorChar + dir);
     for (File f : absDir.listFiles()) {
@@ -217,7 +264,13 @@ public static void mergeDirRecursive(Configuration cfg, String templateRoot, Str
             mergeDirRecursive(cfg, templateRoot, f.getPath().substring(templateRoot.length() + 1), model, outputDir);
         }
         else {
-            mergeFile(cfg, templateRoot, f.getPath().substring(templateRoot.length() + 1), model, outputDir);
+            /* f.isFile() */
+            if (f.getName().endsWith(".subst.properties")) {
+                substProps(cfg, templateRoot, f.getPath().substring(templateRoot.length() + 1), model, outputDir);
+            }
+            else {
+                mergeFile(cfg, templateRoot, f.getPath().substring(templateRoot.length() + 1), model, outputDir);
+            }
         }
     }
 }

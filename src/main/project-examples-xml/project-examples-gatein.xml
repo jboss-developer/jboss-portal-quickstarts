@@ -279,7 +279,7 @@
     </project>
     <project>
         <category></category>
-        <name>cdi-scope-portlets</name>
+        <name>cdi-scopes-portlet</name>
         <priority>1</priority>
         <included-projects></included-projects>
         <shortDescription></shortDescription>
