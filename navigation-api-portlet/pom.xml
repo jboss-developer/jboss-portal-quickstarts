@@ -22,7 +22,7 @@
     <artifactId>navigation-api-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Navigation API Portlet</name>
-    <version>3.6.0.Beta03-SNAPSHOT</version>
+    <version>3.6.0.Beta04-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>The simple navigation portlet using Portal API.</description>
     <url>http://www.gatein.org</url>
