@@ -37,10 +37,6 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.gatein.portal</groupId>
-            <artifactId>exo.portal.component.web.api</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-war</artifactId>
             <version>${project.version}</version>

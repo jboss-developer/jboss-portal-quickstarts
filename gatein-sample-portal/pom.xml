@@ -77,12 +77,6 @@
             </dependency>
             <dependency>
                 <groupId>org.gatein.portal</groupId>
-                <artifactId>exo.portal.component.web.api</artifactId>
-                <version>${version.org.gatein}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.gatein.portal</groupId>
                 <artifactId>exo.portal.component.web.resources</artifactId>
                 <version>${version.org.gatein}</version>
                 <scope>provided</scope>
