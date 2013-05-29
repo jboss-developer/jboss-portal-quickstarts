@@ -22,19 +22,16 @@
 
     <page-nodes>
         <node>
-            <uri>samplePage</uri>
             <name>samplePage</name>
             <label>#{portal.classic.samplePage}</label>
             <page-reference>portal::classic::samplePage</page-reference>
         </node>
         <node>
-            <uri>coolPage</uri>
             <name>coolPage</name>
             <label>#{portal.extension.CoolPage}</label>
             <page-reference>portal::classic::coolPage</page-reference>
         </node>
         <node>
-            <uri>groupnavigation</uri>
             <name>groupnavigation</name>
             <label>#{portal.classic.groupnavigation}</label>
 			<!-- Change visibility attribute to displayed -->

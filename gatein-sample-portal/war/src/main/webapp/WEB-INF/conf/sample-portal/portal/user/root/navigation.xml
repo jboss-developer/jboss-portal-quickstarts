@@ -22,7 +22,6 @@
 
     <page-nodes>
         <node>
-            <uri>sample-user</uri>
             <name>sample-user</name>
             <label>Sample-Portal Page User</label>
             <page-reference>user::root::sampledashboard</page-reference>
