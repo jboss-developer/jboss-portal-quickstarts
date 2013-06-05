@@ -23,7 +23,7 @@ An introduction and some background information to this quickstart can be found 
 of GateIn Portal Developer Guide:
 
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project)
-* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
+* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR+286%29)
 * [Generic CDI Portlet](https://docs.jboss.org/author/display/GTNPORTAL36/GenericPortlet+and+Portlet+Filter+Injection)
 
 

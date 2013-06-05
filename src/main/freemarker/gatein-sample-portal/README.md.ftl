@@ -64,10 +64,10 @@ of XML commented out. Please search for `Uncommented this when deploying ${proje
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [${compatibility.as.productAndVersion} Admin Guide](${jboss.admin.guide.ds.url})
+> described in [${compatibility.as.projectNameAndVersion} Admin Guide](${jboss.admin.guide.ds.url})
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[${compatibility.as.productAndVersion} Admin Guide](${jboss.admin.guide.ds.files.url}).
+[${compatibility.as.projectNameAndVersion} Admin Guide](${jboss.admin.guide.ds.files.url}).
 
 
 Access the Sample Portal

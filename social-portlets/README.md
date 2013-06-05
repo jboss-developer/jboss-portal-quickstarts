@@ -31,7 +31,7 @@ An introduction and some background information to this quickstart can be found 
 of GateIn Portal Developer Guide:
 
 * [Starting a Portlet Project](https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project)
-* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR-286%29)
+* [Standard Portlet Development (JSR-286)](https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR+286%29)
 * [Portal API](https://docs.jboss.org/author/display/GTNPORTAL36/Portal+API)
 
 Informations about configuration of OAuth authentication and integration with social networks could be found in the following
@@ -39,7 +39,7 @@ chapters of  GateIn Portal Reference Guide:
 
 * [OAuth - Authentication with social network accounts](https://docs.jboss.org/author/display/GTNPORTAL36/OAuth+-+Authentication+with+social+network+accounts)
 * [Facebook](https://docs.jboss.org/author/display/GTNPORTAL36/Facebook)
-* [Google+](https://docs.jboss.org/author/display/GTNPORTAL36/Google+plus)
+* [Google+](https://docs.jboss.org/author/display/GTNPORTAL36/Google+Plus)
 * [Twitter](https://docs.jboss.org/author/display/GTNPORTAL36/Twitter)
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->

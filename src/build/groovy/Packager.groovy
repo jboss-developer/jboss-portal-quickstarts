@@ -96,7 +96,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     String product = project.properties.get("compatibility.portal.projectName");
     String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
     String majorVersion = project.properties.get("compatibility.portal.versionMajor");
-    String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url").toLowerCase();
+    String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url.prefix").toLowerCase();
 
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
@@ -122,8 +122,8 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
             productNameShort.equals("GateIn") ?
                 "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.61" :
                 "org.jboss.ide.eclipse.as.runtime.eap." +
-                    project.properties.get("compatibility.as.major.version") +
-                    project.properties.get("compatibility.as.minor.version")
+                    project.properties.get("compatibility.as.majorVersion") +
+                    project.properties.get("compatibility.as.minorVersion")
     ;
     setTextContentByXPath(
             xPath,

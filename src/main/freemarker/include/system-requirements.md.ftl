@@ -21,4 +21,4 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on ${compatibility.portal.projectName} ${compatibility.portal.versionMm} running on ${compatibility.as.product}.
+The project is designed to be deployed on ${compatibility.portal.projectName} ${compatibility.portal.versionMm} running on ${compatibility.as.projectName}.

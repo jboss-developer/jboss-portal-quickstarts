@@ -27,7 +27,7 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with ${compatibility.portal.projectNameAndVersion} running on ${compatibility.as.product}.
+This release of Portal Quickstarts is compatible with ${compatibility.portal.projectNameAndVersion} running on ${compatibility.as.projectName}.
 
 <a id="toc"></a>
 Available Quickstarts

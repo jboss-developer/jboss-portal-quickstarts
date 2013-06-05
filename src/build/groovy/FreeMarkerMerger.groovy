@@ -306,14 +306,19 @@ Writer extLinksHtmlBuilder = new OutputStreamWriter(new FileOutputStream(new Fil
 extLinksHtmlBuilder.append("<html><body><ul>\n");
 /* Sort alphabetically using TreeSet */
 Map<String, String> linksAndVersions = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
+Set<String> urls = new TreeSet<String>();
 for (String key : topProperties.keySet()) {
     if (key instanceof String && (key.endsWith(".url") || key.startsWith("compatibility."))) {
         linksAndVersions.put(key.replace('.', '_'), topProperties.get(key));
         if (key.endsWith(".url")) {
-            extLinksHtmlBuilder.append("<li><a href=\"").append(topProperties.get(key)).append("\">").append(topProperties.get(key)).append("</a></li>\n");
+            urls.add(topProperties.get(key));
         }
     }
 }
+for (String url : urls) {
+    extLinksHtmlBuilder.append("<li><a href=\"").append(url).append("\">").append(url).append("</a></li>\n");
+}
+
 extLinksHtmlBuilder.append("</ul></body></html>");
 extLinksHtmlBuilder.close();
 model.putMap("linksAndVersions", linksAndVersions);

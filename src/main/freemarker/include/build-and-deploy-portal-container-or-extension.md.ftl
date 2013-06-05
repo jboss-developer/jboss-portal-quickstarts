@@ -20,7 +20,7 @@ Build and Deploy
 ----------------
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
-`mvn jboss-as:deploy` or copying to the default ${compatibility.as.product} deployment folder when 
+`mvn jboss-as:deploy` or copying to the default ${compatibility.as.projectName} deployment folder when 
 ${compatibility.portal.projectName} is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
