@@ -42,7 +42,7 @@
     
     <h2><code>@PortletLifecycleScoped</code></h2>
     <p>
-        <code>lifecycleScopedBean.text</code></a> value during <code>Portlet.doView()</code>: 
+        <code>lifecycleScopedBean.text</code> value during <code>Portlet.doView()</code>: 
         <code>"${lifecycleScopedBean.getText()}"</code>
     </p>
     <form action="<%=myActionURL%>" method="POST">
@@ -69,7 +69,7 @@
 
     <h2><code>@PortletRedisplayScoped</code></h2>
     <p>
-        <code>redisplayScopedBean.text</code></a> value during <code>Portlet.doView()</code>: 
+        <code>redisplayScopedBean.text</code> value during <code>Portlet.doView()</code>: 
         <code>"${redisplayScopedBean.getText()}"</code>
     </p>
     <form action="<%=myActionURL%>" method="POST">
