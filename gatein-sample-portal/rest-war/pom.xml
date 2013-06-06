@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-sample-portal-rest-war</artifactId>
     <packaging>war</packaging>
-    <name>GateIn Sample Portal REST WAR</name>
+    <name>Sample Portal REST WAR</name>
     <url>http://gatein.org</url>
-    <description>GateIn Sample Portal REST WAR</description>
+    <description>Sample Portal REST WAR</description>
 
     <build>
         <finalName>rest-sample-portal</finalName>

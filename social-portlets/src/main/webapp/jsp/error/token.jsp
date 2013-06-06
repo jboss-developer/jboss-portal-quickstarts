@@ -33,7 +33,7 @@
         ${errorMessage}
         Click
         <a href="${tokenUrl}">here</a>
-        to link your GateIn account with ${oauthProvider.friendlyName} account.
+        to link your Portal account with ${oauthProvider.friendlyName} account.
     </span>
 </div>
 

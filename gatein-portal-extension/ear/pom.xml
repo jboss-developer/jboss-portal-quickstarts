@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-portal-extension-ear</artifactId>
     <packaging>ear</packaging>
-    <name>GateIn Portal Extension EAR</name>
+    <name>Portal Extension EAR</name>
     <url>http://gatein.org</url>
-    <description>GateIn Portal Extension EAR</description>
+    <description>Portal Extension EAR</description>
 
     <dependencies>
         <dependency>

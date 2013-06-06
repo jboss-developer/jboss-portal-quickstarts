@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-sample-portal-war</artifactId>
     <packaging>war</packaging>
-    <name>GateIn Sample Portal WAR</name>
+    <name>Sample Portal WAR</name>
     <url>http://gatein.org</url>
-    <description>GateIn Sample Portal WAR</description>
+    <description>Sample Portal WAR</description>
 
     <build>
         <finalName>${project.parent.artifactId}</finalName>

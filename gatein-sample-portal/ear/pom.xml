@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-sample-portal-ear</artifactId>
     <packaging>ear</packaging>
-    <name>GateIn Sample Portal EAR</name>
+    <name>Sample Portal EAR</name>
     <url>http://gatein.org</url>
-    <description>GateIn Sample Portal EAR</description>
+    <description>Sample Portal EAR</description>
 
     <dependencies>
         <dependency>

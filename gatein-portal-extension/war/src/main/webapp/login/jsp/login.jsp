@@ -36,7 +36,7 @@
 <link rel="stylesheet" type="text/css" href="<%=contextPath%>/login/skin/Stylesheet.css" />
 </head>
 <body style="text-align: center; background: #b5b6b6; font-family: arial, tahoma, verdana">
-    <div style="color: #334AF6; font-weight: bold;">This modified login form comes from GateIn Portal Extension.</div>
+    <div style="color: #334AF6; font-weight: bold;">This modified login form comes from Portal Extension.</div>
     <div class="UILogin">
         <div class="LoginHeader"></div>
         <div class="LoginContent">

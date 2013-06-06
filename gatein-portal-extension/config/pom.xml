@@ -25,8 +25,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>gatein-portal-extension-config</artifactId>
-    <name>GateIn Portal Extension Configuration</name>
+    <name>Portal Extension Configuration</name>
     <packaging>jar</packaging>
     <url>http://www.gatein.org</url>
-    <description>GateIn Portal Extension Configuration</description>
+    <description>Portal Extension Configuration</description>
 </project>
