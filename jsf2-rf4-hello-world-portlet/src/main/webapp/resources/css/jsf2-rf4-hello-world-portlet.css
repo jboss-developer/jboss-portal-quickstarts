@@ -22,8 +22,8 @@ div.jsf2Rf4HelloWorldPortlet {
        The path '/css/background/rf-logo.png' used in the expression is relative to resources
        folder of this web application. See https://docs.jboss.org/author/display/PBR/Resource+Serving */
     background: url(#{resource['/css/background/rf-logo.png']}) no-repeat;
-    background-position-x: 743px;
-    background-position-y: 10px;
+    background-position: right 30px top 0;
+    background-origin: content-box;
 }
 div.jsf2Rf4HelloWorldPortlet p {
     width: 713px;
