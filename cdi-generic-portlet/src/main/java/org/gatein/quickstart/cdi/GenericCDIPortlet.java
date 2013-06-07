@@ -41,6 +41,9 @@ public class GenericCDIPortlet extends GenericPortlet {
     @Override
     protected void doView(RenderRequest request, RenderResponse response) throws PortletException, IOException {
         PrintWriter writer = response.getWriter();
-        writer.write("Message from DataBean is: " + bean.getMessage());
+        writer.write("<div style=\"margin: 10px;\">\n");
+        writer.write("<h1 style=\"font-size:16px;background-color:#dedfdf;padding:2px 4px;margin-bottom:2px;margin-bottom:2px;\">CDI Generic Portlet</h1>\n");
+        writer.write("<p style=\"margin-left: 4px;\">Message from DataBean is: " + bean.getMessage() +"</p>\n");
+        writer.write("</div>\n");
     }
 }
