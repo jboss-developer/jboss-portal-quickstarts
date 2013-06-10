@@ -22,7 +22,7 @@ div.jsf2HelloWorldPortlet {
        used in the expression is relative to  resources folder of this web application.
        See https://docs.jboss.org/author/display/PBR/Resource+Serving */
     background: url(#{resource['/css/background/jsf-logo.png']}) no-repeat;
-    background-position: right 30px top 0;
+    background-position: right top;
     background-origin: content-box;
 }
 div.jsf2HelloWorldPortlet p {
