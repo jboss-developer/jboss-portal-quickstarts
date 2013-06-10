@@ -19,7 +19,7 @@
     xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_3 http://www.gatein.org/xml/ns/gatein_resources_1_3"
     xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
 
-    <!-- JPP will load this CSS for HomePagePortlet instead of the default one. -->
+    <!-- GateIn will load this CSS for HomePagePortlet instead of the default one. -->
     <portlet-skin>
         <!--
             The name of the web application containing the portlet.xml file in which
@@ -33,17 +33,6 @@
         <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
     </portlet-skin>
 
-    <!--
-        GateIn will load this CSS for BannerPortlet instead of the default one.
-        We want to replace the default logo with ours.
-    -->
-    <portlet-skin>
-        <application-name>web</application-name>
-        <portlet-name>BannerPortlet</portlet-name>
-        <skin-name>Default</skin-name>
-        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>
-    </portlet-skin>
-
     <!-- JPP will load this CSS for HomePagePortlet instead of the default one. -->
     <portlet-skin>
         <!--
@@ -55,7 +44,7 @@
         <!-- <portlet-name> value from the portlet.xml referenced above -->
         <portlet-name>HomePagePortlet</portlet-name>
         <skin-name>JppSkin</skin-name>
-        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet.css</css-path>
+        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet-JPP.css</css-path>
     </portlet-skin>
 
     <!--
@@ -65,8 +54,19 @@
     <portlet-skin>
         <application-name>web</application-name>
         <portlet-name>BannerPortlet</portlet-name>
-        <skin-name>JppSkin</skin-name>
+        <skin-name>Default</skin-name>
         <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>
+    </portlet-skin>
+
+    <!--
+        JPP will load this CSS for BannerPortlet instead of the default one.
+        We want to replace the default logo with ours.
+    -->
+    <portlet-skin>
+        <application-name>web</application-name>
+        <portlet-name>BannerPortlet</portlet-name>
+        <skin-name>JppSkin</skin-name>
+        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet-JPP.css</css-path>
     </portlet-skin>
 
 
