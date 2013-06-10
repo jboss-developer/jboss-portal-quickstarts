@@ -33,6 +33,7 @@
         </supports>
         <portlet-info>
             <title>Simplest Hello World Portlet</title>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 </portlet-app>

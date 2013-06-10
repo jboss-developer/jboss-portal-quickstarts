@@ -33,6 +33,7 @@
         <portlet-info>
             <title>Navigation API Portlet</title>
             <short-title>Navigation API Portlet</short-title>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 </portlet-app>

@@ -30,6 +30,7 @@
         </supports>
         <portlet-info>
             <title>CDI Generic Portlet</title>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
     <filter>

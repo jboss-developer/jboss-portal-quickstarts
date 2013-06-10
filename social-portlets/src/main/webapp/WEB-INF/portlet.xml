@@ -32,7 +32,7 @@
         <portlet-info>
             <title>Facebook User Info Portlet</title>
             <short-title>FB UserInfo Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -47,7 +47,7 @@
         <portlet-info>
             <title>Facebook Friends Portlet</title>
             <short-title>FB Friends Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -62,7 +62,7 @@
         <portlet-info>
             <title>Facebook Status Update Portlet</title>
             <short-title>FB Status Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -77,7 +77,7 @@
         <portlet-info>
             <title>Twitter Portlet</title>
             <short-title>Twitter Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -92,7 +92,7 @@
         <portlet-info>
             <title>Google User Info Portlet</title>
             <short-title>Google User Info Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -107,7 +107,7 @@
         <portlet-info>
             <title>Google Activities Portlet</title>
             <short-title>Google Activities Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
@@ -122,7 +122,7 @@
         <portlet-info>
             <title>Google Friends Portlet</title>
             <short-title>Google Friends Portlet</short-title>
-            <keywords>Social</keywords>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 

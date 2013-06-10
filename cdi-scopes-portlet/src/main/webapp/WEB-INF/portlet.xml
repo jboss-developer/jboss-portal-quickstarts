@@ -31,6 +31,7 @@
 
         <portlet-info>
             <title>CDI Scopes Portlet</title>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 </portlet-app>

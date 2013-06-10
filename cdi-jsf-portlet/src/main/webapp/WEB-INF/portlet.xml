@@ -42,6 +42,7 @@
 
         <portlet-info>
             <title>CDI JSF Portlet</title>
+            <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
 
