@@ -84,7 +84,7 @@ To ensure that the example portlet has been deployed successfully, do the follow
 [http://127.0.0.1:8080/portal/classic](http://127.0.0.1:8080/portal/classic)).
 * Sign in as root or other user with manager:/platform/administrators permissions.
 * Go to Top Menu > Group > Administration > Application Registry and hit Import Applications. After that, you should
-see the newly imported Portlet Using Portet-Specific CDI Scopes under the cdi-scopes-portlet Category.
+see the newly imported Portlet Using Portet-Specific CDI Scopes under the Quickstarts Category.
 * Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
     * If you have chosen (a) to add the portlet to a new page:
         * Go to Top Menu > Group Editor > Add New Page
