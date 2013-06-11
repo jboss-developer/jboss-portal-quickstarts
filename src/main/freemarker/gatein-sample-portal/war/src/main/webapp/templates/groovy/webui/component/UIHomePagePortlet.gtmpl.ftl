@@ -18,6 +18,7 @@
 
     String initialURI = _ctx.getRequestContext().getParentAppRequestContext().getInitialURI();
 %>
+<#noparse>
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
     <div class="TRContainer">
         <div class="PortletDecoration">
@@ -46,6 +47,9 @@
             </div>
 
             <div class="HomePortletContent">
+</#noparse>
+<#if compatibility.portal.projectNameShort == "GateIn">
+<#noparse>
                 <div class="LeftAccountsContainer">
                     <div class="RightAccountsContainer">
                         <div class="MiddleAccountsContainer">
@@ -102,6 +106,9 @@
                         </div>
                     </div>
                 </div>
+</#noparse>
+</#if>
+<#noparse>
             </div>
 
         </div>
@@ -114,3 +121,4 @@
         </div>
     </div>
 </div>
+</#noparse>

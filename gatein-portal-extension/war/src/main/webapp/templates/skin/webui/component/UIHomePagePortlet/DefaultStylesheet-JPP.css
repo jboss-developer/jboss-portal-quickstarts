@@ -248,3 +248,11 @@ _html .UIHomePagePortlet .RightAccountsContainer {
 .UIHomePagePortlet .ClearBoth {
     clear: both;
 }
+
+.BottomDecoratorHome .BottomDecoratorLeft {
+    background: none;
+}
+
+.BottomDecoratorHome .BottomDecoratorRight {
+    background: none;
+}

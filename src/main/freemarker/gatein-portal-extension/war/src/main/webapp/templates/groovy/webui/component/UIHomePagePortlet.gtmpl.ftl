@@ -30,6 +30,9 @@
 %>
 <#noparse>
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
+</#noparse>
+<#if compatibility.portal.projectNameShort == "GateIn">
+<#noparse>
     <div class="TRContainer">
         <div class="PortletDecoration">
             <div class="MiddleAccountsContainer">
@@ -86,6 +89,9 @@
             </div>
         </div>
     </div>
+</#noparse>
+</#if>
+<#noparse>
     <div class="TLContainer">
         <div class="PortletDecoration">
 
