@@ -23,7 +23,7 @@
 
 <portlet:defineObjects />
 <c:set var="resourceBundle" value="${portletConfig.getResourceBundle(renderRequest.locale)}" />
-<div id="id<portlet:namespace/>_gtnQuickstartNavigationPortlet" class="gtnQuickstartNavigationPortlet ">    
+<div id="id<portlet:namespace/>_gtnQuickstartNavigationPortlet" class="gtnQuickstartNavigationPortlet ">
     <%-- Render the main menu, if nodes are available --%>
     <c:if test="${fn:length(navigationRootNode.children) > 0}">
         <c:set var="parentNode" value="${navigationRootNode}" scope="request" />
