@@ -98,6 +98,39 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     String majorVersion = project.properties.get("compatibility.portal.versionMajor");
     String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url.prefix").toLowerCase();
 
+    String compatibilityMin = majorVersion + ".0";
+    File genPropsFile = new File("src/main/freemarker/"+ moduleProject.getArtifactId(), "generator.properties");
+    if (genPropsFile.exists()) {
+        Properties genProps = new Properties();
+        FileInputStream genPropsIn = null;
+        try {
+            genPropsIn = new FileInputStream(genPropsFile);
+            genProps.load(genPropsIn);
+        }
+        catch (Throwable e) {
+            e.printStackTrace();
+        }
+        finally {
+            genPropsIn.close();
+        }
+        String genPropsPrefix = productNameShort.equals("GateIn") ? "compatibility.min.portal.community." : "compatibility.min.portal.product.";
+        if (genProps.containsKey(genPropsPrefix + "versionMajor")) {
+            StringBuilder compatibilityMinBuffer = new StringBuilder(8);
+            compatibilityMinBuffer.append(genProps.get(genPropsPrefix + "versionMajor"));
+            System.out.println(genPropsPrefix + "versionMinor");
+            if (genProps.containsKey(genPropsPrefix + "versionMinor")) {
+                compatibilityMinBuffer.append('.').append(genProps.get(genPropsPrefix + "versionMinor"));
+                if (genProps.containsKey(genPropsPrefix + "versionMicro")) {
+                    compatibilityMinBuffer.append('.').append(genProps.get(genPropsPrefix + "versionMicro"));
+                }
+            }
+            else {
+                compatibilityMinBuffer.append(".0");
+            }
+            compatibilityMin = compatibilityMinBuffer.toString();
+        }
+    }
+
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
         log.info("Trying to insert <project> node for '${moduleProject.artifactId}'.");
@@ -116,7 +149,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     setTextContent(projectNode, "url", "${downloadsRootUrl}/"+ zipFile.getName())
 
     setTextContentByXPath(xPath, "fixes/fix[@type='wtpruntime']/property[@name='description']",
-            projectNode, "This project example requires ${product} ${majorVersion}.x");
+            projectNode, "This project example requires ${product} ${compatibilityMin} or higher.");
 
     String runtimes =
             productNameShort.equals("GateIn") ?
@@ -125,6 +158,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
                     project.properties.get("compatibility.as.majorVersion") +
                     project.properties.get("compatibility.as.minorVersion")
     ;
+
     setTextContentByXPath(
             xPath,
             "fixes/fix[@type='wtpruntime']/property[@name='allowed-types']",

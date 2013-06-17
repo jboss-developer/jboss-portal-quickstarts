@@ -265,7 +265,10 @@ public void mergeDirRecursive(Configuration cfg, String templateRoot, String dir
         }
         else {
             /* f.isFile() */
-            if (f.getName().endsWith(".subst.properties")) {
+            if (f.getName().equals("generator.properties")) {
+                /* ignore */
+            }
+            else if (f.getName().endsWith(".subst.properties")) {
                 substProps(cfg, templateRoot, f.getPath().substring(templateRoot.length() + 1), model, outputDir);
             }
             else {
