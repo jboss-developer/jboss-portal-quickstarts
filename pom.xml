@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>3.6.0.Beta04-SNAPSHOT</version>
+    <version>3.6.0.Final-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>GateIn Quickstarts Parent</name>
     <url>http://gatein.org</url>
@@ -37,7 +37,7 @@
 
     <properties>
         <org.jboss.ide.target.version>4.1</org.jboss.ide.target.version>
-        <org.jboss.bom.gatein-bom.version>1.0.0.Beta02</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>

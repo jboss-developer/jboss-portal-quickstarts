@@ -22,7 +22,7 @@
     <artifactId>navigation-api-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Navigation API Portlet</name>
-    <version>3.6.0.Beta04-SNAPSHOT</version>
+    <version>3.6.0.Final-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>The simple navigation portlet using Portal API.</description>
     <url>http://www.gatein.org</url>
@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.0.Beta02</org.jboss.bom.gatein-bom.version>
+        <org.jboss.bom.gatein-bom.version>1.0.0.Final</org.jboss.bom.gatein-bom.version>
 
         <!-- Other dependencies -->
         <servlet-api.version>2.5</servlet-api.version>
