@@ -36,7 +36,7 @@
     </licenses>
 
     <properties>
-        <org.jboss.ide.target.version>4.1</org.jboss.ide.target.version>
+        <org.jboss.ide.target.nameAndVersion>jbt4.1</org.jboss.ide.target.nameAndVersion>
         <org.jboss.bom.gatein-bom.version>1.0.1.Final</org.jboss.bom.gatein-bom.version>
         <!-- descriptor.suffix history:
             GateIn:
@@ -44,8 +44,6 @@
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
              JBT 4.1.0.Alpha2 - '-001'
-            GateIn:
-             JBT 4.0.0.Final - '-001'
         -->
         <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
 
@@ -202,6 +200,9 @@
         <profile>
             <id>product</id>
             <properties>
+                <org.jboss.ide.target.nameAndVersion>jbds7.0</org.jboss.ide.target.nameAndVersion>
+                <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
+
                 <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
                 <compatibility.portal.versionMinor>${compatibility.portal.product.versionMinor}</compatibility.portal.versionMinor>
                 <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>

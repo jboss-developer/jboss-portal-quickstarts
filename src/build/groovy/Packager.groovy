@@ -282,8 +282,8 @@ for (module in project.modules) {
 String descriptorPath = "target/assembly/project-examples-" +
         project.properties.get("compatibility.portal.projectNameShort").toLowerCase() +
         project.properties.get("compatibility.portal.versionMm") +
-        "-jbt" +
-        project.properties.get("org.jboss.ide.target.version") +
+        "-" +
+        project.properties.get("org.jboss.ide.target.nameAndVersion") +
         project.properties.get("org.gatein.portal.quickstarts.descriptor.suffix") +
         ".xml"
 writeDom(descriptorDom, descriptorPath)
