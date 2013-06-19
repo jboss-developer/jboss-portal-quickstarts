@@ -21,7 +21,7 @@
 
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.6.0.Final-qs2-SNAPSHOT</version>
+    <version>3.6.0.Final-qs2</version>
     <name>Portal Extension</name>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
