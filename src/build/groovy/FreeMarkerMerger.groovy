@@ -74,7 +74,7 @@ private static class ModelNode extends HashMap<String, Object> {
 
     @Override
     public Object put(String key, Object value) {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException("Cannot put key '${key}' and value ${value}.");
     }
 
     public void putModel(Object value) {
@@ -125,7 +125,6 @@ private static class ModelNode extends HashMap<String, Object> {
                 } else {
                     parent.putString(token, (String) prop.getValue());
                 }
-                // log.info("   handling prop segment '${token}'.")
             }
         }
     }
@@ -147,7 +146,7 @@ private static class ModelNode extends HashMap<String, Object> {
     public void putString(String key, String value) {
         Object node = get(key);
         if (node instanceof ModelNode) {
-            ((ModelNode) node).value = value;
+            ((ModelNode) node).setValue(value);
         } else {
             super.put(key, new ModelNode(value));
         }
@@ -159,6 +158,10 @@ private static class ModelNode extends HashMap<String, Object> {
 
     public String toString() {
         return value;
+    }
+
+    public void setValue(String val) {
+        this.value = val;
     }
 }
 

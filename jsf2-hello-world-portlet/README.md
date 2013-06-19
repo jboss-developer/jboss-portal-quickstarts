@@ -12,7 +12,7 @@ What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1 
-and [Portlet Bridge](https://docs.jboss.org/author/display/PBR32) 3.2.0.Final.
+and [Portlet Bridge](https://docs.jboss.org/author/display/PBR32) 3.2.1.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters 
 of GateIn Portal Developer Guide:
