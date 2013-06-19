@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat;
+
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
@@ -21,11 +23,13 @@ import org.apache.maven.model.Model
 import org.apache.maven.model.io.xpp3.MavenXpp3Reader
 
 import org.w3c.dom.Attr;
+import org.w3c.dom.Comment;
 import org.w3c.dom.Document;
 import org.w3c.dom.DocumentFragment;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
 import java.util.regex.Pattern;
 
 final Pattern COMMENT_PATTERN = Pattern.compile("<!--~.*?~-->\r?\n?", Pattern.DOTALL | Pattern.MULTILINE);
@@ -278,6 +282,12 @@ for (module in project.modules) {
     enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, project)
 
 }
+
+descriptorDom.setStrictErrorChecking(false);
+java.text.SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ssZZ");
+Comment comment = descriptorDom.createComment(" Generated on "+ df.format(new Date()) +" ");
+descriptorDom.insertBefore(comment, descriptorDom.getDocumentElement());
+descriptorDom.insertBefore(descriptorDom.createTextNode("\n"), descriptorDom.getDocumentElement());
 
 String descriptorPath = "target/assembly/project-examples-" +
         project.properties.get("compatibility.portal.projectNameShort").toLowerCase() +
