@@ -89,6 +89,19 @@
                                 <value>
                                   <string>gatein-mobile-configuration</string>
                                 </value>
+<#if compatibility.portal.projectNameShort != "GateIn">
+                                <value>
+                                    <!--
+                                        Some of the resources we want to override are in jpp-branding-extension.war
+                                        and jpp-ext.war which are packaged in jpp-branding-extension.ear.
+                                        Note that jpp-ext is the display-name of jpp-branding-extension.war
+                                    -->
+                                    <string>jpp-ext</string>
+                                </value>
+                                <value>
+                                    <string>jpp-branding-skin</string>
+                                </value>
+</#if>
                                 <value>
                                     <string>gatein-portal-extension</string>
                                 </value>
