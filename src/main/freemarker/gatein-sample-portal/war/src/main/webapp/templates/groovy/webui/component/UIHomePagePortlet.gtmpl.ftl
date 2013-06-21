@@ -17,98 +17,98 @@
      */
 
     String initialURI = _ctx.getRequestContext().getParentAppRequestContext().getInitialURI();
+
+    /* In gtmpl, static classes do not work as expected. As a workaround we create an instance. */
+    LinksAndVersions LinksAndVersions = new LinksAndVersions();
 %>
 <#noparse>
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
+</#noparse>
+<#if compatibility.portal.projectNameShort == "GateIn">
+<#noparse>
     <div class="TRContainer">
         <div class="PortletDecoration">
-            <div class="GuideText"><%=_ctx.appRes("UIHomePagePortlet.Label.ExtendedHomePage")%>
-                <ul>
-                    <li><b><%=_ctx.appRes("UIHomePagePortlet.Label.SampleKey")%></b></li>
-                    <li><b><%=_ctx.appRes("UIHomePagePortlet.Label.SampleRB.SampleKey")%></b></li>
-                </ul>
+            <div class="MiddleAccountsContainer">
+                <div class="InstructionTitle"><%=_ctx.appRes("UIHomePagePortlet.Label.Title")%></div>
+                <div class="AccountsContainerDeco ClearFix">
+                    <div class="AccountBlock AdministratorUser">
+                        <div class="AccountInfos">
+                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=root&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Administrator")%></a></div>
+                            <div class="Username ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>root</span>
+                            </div>
+                            <div class="Passwords ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SeparatorLine"><span></span></div>
+                    <div class="AccountBlock ManagerUser">
+                        <div class="AccountInfos">
+                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=john&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Manager")%></a></div>
+                            <div class="Username ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>john</span>
+                            </div>
+                            <div class="Passwords ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SeparatorLine"><span></span></div>
+                    <div class="AccountBlock NormalUser">
+                        <div class="AccountInfos">
+                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=mary&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.User")%></a></div>
+                            <div class="Username ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>mary</span>
+                            </div>
+                            <div class="Passwords ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SeparatorLine"><span></span></div>
+                    <div class="AccountBlock DemoUser" style="margin-right: 0px;">
+                        <div class="AccountInfos">
+                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=demo&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Demo")%></a></div>
+                            <div class="Username ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>demo</span>
+                            </div>
+                            <div class="Passwords ClearFix">
+                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a class="VersionIcon" href="http://www.jboss.org/gatein/" target="_blank"></a>
-            <div class="DotLine"><span></span></div>
-            <div class="GuideText"><%=_ctx.appRes("UIHomePagePortlet.Label.GuideText")%></div>
-            <a class="ContactIcon" href="http://community.jboss.org/en/gatein?view=discussions" target="_blank"></a>
-
         </div>
     </div>
+</#noparse>
+</#if>
+<#noparse>
     <div class="TLContainer">
         <div class="PortletDecoration">
 
             <div class="HomePortletAdBackround">
                 <div class="AdImageLeft">
                     <div class="AdImageRight">
-                        <div class="EmptyBlock"><%=_ctx.appRes("UIHomePagePortlet.Label.Slogan")%></div>
+                        <div class="EmptyBlock">
+                            Sample Portal Home
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="HomePortletContent">
-</#noparse>
-<#if compatibility.portal.projectNameShort == "GateIn">
-<#noparse>
-                <div class="LeftAccountsContainer">
-                    <div class="RightAccountsContainer">
-                        <div class="MiddleAccountsContainer">
-                            <div class="InstructionTitle"><%=_ctx.appRes("UIHomePagePortlet.Label.Title")%></div>
-                            <div class="AccountsContainerDeco ClearFix">
-                                <div class="AccountBlock AdministratorUser">
-                                    <div class="AccountInfos">
-                                        <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=root&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Administrator")%></a></div>
-                                        <div class="Username ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>root</span>
-                                        </div>
-                                        <div class="Passwords ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="SeparatorLine"><span></span></div>
-                                <div class="AccountBlock ManagerUser">
-                                    <div class="AccountInfos">
-                                        <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=john&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Manager")%></a></div>
-                                        <div class="Username ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>john</span>
-                                        </div>
-                                        <div class="Passwords ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="SeparatorLine"><span></span></div>
-                                <div class="AccountBlock NormalUser">
-                                    <div class="AccountInfos">
-                                        <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=mary&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.User")%></a></div>
-                                        <div class="Username ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>mary</span>
-                                        </div>
-                                        <div class="Passwords ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="SeparatorLine"><span></span></div>
-                                <div class="AccountBlock DemoUser" style="margin-right: 0px;">
-                                    <div class="AccountInfos">
-                                        <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=demo&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Demo")%></a></div>
-                                        <div class="Username ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>demo</span>
-                                        </div>
-                                        <div class="Passwords ClearFix">
-                                            <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</#noparse>
-</#if>
-<#noparse>
+                <h2>About this Sample Portal</h2>
+                <p><%=_ctx.appRes("UIHomePagePortlet.Label.ExtendedHomePage")%></p>
+                <ul>
+                    <li><%=_ctx.appRes("UIHomePagePortlet.Label.SampleKey")%></li>
+                    <li><%=_ctx.appRes("UIHomePagePortlet.Label.SampleRB.SampleKey")%></li>
+                </ul>
+                <hr/>
+                <p>
+                    Your feedback is welcome on <a href="${LinksAndVersions.gatein_user_forum_url}">Online User Group</a>.
+                </p>
             </div>
 
         </div>
@@ -122,3 +122,19 @@
     </div>
 </div>
 </#noparse>
+<%
+/**
+ * LinksAndVersions is here as a workaround for GTNPORTAL-2871
+ *
+ * A helper class generated through <code>mvn install -P generate-readmes</code>.
+ * The constants in this class mirror properties from top pom.xml file.
+ *
+ * @author Peter Palaga
+ *
+ */
+public static class LinksAndVersions {
+<#list linksAndVersions?keys as key>
+    public static final String ${key} = "${linksAndVersions[key]}";
+</#list>
+}
+%>

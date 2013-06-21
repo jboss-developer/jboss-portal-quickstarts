@@ -88,7 +88,7 @@
 }
 
 .UIHomePagePortlet .AdImageLeft {
-    background: url('DefaultSkin/background/RightHome-JPP.jpg') no-repeat left top; /* orientation=lt */
+    background: url('DefaultSkin/background/RightHome-JPP.jpg') no-repeat left top;
 }
 
 * html .UIHomePagePortlet .AdImageLeft {

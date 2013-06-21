@@ -37,7 +37,7 @@
     <portlet-skin>
         <!--
             The name of the web application containing the portlet.xml file in which
-            BannerPortlet is definded. The application name is usually the same as
+            HomePagePortlet is definded. The application name is usually the same as
             the name of the WAR through which the application was deployed.
         -->
         <application-name>web</application-name>

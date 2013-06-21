@@ -88,7 +88,8 @@
 }
 
 .UIHomePagePortlet .AdImageLeft {
-    background: url('DefaultSkin/background/RightHome.jpg') no-repeat left top;
+    background: url('DefaultSkin/background/RightHome-JPP.jpg') no-repeat left top;
+    height: 148px;
 }
 
 * html .UIHomePagePortlet .AdImageLeft {
@@ -102,7 +103,7 @@
 
 .UIHomePagePortlet .AdImageLeft .EmptyBlock {
     font-size: 21px;
-    color: #616161;
+    color: #ffffff;
     text-align: left;
     font-family: arial;
     font-weight: bold;
@@ -247,4 +248,12 @@ _html .UIHomePagePortlet .RightAccountsContainer {
 
 .UIHomePagePortlet .ClearBoth {
     clear: both;
+}
+
+.BottomDecoratorHome .BottomDecoratorLeft {
+    background: none;
+}
+
+.BottomDecoratorHome .BottomDecoratorRight {
+    background: none;
 }
