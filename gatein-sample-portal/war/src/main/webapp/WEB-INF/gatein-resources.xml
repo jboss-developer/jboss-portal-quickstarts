@@ -46,6 +46,30 @@
         <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet-JPP.css</css-path>
     </portlet-skin>
 
+
+    <!--
+        GateIn will load this CSS for BannerPortlet instead of the default one.
+        We want to replace the default logo with ours.
+    -->
+    <portlet-skin>
+        <application-name>web</application-name>
+        <portlet-name>BannerPortlet</portlet-name>
+        <skin-name>Default</skin-name>
+        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet.css</css-path>
+    </portlet-skin>
+
+    <!--
+        JPP will load this CSS for BannerPortlet instead of the default one.
+        We want to replace the default logo with ours.
+    -->
+    <portlet-skin>
+        <application-name>web</application-name>
+        <portlet-name>BannerPortlet</portlet-name>
+        <skin-name>JppSkin</skin-name>
+        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet-JPP.css</css-path>
+    </portlet-skin>
+
+
     <portlet-skin>
         <application-name>sample-portal</application-name>
         <portlet-name>CoolPortlet</portlet-name>

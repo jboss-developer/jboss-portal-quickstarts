@@ -30,33 +30,24 @@
             <type>org.exoplatform.container.definition.PortalContainerDefinitionPlugin</type>
             <init-params>
                 <object-param>
-                    <name>portal</name>
+                    <name>sample-portal</name>
                     <object type="org.exoplatform.container.definition.PortalContainerDefinition">
-                        <!-- The name of the Portal Container: note that a Portal Container called "portal"
-                             already exists in the default JPP installation. Therefore, we actually redefine
-                             that existing Portal Container here. -->
+                        <!-- The name of the portal container -->
                         <field name="name">
-                            <string>portal</string>
+                            <string>sample-portal</string>
                         </field>
                         <!-- The name of the context name of the rest web application -->
                         <field name="restContextName">
-                            <string>rest</string>
+                            <string>rest-sample-portal</string>
                         </field>
                         <!-- The name of the realm -->
                         <field name="realmName">
-                            <string>gatein-domain</string>
+                            <string>gatein-domain-sample-portal</string>
                         </field>
                         <field name="externalSettingsPath">
                             <string>configuration.properties</string>
                         </field>
-                        <!--
-                            The list of all the context names that are needed to initialize the Portal Container properly.
-                            The order of the dependencies will define the initialization order and also the order for
-                            loading resources. When a resource with the same path, say /dir/subdir/resource, is available
-                            in more than one of the listed contexts, the one from the context closest to the end of this list
-                            will be chosen. Here we want the resources available in gatein-portal-extension to win over all
-                            other resources. Therefore we have added gatein-portal-extension as the last element of the list.
-                        -->
+                        <!-- All the dependencies of the portal container ordered by loading priority -->
                         <field name="dependencies">
                             <collection type="java.util.ArrayList">
                                 <value>
@@ -81,19 +72,20 @@
                                     <string>eXoGadgetServer</string>
                                 </value>
                                 <value>
-                                    <string>rest</string>
+                                    <string>rest-sample-portal</string>
                                 </value>
                                 <value>
                                     <string>web</string>
                                 </value>
-                                <value>
-                                  <string>gatein-mobile-configuration</string>
-                                </value>
+                                <!--<value profiles="jboss">
+                                   <string>gatein-wsrp-integration</string>
+                                </value>-->
 <#if compatibility.portal.projectNameShort != "GateIn">
                                 <!--
-                                    Some of the resources we want to override are in jpp-branding-extension.war
-                                    and jpp-ext.war which are packaged in jpp-branding-extension.ear.
-                                    Note that jpp-ext is the display-name of jpp-branding-extension.war
+                                    In Sample Portal, we rely on JppSkin for BannerPortlet and NavigationPortlet defined
+                                    in jpp-ext and jpp-branding-skin. Note that jpp-ext is the display-name of
+                                    jpp-branding-extension.war.
+                                    You can remove them both safely, when you define your own skin.
                                 -->
                                 <value>
                                     <string>jpp-ext</string>
@@ -103,7 +95,7 @@
                                 </value>
 </#if>
                                 <value>
-                                    <string>gatein-portal-extension</string>
+                                    <string>sample-portal</string>
                                 </value>
                             </collection>
                         </field>
