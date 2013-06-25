@@ -35,6 +35,19 @@
         </license>
     </licenses>
 
+    <modules>
+        <module>simplest-hello-world-portlet</module>
+        <module>jsf2-hello-world-portlet</module>
+        <module>jsf2-rf4-hello-world-portlet</module>
+        <module>navigation-api-portlet</module>
+        <module>cdi-generic-portlet</module>
+        <module>cdi-jsf-portlet</module>
+        <module>cdi-scopes-portlet</module>
+        <module>social-portlets</module>
+        <module>gatein-portal-extension</module>
+        <module>gatein-sample-portal</module>
+    </modules>
+
     <properties>
         <org.jboss.ide.target.nameAndVersion>jbt4.1</org.jboss.ide.target.nameAndVersion>
         <org.jboss.bom.gatein-bom.version>1.0.1.Final</org.jboss.bom.gatein-bom.version>
@@ -170,19 +183,6 @@
         <twitter.twitter4j.url>http://twitter4j.org/en/index.html</twitter.twitter4j.url>
 
     </properties>
-
-    <modules>
-        <module>simplest-hello-world-portlet</module>
-        <module>jsf2-hello-world-portlet</module>
-        <module>jsf2-rf4-hello-world-portlet</module>
-        <module>navigation-api-portlet</module>
-        <module>cdi-generic-portlet</module>
-        <module>cdi-jsf-portlet</module>
-        <module>cdi-scopes-portlet</module>
-        <module>social-portlets</module>
-        <module>gatein-portal-extension</module>
-        <module>gatein-sample-portal</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>

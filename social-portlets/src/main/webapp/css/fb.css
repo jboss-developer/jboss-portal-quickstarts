@@ -49,7 +49,7 @@
 
 .facebookUserInfo:after {
     display: inline-block;
-    content: "»";
+    content: "\00BB";
     color: #555555;
     font-family: ubuntu;
     font-size: 18px;

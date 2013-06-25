@@ -78,7 +78,11 @@ private static class ModelNode extends HashMap<String, Object> {
     }
 
     public void putModel(Object value) {
-        super.put("project", value);
+        putModel("project", value);
+    }
+
+    public void putModel(String key, Object value) {
+        super.put(key, value);
     }
 
     public void putNode(String key, ModelNode node) {
@@ -301,6 +305,7 @@ cfg.setObjectWrapper(new ModelNodeWrapper());
 /* Create a data model to merge with FreeMarker templates */
 ModelNode model = new ModelNode();
 model.putModel(project);
+model.putModel("parent", project);
 model.putString("derivedFileNotice", "Do not edit this derived file! See ${project.artifactId}/src/main/freemarker/");
 
 model.putProperties(session, "org.jboss.bom", "gatein-3.6-bom", project.getProperties().get("org.jboss.bom.gatein-bom.version"));

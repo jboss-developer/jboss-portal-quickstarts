@@ -21,10 +21,24 @@
 
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
-    <version>3.6.0.Final-qs4-SNAPSHOT</version>
     <name>Portal Extension</name>
+    <version>3.6.0.Final-qs4-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
+    <url>http://www.gatein.org</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <distribution>repo</distribution>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <modules>
+        <module>config</module>
+        <module>war</module>
+        <module>ear</module>
+    </modules>
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
@@ -39,14 +53,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <version.surefire.plugin>2.10</version.surefire.plugin>
-        <version.org.jboss.as.plugins.maven.plugin>7.3.Final</version.org.jboss.as.plugins.maven.plugin>
+        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
     </properties>
-
-    <modules>
-        <module>config</module>
-        <module>war</module>
-        <module>ear</module>
-    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -71,7 +79,7 @@
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${version.org.jboss.as.plugins.maven.plugin}</version>
+                <version>${version.jboss.maven.plugin}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

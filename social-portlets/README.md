@@ -6,7 +6,8 @@ Author: Marek Posolda, Viliam Rockai
 Level: Intermediate  
 Technologies: Portlet, JSP, OAuth, CDI  
 Summary: Portlets showing integration with Social networks  
-Target Product: GateIn Portal 3.6
+Target Product: GateIn Portal 3.6  
+Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?
 -----------

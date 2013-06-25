@@ -1,7 +1,7 @@
 /*
  * JBoss, Home of Professional Open Source
- * Copyright <Year>, Red Hat, Inc. and/or its affiliates, and individual
- * contributors by the @authors tag. See the copyright.txt in the 
+ * Copyright 2013, Red Hat, Inc. and/or its affiliates, and individual
+ * contributors by the @authors tag. See the copyright.txt in the
  * distribution for a full listing of individual contributors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -9,14 +9,14 @@
  * You may obtain a copy of the License at
  * http://www.apache.org/licenses/LICENSE-2.0
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,  
+ * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
 
 /*
- * jQuery drop-down menu plugin for quickstart navigation portlet interface. 
+ * jQuery drop-down menu plugin for quickstart navigation portlet interface.
  * Features:
  *  - Basic on-click drop-down support.
  *  - Dynamically respond to window changes, distribute menus not to be outside the window.
@@ -97,7 +97,7 @@
          * Thanks to the usage of the on function, this is applied even to
          * the content loaded by ajax and inserted to the dom in the future.
          */
-        
+
         $(this).on("click", settings.arrowElement, function(e) {
 
             var menuItem = $(this).parent(settings.menuElement);
@@ -122,7 +122,7 @@
                 menuItem.children().remove(".submenu");
             }
         });
-        
+
     };
 
 })(jQuery);

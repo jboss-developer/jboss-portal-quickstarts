@@ -34,7 +34,7 @@
         <node>
             <name>groupnavigation</name>
             <label>#{portal.classic.groupnavigation}</label>
-			<!-- Change visibility attribute to displayed -->
+            <!-- Change visibility attribute to displayed -->
             <visibility>DISPLAYED</visibility>
             <page-reference>portal::classic::groupnavigation</page-reference>
         </node>

@@ -45,14 +45,13 @@
         <restfb.version>1.6.12</restfb.version>
 
         <!-- Other dependencies -->
-        <servlet-api.version>2.5</servlet-api.version>
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
         <jstl.version>1.2</jstl.version>
 
         <!-- Plugin versions and settings -->
-        <jboss.as.plugin.version>7.1.1.Final</jboss.as.plugin.version>
+        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
+        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -156,13 +155,6 @@
             <artifactId>restfb</artifactId>
         </dependency>
 
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <!--
             pc-portlet is here because it contains portlet_2_0.tld tag library descriptor which IDEs
             (including Eclipse and NetBeans) need to have in class path so that they are able to provide
@@ -194,7 +186,7 @@
             <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
-                <version>${jboss.as.plugin.version}</version>
+                <version>${version.jboss.maven.plugin}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

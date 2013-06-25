@@ -1,4 +1,4 @@
-<projects>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
     JBoss, Home of Professional Open Source
     Copyright 2012, Red Hat, Inc. and/or its affiliates, and individual
@@ -15,6 +15,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
  -->
+<projects>
 <!-- Beware that this file is handled by Maven during the build.
      The text content of the following elements is overwritten (or added) by Maven, the new values being taken form the
      respective sub-project's pom.xml:

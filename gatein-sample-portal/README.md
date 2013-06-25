@@ -6,7 +6,8 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: GateIn Portal, Portal Container  
 Summary: Sample Portal  
-Target Product: GateIn Portal 3.6
+Target Product: GateIn Portal 3.6  
+Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 
 What is it?
