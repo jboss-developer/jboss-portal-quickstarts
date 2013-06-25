@@ -46,7 +46,6 @@
 
         <!-- Other dependencies -->
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
-        <jstl.version>1.2</jstl.version>
 
         <!-- Plugin versions and settings -->
         <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
@@ -167,14 +166,12 @@
             <scope>provided</scope>
         </dependency>
         <!--
-            jstl is here for the same reason as pc-portlet: it contains http://java.sun.com/jsp/jstl/core
+            jboss-jstl-api_1.2_spec is here for the same reason as pc-portlet: it contains http://java.sun.com/jsp/jstl/core
             and http://java.sun.com/jsp/jstl/functions tag library descriptors.
         -->
         <dependency>
-            <groupId>jstl</groupId>
-            <artifactId>jstl</artifactId>
-            <version>${jstl.version}</version>
-            <scope>provided</scope>
+            <groupId>org.jboss.spec.javax.servlet.jstl</groupId>
+            <artifactId>jboss-jstl-api_1.2_spec</artifactId>
         </dependency>
 
     </dependencies>
