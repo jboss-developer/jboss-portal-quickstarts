@@ -50,7 +50,7 @@
 
     <properties>
         <org.jboss.ide.target.nameAndVersion>jbt4.1</org.jboss.ide.target.nameAndVersion>
-        <org.jboss.bom.gatein-bom.version>1.0.1.Final</org.jboss.bom.gatein-bom.version>
+        <verson.jboss.gatein.bom>1.0.1.Final</verson.jboss.gatein.bom>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
@@ -189,7 +189,7 @@
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>gatein-3.6-bom</artifactId>
-                <version>${org.jboss.bom.gatein-bom.version}</version>
+                <version>${verson.jboss.gatein.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -287,8 +287,8 @@
                             </includes>
                             <replacements>
                                 <replacement>
-                                    <token>&lt;org.jboss.bom.gatein-bom.version>[^&lt;]*&lt;/org.jboss.bom.gatein-bom.version></token>
-                                    <value>&lt;org.jboss.bom.gatein-bom.version>${org.jboss.bom.gatein-bom.version}&lt;/org.jboss.bom.gatein-bom.version></value>
+                                    <token>&lt;verson.jboss.gatein.bom>[^&lt;]*&lt;/verson.jboss.gatein.bom></token>
+                                    <value>&lt;verson.jboss.gatein.bom>${verson.jboss.gatein.bom}&lt;/verson.jboss.gatein.bom></value>
                                 </replacement>
                             </replacements>
                         </configuration>

@@ -308,7 +308,7 @@ model.putModel(project);
 model.putModel("parent", project);
 model.putString("derivedFileNotice", "Do not edit this derived file! See ${project.artifactId}/src/main/freemarker/");
 
-model.putProperties(session, "org.jboss.bom", "gatein-3.6-bom", project.getProperties().get("org.jboss.bom.gatein-bom.version"));
+model.putProperties(session, "org.jboss.bom", "gatein-3.6-bom", project.getProperties().get("verson.jboss.gatein.bom"));
 Properties topProperties = project.getProperties();
 model.putProperties(topProperties);
 

@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.1.Final</org.jboss.bom.gatein-bom.version>
+        <verson.jboss.gatein.bom>1.0.1.Final</verson.jboss.gatein.bom>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
@@ -71,7 +71,7 @@
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>gatein-3.6-bom</artifactId>
-                <version>${org.jboss.bom.gatein-bom.version}</version>
+                <version>${verson.jboss.gatein.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

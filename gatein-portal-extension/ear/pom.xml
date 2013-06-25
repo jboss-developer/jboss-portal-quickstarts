@@ -41,12 +41,10 @@
         <dependency>
             <artifactId>gatein-portal-extension-config</artifactId>
             <groupId>org.gatein.portal.quickstarts</groupId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <artifactId>gatein-portal-extension-war</artifactId>
             <groupId>org.gatein.portal.quickstarts</groupId>
-            <version>${project.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>

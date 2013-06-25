@@ -41,18 +41,15 @@
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-config</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-war</artifactId>
-            <version>${project.version}</version>
             <type>war</type>
         </dependency>
         <dependency>
             <groupId>org.gatein.portal.quickstarts</groupId>
             <artifactId>gatein-sample-portal-rest-war</artifactId>
-            <version>${project.version}</version>
             <type>war</type>
         </dependency>
     </dependencies>

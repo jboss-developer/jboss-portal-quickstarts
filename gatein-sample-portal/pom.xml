@@ -44,7 +44,7 @@
         <version.org.gatein>3.6.0.Beta02-SNAPSHOT</version.org.gatein>
 
         <!-- GateIn Bill of Materials (BOM) version -->
-        <org.jboss.bom.gatein-bom.version>1.0.1.Final</org.jboss.bom.gatein-bom.version>
+        <verson.jboss.gatein.bom>1.0.1.Final</verson.jboss.gatein.bom>
         <!-- <version.org.gatein.common>2.1.0.Final-redhat-1</version.org.gatein.common> -->
         <version.org.gatein.common>2.1.0.Final</version.org.gatein.common>
 
@@ -71,7 +71,7 @@
             <dependency>
                 <groupId>org.jboss.bom</groupId>
                 <artifactId>gatein-3.6-bom</artifactId>
-                <version>${org.jboss.bom.gatein-bom.version}</version>
+                <version>${verson.jboss.gatein.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -87,6 +87,24 @@
                 <artifactId>exo.portal.component.web.resources</artifactId>
                 <version>${version.org.gatein}</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.gatein.portal.quickstarts</groupId>
+                <artifactId>gatein-sample-portal-config</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.gatein.portal.quickstarts</groupId>
+                <artifactId>gatein-sample-portal-war</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+            <dependency>
+                <groupId>org.gatein.portal.quickstarts</groupId>
+                <artifactId>gatein-sample-portal-rest-war</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
             </dependency>
 
         </dependencies>
