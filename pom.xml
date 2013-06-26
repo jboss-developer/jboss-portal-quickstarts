@@ -242,22 +242,23 @@
                 <gatein.devguide.starting.portlet.project.url>${gatein.docs.prefix}/Development_Guide/Portlet_Development.html#Starting_a_Portlet_Project</gatein.devguide.starting.portlet.project.url>
                 <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.prefix}/Development_Guide/Standard_Portlet_Development_JSR-286.html</gatein.devguide.jsf.plain.jsr268.portlet.url>
                 <gatein.devguide.jsf.portlets.url>${gatein.docs.prefix}/Development_Guide/JSF2_Portlet_Development.html</gatein.devguide.jsf.portlets.url>
-                <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.prefix}/Development_Guide/Basic_JSF_Portlet_Development</gatein.devguide.jsf.basic.portlet.url>
+                <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.prefix}/Development_Guide/Basic_JSF_Portlet_Development.html</gatein.devguide.jsf.basic.portlet.url>
                 <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.prefix}/Development_Guide/JSF_Portlet_Development_with_RichFaces</gatein.devguide.jsf.rf.portlet.url>
+                <gatein.devguide.api.portal.url>${gatein.docs.prefix}/Development_Guide/Portal_API.html</gatein.devguide.api.portal.url>
 
                 <!-- TODO: Where is portlet primer in the prod docs? -->
-                <gatein.refguide.portlet.primer.url>${gatein.docs.prefix}/Reference_Guide/chap-Reference_Guide-Portlet_Primer.html</gatein.refguide.portlet.primer.url>
+                <gatein.refguide.portlet.primer.url>${gatein.docs.prefix}/Development_Guide/Portlet_Development_Resources.html#JSR_168_and_JSR_286_overview</gatein.refguide.portlet.primer.url>
                 <gatein.refguide.pbr.url>${gatein.docs.prefix}/Reference_Guide/chap-Reference_Guide-Building_JSF_Portlets.html</gatein.refguide.pbr.url>
 
                 <!-- TODO: CDI in prod doc. -->
-                <gatein.devguide.cdi.url>${gatein.docs.prefix}/CDI_Portlet_Development</gatein.devguide.cdi.url>
-                <gatein.devguide.cdi.generic.portlet.url>${gatein.docs.prefix}/GenericPortlet_and_Portlet_Filter_Injection</gatein.devguide.cdi.generic.portlet.url>
-                <gatein.devguide.cdi.scope.portlets.url>${gatein.docs.prefix}/Portlet_CDI_Scopes</gatein.devguide.cdi.scope.portlets.url>
+                <gatein.devguide.cdi.url>${gatein.docs.prefix}/Development_Guide/CDI_Portlet_Development.html</gatein.devguide.cdi.url>
+                <gatein.devguide.cdi.generic.portlet.url>${gatein.docs.prefix}/Development_Guide/CDI_Portlet_Development.html#GenericPortlet_and_Portlet_Filter_Injection</gatein.devguide.cdi.generic.portlet.url>
+                <gatein.devguide.cdi.scope.portlets.url>${gatein.docs.prefix}/Development_Guide/Portlet_CDI_Scopes.html</gatein.devguide.cdi.scope.portlets.url>
 
-                <gatein.refguide.oauth.url>${gatein.docs.prefix}/OAuth_-_Authentication_with_social_network_accounts</gatein.refguide.oauth.url>
-                <gatein.refguide.facebook.url>${gatein.docs.prefix}/Facebook</gatein.refguide.facebook.url>
-                <gatein.refguide.google.url>${gatein.docs.prefix}/Google_Plus</gatein.refguide.google.url>
-                <gatein.refguide.twitter.url>${gatein.docs.prefix}/Twitter</gatein.refguide.twitter.url>
+                <gatein.refguide.oauth.url>${gatein.docs.prefix}/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html</gatein.refguide.oauth.url>
+                <gatein.refguide.facebook.url>${gatein.docs.prefix}/Development_Guide/Facebook.html</gatein.refguide.facebook.url>
+                <gatein.refguide.google.url>${gatein.docs.prefix}/Development_Guide/Google_Plus.html</gatein.refguide.google.url>
+                <gatein.refguide.twitter.url>${gatein.docs.prefix}/Development_Guide/Twitter.html</gatein.refguide.twitter.url>
 
                 <jboss.admin.guide.url.prefix>${jboss.confluence.root.url}/JBoss_Enterprise_Application_Platform/${compatibility.as.versionMm}/html/Administration_and_Configuration_Guide</jboss.admin.guide.url.prefix>
                 <jboss.admin.guide.ds.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
