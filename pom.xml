@@ -57,8 +57,9 @@
              JBT 4.0.0.Alpha2 - '-001'
              JBT 4.0.0.Beta1 - '-002'
              JBT 4.1.0.Alpha2 - '-001'
+             JBT 4.1.0.CR1 - '-002'
         -->
-        <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
+        <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
 
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
         <compatibility.portal.community.versionMinor>6</compatibility.portal.community.versionMinor>
