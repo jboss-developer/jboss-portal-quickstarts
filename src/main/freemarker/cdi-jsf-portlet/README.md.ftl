@@ -44,10 +44,10 @@ of ${compatibility.portal.projectName} Developer Guide:
 
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
 * [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
-* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
 <#if compatibility.portal.projectNameShort == "GateIn">
-* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
+* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
 </#if>
+* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
 * [Generic CDI Portlet](${gatein.devguide.cdi.generic.portlet.url})
 
 

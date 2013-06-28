@@ -36,11 +36,11 @@ An introduction and some background information to this quickstart can be found 
 of ${compatibility.portal.projectName} Developer Guide:
 
 * [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
-* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
 <#if compatibility.portal.projectNameShort == "GateIn">
+* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
+</#if>
 * [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
 * [JSF portlet development with RichFaces](${gatein.devguide.jsf.rf.portlet.url})
-</#if>
 
 
 <#include "/include/portlet-general.md.ftl">
