@@ -22,7 +22,7 @@
     <artifactId>gatein-portal-extension</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Portal Extension</name>
-    <version>3.6.0.Final-qs4-SNAPSHOT</version>
+    <version>3.6.0.Final-qs-4</version>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
     <url>http://www.gatein.org</url>
