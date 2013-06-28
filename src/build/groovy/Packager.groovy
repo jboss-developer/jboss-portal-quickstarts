@@ -102,7 +102,8 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     String majorVersion = project.properties.get("compatibility.portal.versionMajor");
     String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url.prefix").toLowerCase();
 
-    String compatibilityMin = majorVersion + ".0";
+    String compatibilityMin = null;
+    String compatibilityMax = null;
     File genPropsFile = new File("src/main/freemarker/"+ moduleProject.getArtifactId(), "generator.properties");
     if (genPropsFile.exists()) {
         Properties genProps = new Properties();
@@ -120,7 +121,10 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
         String genPropsPrefix = productNameShort.equals("GateIn") ? "compatibility.min.portal.community." : "compatibility.min.portal.product.";
         if (genProps.containsKey(genPropsPrefix + "versionMajor")) {
             StringBuilder compatibilityMinBuffer = new StringBuilder(8);
-            compatibilityMinBuffer.append(genProps.get(genPropsPrefix + "versionMajor"));
+            String minMajor = genProps.get(genPropsPrefix + "versionMajor");
+            compatibilityMinBuffer.append(minMajor);
+            int minMajorInt = Integer.parseInt(minMajor);
+            compatibilityMax = ""+ (minMajorInt + 1) +".0.0";
             System.out.println(genPropsPrefix + "versionMinor");
             if (genProps.containsKey(genPropsPrefix + "versionMinor")) {
                 compatibilityMinBuffer.append('.').append(genProps.get(genPropsPrefix + "versionMinor"));
@@ -153,14 +157,15 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     setTextContent(projectNode, "url", "${downloadsRootUrl}/"+ zipFile.getName())
 
     setTextContentByXPath(xPath, "fixes/fix[@type='wtpruntime']/property[@name='description']",
-            projectNode, "This project example requires ${product} ${compatibilityMin} or higher.");
+            projectNode, "This project example requires ${product} ${compatibilityMin} or higher with the same major version.");
 
     String runtimes =
             productNameShort.equals("GateIn") ?
-                "org.jboss.ide.eclipse.as.runtime.71, org.jboss.ide.eclipse.as.runtime.eap.61" :
+                "org.jboss.ide.eclipse.as.runtime.71\u007BGateIn:[${compatibilityMin},${compatibilityMax})\u007D, org.jboss.ide.eclipse.as.runtime.eap.61\u007BGateIn:[${compatibilityMin},${compatibilityMax})\u007D" :
                 "org.jboss.ide.eclipse.as.runtime.eap." +
                     project.properties.get("compatibility.as.majorVersion") +
-                    project.properties.get("compatibility.as.minorVersion")
+                    project.properties.get("compatibility.as.minorVersion") +
+                    "\u007BJPP:[${compatibilityMin},${compatibilityMax})\u007D"
     ;
 
     setTextContentByXPath(
