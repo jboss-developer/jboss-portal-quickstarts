@@ -77,11 +77,14 @@
                                 <value>
                                     <string>web</string>
                                 </value>
-                                <!--<value profiles="jboss">
-                                   <string>gatein-wsrp-integration</string>
-                                </value>-->
                                 <value>
-                                    <string>sample-portal</string>
+                                  <string>gatein-mobile-configuration</string>
+                                </value>
+                                <value>
+                                    <string>gatein-mobile-login</string>
+                                </value>
+                                <value>
+                                    <string>gatein-sample-portal</string>
                                 </value>
                             </collection>
                         </field>

@@ -225,8 +225,8 @@
                 <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
                 <gatein.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</gatein.user.forum.url>
 
-                <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url>
-                <!-- <jboss.confluence.root.url>https://access.redhat.com/knowledge/docs/en-US</jboss.confluence.root.url> -->
+                <!-- <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url> -->
+                <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
 
                 <gatein.docs.prefix>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}/html</gatein.docs.prefix>
                 <gatein.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}</gatein.docs.url>
