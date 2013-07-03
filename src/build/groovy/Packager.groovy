@@ -102,42 +102,18 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     String majorVersion = project.properties.get("compatibility.portal.versionMajor");
     String downloadsRootUrl = project.properties.get("gatein.quickstarts.downloads.url.prefix").toLowerCase();
 
-    String compatibilityMin = null;
-    String compatibilityMax = null;
     File genPropsFile = new File("src/main/freemarker/"+ moduleProject.getArtifactId(), "generator.properties");
-    if (genPropsFile.exists()) {
-        Properties genProps = new Properties();
-        FileInputStream genPropsIn = null;
-        try {
-            genPropsIn = new FileInputStream(genPropsFile);
-            genProps.load(genPropsIn);
-        }
-        catch (Throwable e) {
-            e.printStackTrace();
-        }
-        finally {
-            genPropsIn.close();
-        }
-        String genPropsPrefix = productNameShort.equals("GateIn") ? "compatibility.min.portal.community." : "compatibility.min.portal.product.";
-        if (genProps.containsKey(genPropsPrefix + "versionMajor")) {
-            StringBuilder compatibilityMinBuffer = new StringBuilder(8);
-            String minMajor = genProps.get(genPropsPrefix + "versionMajor");
-            compatibilityMinBuffer.append(minMajor);
-            int minMajorInt = Integer.parseInt(minMajor);
-            compatibilityMax = ""+ (minMajorInt + 1) +".0.0";
-            System.out.println(genPropsPrefix + "versionMinor");
-            if (genProps.containsKey(genPropsPrefix + "versionMinor")) {
-                compatibilityMinBuffer.append('.').append(genProps.get(genPropsPrefix + "versionMinor"));
-                if (genProps.containsKey(genPropsPrefix + "versionMicro")) {
-                    compatibilityMinBuffer.append('.').append(genProps.get(genPropsPrefix + "versionMicro"));
-                }
-            }
-            else {
-                compatibilityMinBuffer.append(".0");
-            }
-            compatibilityMin = compatibilityMinBuffer.toString();
-        }
+    Properties genProps = new Properties();
+    FileInputStream genPropsIn = null;
+    try {
+        genPropsIn = new FileInputStream(genPropsFile);
+        genProps.load(genPropsIn);
     }
+    finally {
+        genPropsIn.close();
+    }
+    String genPropsPrefix = productNameShort.equals("GateIn") ? "compatibility.portal.community." : "compatibility.portal.product.";
+    String compatibilityMin = genProps.get(genPropsPrefix + "min.versionMm");
 
     Node projectNode = xPath.evaluate("/projects/project[name/text() = '${moduleProject.artifactId}']", descriptorDom, XPathConstants.NODE)
     if (projectNode == null) {
@@ -159,14 +135,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     setTextContentByXPath(xPath, "fixes/fix[@type='wtpruntime']/property[@name='description']",
             projectNode, "This project example requires ${product} ${compatibilityMin} or higher with the same major version.");
 
-    String runtimes =
-            productNameShort.equals("GateIn") ?
-                "org.jboss.ide.eclipse.as.runtime.71\u007BGateIn:[${compatibilityMin},${compatibilityMax})\u007D, org.jboss.ide.eclipse.as.runtime.eap.61\u007BGateIn:[${compatibilityMin},${compatibilityMax})\u007D" :
-                "org.jboss.ide.eclipse.as.runtime.eap." +
-                    project.properties.get("compatibility.as.majorVersion") +
-                    project.properties.get("compatibility.as.minorVersion") +
-                    "\u007BJPP:[${compatibilityMin},${compatibilityMax})\u007D"
-    ;
+    String runtimes = genProps.get(genPropsPrefix + "wtpruntimes");
 
     setTextContentByXPath(
             xPath,
@@ -174,6 +143,16 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
             projectNode,
             runtimes
     );
+
+    //System.out.println("genProps.get(\"" +genPropsPrefix + "isOnJBossCentral\") = "+ genProps.get(genPropsPrefix + "isOnJBossCentral"));
+    if ("false".equals(genProps.get(genPropsPrefix + "isOnJBossCentral"))) {
+        setTextContentByXPath(
+            xPath,
+            "tags",
+            projectNode,
+            ""
+        );
+    }
 }
 
 def stripMdFile(path, pattern) {
