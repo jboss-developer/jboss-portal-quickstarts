@@ -13,7 +13,7 @@ redhatVersion=$(echo "${pupstreamVersion}" | sed 's/-prod-\([0-9]*\)/-redhat-\1/
 redhatVersionNext=$(echo "${pupstreamVersion}" | sed "s/-prod-\([0-9]*\)/-redhat-$((prodNo + 1))-SNAPSHOT/")
 redhatTag="gatein-quickstart-${redhatVersion}"
 
-git fetch pupstream
+git fetch --tags pupstream
 git checkout -b "${pupstreamTag}" "${pupstreamTag}"
 
 ./src/build/sh/mvn-property-set.sh "${mvnSettings}" "version.jboss.gatein.bom" "${redhatBomVersion}"
