@@ -172,8 +172,8 @@ public static class LinksAndVersions {
     public static final String compatibility_portal_versionMmm = "3.6.0";
     public static final String compatibility_wfk_versionMajor = "2";
     public static final String compatibility_wfk_versionMicro = "0";
-    public static final String compatibility_wfk_versionMinor = "1";
-    public static final String compatibility_wfk_versionMmm = "2.1.0";
+    public static final String compatibility_wfk_versionMinor = "3";
+    public static final String compatibility_wfk_versionMmm = "2.3.0";
     public static final String facebook_graph_url = "https://developers.facebook.com/docs/reference/api/";
     public static final String facebook_restfb_url = "http://restfb.com/";
     public static final String facebook_url = "https://www.facebook.com";

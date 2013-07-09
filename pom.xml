@@ -113,7 +113,7 @@
         <compatibility.as.projectNameAndVersion>${compatibility.as.projectName} ${compatibility.as.versionMm}</compatibility.as.projectNameAndVersion>
 
         <compatibility.wfk.versionMajor>2</compatibility.wfk.versionMajor>
-        <compatibility.wfk.versionMinor>1</compatibility.wfk.versionMinor>
+        <compatibility.wfk.versionMinor>3</compatibility.wfk.versionMinor>
         <compatibility.wfk.versionMicro>0</compatibility.wfk.versionMicro>
         <compatibility.wfk.versionMmm>${compatibility.wfk.versionMajor}.${compatibility.wfk.versionMinor}.${compatibility.wfk.versionMicro}</compatibility.wfk.versionMmm>
 
