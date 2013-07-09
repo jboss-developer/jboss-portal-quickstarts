@@ -22,7 +22,7 @@
     <artifactId>jsf2-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>JSF2 Hello World Portlet</name>
-    <version>3.6.0.Final-qs-7-prod-1</version>
+    <version>3.6.0.Final-qs-7-redhat-1</version>
     <packaging>war</packaging>
     <description>A simple portlet using JavaServer Faces 2.</description>
     <url>http://www.gatein.org</url>
@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.1.Final</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.1.Final-redhat-1</version.jboss.gatein.bom>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
