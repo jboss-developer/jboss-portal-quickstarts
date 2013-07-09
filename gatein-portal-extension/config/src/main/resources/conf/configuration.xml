@@ -89,6 +89,17 @@
                                 <value>
                                   <string>gatein-mobile-configuration</string>
                                 </value>
+                                <!--
+                                    Some of the resources we want to override are in jpp-branding-extension.war
+                                    and jpp-ext.war which are packaged in jpp-branding-extension.ear.
+                                    Note that jpp-ext is the display-name of jpp-branding-extension.war
+                                -->
+                                <value>
+                                    <string>jpp-ext</string>
+                                </value>
+                                <value>
+                                    <string>jpp-branding-skin</string>
+                                </value>
                                 <value>
                                     <string>gatein-portal-extension</string>
                                 </value>

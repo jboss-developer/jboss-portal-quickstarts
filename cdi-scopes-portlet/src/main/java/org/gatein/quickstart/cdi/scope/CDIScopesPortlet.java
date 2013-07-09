@@ -34,8 +34,8 @@ import javax.portlet.ResourceResponse;
 /**
  * A portlet demostrating the injection of beans living in portlet-specific CDI scopes {@code @PortletLifecycleScoped} and
  * {@code @PortletRedisplayScoped}. See also <a id="gatein.devguide.cdi.scope.portlets.url"
- * href="https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+CDI+Scopes">Portlet CDI Scopes</a> Section of <span
- * id="compatibility.portal.projectNameShort">GateIn</span> Developer Guide.
+ * href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Portlet_CDI_Scopes.html">Portlet CDI Scopes</a> Section of <span
+ * id="compatibility.portal.projectNameShort">JPP</span> Developer Guide.
  *
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  * @author <a href="ppalaga@redhat.com">Peter Palaga</a>

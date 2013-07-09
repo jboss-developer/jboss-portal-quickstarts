@@ -22,62 +22,6 @@
     LinksAndVersions LinksAndVersions = new LinksAndVersions();
 %>
 <div class="UIHomePagePortlet ClearFix" id="$uicomponent.id">
-    <div class="TRContainer">
-        <div class="PortletDecoration">
-            <div class="MiddleAccountsContainer">
-                <div class="InstructionTitle"><%=_ctx.appRes("UIHomePagePortlet.Label.Title")%></div>
-                <div class="AccountsContainerDeco ClearFix">
-                    <div class="AccountBlock AdministratorUser">
-                        <div class="AccountInfos">
-                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=root&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Administrator")%></a></div>
-                            <div class="Username ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>root</span>
-                            </div>
-                            <div class="Passwords ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="SeparatorLine"><span></span></div>
-                    <div class="AccountBlock ManagerUser">
-                        <div class="AccountInfos">
-                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=john&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Manager")%></a></div>
-                            <div class="Username ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>john</span>
-                            </div>
-                            <div class="Passwords ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="SeparatorLine"><span></span></div>
-                    <div class="AccountBlock NormalUser">
-                        <div class="AccountInfos">
-                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=mary&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.User")%></a></div>
-                            <div class="Username ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>mary</span>
-                            </div>
-                            <div class="Passwords ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="SeparatorLine"><span></span></div>
-                    <div class="AccountBlock DemoUser" style="margin-right: 0px;">
-                        <div class="AccountInfos">
-                            <div class="AccountTitle"><a href="${_ctx.getPortalContextPath()}/login?username=demo&amp;password=gtn&amp;initialURI=<%=initialURI%>"><%=_ctx.appRes("UIHomePagePortlet.Label.Demo")%></a></div>
-                            <div class="Username ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Username")%></div><span>demo</span>
-                            </div>
-                            <div class="Passwords ClearFix">
-                                <div class="Lable"><%=_ctx.appRes("UIHomePagePortlet.Label.Password")%></div><span>gtn</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="TLContainer">
         <div class="PortletDecoration">
 
@@ -139,13 +83,13 @@ public static class LinksAndVersions {
     public static final String compatibility_as_product_versionMinor = "1";
     public static final String compatibility_as_product_versionMm = "6.1";
     public static final String compatibility_as_product_versionMmm = "6.1.0";
-    public static final String compatibility_as_projectName = "JBoss AS";
-    public static final String compatibility_as_projectNameAndVersion = "JBoss AS 7.1";
-    public static final String compatibility_as_versionMajor = "7";
+    public static final String compatibility_as_projectName = "JBoss EAP";
+    public static final String compatibility_as_projectNameAndVersion = "JBoss EAP 6.1";
+    public static final String compatibility_as_versionMajor = "6";
     public static final String compatibility_as_versionMicro = "1";
     public static final String compatibility_as_versionMinor = "1";
-    public static final String compatibility_as_versionMm = "7.1";
-    public static final String compatibility_as_versionMmm = "7.1.1";
+    public static final String compatibility_as_versionMm = "6.1";
+    public static final String compatibility_as_versionMmm = "6.1.1";
     public static final String compatibility_portal_community_projectName = "GateIn Portal";
     public static final String compatibility_portal_community_projectNameAndVersion = "GateIn Portal 3.6";
     public static final String compatibility_portal_community_projectNameShort = "GateIn";
@@ -162,14 +106,14 @@ public static class LinksAndVersions {
     public static final String compatibility_portal_product_versionMinor = "1";
     public static final String compatibility_portal_product_versionMm = "6.1";
     public static final String compatibility_portal_product_versionMmm = "6.1.0";
-    public static final String compatibility_portal_projectName = "GateIn Portal";
-    public static final String compatibility_portal_projectNameAndVersion = "GateIn Portal 3.6";
-    public static final String compatibility_portal_projectNameShort = "GateIn";
-    public static final String compatibility_portal_versionMajor = "3";
+    public static final String compatibility_portal_projectName = "JBoss Portal Platform";
+    public static final String compatibility_portal_projectNameAndVersion = "JBoss Portal Platform 6.1";
+    public static final String compatibility_portal_projectNameShort = "JPP";
+    public static final String compatibility_portal_versionMajor = "6";
     public static final String compatibility_portal_versionMicro = "0";
-    public static final String compatibility_portal_versionMinor = "6";
-    public static final String compatibility_portal_versionMm = "3.6";
-    public static final String compatibility_portal_versionMmm = "3.6.0";
+    public static final String compatibility_portal_versionMinor = "1";
+    public static final String compatibility_portal_versionMm = "6.1";
+    public static final String compatibility_portal_versionMmm = "6.1.0";
     public static final String compatibility_wfk_versionMajor = "2";
     public static final String compatibility_wfk_versionMicro = "0";
     public static final String compatibility_wfk_versionMinor = "1";
@@ -177,36 +121,36 @@ public static class LinksAndVersions {
     public static final String facebook_graph_url = "https://developers.facebook.com/docs/reference/api/";
     public static final String facebook_restfb_url = "http://restfb.com/";
     public static final String facebook_url = "https://www.facebook.com";
-    public static final String gatein_devguide_api_portal_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portal+API";
-    public static final String gatein_devguide_cdi_generic_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL36/GenericPortlet+and+Portlet+Filter+Injection";
-    public static final String gatein_devguide_cdi_scope_portlets_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+CDI+Scopes";
-    public static final String gatein_devguide_cdi_url = "https://docs.jboss.org/author/display/GTNPORTAL36/CDI+Portlet+Development";
-    public static final String gatein_devguide_containers_url = "https://docs.jboss.org/author/display/GTNPORTAL36/GDG-Portal+Containers+and+Extensions";
-    public static final String gatein_devguide_custom_groovy_template_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Groovy+Template+for+a+Portlet";
-    public static final String gatein_devguide_custom_portlet_skin_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Skin+for+a+Portlet";
-    public static final String gatein_devguide_extensions_url = "https://docs.jboss.org/author/display/GTNPORTAL36/GDG-Portal+Containers+and+Extensions";
-    public static final String gatein_devguide_i18n_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Internationalization+Resource+Bundles";
-    public static final String gatein_devguide_jsf_basic_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Basic+JSF+Portlet+Development";
-    public static final String gatein_devguide_jsf_plain_jsr268_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Standard+Portlet+Development+%28JSR+286%29";
-    public static final String gatein_devguide_jsf_portlets_url = "https://docs.jboss.org/author/display/GTNPORTAL36/JSF2+Portlet+Development";
-    public static final String gatein_devguide_jsf_rf_portlet_url = "https://docs.jboss.org/author/display/GTNPORTAL36/JSF+portlet+development+with+RichFaces";
-    public static final String gatein_devguide_nav_pages_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Custom+Navigation+and+Pages";
-    public static final String gatein_devguide_starting_portlet_project_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project";
-    public static final String gatein_devguide_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Developer+Guide";
-    public static final String gatein_docs_url = "https://docs.jboss.org/author/display/GTNPORTAL36";
-    public static final String gatein_refguide_facebook_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Facebook";
-    public static final String gatein_refguide_google_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Google+Plus";
-    public static final String gatein_refguide_oauth_url = "https://docs.jboss.org/author/display/GTNPORTAL36/OAuth+-+Authentication+with+social+network+accounts";
-    public static final String gatein_refguide_pbr_url = "https://docs.jboss.org/author/display/PBR32";
-    public static final String gatein_refguide_portlet_primer_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+Primer";
-    public static final String gatein_refguide_twitter_url = "https://docs.jboss.org/author/display/GTNPORTAL36/Twitter";
-    public static final String gatein_user_forum_url = "https://community.jboss.org/en/gatein?view=discussions";
+    public static final String gatein_devguide_api_portal_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/part-Portal_API.html";
+    public static final String gatein_devguide_cdi_generic_portlet_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html";
+    public static final String gatein_devguide_cdi_scope_portlets_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Portlet_CDI_Scopes.html";
+    public static final String gatein_devguide_cdi_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-CDI_Portlet_Development.html";
+    public static final String gatein_devguide_containers_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portal_Containers.html";
+    public static final String gatein_devguide_custom_groovy_template_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Custom_Groovy_Template_for_a_Portlet.html";
+    public static final String gatein_devguide_custom_portlet_skin_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Custom_Skin_for_a_Portlet.html";
+    public static final String gatein_devguide_extensions_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portal_Extension.html";
+    public static final String gatein_devguide_i18n_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Custom_Internationalization_Resource_Bundles.html";
+    public static final String gatein_devguide_jsf_basic_portlet_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html";
+    public static final String gatein_devguide_jsf_plain_jsr268_portlet_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html";
+    public static final String gatein_devguide_jsf_portlets_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html";
+    public static final String gatein_devguide_jsf_rf_portlet_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-JSF_Portlet_Development_with_RichFaces.html";
+    public static final String gatein_devguide_nav_pages_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Custom_Navigation_and_Pages.html";
+    public static final String gatein_devguide_starting_portlet_project_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html";
+    public static final String gatein_devguide_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide";
+    public static final String gatein_docs_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1";
+    public static final String gatein_refguide_facebook_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Facebook.html";
+    public static final String gatein_refguide_google_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Google.html";
+    public static final String gatein_refguide_oauth_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html";
+    public static final String gatein_refguide_pbr_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html";
+    public static final String gatein_refguide_portlet_primer_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-JSR-168_and_JSR-286_overview.html";
+    public static final String gatein_refguide_twitter_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Twitter.html";
+    public static final String gatein_user_forum_url = "https://access.redhat.com/groups/jboss-enterprise-middleware";
     public static final String google_oauth_api_url = "https://developers.google.com/accounts/docs/OAuth2";
     public static final String google_plus_api_url = "https://developers.google.com/+/api/latest/";
     public static final String google_plus_url = "https://plus.google.com/";
-    public static final String jboss_admin_guide_ds_files_url = "https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-Deploymentof%5Cds.xmlfiles";
-    public static final String jboss_admin_guide_ds_url = "https://docs.jboss.org/author/display/AS71/Admin+Guide#AdminGuide-Datasources";
-    public static final String jboss_confluence_root_url = "https://docs.jboss.org/author/display";
+    public static final String jboss_admin_guide_ds_files_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files";
+    public static final String jboss_admin_guide_ds_url = "https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html";
+    public static final String jboss_confluence_root_url = "https://access.redhat.com/site/documentation/en-US";
     public static final String mvnrepo_redhat_all_url = "http://maven.repository.redhat.com/techpreview/all";
     public static final String twitter_twitter4j_url = "http://twitter4j.org/en/index.html";
     public static final String twitter_url = "https://twitter.com/";
