@@ -18,4 +18,7 @@ mvn clean install -P generate-readmes,product --settings "$mvnSettings"
 ./src/build/sh/md2html.sh
 git commit -a -m "Productization - the engineering part"
 ./src/build/sh/mvn-tag.sh "$mvnSettings" "${prodVersion}" "${prodVersionNext}"
-echo "You might want to push now:\ngit push pupstream master && git push pupstream ${prodTag}"
+
+mvn install -P prepare-zips,product --settings "$mvnSettings"
+
+echo -e "You might want to push now:\ngit push pupstream master && git push pupstream ${prodTag}"

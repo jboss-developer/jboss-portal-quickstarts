@@ -1,4 +1,6 @@
 #!/bin/bash
+# prerequisites on fedora:
+# perl-XML-XPath
 
 set -e
 set -x
@@ -6,7 +8,7 @@ set -x
 mvnSettings="$1"
 
 oldSnapshotVersion=$(xpath pom.xml "/project/version/text()" 2>/dev/null)
-taggedVersion=${oldSnapshotVersion#-SNAPSHOT}
+taggedVersion=$(echo "${oldSnapshotVersion}" | sed 's/-SNAPSHOT//')
 tag="gatein-quickstart-${taggedVersion}"
 qsNo=$(echo "${oldSnapshotVersion}" | sed 's/.*-qs-\([0-9]*\)-.*/\1/')
 newSnapshotVersion=${oldSnapshotVersion/qs-${qsNo}/qs-$((qsNo + 1))}
@@ -31,7 +33,6 @@ fi
 
 ./src/build/sh/mvn-tag.sh "$mvnSettings" "${taggedVersion}" "${newSnapshotVersion}"
 
-mvn clean install -P prepare-zips --settings "$mvnSettings"
+mvn install -P prepare-zips --settings "$mvnSettings"
 
-
-echo "You might want to push now:\ngit push upstream master && git push -u origin master && git push upstream ${tag}"
+echo -e "You might want to push now:\ngit push upstream master && git push -u origin master && git push upstream ${tag}"

@@ -3,6 +3,8 @@ Peter Palaga
 
 = How to Release GateIn Quickstarts
 
+TIP: There is `src/build/sh/release-community.sh` script that covers the steps 1. to 5. below.
+
 . Change to the project top directory:
 [source,sh]
 cd ~/git/gatein-portal-quickstart
