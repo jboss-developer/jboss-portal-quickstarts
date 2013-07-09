@@ -16,7 +16,7 @@ redhatTag="gatein-quickstart-${redhatVersion}"
 git fetch pupstream
 git checkout -b "${pupstreamTag}" "${pupstreamTag}"
 
-./src/build/sh/mvn-property-set.sh "${mvnSettings}" "verson.jboss.gatein.bom" "${redhatBomVersion}"
+./src/build/sh/mvn-property-set.sh "${mvnSettings}" "version.jboss.gatein.bom" "${redhatBomVersion}"
 
 
 ./src/build/sh/mvn-tag.sh "$mvnSettings" "${redhatVersion}" "${redhatVersionNext}"
