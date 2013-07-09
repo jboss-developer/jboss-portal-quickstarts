@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.1.Final</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.1.Final-redhat-1</version.jboss.gatein.bom>
 
         <!-- Versions of social libraries used by portlets. All those libs are available in Maven central -->
         <twitter4j.version>2.2.6</twitter4j.version>

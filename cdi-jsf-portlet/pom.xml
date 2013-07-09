@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.1.Final</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.1.Final-redhat-1</version.jboss.gatein.bom>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
