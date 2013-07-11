@@ -22,7 +22,7 @@
     <groupId>org.gatein.portal.quickstarts</groupId>
     <artifactId>social-portlets</artifactId>
     <name>Social Portlets</name>
-    <version>3.6.0.Final-qs-8</version>
+    <version>3.6.0.Final-qs-8-prod-1</version>
     <packaging>war</packaging>
     <description>Portlets showing integration with Social networks</description>
     <url>http://www.gatein.org</url>
