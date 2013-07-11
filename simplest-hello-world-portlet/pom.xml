@@ -22,7 +22,7 @@
     <artifactId>simplest-hello-world-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Simplest Hello World Portlet</name>
-    <version>3.6.0.Final-qs-8-SNAPSHOT</version>
+    <version>3.6.0.Final-qs-8</version>
     <packaging>war</packaging>
     <description>The very essence of every possible portlet.</description>
     <url>http://www.gatein.org</url>

@@ -22,7 +22,7 @@
     <artifactId>cdi-generic-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>CDI Generic Portlet</name>
-    <version>3.6.0.Final-qs-8-SNAPSHOT</version>
+    <version>3.6.0.Final-qs-8</version>
     <packaging>war</packaging>
     <description>An application that demonstrates use of CDI in a portlet.</description>
     <url>http://www.gatein.org</url>
