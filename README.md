@@ -22,7 +22,7 @@ Available Quickstarts
 * [Navigation API Portlet](navigation-api-portlet/README.html)
 * [CDI Generic Portlet](cdi-generic-portlet/README.html)
 * [CDI Portlet with JSF](cdi-jsf-portlet/README.html)
-* [Portlet Using Portet-Specific CDI Scopes](cdi-scope-portlet/README.html)
+* [Portlet Using Portet-Specific CDI Scopes](cdi-scopes-portlet/README.html)
 * [Social Portlets](social-portlets/README.html)
 * [Portal Extension](gatein-portal-extension/README.html)
 * [Sample Portal](gatein-sample-portal/README.html)
