@@ -22,7 +22,7 @@
     <artifactId>navigation-api-portlet</artifactId>
     <groupId>org.gatein.portal.quickstarts</groupId>
     <name>Navigation API Portlet</name>
-    <version>3.6.0.Final-qs-9-prod-1</version>
+    <version>3.6.0.Final-qs-9-redhat-1</version>
     <packaging>war</packaging>
     <description>The simple navigation portlet using Portal API.</description>
     <url>http://www.gatein.org</url>
@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.1.Final</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.1.Final-redhat-1</version.jboss.gatein.bom>
 
         <!-- Other dependencies -->
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
