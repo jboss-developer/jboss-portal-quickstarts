@@ -34,8 +34,30 @@
       <repositories>
         <repository>
           <id>jpp</id>
-          <!-- Change this to where you have unpacked the zipped JPP 6.0.0 Maven repository -->
-          <url>file:///path/to/repo/jboss-jpp-6.0.0-maven-repository</url>
+          <!-- Change this to where you have unpacked the zipped JPP 6.1.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-jpp-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>wfk230</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.3.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.3.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>wfk220</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.2.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.2.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -58,6 +80,17 @@
           <id>wfk200</id>
           <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.0.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.0.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>eap610</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.1.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -94,7 +127,29 @@
         <pluginRepository>
           <id>jpp-plugins</id>
           <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
-          <url>file:///path/to/repo/jboss-jpp-6.0.0-maven-repository</url>
+          <url>file:///path/to/repo/jboss-jpp-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>wfk230-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.3.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.3.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>wfk220-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.2.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.2.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -124,6 +179,18 @@
             <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
+        <pluginRepository>
+          <id>eap610-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
         <pluginRepository>
           <id>eap601-plugins</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->

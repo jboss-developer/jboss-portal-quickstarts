@@ -48,8 +48,8 @@ repositories.</p>
 <ol>
 <li>Open a command line and navigate to the root of the JBoss server directory.</li>
 <li><p>The following shows the command line to start the server with the web profile:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="p">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span> <span class="n">JBOSS_HOME</span><span class="o">\</span><span class="n">bin</span><span class="o">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
 </pre></div></li>
 </ol>
 
@@ -59,7 +59,7 @@ repositories.</p>
 <li>Make sure you have started the Portal as described above.</li>
 <li>Open a command line and navigate to the root directory of this quickstart.</li>
 <li><p>Type this command to build and deploy the archive:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">deploy</span>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">deploy</span>
 </pre></div>
 <p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
 just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</code> in the pom.xml file and adjust it to suit your needs.
@@ -118,7 +118,7 @@ see the newly imported JSF2+RF4 Hello World Portlet under the Quickstarts Catego
 <li>Make sure you have started the JBoss Server as described above.</li>
 <li>Open a command line and navigate to the root directory of this quickstart.</li>
 <li><p>When you are finished testing, type this command to undeploy the archive:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="p">:</span><span class="n">undeploy</span>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">undeploy</span>
 </pre></div></li>
 </ol>
 
@@ -135,8 +135,8 @@ or <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Intro
 
 <p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">sources</span>
-<span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="p">=</span><span class="n">javadoc</span>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
+<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
 </pre></div>
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 

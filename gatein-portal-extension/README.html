@@ -53,7 +53,7 @@ GateIn Portal is running. Instead of that you will need to:</p>
 
 <ol>
 <li><p>Make sure that the Portal is not running, e.g. by running </p>
-<div class="highlight"><pre>$<span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">connect</span> <span class="n">controller</span><span class="p">=</span><span class="mf">127.0</span><span class="p">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">9999</span> <span class="n">command</span><span class="p">=:</span><span class="n">shutdown</span>
+<div class="highlight"><pre><span class="err">$</span><span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">connect</span> <span class="n">controller</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">9999</span> <span class="n">command</span><span class="o">=:</span><span class="n">shutdown</span>
 </pre></div></li>
 <li><p>Open a command line and navigate to the root directory of this quickstart.</p></li>
 <li><p>Run the following command to build the archive:</p>
@@ -77,8 +77,8 @@ GateIn Portal is running. Instead of that you will need to:</p>
 <ol>
 <li>Open a command line and navigate to the root of the JBoss server directory.</li>
 <li><p>The following shows the command line to start the server with the web profile:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="p">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="p">:</span> <span class="n">JBOSS_HOME</span><span class="o">\</span><span class="n">bin</span><span class="o">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
 </pre></div></li>
 </ol>
 
@@ -105,8 +105,8 @@ See Build and Deploy section above for an alternative.  </p>
 
 <p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">sources</span>
-<span class="n">mvn</span> <span class="n">dependency</span><span class="p">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="p">=</span><span class="n">javadoc</span>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
+<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
 </pre></div>
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 
