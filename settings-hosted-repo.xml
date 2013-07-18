@@ -38,12 +38,36 @@
             <enabled>false</enabled>
           </snapshots>
         </repository>
+
+        <!-- earlyaccess/all is necessary only for JPP 6.1 Beta. The final version will not need it. -->
+        <repository>
+          <id>earlyaccess-all</id>
+          <url>http://maven.repository.redhat.com/earlyaccess/all/</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
       </repositories>
 
       <pluginRepositories>
         <pluginRepository>
           <id>rh-all-plugins</id>
           <url>http://maven.repository.redhat.com/techpreview/all</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+
+        <!-- earlyaccess/all is necessary only for JPP 6.1 Beta. The final version will not need it. -->
+        <pluginRepository>
+          <id>earlyaccess-all-plugins</id>
+          <url>http://maven.repository.redhat.com/earlyaccess/all</url>
           <releases>
             <enabled>true</enabled>
           </releases>

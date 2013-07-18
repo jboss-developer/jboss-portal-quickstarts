@@ -13,7 +13,7 @@ What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1
-and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.2.1.Final.
+and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.2.1.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of JBoss Portal Platform Developer Guide:
@@ -47,7 +47,8 @@ This is the easier and thus recommended option. You need to configure the Maven 
         For Windows:       \Users\USER_NAME\.m2\settings.xml or \Documents and Settings\USER_NAME\.m2\settings.xml
 * If you have an existing `settings.xml` file, modify it with the configuration information from the `settings-hosted-repo.xml`
   file located in the root folder of JBoss Portal Platform quickstarts. This effectivelly results in
-  adding `http://maven.repository.redhat.com/techpreview/all` as `<repository>` and `<pluginRepository>` to your `settings.xml`.
+  adding `http://maven.repository.redhat.com/techpreview/all` and `http://maven.repository.redhat.com/earlyaccess/all/` as `<repository>` and `<pluginRepository>` elements to your `settings.xml`.
+  Note that `earlyaccess/all` is necessary only for JPP 6.1 Beta. The final version will not need it.
 * If there is no `settings.xml` file, copy the `settings-hosted-repo.xml` file to the `.m2` directory for your
   operating system and rename it to `settings.xml`.
 

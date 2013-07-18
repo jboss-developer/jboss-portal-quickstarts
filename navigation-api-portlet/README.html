@@ -49,7 +49,8 @@ of JBoss Portal Platform Developer Guide:</p>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
 file located in the root folder of JBoss Portal Platform quickstarts. This effectivelly results in
-adding <code>http://maven.repository.redhat.com/techpreview/all</code> as <code>&lt;repository&gt;</code> and <code>&lt;pluginRepository&gt;</code> to your <code>settings.xml</code>.</p></li>
+adding <code>http://maven.repository.redhat.com/techpreview/all</code> and <code>http://maven.repository.redhat.com/earlyaccess/all/</code> as <code>&lt;repository&gt;</code> and <code>&lt;pluginRepository&gt;</code> elements to your <code>settings.xml</code>.
+Note that <code>earlyaccess/all</code> is necessary only for JPP 6.1 Beta. The final version will not need it.</p></li>
 <li><p>If there is no <code>settings.xml</code> file, copy the <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your
 operating system and rename it to <code>settings.xml</code>.</p></li>
 </ul>
