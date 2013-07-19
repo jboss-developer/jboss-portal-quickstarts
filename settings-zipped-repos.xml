@@ -190,7 +190,6 @@
             <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
-      </pluginRepositories>
         <pluginRepository>
           <id>eap601-plugins</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->
