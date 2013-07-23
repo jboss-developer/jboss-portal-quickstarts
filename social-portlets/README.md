@@ -6,7 +6,7 @@ Author: Marek Posolda, Viliam Rockai
 Level: Intermediate  
 Technologies: Portlet, JSP, OAuth, CDI  
 Summary: Portlets showing integration with Social networks  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?

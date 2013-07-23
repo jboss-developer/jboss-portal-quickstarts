@@ -23,7 +23,7 @@ Author: Ken Finnigan, Peter Palaga  <#-- two spaces mean line break in MD -->
 Level: Intermediate  <#-- two spaces mean line break in MD -->
 Technologies: Portlet, CDI  <#-- two spaces mean line break in MD -->
 Summary: ${project.description}  <#-- two spaces mean line break in MD -->
-Target Product: ${compatibility.portal.projectNameAndVersion}  <#-- two spaces mean line break in MD -->
+Target Product: ${compatibility.portal.projectNameShort}  <#-- two spaces mean line break in MD -->
 Source: <${parent.scm.url}>
 
 What is it?

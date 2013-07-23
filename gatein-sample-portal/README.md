@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: JBoss Portal Platform, Portal Container  
 Summary: Sample Portal  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 

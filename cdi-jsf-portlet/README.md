@@ -6,7 +6,7 @@ Author: Ken Finnigan, Peter Palaga
 Level: Intermediate  
 Technologies: Portlet, CDI, JSF  
 Summary: An application that demonstrates use of JSF 2 RI and CDI in a portlet  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?

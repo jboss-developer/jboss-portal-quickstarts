@@ -6,14 +6,14 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1
-and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.2.1.Final.
+and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.2.1.Final-redhat-1.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of JBoss Portal Platform Developer Guide:

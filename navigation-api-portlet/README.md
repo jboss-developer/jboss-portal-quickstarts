@@ -6,7 +6,7 @@ Author: Viliam Rockai
 Level: Beginner 
 Technologies: Portlet, JSP, JQuery 
 Summary: The simple navigation portlet using Portal API. 
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart> 
 
 What is it?

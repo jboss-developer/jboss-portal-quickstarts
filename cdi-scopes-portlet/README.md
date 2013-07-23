@@ -6,7 +6,7 @@ Author: Ken Finnigan
 Level: Intermediate  
 Technologies: Portlet, CDI  
 Summary: Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?

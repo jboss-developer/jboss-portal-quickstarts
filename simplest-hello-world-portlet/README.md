@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: JBoss Portal Platform 6.1  
+Target Product: JPP  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?
