@@ -19,6 +19,7 @@ package org.jboss.portal.portlet.samples;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 import javax.portlet.GenericPortlet;
 import javax.portlet.RenderRequest;
@@ -26,19 +27,22 @@ import javax.portlet.RenderResponse;
 
 /**
  * The simplest posible Portlet.
- * 
+ *
  * @author Peter Palaga
  */
 public class SimplestHelloWorldPortlet extends GenericPortlet {
+    private static final Logger log = Logger.getLogger(SimplestHelloWorldPortlet.class.getName());
+
     /**
      * Serves the VIEW mode. Writes "Hello World !" to the response writer.
-     * 
+     *
      * @see javax.portlet.GenericPortlet#doView(javax.portlet.RenderRequest, javax.portlet.RenderResponse)
      */
     @Override
     public void doView(RenderRequest request, RenderResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
-        writer.write("Hello World !");
+        writer.write("<h1>Hello World !</h1>");
         writer.close();
+        log.info("Hello World !");
     }
 }

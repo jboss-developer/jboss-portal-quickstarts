@@ -22,8 +22,10 @@ import javax.portlet.GenericPortlet;
 import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Logger;
 
 /**
  * A minimal Portlet using CDI.
@@ -31,6 +33,7 @@ import java.io.PrintWriter;
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
 public class GenericCDIPortlet extends GenericPortlet {
+    private static final Logger log = Logger.getLogger(GenericCDIPortlet.class.getName());
 
     /**
      * Java EE Container injects a Request Scoped {@link DataBean} for us here.
@@ -45,5 +48,6 @@ public class GenericCDIPortlet extends GenericPortlet {
         writer.write("<h1 style=\"font-size:16px;background-color:#dedfdf;padding:2px 4px;margin-bottom:2px;margin-bottom:2px;\">CDI Generic Portlet</h1>\n");
         writer.write("<p style=\"margin-left: 4px;\">Message from DataBean is: " + bean.getMessage() +"</p>\n");
         writer.write("</div>\n");
+        log.info("doView() finished");
     }
 }

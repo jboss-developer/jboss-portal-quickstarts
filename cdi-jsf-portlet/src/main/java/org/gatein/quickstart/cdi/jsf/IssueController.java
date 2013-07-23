@@ -18,6 +18,7 @@
 package org.gatein.quickstart.cdi.jsf;
 
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.Conversation;
@@ -38,6 +39,7 @@ import javax.inject.Named;
 @Named
 @ConversationScoped
 public class IssueController implements Serializable {
+    private static final Logger log = Logger.getLogger(IssueController.class.getName());
 
     private static final long serialVersionUID = 3184963917964851211L;
 
@@ -77,6 +79,7 @@ public class IssueController implements Serializable {
         }
         mgr.deleteIssue(issue);
         message = "You just deleted Issue #" + issue.getId() + " with a title of '" + issue.getTitle() + "'";
+        log.info("Issue #" + issue.getId() + " deleted.");
     }
 
     /**

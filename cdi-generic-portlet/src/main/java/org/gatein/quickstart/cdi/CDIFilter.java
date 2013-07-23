@@ -24,7 +24,9 @@ import javax.portlet.RenderResponse;
 import javax.portlet.filter.FilterChain;
 import javax.portlet.filter.FilterConfig;
 import javax.portlet.filter.RenderFilter;
+
 import java.io.IOException;
+import java.util.logging.Logger;
 
 /**
  * A portlet filter using CDI.
@@ -32,6 +34,7 @@ import java.io.IOException;
  * @author <a href="http://community.jboss.org/people/kenfinni">Ken Finnigan</a>
  */
 public class CDIFilter implements RenderFilter {
+    private static final Logger log = Logger.getLogger(CDIFilter.class.getName());
 
     /**
      * Java EE Container injects a Request Scoped {@link DataBean} for us here.
@@ -44,6 +47,7 @@ public class CDIFilter implements RenderFilter {
             PortletException {
         if (null != bean) {
             bean.setMessage("Hello from Filter with CDI!");
+            log.info("bean.message set to 'Hello from Filter with CDI!'");
         }
         chain.doFilter(request, response);
     }

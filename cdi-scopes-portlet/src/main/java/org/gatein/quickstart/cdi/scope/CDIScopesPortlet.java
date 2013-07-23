@@ -18,6 +18,7 @@
 package org.gatein.quickstart.cdi.scope;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.inject.Inject;
 import javax.portlet.ActionRequest;
@@ -31,6 +32,7 @@ import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 
+
 /**
  * A portlet demostrating the injection of beans living in portlet-specific CDI scopes {@code @PortletLifecycleScoped} and
  * {@code @PortletRedisplayScoped}. See also <a id="gatein.devguide.cdi.scope.portlets.url"
@@ -41,6 +43,8 @@ import javax.portlet.ResourceResponse;
  * @author <a href="ppalaga@redhat.com">Peter Palaga</a>
  */
 public class CDIScopesPortlet extends GenericPortlet {
+    private static final Logger log = Logger.getLogger(CDIScopesPortlet.class.getName());
+
     /**
      * A {@code @PortletLifecycleScoped} bean.
      */
@@ -86,7 +90,7 @@ public class CDIScopesPortlet extends GenericPortlet {
              * @PortletRedisplayScoped beans are created anew on each ActionRequest.
              */
         } else {
-            getPortletContext().log("Unexpected ActionRequest.");
+            log.warning("Unexpected ActionRequest.");
         }
     }
 
@@ -115,6 +119,7 @@ public class CDIScopesPortlet extends GenericPortlet {
             response.getWriter().write("redisplayScopedBean.text was set to '" + text + "', but is now set to 'Ajax'.");
         } else {
             response.getWriter().write("Unexpected resourceId '" + resourceId + "'.");
+            log.warning("Unexpected resourceId '" + resourceId + "'.");
         }
     }
 

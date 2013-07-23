@@ -18,6 +18,8 @@ package org.gatein.portlet.quickstart.navigation;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
+
 import javax.portlet.GenericPortlet;
 import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
@@ -25,6 +27,7 @@ import javax.portlet.RenderResponse;
 import javax.portlet.ResourceRequest;
 import javax.portlet.ResourceResponse;
 import javax.portlet.PortletRequestDispatcher;
+
 import org.gatein.api.PortalRequest;
 import org.gatein.api.navigation.Navigation;
 import org.gatein.api.navigation.Node;
@@ -37,6 +40,7 @@ import org.gatein.api.navigation.Nodes;
  * @author <a href="mailto:vrockai@redhat.com">Viliam Rockai</a>
  */
 public class NavigationPortlet extends GenericPortlet {
+    private static final Logger log = Logger.getLogger(NavigationPortlet.class.getName());
 
     // The root navigation bean contains the top-menu elements (Home and Sitemap by default) as its direct children nodes.
     private NavigationNodeBean navigationRootNodeBean;
@@ -59,7 +63,7 @@ public class NavigationPortlet extends GenericPortlet {
         PortalRequest portalRequest = PortalRequest.getInstance();
 
         Navigation navigation = PortalRequest.getInstance().getNavigation();
-                
+
         // Diving two levels so the information about children count of children nodes is available
         Node rootNode = navigation.getRootNode(Nodes.visitNodes(2));
 
@@ -94,11 +98,13 @@ public class NavigationPortlet extends GenericPortlet {
     public void serveResource(ResourceRequest request, ResourceResponse response) throws PortletException, IOException {
 
         Navigation navigation = PortalRequest.getInstance().getNavigation();
-        
+
         String chosenNodeURI = request.getParameter("uri");
 
+        log.info("Serving resource '"+ chosenNodeURI +"'.");
+
         Node chosenNode = navigation.getNode(NodePath.fromString(chosenNodeURI), Nodes.visitNodes(2));
-        
+
         request.setAttribute("parentNode", new NavigationNodeBean(chosenNode));
 
         PortletRequestDispatcher prd = getPortletContext().getRequestDispatcher("/jsp/node.jsp");
