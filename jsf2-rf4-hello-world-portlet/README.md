@@ -6,7 +6,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: RF4, JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
-Target Product: GateIn Portal 3.6  
+Target Product: GateIn  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?

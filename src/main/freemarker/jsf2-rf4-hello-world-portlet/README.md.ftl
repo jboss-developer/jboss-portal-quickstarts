@@ -23,7 +23,7 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan  <#-- two spaces mean line bre
 Level: Beginner  <#-- two spaces mean line break in MD -->
 Technologies: RF4, JSF2, Portlet Bridge  <#-- two spaces mean line break in MD -->
 Summary: ${project.description}  <#-- two spaces mean line break in MD -->
-Target Product: ${compatibility.portal.projectNameAndVersion}  <#-- two spaces mean line break in MD -->
+Target Product: ${compatibility.portal.projectNameShort}  <#-- two spaces mean line break in MD -->
 Source: <${parent.scm.url}>
 
 What is it?

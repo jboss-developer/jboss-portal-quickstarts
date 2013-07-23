@@ -6,7 +6,7 @@ Author: Viliam Rockai
 Level: Beginner 
 Technologies: Portlet, JSP, JQuery 
 Summary: The simple navigation portlet using Portal API. 
-Target Product: GateIn Portal 3.6  
+Target Product: GateIn  
 Source: <https://github.com/gatein/gatein-portal-quickstart> 
 
 What is it?

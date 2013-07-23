@@ -6,7 +6,7 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: GateIn Portal 3.6  
+Target Product: GateIn  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?

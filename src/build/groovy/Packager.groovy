@@ -146,12 +146,13 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
 
     //System.out.println("genProps.get(\"" +genPropsPrefix + "isOnJBossCentral\") = "+ genProps.get(genPropsPrefix + "isOnJBossCentral"));
     if ("false".equals(genProps.get(genPropsPrefix + "isOnJBossCentral"))) {
-        setTextContentByXPath(
-            xPath,
-            "tags",
-            projectNode,
-            ""
-        );
+        projectNode.getParentNode().removeChild(projectNode);
+//        setTextContentByXPath(
+//            xPath,
+//            "tags",
+//            projectNode,
+//            ""
+//        );
     }
 }
 
@@ -192,12 +193,17 @@ ant.mkdir(dir: "target/assembly-prepare")
 Document descriptorDom = readDom("src/main/project-examples-xml/project-examples-gatein.xml")
 XPath xPath = XPathFactory.newInstance().newXPath();
 
+String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
+String rootIncludes = productNameShort.equals("GateIn") ?
+    "README.md, LICENSE.txt" :
+    "README.md, LICENSE.txt, settings-hosted-repo.xml, settings-zipped-repos.xml";
+
 ant.copy(
     todir: "target/assembly-prepare",
 ) {
     ant.fileset(
         dir: "${project.basedir}",
-        includes: "README.md, LICENSE.txt"
+        includes: rootIncludes
     )
 }
 stripMdFile("${project.basedir}/target/assembly-prepare/README.md", COMMENT_PATTERN)
@@ -215,9 +221,8 @@ String gateinQuickstartsZipPath = "target/assembly/"+
 ant.zip (
     destfile: gateinQuickstartsZipPath,
     basedir: "target/assembly-prepare",
-    includes: "README.md, LICENSE.txt"
+    includes: rootIncludes
 )
-
 
 MavenXpp3Reader pomReader = new MavenXpp3Reader()
 for (module in project.modules) {

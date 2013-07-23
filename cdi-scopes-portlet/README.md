@@ -6,7 +6,7 @@ Author: Ken Finnigan
 Level: Intermediate  
 Technologies: Portlet, CDI  
 Summary: Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.  
-Target Product: GateIn Portal 3.6  
+Target Product: GateIn  
 Source: <https://github.com/gatein/gatein-portal-quickstart>
 
 What is it?
