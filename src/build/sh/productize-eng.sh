@@ -13,7 +13,7 @@ prodVersionNext="${upstreamVersion}-prod-2-SNAPSHOT"
 prodTag="gatein-quickstart-${prodVersion}"
 
 git fetch upstream
-git checkout -b "${prodVersion}" "${upstreamTag}"
+git checkout -b "${prodBranch}" "${upstreamTag}"
 
 mvn clean install -P generate-readmes,product --settings "$mvnSettings"
 ./src/build/sh/md2html.sh
