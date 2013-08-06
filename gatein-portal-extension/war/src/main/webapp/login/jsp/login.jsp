@@ -37,7 +37,7 @@
 </head>
 <body style="text-align: center; background: #b5b6b6; font-family: arial, tahoma, verdana">
     <div style="color: #334AF6; font-weight: bold;">This modified login form comes from Portal Extension.</div>
-    <div class="UILogin">
+    <div class="UILogin" style="width: 17em; margin-left: auto; margin-right: auto;">
         <div class="LoginHeader"></div>
         <div class="LoginContent">
             <div class="CenterLoginContent">
@@ -48,11 +48,11 @@
                     <table>
                         <tr class="FieldContainer">
                             <td class="FieldLabel">Username</td>
-                            <td><input class="UserName" name="username" /></td>
+                            <td><input class="UserName" name="username" style="width: 11em"/></td>
                         </tr>
                         <tr class="FieldContainer" id="UIPortalLoginFormControl">
                             <td class="FieldLabel">Password</td>
-                            <td><input class="Password" type="password" name="password" value="" /></td>
+                            <td><input class="Password" type="password" name="password" value="" style="width: 11em"/></td>
                         </tr>
                     </table>
                     <div class="LoginButton">
