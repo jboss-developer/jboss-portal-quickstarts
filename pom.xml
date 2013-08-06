@@ -50,7 +50,7 @@
 
     <properties>
         <org.jboss.ide.target.nameAndVersion>jbt4.1</org.jboss.ide.target.nameAndVersion>
-        <version.jboss.gatein.bom>1.0.1.Final</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.2.Final</version.jboss.gatein.bom>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
