@@ -56,7 +56,7 @@
         <m2eclipse.wtp.contextRoot>/portal/classic</m2eclipse.wtp.contextRoot>
 
         <version.surefire.plugin>2.10</version.surefire.plugin>
-        <version.jboss.maven.plugin>7.3.Final</version.jboss.maven.plugin>
+        <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
 
     </properties>
 
