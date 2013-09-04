@@ -20,7 +20,7 @@
     <parent>
         <artifactId>gatein-portal-extension</artifactId>
         <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.6.3.Final-qs-2</version>
+        <version>3.6.3.Final-qs-3-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
