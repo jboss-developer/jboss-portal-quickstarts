@@ -6,22 +6,21 @@
 Level: Beginner<br/>
 Technologies: RF4, JSF2, Portlet Bridge<br/>
 Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.<br/>
-Target Product: GateIn<br/>
+Target Product: JPP<br/>
 Source: <a href="https://github.com/gatein/gatein-portal-quickstart">https://github.com/gatein/gatein-portal-quickstart</a></p>
 
 <h2><a id="what-is-it" class="anchor" href="#what-is-it"><span class="anchor-icon"></span></a>What is it?</h2>
 
 <p>This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1,
-RichFaces 4.3 and <a href="https://docs.jboss.org/author/display/PBR32">Portlet Bridge</a> 3.2.1.Final.</p>
+RichFaces 4.3 and <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html">Portlet Bridge</a> 3.2.1.Final.</p>
 
 <p>An introduction and some background information to this quickstart can be found in the following chapters
-of GateIn Portal Developer Guide:</p>
+of JBoss Portal Platform Developer Guide:</p>
 
 <ul>
-<li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/Starting+a+Portlet+Project">Starting a Portlet Project</a></li>
-<li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/JSF2+Portlet+Development">JSF2 Portlet Development</a></li>
-<li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/Basic+JSF+Portlet+Development">Basic JSF Portlet Development</a></li>
-<li><a href="https://docs.jboss.org/author/display/GTNPORTAL36/JSF+portlet+development+with+RichFaces">JSF portlet development with RichFaces</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html">Starting a Portlet Project</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html">Basic JSF Portlet Development</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-JSF_Portlet_Development_with_RichFaces.html">JSF portlet development with RichFaces</a></li>
 </ul>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -32,14 +31,75 @@ of GateIn Portal Developer Guide:</p>
 
 <p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
 
-<p>The project is designed to be deployed on GateIn Portal 3.6 running on JBoss AS.</p>
+<p>The project is designed to be deployed on JBoss Portal Platform 6.1 running on JBoss EAP.</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 
 <h2><a id="configure-maven" class="anchor" href="#configure-maven"><span class="anchor-icon"></span></a>Configure Maven</h2>
 
-<p>You do not need to touch your settings.xml because of this quickstart. All necessary artifacts are available in public
-repositories.</p>
+<p>You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download &amp; setup zipped Maven repository.</p>
+
+<h3><a id="a-use-hosted-maven-repository" class="anchor" href="#a-use-hosted-maven-repository"><span class="anchor-icon"></span></a>A. Use hosted Maven repository</h3>
+
+<p>This is the easier and thus recommended option. You need to configure the Maven user settings as follows:</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
+file located in the root folder of JBoss Portal Platform quickstarts. This effectivelly results in
+adding <code>http://maven.repository.redhat.com/techpreview/all</code> as <code>&lt;repository&gt;</code> and <code>&lt;pluginRepository&gt;</code> to your <code>settings.xml</code>.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul>
+
+<h3><a id="b-download-amp-setup-zipped-maven-repositories" class="anchor" href="#b-download-amp-setup-zipped-maven-repositories"><span class="anchor-icon"></span></a>B. Download &amp; setup zipped Maven repositories</h3>
+
+<ol>
+<li><p>Download the following zipped Maven repositories from <a href="https://access.redhat.com/">Red Hat Customer Portal</a>,
+Downloads &gt; JBoss Enterprise Middleware:</p>
+
+<ul>
+<li>JBoss Portal Platform 6.1 Maven Repository</li>
+<li>Web Framework Kit 2.3.0 Maven Repository</li>
+<li>Web Framework Kit 2.2.0 Maven Repository</li>
+<li>Web Framework Kit 2.1.0 Maven Repository</li>
+<li>Web Framework Kit 2.0.0 Maven Repository</li>
+<li>Application Platform 6.1.1 Maven Repository</li>
+<li>Application Platform 6.0.1 Maven Repository</li>
+<li>Application Platform 6.0.0 Maven Repository</li>
+</ul>
+
+<p>Unpack each of these files to a separate directory.</p></li>
+<li><p>Modify the <code>settings-zipped-repos.xml</code> file located in the root directory of JBoss Portal Platform
+quickstarts:</p>
+
+<ul>
+<li>For each zipped repository unpacked in the previous step, replace <code>/path/to/repo/</code> within <code>file:///path/to/repo/...</code>
+with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous
+step.</li>
+<li>Note that path to each repository needs tobe set twice: one within <code>&lt;repository&gt;</code> tag and one within
+<code>&lt;pluginRepository&gt;</code> tag.</li>
+<li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
+path. For example:</p>
+<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.1-quickstarts</span>
+</pre></div></li>
+</ul></li>
+<li><p>Configure the Maven user settings.</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code>
+file.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul></li>
+</ol>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 
@@ -79,7 +139,7 @@ just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</cod
 <p>To ensure that the example portlet has been deployed successfully, do the following:</p>
 
 <ul>
-<li>Point your web browser at the base URL of your portal (URL of a default local GateIn Portal installation is
+<li>Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform installation is
 <a href="http://127.0.0.1:8080/portal/classic">http://127.0.0.1:8080/portal/classic</a>).</li>
 <li>Sign in as root or other user with manager:/platform/administrators permissions.</li>
 <li>Go to Top Menu &gt; Group &gt; Administration &gt; Application Registry and hit Import Applications. After that, you should
@@ -142,5 +202,5 @@ commands to pull them into your local repository. The IDE should then detect the
 
 <h2><a id="feedback" class="anchor" href="#feedback"><span class="anchor-icon"></span></a>Feedback</h2>
 
-<p>Please post feedback on this quickstart or GateIn Portal on <a href="https://community.jboss.org/en/gatein?view=discussions">GateIn Forums</a>.</p>
+<p>Please post feedback on this quickstart or JBoss Portal Platform on <a href="https://access.redhat.com/groups/jboss-enterprise-middleware">Online User Group</a>.</p>
 </body></html>
