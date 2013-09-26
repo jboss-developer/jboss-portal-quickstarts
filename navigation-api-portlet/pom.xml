@@ -36,7 +36,7 @@
 
     <properties>
         <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.3.Final-redhat-1</version.jboss.gatein.bom>
+        <version.jboss.gatein.bom>1.0.3.Final-redhat-2</version.jboss.gatein.bom>
 
         <!-- Other dependencies -->
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
