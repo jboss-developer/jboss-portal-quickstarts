@@ -98,7 +98,7 @@
 
         <compatibility.as.product.versionMajor>6</compatibility.as.product.versionMajor>
         <compatibility.as.product.versionMinor>1</compatibility.as.product.versionMinor>
-        <compatibility.as.product.versionMicro>0</compatibility.as.product.versionMicro>
+        <compatibility.as.product.versionMicro>1</compatibility.as.product.versionMicro>
         <compatibility.as.product.versionMm>${compatibility.as.product.versionMajor}.${compatibility.as.product.versionMinor}</compatibility.as.product.versionMm>
         <compatibility.as.product.versionMmm>${compatibility.as.product.versionMm}.${compatibility.as.product.versionMicro}</compatibility.as.product.versionMmm>
         <compatibility.as.product.projectName>JBoss EAP</compatibility.as.product.projectName>

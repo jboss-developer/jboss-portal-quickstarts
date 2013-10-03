@@ -88,6 +88,17 @@
           </snapshots>
         </repository>
         <repository>
+          <id>eap611</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.1.1-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
           <id>eap610</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.1.0-maven-repository</url>
@@ -180,6 +191,17 @@
           </snapshots>
         </pluginRepository>
         <pluginRepository>
+          <id>eap611-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.1.1-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
           <id>eap610-plugins</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.1.0-maven-repository</url>
@@ -190,7 +212,6 @@
             <enabled>false</enabled>
           </snapshots>
         </pluginRepository>
-      </pluginRepositories>
         <pluginRepository>
           <id>eap601-plugins</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->

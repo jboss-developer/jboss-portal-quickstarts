@@ -235,10 +235,10 @@ public static class LinksAndVersions {
     public static final String compatibility_as_product_projectName = "JBoss EAP";
     public static final String compatibility_as_product_projectNameAndVersion = "JBoss EAP 6.1";
     public static final String compatibility_as_product_versionMajor = "6";
-    public static final String compatibility_as_product_versionMicro = "0";
+    public static final String compatibility_as_product_versionMicro = "1";
     public static final String compatibility_as_product_versionMinor = "1";
     public static final String compatibility_as_product_versionMm = "6.1";
-    public static final String compatibility_as_product_versionMmm = "6.1.0";
+    public static final String compatibility_as_product_versionMmm = "6.1.1";
     public static final String compatibility_as_projectName = "JBoss AS";
     public static final String compatibility_as_projectNameAndVersion = "JBoss AS 7.1";
     public static final String compatibility_as_versionMajor = "7";
