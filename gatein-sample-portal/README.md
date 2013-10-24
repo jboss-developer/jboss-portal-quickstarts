@@ -70,7 +70,7 @@ Setup JBoss Datasources and Security Policies
 In JBoss, Datasources and Security Policies need to be defined on the level of Application Server and they
 cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is 
 the reason why it is not enough just to deploy `gatein-sample-portal.ear`. You also need to define the 
-Datasources and Security Policies e.g. in `$BOSS_HOME/standalone/configuration/standalone.xml`.
+Datasources and Security Policies e.g. in `$JBOSS_HOME/standalone/configuration/standalone.xml`.
 
 The `standalone.xml` available in the out-of-the-box GateIn Portal 3.6 installation contains the needed pieces
 of XML commented out. Please search for `Uncommented this when deploying gatein-sample-portal` in the file and uncomment the
