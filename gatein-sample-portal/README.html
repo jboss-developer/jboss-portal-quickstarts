@@ -63,9 +63,9 @@ GateIn Portal is running. Instead of that you will need to:</p>
 <h2><a id="setup-jboss-datasources-and-security-policies" class="anchor" href="#setup-jboss-datasources-and-security-policies"><span class="anchor-icon"></span></a>Setup JBoss Datasources and Security Policies</h2>
 
 <p>In JBoss, Datasources and Security Policies need to be defined on the level of Application Server and they
-cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is 
-the reason why it is not enough just to deploy <code>gatein-sample-portal.ear</code>. You also need to define the 
-Datasources and Security Policies e.g. in <code>$BOSS_HOME/standalone/configuration/standalone.xml</code>.</p>
+cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is
+the reason why it is not enough just to deploy <code>gatein-sample-portal.ear</code>. You also need to define the
+Datasources and Security Policies e.g. in <code>$JBOSS_HOME/standalone/configuration/standalone.xml</code>.</p>
 
 <p>The <code>standalone.xml</code> available in the out-of-the-box GateIn Portal 3.6 installation contains the needed pieces
 of XML commented out. Please search for <code>Uncommented this when deploying gatein-sample-portal</code> in the file and uncomment the
