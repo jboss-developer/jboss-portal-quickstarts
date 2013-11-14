@@ -78,13 +78,10 @@
                                     <string>web</string>
                                 </value>
                                 <value>
-                                  <string>gatein-mobile-configuration</string>
-                                </value>
-                                <value>
                                     <string>gatein-mobile-login</string>
                                 </value>
                                 <value>
-                                    <string>gatein-sample-portal</string>
+                                    <string>sample-portal</string>
                                 </value>
                             </collection>
                         </field>

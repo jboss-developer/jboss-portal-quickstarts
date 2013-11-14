@@ -77,9 +77,6 @@
                                 <value>
                                     <string>web</string>
                                 </value>
-                                <value>
-                                  <string>gatein-mobile-configuration</string>
-                                </value>
 <#if compatibility.portal.projectNameShort != "GateIn">
                                 <!--
                                     In Sample Portal, we rely on JppSkin for BannerPortlet and NavigationPortlet defined
@@ -98,7 +95,7 @@
                                     <string>gatein-mobile-login</string>
                                 </value>
                                 <value>
-                                    <string>gatein-sample-portal</string>
+                                    <string>sample-portal</string>
                                 </value>
                             </collection>
                         </field>
