@@ -56,7 +56,7 @@
         <css-path>/css/QuickstartStylesheet.css</css-path>
     </portlet-skin>
 
-    <!-- Skin definition for JPP -->
+    <!-- Skin definition for JBoss Portal -->
     <portlet-skin>
         <application-name>navigation-api-portlet</application-name>
         <portlet-name>QuickstartNavigationPortlet</portlet-name>

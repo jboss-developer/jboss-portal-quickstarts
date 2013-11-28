@@ -33,7 +33,7 @@
                     <name>portal</name>
                     <object type="org.exoplatform.container.definition.PortalContainerDefinition">
                         <!-- The name of the Portal Container: note that a Portal Container called "portal"
-                             already exists in the default JPP installation. Therefore, we actually redefine
+                             already exists in the default ${compatibility.portal.projectNameShort} installation. Therefore, we actually redefine
                              that existing Portal Container here. -->
                         <field name="name">
                             <string>portal</string>

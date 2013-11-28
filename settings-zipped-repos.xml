@@ -33,9 +33,9 @@
       <id>jboss-local-repositories</id>
       <repositories>
         <repository>
-          <id>jpp</id>
-          <!-- Change this to where you have unpacked the zipped JPP 6.1.0 Maven repository -->
-          <url>file:///path/to/repo/jboss-jpp-6.1.0-maven-repository</url>
+          <id>jboss-portal</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -136,9 +136,9 @@
 
       <pluginRepositories>
         <pluginRepository>
-          <id>jpp-plugins</id>
-          <!-- Change this to where you have unpacked the zipped JPP Maven repository -->
-          <url>file:///path/to/repo/jboss-jpp-6.1.0-maven-repository</url>
+          <id>jboss-portal-plugins</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>

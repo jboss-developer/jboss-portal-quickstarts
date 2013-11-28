@@ -37,7 +37,7 @@
                     <!--
                         Note that we actually do not need to name locale.navigation.portal.classic and
                         locale.navigation.group.platform.administrators here as they are in init.resources
-                        of the default JPP installation. But it makes no harm to include them once again here.
+                        of the default Portal installation. But it makes no harm to include them once again here.
                     -->
                     <value>locale.navigation.portal.classic</value>
                     <value>locale.navigation.group.platform.administrators</value>
@@ -45,7 +45,7 @@
                 <values-param>
                     <name>portal.resource.names</name>
                     <description>These resources are merged to a single resource bundle which is accessible from anywhere
-                        in JPP. All these keys are located in the same bundle, which is separated from the navigation
+                        in the Portal. All these keys are located in the same bundle, which is separated from the navigation
                         resource bundles.</description>
                     <value>locale.portal.extension</value>
                 </values-param>

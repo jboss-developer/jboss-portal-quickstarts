@@ -254,9 +254,9 @@ public static class LinksAndVersions {
     public static final String compatibility_portal_community_versionMinor = "6";
     public static final String compatibility_portal_community_versionMm = "3.6";
     public static final String compatibility_portal_community_versionMmm = "3.6.0";
-    public static final String compatibility_portal_product_projectName = "JBoss Portal Platform";
-    public static final String compatibility_portal_product_projectNameAndVersion = "JBoss Portal Platform 6.1";
-    public static final String compatibility_portal_product_projectNameShort = "JPP";
+    public static final String compatibility_portal_product_projectName = "Red Hat JBoss Portal";
+    public static final String compatibility_portal_product_projectNameAndVersion = "Red Hat JBoss Portal 6.1";
+    public static final String compatibility_portal_product_projectNameShort = "JBoss Portal";
     public static final String compatibility_portal_product_versionMajor = "6";
     public static final String compatibility_portal_product_versionMicro = "0";
     public static final String compatibility_portal_product_versionMinor = "1";

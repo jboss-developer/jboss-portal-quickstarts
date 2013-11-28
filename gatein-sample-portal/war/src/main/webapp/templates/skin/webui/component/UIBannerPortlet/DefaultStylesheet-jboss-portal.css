@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 #banner {
     border-top: 1px solid #b5b6b6;
 }
@@ -35,8 +34,8 @@
 }
 
 .UIBannerPortlet .RightBanner {
-    background: url('DefaultSkin/background/JPP-extension-logo.gif') no-repeat 13px 22px; /* orientation=lt */
-    background: url('DefaultSkin/background/JPP-extension-logo.gif') no-repeat right 22px; /* orientation=rt */
+    background: url('DefaultSkin/background/jboss-portal-sample-portal-logo.gif') no-repeat 13px 22px; /* orientation=lt */
+    background: url('DefaultSkin/background/jboss-portal-extension-logo.gif') no-repeat right 22px; /* orientation=rt */
 }
 
 .UIBannerPortlet .MiddleBanner {

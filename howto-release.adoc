@@ -53,13 +53,13 @@ total 3248
 -rw-rw-r--. 1 ppalaga ppalaga   81222 May 14 15:35 social-portlets.zip
 
 # in most cases, you want to publish the *-Quickstarts.zip file (which contains all quickstarts)
-# separately under GateIn/JPP Downloads
+# separately under GateIn/JBoss Portal Downloads
 mv -t /tmp *-Quickstarts.zip
 # the remainig files belong to download.jboss.org/gatein/quickstarts/[jpp|gatein]-[major].[minor] folder
 rsync * ...
 ----
 
-. Upload the `*-Quickstarts.zip` file to GateIn/JPP Downloads:
+. Upload the `*-Quickstarts.zip` file to GateIn/JBoss Portal Downloads:
 +
 [source,sh]
 ----

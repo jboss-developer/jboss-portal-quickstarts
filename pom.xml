@@ -75,8 +75,8 @@
         <compatibility.portal.product.versionMicro>0</compatibility.portal.product.versionMicro>
         <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
-        <compatibility.portal.product.projectName>JBoss Portal Platform</compatibility.portal.product.projectName>
-        <compatibility.portal.product.projectNameShort>JPP</compatibility.portal.product.projectNameShort>
+        <compatibility.portal.product.projectName>Red Hat JBoss Portal</compatibility.portal.product.projectName>
+        <compatibility.portal.product.projectNameShort>JBoss Portal</compatibility.portal.product.projectNameShort>
         <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.community.versionMajor}</compatibility.portal.versionMajor>

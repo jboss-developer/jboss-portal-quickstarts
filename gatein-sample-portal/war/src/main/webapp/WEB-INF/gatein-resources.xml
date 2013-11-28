@@ -43,7 +43,7 @@
         <!-- <portlet-name> value from the portlet.xml referenced above -->
         <portlet-name>HomePagePortlet</portlet-name>
         <skin-name>JppSkin</skin-name>
-        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet-JPP.css</css-path>
+        <css-path>/templates/skin/webui/component/UIHomePagePortlet/DefaultStylesheet-jboss-portal.css</css-path>
     </portlet-skin>
 
 
@@ -59,14 +59,14 @@
     </portlet-skin>
 
     <!--
-        JPP will load this CSS for BannerPortlet instead of the default one.
+        JBoss Portal will load this CSS for BannerPortlet instead of the default one.
         We want to replace the default logo with ours.
     -->
     <portlet-skin>
         <application-name>web</application-name>
         <portlet-name>BannerPortlet</portlet-name>
         <skin-name>JppSkin</skin-name>
-        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet-JPP.css</css-path>
+        <css-path>/templates/skin/webui/component/UIBannerPortlet/DefaultStylesheet-jboss-portal.css</css-path>
     </portlet-skin>
 
 
