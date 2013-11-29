@@ -95,7 +95,7 @@
                                     <string>gatein-mobile-login</string>
                                 </value>
                                 <value>
-                                    <string>sample-portal</string>
+                                    <string>gatein-sample-portal</string>
                                 </value>
                             </collection>
                         </field>
