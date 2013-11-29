@@ -36,8 +36,8 @@
     
     <p>
         Before you proceed, you may want to read 
-        <a id="gatein.devguide.cdi.scope.portlets.url" href="https://docs.jboss.org/author/display/GTNPORTAL36/Portlet+CDI+Scopes">Portlet CDI Scopes</a>
-        Section of <span id="compatibility.portal.projectNameShort">GateIn</span> Developer Guide.
+        <a id="gatein.devguide.cdi.scope.portlets.url" href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Portlet_CDI_Scopes.html">Portlet CDI Scopes</a>
+        Section of <span id="compatibility.portal.projectNameShort">JBoss Portal</span> Developer Guide.
     </p>
     
     <h2><code>@PortletLifecycleScoped</code></h2>

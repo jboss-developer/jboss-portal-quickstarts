@@ -33,7 +33,7 @@
                     <name>portal</name>
                     <object type="org.exoplatform.container.definition.PortalContainerDefinition">
                         <!-- The name of the Portal Container: note that a Portal Container called "portal"
-                             already exists in the default GateIn installation. Therefore, we actually redefine
+                             already exists in the default JBoss Portal installation. Therefore, we actually redefine
                              that existing Portal Container here. -->
                         <field name="name">
                             <string>portal</string>
@@ -88,6 +88,17 @@
                                 </value>
                                 <value>
                                   <string>gatein-mobile-configuration</string>
+                                </value>
+                                <!--
+                                    Some of the resources we want to override are in jpp-branding-extension.war
+                                    and jpp-ext.war which are packaged in jpp-branding-extension.ear.
+                                    Note that jpp-ext is the display-name of jpp-branding-extension.war
+                                -->
+                                <value>
+                                    <string>jpp-ext</string>
+                                </value>
+                                <value>
+                                    <string>jpp-branding-skin</string>
                                 </value>
                                 <value>
                                     <string>gatein-portal-extension</string>

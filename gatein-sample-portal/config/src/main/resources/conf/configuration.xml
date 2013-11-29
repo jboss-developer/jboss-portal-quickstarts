@@ -77,11 +77,23 @@
                                 <value>
                                     <string>web</string>
                                 </value>
+                                <!--
+                                    In Sample Portal, we rely on JppSkin for BannerPortlet and NavigationPortlet defined
+                                    in jpp-ext and jpp-branding-skin. Note that jpp-ext is the display-name of
+                                    jpp-branding-extension.war.
+                                    You can remove them both safely, when you define your own skin.
+                                -->
+                                <value>
+                                    <string>jpp-ext</string>
+                                </value>
+                                <value>
+                                    <string>jpp-branding-skin</string>
+                                </value>
                                 <value>
                                     <string>gatein-mobile-login</string>
                                 </value>
                                 <value>
-                                    <string>sample-portal</string>
+                                    <string>gatein-sample-portal</string>
                                 </value>
                             </collection>
                         </field>
