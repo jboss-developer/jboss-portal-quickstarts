@@ -214,9 +214,9 @@ String product = project.properties.get("compatibility.portal.projectName");
 String productVersion = project.properties.get("compatibility.portal.versionMm");
 
 String gateinQuickstartsZipPath = "target/assembly/"+
-    project.properties.get("compatibility.portal.projectNameShort") +
+    project.properties.get("compatibility.portal.projectNameShort").toLowerCase().replace(' ', '-') +
     "-"+
-    productVersion +"-Quickstarts.zip";
+    productVersion +"-quickstarts.zip";
 
 ant.zip (
     destfile: gateinQuickstartsZipPath,
