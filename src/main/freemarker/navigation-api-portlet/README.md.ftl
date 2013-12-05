@@ -34,8 +34,8 @@ This project demonstrates how to create the navigation portlet using the GateIn 
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
-* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
-* [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
-* [Portal API](${gatein.devguide.api.portal.url})
+* [Starting a Portlet Project](${portal.devguide.starting.portlet.project.url})
+* [Standard Portlet Development (JSR-286)](${portal.devguide.jsf.plain.jsr268.portlet.url})
+* [Portal API](${portal.devguide.api.portal.url})
 
 <#include "/include/portlet-general.md.ftl">

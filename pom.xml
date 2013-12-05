@@ -18,14 +18,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.gatein.portal.quickstarts</groupId>
+    <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>gatein-portal-quickstarts-parent</artifactId>
-    <version>3.6.3.Final-qs-3-SNAPSHOT</version>
+    <version>6.1.1.build-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>GateIn Quickstarts Parent</name>
-    <url>http://gatein.org</url>
+    <name>JBoss Portal Quickstarts Parent</name>
+    <url>http://jboss.org</url>
     <scm>
-        <url>https://github.com/gatein/gatein-portal-quickstart</url>
+        <url>https://github.com/jboss-developer/jboss-portal-quickstarts.git</url>
     </scm>
     <licenses>
         <license>
@@ -49,8 +49,7 @@
     </modules>
 
     <properties>
-        <org.jboss.ide.target.nameAndVersion>jbt4.1</org.jboss.ide.target.nameAndVersion>
-        <version.jboss.gatein.bom>1.0.4.Alpha01</version.jboss.gatein.bom>
+                <org.jboss.ide.target.nameAndVersion>jbds7.1</org.jboss.ide.target.nameAndVersion>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
@@ -59,7 +58,8 @@
              JBT 4.1.0.Alpha2 - '-001'
              JBT 4.1.0.CR1 - '-002'
         -->
-        <org.gatein.portal.quickstarts.descriptor.suffix>-002</org.gatein.portal.quickstarts.descriptor.suffix>
+        <org.jboss.quickstarts.portal.descriptor.suffix>-001</org.jboss.quickstarts.portal.descriptor.suffix>
+        <version.jboss.portal.bom>6.1.1.build-SNAPSHOT</version.jboss.portal.bom>
 
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
         <compatibility.portal.community.versionMinor>6</compatibility.portal.community.versionMinor>
@@ -79,14 +79,20 @@
         <compatibility.portal.product.projectNameShort>JBoss Portal</compatibility.portal.product.projectNameShort>
         <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
 
-        <compatibility.portal.versionMajor>${compatibility.portal.community.versionMajor}</compatibility.portal.versionMajor>
-        <compatibility.portal.versionMinor>${compatibility.portal.community.versionMinor}</compatibility.portal.versionMinor>
-        <compatibility.portal.versionMicro>${compatibility.portal.community.versionMicro}</compatibility.portal.versionMicro>
+        <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
+        <compatibility.portal.versionMinor>${compatibility.portal.product.versionMinor}</compatibility.portal.versionMinor>
         <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
         <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
-        <compatibility.portal.projectName>${compatibility.portal.community.projectName}</compatibility.portal.projectName>
-        <compatibility.portal.projectNameShort>${compatibility.portal.community.projectNameShort}</compatibility.portal.projectNameShort>
+        <compatibility.portal.projectName>${compatibility.portal.product.projectName}</compatibility.portal.projectName>
+        <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
+
+        <compatibility.as.versionMajor>${compatibility.as.product.versionMajor}</compatibility.as.versionMajor>
+        <compatibility.as.versionMinor>${compatibility.as.product.versionMinor}</compatibility.as.versionMinor>
+        <compatibility.as.versionMm>${compatibility.as.versionMajor}.${compatibility.as.versionMinor}</compatibility.as.versionMm>
+        <compatibility.as.versionMmm>${compatibility.as.versionMm}.${compatibility.as.versionMicro}</compatibility.as.versionMmm>
+        <compatibility.as.projectName>${compatibility.as.product.projectName}</compatibility.as.projectName>
+        <compatibility.as.projectNameAndVersion>${compatibility.as.projectName} ${compatibility.as.versionMm}</compatibility.as.projectNameAndVersion>
 
         <compatibility.as.community.versionMajor>7</compatibility.as.community.versionMajor>
         <compatibility.as.community.versionMinor>1</compatibility.as.community.versionMinor>
@@ -117,7 +123,68 @@
         <compatibility.wfk.versionMicro>0</compatibility.wfk.versionMicro>
         <compatibility.wfk.versionMmm>${compatibility.wfk.versionMajor}.${compatibility.wfk.versionMinor}.${compatibility.wfk.versionMicro}</compatibility.wfk.versionMmm>
 
-        <gatein-bom.pbr.version>${version.org.jboss.portletbridge}</gatein-bom.pbr.version>
+        <!-- External links used in READMEs -->
+        <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
+
+        <portal.user.forum.label>Online User Group</portal.user.forum.label>
+        <portal.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</portal.user.forum.url>
+
+        <!-- <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url> -->
+        <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
+
+        <portal.docs.prefix>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}/html</portal.docs.prefix>
+        <portal.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}</portal.docs.url>
+        <portal.devguide.url>${portal.docs.prefix}/Development_Guide</portal.devguide.url>
+
+        <portal.devguide.containers.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Containers.html</portal.devguide.containers.url>
+        <portal.devguide.extensions.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html</portal.devguide.extensions.url>
+
+        <portal.devguide.custom.groovy.template.url>${portal.docs.prefix}/Development_Guide/Custom_Groovy_Template_for_a_Portlet.html</portal.devguide.custom.groovy.template.url>
+        <portal.devguide.custom.portlet.skin.url>${portal.docs.prefix}/Development_Guide/sect-Custom_Skin_for_a_Portlet.html</portal.devguide.custom.portlet.skin.url>
+        <portal.devguide.nav.pages.url>${portal.docs.prefix}/Development_Guide/sect-Custom_Navigation_and_Pages.html</portal.devguide.nav.pages.url>
+        <portal.devguide.i18n.url>${portal.docs.prefix}/Development_Guide/Custom_Internationalization_Resource_Bundles.html</portal.devguide.i18n.url>
+
+        <portal.devguide.starting.portlet.project.url>${portal.docs.prefix}/Development_Guide/sect-Starting_a_Portlet_Project.html</portal.devguide.starting.portlet.project.url>
+        <portal.devguide.jsf.plain.jsr268.portlet.url>${portal.docs.prefix}/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html</portal.devguide.jsf.plain.jsr268.portlet.url>
+        <portal.devguide.jsf.portlets.url>${portal.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</portal.devguide.jsf.portlets.url>
+        <portal.devguide.jsf.basic.portlet.url>${portal.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</portal.devguide.jsf.basic.portlet.url>
+        <portal.devguide.jsf.rf.portlet.url>${portal.docs.prefix}/Development_Guide/chap-JSF_Portlet_Development_with_RichFaces.html</portal.devguide.jsf.rf.portlet.url>
+        <portal.devguide.api.portal.url>${portal.docs.prefix}/Development_Guide/part-Portal_API.html</portal.devguide.api.portal.url>
+
+        <!-- TODO: Where is portlet primer in the prod docs? -->
+        <portal.refguide.portlet.primer.url>${portal.docs.prefix}/Development_Guide/sect-JSR-168_and_JSR-286_overview.html</portal.refguide.portlet.primer.url>
+        <portal.refguide.pbr.url>${portal.docs.prefix}/Development_Guide/chap-Portlet_Bridge.html</portal.refguide.pbr.url>
+
+        <!-- TODO: CDI in prod doc. -->
+        <portal.devguide.cdi.url>${portal.docs.prefix}/Development_Guide/chap-CDI_Portlet_Development.html</portal.devguide.cdi.url>
+        <portal.devguide.cdi.generic.portlet.url>${portal.docs.prefix}/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html</portal.devguide.cdi.generic.portlet.url>
+        <portal.devguide.cdi.scope.portlets.url>${portal.docs.prefix}/Development_Guide/sect-Portlet_CDI_Scopes.html</portal.devguide.cdi.scope.portlets.url>
+
+        <portal.refguide.oauth.url>${portal.docs.prefix}/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html</portal.refguide.oauth.url>
+        <portal.refguide.facebook.url>${portal.docs.prefix}/Development_Guide/Facebook.html</portal.refguide.facebook.url>
+        <portal.refguide.google.url>${portal.docs.prefix}/Development_Guide/Google.html</portal.refguide.google.url>
+        <portal.refguide.twitter.url>${portal.docs.prefix}/Development_Guide/Twitter.html</portal.refguide.twitter.url>
+
+        <jboss.admin.guide.url.prefix>${jboss.confluence.root.url}/JBoss_Enterprise_Application_Platform/${compatibility.as.versionMm}/html/Administration_and_Configuration_Guide</jboss.admin.guide.url.prefix>
+        <jboss.admin.guide.ds.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
+        <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html#Deployment_of_-ds.xml_files</jboss.admin.guide.ds.files.url>
+
+
+        <!-- Other guides -->
+        <gatein.refguide.pbr.url>https://docs.jboss.org/author/display/PBR32</gatein.refguide.pbr.url>
+
+        <!-- Other URLs -->
+        <facebook.url>https://www.facebook.com</facebook.url>
+        <facebook.graph.url>https://developers.facebook.com/docs/reference/api/</facebook.graph.url>
+        <facebook.restfb.url>http://restfb.com/</facebook.restfb.url>
+        <google.plus.url>https://plus.google.com/</google.plus.url>
+        <google.oauth.api.url>https://developers.google.com/accounts/docs/OAuth2</google.oauth.api.url>
+        <google.plus.api.url>https://developers.google.com/+/api/latest/</google.plus.api.url>
+        <twitter.url>https://twitter.com/</twitter.url>
+        <twitter.twitter4j.url>http://twitter4j.org/en/index.html</twitter.twitter4j.url>
+
+
+
 
         <maven.antrun.plugin.version>1.7</maven.antrun.plugin.version>
         <github.global.server>github</github.global.server>
@@ -131,66 +198,16 @@
         <!-- External links used in READMEs -->
         <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
 
-        <gatein.quickstarts.downloads.url.prefix>http://download.jboss.org/gatein/quickstarts/${compatibility.portal.projectNameShort}-${compatibility.portal.versionMm}</gatein.quickstarts.downloads.url.prefix>
-
-        <gatein.user.forum.label>GateIn Forums</gatein.user.forum.label>
-        <gatein.user.forum.url>https://community.jboss.org/en/gatein?view=discussions</gatein.user.forum.url>
-
-        <jboss.confluence.root.url>https://docs.jboss.org/author/display</jboss.confluence.root.url>
-        <gatein.docs.prefix>${jboss.confluence.root.url}/GTNPORTAL${compatibility.portal.versionMajor}${compatibility.portal.versionMinor}</gatein.docs.prefix>
-        <gatein.docs.url>${gatein.docs.prefix}</gatein.docs.url>
-        <gatein.devguide.url>${gatein.docs.prefix}/Developer+Guide</gatein.devguide.url>
-
-        <gatein.devguide.containers.url>${gatein.docs.prefix}/GDG-Portal+Containers+and+Extensions</gatein.devguide.containers.url>
-        <gatein.devguide.extensions.url>${gatein.docs.prefix}/GDG-Portal+Containers+and+Extensions</gatein.devguide.extensions.url>
-
-        <gatein.devguide.custom.groovy.template.url>${gatein.docs.prefix}/Custom+Groovy+Template+for+a+Portlet</gatein.devguide.custom.groovy.template.url>
-        <gatein.devguide.custom.portlet.skin.url>${gatein.docs.prefix}/Custom+Skin+for+a+Portlet</gatein.devguide.custom.portlet.skin.url>
-        <gatein.devguide.nav.pages.url>${gatein.docs.prefix}/Custom+Navigation+and+Pages</gatein.devguide.nav.pages.url>
-        <gatein.devguide.i18n.url>${gatein.docs.prefix}/Custom+Internationalization+Resource+Bundles</gatein.devguide.i18n.url>
-
-        <gatein.devguide.starting.portlet.project.url>${gatein.docs.prefix}/Starting+a+Portlet+Project</gatein.devguide.starting.portlet.project.url>
-        <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.prefix}/Standard+Portlet+Development+%28JSR+286%29</gatein.devguide.jsf.plain.jsr268.portlet.url>
-        <gatein.devguide.jsf.portlets.url>${gatein.docs.prefix}/JSF2+Portlet+Development</gatein.devguide.jsf.portlets.url>
-        <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.prefix}/Basic+JSF+Portlet+Development</gatein.devguide.jsf.basic.portlet.url>
-        <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.prefix}/JSF+portlet+development+with+RichFaces</gatein.devguide.jsf.rf.portlet.url>
-        <gatein.devguide.api.portal.url>${gatein.docs.prefix}/Portal+API</gatein.devguide.api.portal.url>
-        <gatein.refguide.portlet.primer.url>${gatein.docs.prefix}/Portlet+Primer</gatein.refguide.portlet.primer.url>
-
-        <gatein.devguide.cdi.url>${gatein.docs.prefix}/CDI+Portlet+Development</gatein.devguide.cdi.url>
-        <gatein.devguide.cdi.generic.portlet.url>${gatein.docs.prefix}/GenericPortlet+and+Portlet+Filter+Injection</gatein.devguide.cdi.generic.portlet.url>
-        <gatein.devguide.cdi.scope.portlets.url>${gatein.docs.prefix}/Portlet+CDI+Scopes</gatein.devguide.cdi.scope.portlets.url>
-
-        <gatein.refguide.oauth.url>${gatein.docs.prefix}/OAuth+-+Authentication+with+social+network+accounts</gatein.refguide.oauth.url>
-        <gatein.refguide.facebook.url>${gatein.docs.prefix}/Facebook</gatein.refguide.facebook.url>
-        <gatein.refguide.google.url>${gatein.docs.prefix}/Google+Plus</gatein.refguide.google.url>
-        <gatein.refguide.twitter.url>${gatein.docs.prefix}/Twitter</gatein.refguide.twitter.url>
-
-        <!-- Other guides -->
-        <gatein.refguide.pbr.url>https://docs.jboss.org/author/display/PBR32</gatein.refguide.pbr.url>
-
-        <jboss.admin.guide.url.prefix>${jboss.confluence.root.url}/AS${compatibility.as.versionMajor}${compatibility.as.versionMinor}/Admin+Guide</jboss.admin.guide.url.prefix>
-        <jboss.admin.guide.ds.url>${jboss.admin.guide.url.prefix}#AdminGuide-Datasources</jboss.admin.guide.ds.url>
-        <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url.prefix}#AdminGuide-Deploymentof%5Cds.xmlfiles</jboss.admin.guide.ds.files.url>
-
-        <!-- Other URLs -->
-        <facebook.url>https://www.facebook.com</facebook.url>
-        <facebook.graph.url>https://developers.facebook.com/docs/reference/api/</facebook.graph.url>
-        <facebook.restfb.url>http://restfb.com/</facebook.restfb.url>
-        <google.plus.url>https://plus.google.com/</google.plus.url>
-        <google.oauth.api.url>https://developers.google.com/accounts/docs/OAuth2</google.oauth.api.url>
-        <google.plus.api.url>https://developers.google.com/+/api/latest/</google.plus.api.url>
-        <twitter.url>https://twitter.com/</twitter.url>
-        <twitter.twitter4j.url>http://twitter4j.org/en/index.html</twitter.twitter4j.url>
+        <portal.quickstarts.downloads.url.prefix>http://download.jboss.org/gatein/quickstarts/${compatibility.portal.projectNameShort}-${compatibility.portal.versionMm}</portal.quickstarts.downloads.url.prefix>
 
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.6-bom</artifactId>
-                <version>${version.jboss.gatein.bom}</version>
+                <groupId>org.jboss.bom.portal</groupId>
+                <artifactId>jboss-portal-bom</artifactId>
+                <version>${version.jboss.portal.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -198,75 +215,6 @@
     </dependencyManagement>
 
     <profiles>
-        <profile>
-            <id>product</id>
-            <properties>
-                <org.jboss.ide.target.nameAndVersion>jbds7.0</org.jboss.ide.target.nameAndVersion>
-                <org.gatein.portal.quickstarts.descriptor.suffix>-001</org.gatein.portal.quickstarts.descriptor.suffix>
-
-                <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
-                <compatibility.portal.versionMinor>${compatibility.portal.product.versionMinor}</compatibility.portal.versionMinor>
-                <compatibility.portal.versionMm>${compatibility.portal.versionMajor}.${compatibility.portal.versionMinor}</compatibility.portal.versionMm>
-                <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
-                <compatibility.portal.projectName>${compatibility.portal.product.projectName}</compatibility.portal.projectName>
-                <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
-                <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
-
-                <compatibility.as.versionMajor>${compatibility.as.product.versionMajor}</compatibility.as.versionMajor>
-                <compatibility.as.versionMinor>${compatibility.as.product.versionMinor}</compatibility.as.versionMinor>
-                <compatibility.as.versionMm>${compatibility.as.versionMajor}.${compatibility.as.versionMinor}</compatibility.as.versionMm>
-                <compatibility.as.versionMmm>${compatibility.as.versionMm}.${compatibility.as.versionMicro}</compatibility.as.versionMmm>
-                <compatibility.as.projectName>${compatibility.as.product.projectName}</compatibility.as.projectName>
-                <compatibility.as.projectNameAndVersion>${compatibility.as.projectName} ${compatibility.as.versionMm}</compatibility.as.projectNameAndVersion>
-
-                <!-- External links used in READMEs -->
-                <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
-
-                <gatein.user.forum.label>Online User Group</gatein.user.forum.label>
-                <gatein.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</gatein.user.forum.url>
-
-                <!-- <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url> -->
-                <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
-
-                <gatein.docs.prefix>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}/html</gatein.docs.prefix>
-                <gatein.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}</gatein.docs.url>
-                <gatein.devguide.url>${gatein.docs.prefix}/Development_Guide</gatein.devguide.url>
-
-                <gatein.devguide.containers.url>${gatein.docs.prefix}/Development_Guide/chap-Portal_Containers.html</gatein.devguide.containers.url>
-                <gatein.devguide.extensions.url>${gatein.docs.prefix}/Development_Guide/chap-Portal_Extension.html</gatein.devguide.extensions.url>
-
-                <gatein.devguide.custom.groovy.template.url>${gatein.docs.prefix}/Development_Guide/Custom_Groovy_Template_for_a_Portlet.html</gatein.devguide.custom.groovy.template.url>
-                <gatein.devguide.custom.portlet.skin.url>${gatein.docs.prefix}/Development_Guide/sect-Custom_Skin_for_a_Portlet.html</gatein.devguide.custom.portlet.skin.url>
-                <gatein.devguide.nav.pages.url>${gatein.docs.prefix}/Development_Guide/sect-Custom_Navigation_and_Pages.html</gatein.devguide.nav.pages.url>
-                <gatein.devguide.i18n.url>${gatein.docs.prefix}/Development_Guide/Custom_Internationalization_Resource_Bundles.html</gatein.devguide.i18n.url>
-
-                <gatein.devguide.starting.portlet.project.url>${gatein.docs.prefix}/Development_Guide/sect-Starting_a_Portlet_Project.html</gatein.devguide.starting.portlet.project.url>
-                <gatein.devguide.jsf.plain.jsr268.portlet.url>${gatein.docs.prefix}/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html</gatein.devguide.jsf.plain.jsr268.portlet.url>
-                <gatein.devguide.jsf.portlets.url>${gatein.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</gatein.devguide.jsf.portlets.url>
-                <gatein.devguide.jsf.basic.portlet.url>${gatein.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</gatein.devguide.jsf.basic.portlet.url>
-                <gatein.devguide.jsf.rf.portlet.url>${gatein.docs.prefix}/Development_Guide/chap-JSF_Portlet_Development_with_RichFaces.html</gatein.devguide.jsf.rf.portlet.url>
-                <gatein.devguide.api.portal.url>${gatein.docs.prefix}/Development_Guide/part-Portal_API.html</gatein.devguide.api.portal.url>
-
-                <!-- TODO: Where is portlet primer in the prod docs? -->
-                <gatein.refguide.portlet.primer.url>${gatein.docs.prefix}/Development_Guide/sect-JSR-168_and_JSR-286_overview.html</gatein.refguide.portlet.primer.url>
-                <gatein.refguide.pbr.url>${gatein.docs.prefix}/Development_Guide/chap-Portlet_Bridge.html</gatein.refguide.pbr.url>
-
-                <!-- TODO: CDI in prod doc. -->
-                <gatein.devguide.cdi.url>${gatein.docs.prefix}/Development_Guide/chap-CDI_Portlet_Development.html</gatein.devguide.cdi.url>
-                <gatein.devguide.cdi.generic.portlet.url>${gatein.docs.prefix}/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html</gatein.devguide.cdi.generic.portlet.url>
-                <gatein.devguide.cdi.scope.portlets.url>${gatein.docs.prefix}/Development_Guide/sect-Portlet_CDI_Scopes.html</gatein.devguide.cdi.scope.portlets.url>
-
-                <gatein.refguide.oauth.url>${gatein.docs.prefix}/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html</gatein.refguide.oauth.url>
-                <gatein.refguide.facebook.url>${gatein.docs.prefix}/Development_Guide/Facebook.html</gatein.refguide.facebook.url>
-                <gatein.refguide.google.url>${gatein.docs.prefix}/Development_Guide/Google.html</gatein.refguide.google.url>
-                <gatein.refguide.twitter.url>${gatein.docs.prefix}/Development_Guide/Twitter.html</gatein.refguide.twitter.url>
-
-                <jboss.admin.guide.url.prefix>${jboss.confluence.root.url}/JBoss_Enterprise_Application_Platform/${compatibility.as.versionMm}/html/Administration_and_Configuration_Guide</jboss.admin.guide.url.prefix>
-                <jboss.admin.guide.ds.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
-                <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html#Deployment_of_-ds.xml_files</jboss.admin.guide.ds.files.url>
-
-            </properties>
-        </profile>
         <profile>
             <id>reset-bom-version</id>
             <build>
@@ -289,8 +237,8 @@
                             </includes>
                             <replacements>
                                 <replacement>
-                                    <token>&lt;version.jboss.gatein.bom>[^&lt;]*&lt;/version.jboss.gatein.bom></token>
-                                    <value>&lt;version.jboss.gatein.bom>${version.jboss.gatein.bom}&lt;/version.jboss.gatein.bom></value>
+                                    <token>&lt;version.jboss.portal.bom>[^&lt;]*&lt;/version.jboss.portal.bom></token>
+                                    <value>&lt;version.jboss.portal.bom>${version.jboss.portal.bom}&lt;/version.jboss.portal.bom></value>
                                 </replacement>
                             </replacements>
                         </configuration>
@@ -396,26 +344,6 @@
                                         </element>
                                     </classpath>
                                     <source>${project.basedir}/src/build/groovy/Packager.groovy</source>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>com.github.github</groupId>
-                        <artifactId>downloads-maven-plugin</artifactId>
-                        <version>${downloads.maven.plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <goals>
-                                    <goal>upload</goal>
-                                </goals>
-                                <phase>install</phase>
-                                <configuration>
-                                    <description>${project.version} release of ${project.name}</description>
-                                    <override>true</override>
-                                    <includes>
-                                        <include>assembly/*</include>
-                                    </includes>
                                 </configuration>
                             </execution>
                         </executions>

@@ -19,4 +19,4 @@
 Feedback
 --------
 
-Please post feedback on this quickstart or ${compatibility.portal.projectName} on [${gatein.user.forum.label}](${gatein.user.forum.url}).
+Please post feedback on this quickstart or ${compatibility.portal.projectName} on [${portal.user.forum.label}](${portal.user.forum.url}).

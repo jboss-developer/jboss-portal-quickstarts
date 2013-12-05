@@ -31,7 +31,7 @@ What is it?
 -----------
 
 This project demonstrates a simple Portal Extension. It shows how it is possible to extend and customize a portal without
-modifying the files included in gatein.ear. The main advantage of this approach to customization is that upgrades to new
+modifying the files included in portal.ear. The main advantage of this approach to customization is that upgrades to new
 versions of ${compatibility.portal.projectName} will be easier to handle as all the customization can be embedded in separate
 deployable packages.
 
@@ -42,7 +42,7 @@ ${project.name} customizes the default portal available at [http://localhost:808
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Extension](${gatein.devguide.extensions.url}) page of
+For more details, see [Portal Extension](${portal.devguide.extensions.url}) page of
 ${compatibility.portal.projectName} Developer Guide.
 
 

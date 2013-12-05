@@ -34,10 +34,10 @@ This project demonstrates how to use CDI Scopes `@PortletLifecycleScoped` and `@
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
-* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
-* [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
-* [CDI Portlet Development](${gatein.devguide.cdi.url})
-* [Portlet CDI Scopes](${gatein.devguide.cdi.scope.portlets.url})
+* [Starting a Portlet Project](${portal.devguide.starting.portlet.project.url})
+* [Standard Portlet Development (JSR-286)](${portal.devguide.jsf.plain.jsr268.portlet.url})
+* [CDI Portlet Development](${portal.devguide.cdi.url})
+* [Portlet CDI Scopes](${portal.devguide.cdi.scope.portlets.url})
 
 
 <#include "/include/portlet-general.md.ftl">

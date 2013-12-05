@@ -18,16 +18,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-        <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.6.3.Final-qs-3-SNAPSHOT</version>
-        <artifactId>gatein-sample-portal</artifactId>
+        <groupId>org.jboss.quickstarts.portal</groupId>
+        <version>6.1.1.build-SNAPSHOT</version>
+        <artifactId>sample-portal</artifactId>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>gatein-sample-portal-rest-war</artifactId>
+    <artifactId>sample-portal-rest-war</artifactId>
     <packaging>war</packaging>
     <name>Sample Portal REST WAR</name>
-    <url>http://gatein.org</url>
+    <url>http://jboss.org</url>
     <description>Sample Portal REST WAR</description>
     <licenses>
         <license>

@@ -20,12 +20,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cdi-scopes-portlet</artifactId>
-    <groupId>org.gatein.portal.quickstarts</groupId>
+    <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Portlet Using Portet-Specific CDI Scopes</name>
-    <version>3.6.3.Final-qs-3-SNAPSHOT</version>
+    <version>6.1.1.build-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
-    <url>http://www.gatein.org</url>
+    <url>http://www.jboss.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -35,8 +35,8 @@
     </licenses>
 
     <properties>
-        <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.4.Alpha01</version.jboss.gatein.bom>
+        <!-- JBoss Portal Bill of Materials (BOM) version -->
+        <version.jboss.portal.bom>6.1.1.build-SNAPSHOT</version.jboss.portal.bom>
 
         <!-- Other dependencies -->
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
@@ -67,15 +67,15 @@
     <dependencyManagement>
         <dependencies>
             <!--
-                Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions
+                Define the version of JBoss Portal we build for. In its dependencyManagement,
+                JBoss Portal Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
-                in many cases provided by) GateIn Portal.
+                in many cases provided by) JBoss Portal.
             -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.6-bom</artifactId>
-                <version>${version.jboss.gatein.bom}</version>
+                <groupId>org.jboss.bom.portal</groupId>
+                <artifactId>jboss-portal-bom</artifactId>
+                <version>${version.jboss.portal.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -94,10 +94,10 @@
 
     <dependencies>
         <!--
-            The versions of these dependencies are managed in gatein-*-bom.
-            Note that artifacts managed in gatein-*-bom are <scope>provided</scope> in most cases.
+            The versions of these dependencies are managed in jboss-portal-bom.
+            Note that artifacts managed in jboss-portal-bom are <scope>provided</scope> in most cases.
             Name only those artifacts you refer to in your code.
-            Look at gatein-*-bom POM file for the complete list of available artifacts.
+            Look at jboss-portal-bom POM file for the complete list of available artifacts.
         -->
         <dependency>
             <groupId>javax.portlet</groupId>

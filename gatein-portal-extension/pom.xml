@@ -19,13 +19,13 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>gatein-portal-extension</artifactId>
-    <groupId>org.gatein.portal.quickstarts</groupId>
+    <artifactId>portal-extension</artifactId>
+    <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Portal Extension</name>
-    <version>3.6.3.Final-qs-3-SNAPSHOT</version>
+    <version>6.1.1.build-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
-    <url>http://www.gatein.org</url>
+    <url>http://www.jboss.org</url>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -41,8 +41,8 @@
     </modules>
 
     <properties>
-        <!-- GateIn Bill of Materials (BOM) version -->
-        <version.jboss.gatein.bom>1.0.4.Alpha01</version.jboss.gatein.bom>
+        <!-- JBoss Portal Bill of Materials (BOM) version -->
+        <version.jboss.portal.bom>6.1.1.build-SNAPSHOT</version.jboss.portal.bom>
 
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
@@ -59,27 +59,27 @@
     <dependencyManagement>
         <dependencies>
             <!--
-                Define the version of GateIn we build for. In its dependencyManagement,
-                GateIn Bill of Materials (BOM) specifies the versions
+                Define the version of JBoss Portal we build for. In its dependencyManagement,
+                JBoss Portal Bill of Materials (BOM) specifies the versions
                 of dependencies which are granted to be compatible with (or indeed
-                in many cases provided by) GateIn Portal.
+                in many cases provided by) JBoss Portal.
             -->
             <dependency>
-                <groupId>org.jboss.bom</groupId>
-                <artifactId>gatein-3.6-bom</artifactId>
-                <version>${version.jboss.gatein.bom}</version>
+                <groupId>org.jboss.bom.portal</groupId>
+                <artifactId>jboss-portal-bom</artifactId>
+                <version>${version.jboss.portal.bom}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
             <dependency>
-                <artifactId>gatein-portal-extension-config</artifactId>
-                <groupId>org.gatein.portal.quickstarts</groupId>
+                <artifactId>portal-extension-config</artifactId>
+                <groupId>org.jboss.quickstarts.portal</groupId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <artifactId>gatein-portal-extension-war</artifactId>
-                <groupId>org.gatein.portal.quickstarts</groupId>
+                <artifactId>portal-extension-war</artifactId>
+                <groupId>org.jboss.quickstarts.portal</groupId>
                 <version>${project.version}</version>
                 <type>war</type>
             </dependency>

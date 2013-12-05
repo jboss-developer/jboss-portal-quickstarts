@@ -37,27 +37,27 @@ ${compatibility.portal.projectName} API and JSP front-end. It contains:
 * 1 portlet for [Twitter](${twitter.url}) integration, which is using Twitter API and leverages [Twitter4j library](${twitter.twitter4j.url}) for this purpose
 
 Portlets require that ${compatibility.portal.projectName} integration with particular social network is enabled. You can see
-chapter [OAuth - Authentication with social network accounts](${gatein.refguide.oauth.url}) in ${compatibility.portal.projectName}
+chapter [OAuth - Authentication with social network accounts](${portal.refguide.oauth.url}) in ${compatibility.portal.projectName}
 reference guide for details.
 
 Each portlet is using access token of current authenticated portal user and this access token is
 used to call Social API operations. There is special portlet filter OAuthPortletFilter, which leverages
-[Portal API](${gatein.devguide.api.portal.url}) to obtain informations about access token of current user. Filter saves this info
+[Portal API](${portal.devguide.api.portal.url}) to obtain informations about access token of current user. Filter saves this info
 to CDI RequestContext object, which is used by particular portlet.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
-* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
-* [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
-* [Portal API](${gatein.devguide.api.portal.url})
+* [Starting a Portlet Project](${portal.devguide.starting.portlet.project.url})
+* [Standard Portlet Development (JSR-286)](${portal.devguide.jsf.plain.jsr268.portlet.url})
+* [Portal API](${portal.devguide.api.portal.url})
 
 Informations about configuration of OAuth authentication and integration with social networks could be found in the following
 chapters of  ${compatibility.portal.projectName} Reference Guide:
 
-* [OAuth - Authentication with social network accounts](${gatein.refguide.oauth.url})
-* [Facebook](${gatein.refguide.facebook.url})
-* [Google+](${gatein.refguide.google.url})
-* [Twitter](${gatein.refguide.twitter.url})
+* [OAuth - Authentication with social network accounts](${portal.refguide.oauth.url})
+* [Facebook](${portal.refguide.facebook.url})
+* [Google+](${portal.refguide.google.url})
+* [Twitter](${portal.refguide.twitter.url})
 
 <#include "/include/portlet-general.md.ftl">
