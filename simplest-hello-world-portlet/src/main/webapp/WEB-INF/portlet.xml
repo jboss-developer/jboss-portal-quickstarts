@@ -22,7 +22,7 @@
         <description>Simplest Hello World Portlet is the very essence of every possible Portlet.</description>
         <portlet-name>SimplestHelloWorldPortlet</portlet-name>
         <display-name>Simplest Hello World Portlet</display-name>
-        <portlet-class>org.jboss.portal.portlet.samples.SimplestHelloWorldPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.simplest.SimplestHelloWorldPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>

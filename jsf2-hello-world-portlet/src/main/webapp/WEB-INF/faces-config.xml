@@ -21,7 +21,7 @@
         <!-- Declare the internationalization resources -->
         <resource-bundle>
             <!-- The resource bundle property files are in src/main/resources/org/jboss/as/quickstarts/jsf -->
-            <base-name>org.jboss.as.quickstarts.jsf.messages</base-name>
+            <base-name>org.jboss.quickstarts.portal.jsf.messages</base-name>
             <var>msgs</var>
         </resource-bundle>
         <locale-config>

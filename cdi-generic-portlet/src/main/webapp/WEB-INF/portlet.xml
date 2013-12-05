@@ -22,7 +22,7 @@
         <description>A portlet that demonstrates use of CDI</description>
         <portlet-name>CDIGenericPortlet</portlet-name>
         <display-name>CDI Generic Portlet</display-name>
-        <portlet-class>org.gatein.quickstart.cdi.GenericCDIPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.cdi.GenericCDIPortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>
@@ -35,7 +35,7 @@
     </portlet>
     <filter>
         <filter-name>CDIExampleFilter</filter-name>
-        <filter-class>org.gatein.quickstart.cdi.CDIFilter</filter-class>
+        <filter-class>org.jboss.quickstarts.portal.cdi.CDIFilter</filter-class>
         <lifecycle>RENDER_PHASE</lifecycle>
     </filter>
     <filter-mapping>
