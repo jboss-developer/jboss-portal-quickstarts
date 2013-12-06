@@ -42,13 +42,13 @@ following order:
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
-* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
-* [Standard Portlet Development (JSR-286)](${gatein.devguide.jsf.plain.jsr268.portlet.url})
+* [Starting a Portlet Project](${portal.devguide.starting.portlet.project.url})
+* [Standard Portlet Development (JSR-286)](${portal.devguide.jsf.plain.jsr268.portlet.url})
 <#if compatibility.portal.projectNameShort == "GateIn">
-* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
+* [JSF2 Portlet Development](${portal.devguide.jsf.portlets.url})
 </#if>
-* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
-* [Generic CDI Portlet](${gatein.devguide.cdi.generic.portlet.url})
+* [Basic JSF Portlet Development](${portal.devguide.jsf.basic.portlet.url})
+* [Generic CDI Portlet](${portal.devguide.cdi.generic.portlet.url})
 
 
 <#include "/include/portlet-general.md.ftl">

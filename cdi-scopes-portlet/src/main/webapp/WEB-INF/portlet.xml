@@ -22,7 +22,7 @@
         <description>Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped</description>
         <portlet-name>CDIScopesPortlet</portlet-name>
         <display-name>CDI Scopes Portlet</display-name>
-        <portlet-class>org.gatein.quickstart.cdi.scope.CDIScopesPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.cdi.scope.CDIScopesPortlet</portlet-class>
         <expiration-cache>-0</expiration-cache>
         <supports>
             <mime-type>text/html</mime-type>

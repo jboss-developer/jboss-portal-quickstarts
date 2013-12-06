@@ -18,16 +18,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-        <artifactId>gatein-portal-extension</artifactId>
-        <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.6.3.Final-qs-3-SNAPSHOT</version>
+        <artifactId>portal-extension</artifactId>
+        <groupId>org.jboss.quickstarts.portal</groupId>
+        <version>6.1.1.build-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>gatein-portal-extension-ear</artifactId>
+    <artifactId>portal-extension-ear</artifactId>
     <packaging>ear</packaging>
     <name>Portal Extension EAR</name>
-    <url>http://gatein.org</url>
+    <url>http://jboss.org</url>
     <description>Portal Extension EAR</description>
     <licenses>
         <license>
@@ -39,12 +39,12 @@
 
     <dependencies>
         <dependency>
-            <artifactId>gatein-portal-extension-config</artifactId>
-            <groupId>org.gatein.portal.quickstarts</groupId>
+            <artifactId>portal-extension-config</artifactId>
+            <groupId>org.jboss.quickstarts.portal</groupId>
         </dependency>
         <dependency>
-            <artifactId>gatein-portal-extension-war</artifactId>
-            <groupId>org.gatein.portal.quickstarts</groupId>
+            <artifactId>portal-extension-war</artifactId>
+            <groupId>org.jboss.quickstarts.portal</groupId>
             <type>war</type>
         </dependency>
     </dependencies>
@@ -65,16 +65,16 @@
                     </archive>
                     <modules>
                         <jarModule>
-                            <groupId>org.gatein.portal.quickstarts</groupId>
-                            <artifactId>gatein-portal-extension-config</artifactId>
+                            <groupId>org.jboss.quickstarts.portal</groupId>
+                            <artifactId>portal-extension-config</artifactId>
                             <includeInApplicationXml>false</includeInApplicationXml>
                             <bundleDir>lib</bundleDir>
                         </jarModule>
                         <webModule>
-                            <groupId>org.gatein.portal.quickstarts</groupId>
-                            <artifactId>gatein-portal-extension-war</artifactId>
-                            <bundleFileName>gatein-portal-extension.war</bundleFileName>
-                            <contextRoot>gatein-portal-extension</contextRoot>
+                            <groupId>org.jboss.quickstarts.portal</groupId>
+                            <artifactId>portal-extension-war</artifactId>
+                            <bundleFileName>portal-extension.war</bundleFileName>
+                            <contextRoot>portal-extension</contextRoot>
                         </webModule>
                     </modules>
                 </configuration>

@@ -30,15 +30,15 @@ What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces ${version.javax["faces-api"]}
-and [Portlet Bridge](${gatein.refguide.pbr.url}) ${version.org.jboss.portletbridge}.
+and [Portlet Bridge](${portal.refguide.pbr.url}) ${version.org.jboss.portletbridge}.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of ${compatibility.portal.projectName} Developer Guide:
 
-* [Starting a Portlet Project](${gatein.devguide.starting.portlet.project.url})
+* [Starting a Portlet Project](${portal.devguide.starting.portlet.project.url})
 <#if compatibility.portal.projectNameShort == "GateIn">
-* [JSF2 Portlet Development](${gatein.devguide.jsf.portlets.url})
+* [JSF2 Portlet Development](${portal.devguide.jsf.portlets.url})
 </#if>
-* [Basic JSF Portlet Development](${gatein.devguide.jsf.basic.portlet.url})
+* [Basic JSF Portlet Development](${portal.devguide.jsf.basic.portlet.url})
 
 <#include "/include/portlet-general.md.ftl">

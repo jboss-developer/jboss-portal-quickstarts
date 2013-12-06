@@ -25,7 +25,7 @@
         <description>Facebook User Info Portlet</description>
         <portlet-name>FacebookUserInfoPortlet</portlet-name>
         <display-name>Facebook User Info Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookUserInfoPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.facebook.FacebookUserInfoPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -40,7 +40,7 @@
         <description>Facebook Friends Portlet</description>
         <portlet-name>FacebookFriendsPortlet</portlet-name>
         <display-name>Facebook Friends Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookFriendsPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.facebook.FacebookFriendsPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -55,7 +55,7 @@
         <description>Facebook Status Update Portlet</description>
         <portlet-name>FacebookStatusUpdatePortlet</portlet-name>
         <display-name>Facebook Status Update Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.facebook.FacebookStatusUpdatePortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.facebook.FacebookStatusUpdatePortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -70,7 +70,7 @@
         <description>Twitter Portlet</description>
         <portlet-name>TwitterPortlet</portlet-name>
         <display-name>Twitter Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.twitter.TwitterPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.twitter.TwitterPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -85,7 +85,7 @@
         <description>Google User Info Portlet</description>
         <portlet-name>GoogleUserInfoPortlet</portlet-name>
         <display-name>Google User Info Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleUserInfoPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.google.GoogleUserInfoPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -100,7 +100,7 @@
         <description>Google Activities Portlet</description>
         <portlet-name>GoogleActivitiesPortlet</portlet-name>
         <display-name>Google Activities Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleActivitiesPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.google.GoogleActivitiesPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -115,7 +115,7 @@
         <description>Google Friends Portlet</description>
         <portlet-name>GoogleFriendsPortlet</portlet-name>
         <display-name>Google Friends Portlet</display-name>
-        <portlet-class>org.gatein.security.oauth.portlet.google.GoogleFriendsPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.social.oauth.google.GoogleFriendsPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
         </supports>
@@ -128,7 +128,7 @@
 
     <filter>
         <filter-name>FacebookFilter</filter-name>
-        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <filter-class>org.jboss.quickstarts.portal.social.oauth.OAuthPortletFilter</filter-class>
         <lifecycle>ACTION_PHASE</lifecycle>
         <lifecycle>RENDER_PHASE</lifecycle>
         <init-param>
@@ -143,7 +143,7 @@
 
     <filter>
         <filter-name>GoogleFilter</filter-name>
-        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <filter-class>org.jboss.quickstarts.portal.social.oauth.OAuthPortletFilter</filter-class>
         <lifecycle>ACTION_PHASE</lifecycle>
         <lifecycle>RENDER_PHASE</lifecycle>
         <!-- Validation are useful for Google due to refreshing access token -->
@@ -159,7 +159,7 @@
 
     <filter>
         <filter-name>TwitterFilter</filter-name>
-        <filter-class>org.gatein.security.oauth.portlet.OAuthPortletFilter</filter-class>
+        <filter-class>org.jboss.quickstarts.portal.social.oauth.OAuthPortletFilter</filter-class>
         <lifecycle>ACTION_PHASE</lifecycle>
         <lifecycle>RENDER_PHASE</lifecycle>
         <init-param>

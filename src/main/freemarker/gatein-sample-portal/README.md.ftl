@@ -39,7 +39,7 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers](${gatein.devguide.containers.url}) page of
+For more details, see [Portal Containers](${portal.devguide.containers.url}) page of
 ${compatibility.portal.projectName} Developer Guide.
 
 

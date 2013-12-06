@@ -18,16 +18,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
-        <groupId>org.gatein.portal.quickstarts</groupId>
-        <version>3.6.3.Final-qs-3-SNAPSHOT</version>
-        <artifactId>gatein-sample-portal</artifactId>
+        <groupId>org.jboss.quickstarts.portal</groupId>
+        <version>6.1.1.build-SNAPSHOT</version>
+        <artifactId>sample-portal</artifactId>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>gatein-sample-portal-ear</artifactId>
+    <artifactId>sample-portal-ear</artifactId>
     <packaging>ear</packaging>
     <name>Sample Portal EAR</name>
-    <url>http://gatein.org</url>
+    <url>http://jboss.org</url>
     <description>Sample Portal EAR</description>
     <licenses>
         <license>
@@ -39,17 +39,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.gatein.portal.quickstarts</groupId>
-            <artifactId>gatein-sample-portal-config</artifactId>
+            <groupId>org.jboss.quickstarts.portal</groupId>
+            <artifactId>sample-portal-config</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.gatein.portal.quickstarts</groupId>
-            <artifactId>gatein-sample-portal-war</artifactId>
+            <groupId>org.jboss.quickstarts.portal</groupId>
+            <artifactId>sample-portal-war</artifactId>
             <type>war</type>
         </dependency>
         <dependency>
-            <groupId>org.gatein.portal.quickstarts</groupId>
-            <artifactId>gatein-sample-portal-rest-war</artifactId>
+            <groupId>org.jboss.quickstarts.portal</groupId>
+            <artifactId>sample-portal-rest-war</artifactId>
             <type>war</type>
         </dependency>
     </dependencies>
@@ -68,20 +68,20 @@
                     </archive>
                     <modules>
                         <jarModule>
-                            <groupId>org.gatein.portal.quickstarts</groupId>
-                            <artifactId>gatein-sample-portal-config</artifactId>
+                            <groupId>org.jboss.quickstarts.portal</groupId>
+                            <artifactId>sample-portal-config</artifactId>
                             <includeInApplicationXml>false</includeInApplicationXml>
                             <bundleDir>lib</bundleDir>
                         </jarModule>
                         <webModule>
-                            <groupId>org.gatein.portal.quickstarts</groupId>
-                            <artifactId>gatein-sample-portal-war</artifactId>
+                            <groupId>org.jboss.quickstarts.portal</groupId>
+                            <artifactId>sample-portal-war</artifactId>
                             <bundleFileName>sample-portal.war</bundleFileName>
                             <contextRoot>sample-portal</contextRoot>
                         </webModule>
                         <webModule>
-                            <groupId>org.gatein.portal.quickstarts</groupId>
-                            <artifactId>gatein-sample-portal-rest-war</artifactId>
+                            <groupId>org.jboss.quickstarts.portal</groupId>
+                            <artifactId>sample-portal-rest-war</artifactId>
                             <bundleFileName>rest-sample-portal.war</bundleFileName>
                             <contextRoot>rest-sample-portal</contextRoot>
                         </webModule>

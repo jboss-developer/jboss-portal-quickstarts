@@ -19,9 +19,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ page import="java.util.Locale" %>
 <%@ page import="java.util.ResourceBundle" %>
-<%@ page import="org.gatein.security.oauth.portlet.facebook.FacebookStatusUpdatePortlet" %>
+<%@ page import="org.jboss.quickstarts.portal.social.oauth.facebook.FacebookStatusUpdatePortlet" %>
 <%@ page import="javax.portlet.ActionRequest" %>
-<%@ page import="org.gatein.security.oauth.portlet.AbstractSocialPortlet" %>
+<%@ page import="org.jboss.quickstarts.portal.social.oauth.AbstractSocialPortlet" %>
 <%@ page trimDirectiveWhitespaces="true" %>
 
 <portlet:defineObjects/>

@@ -177,8 +177,8 @@
                 <p>
                     In the above gray box we use the resource key <code>UIHomePagePortlet.Label.Slogan</code>.
                     Although it is already defined in
-                    <code>gatein.ear/web.war/WEB-INF/classes/locale/portlet/web/GroovyPortlet_en.properties</code> as
-                    <pre>UIHomePagePortlet.Label.Slogan=The Best of eXo and JBoss Portal&lt;div&gt;GateIn #{gatein.version}&lt;/div&gt;</pre>
+                    <code>portal.ear/web.war/WEB-INF/classes/locale/portlet/web/GroovyPortlet_en.properties</code> as
+                    <pre>UIHomePagePortlet.Label.Slogan=The Best of eXo and JBoss Portal&lt;div&gt;GateIn #{portal.version}&lt;/div&gt;</pre>
                     here, within the Portal Extension, we redefine it as
                     <pre>UIHomePagePortlet.Label.Slogan=Congratulations!</pre>
                 </p>

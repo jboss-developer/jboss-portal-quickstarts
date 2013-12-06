@@ -22,7 +22,7 @@
         <description>Portlet demonstrating the navigation part of the Portal API</description>
         <portlet-name>QuickstartNavigationPortlet</portlet-name>
         <display-name>Navigation API Portlet</display-name>
-        <portlet-class>org.gatein.portlet.quickstart.navigation.NavigationPortlet</portlet-class>
+        <portlet-class>org.jboss.quickstarts.portal.navigation.NavigationPortlet</portlet-class>
 
         <supports>
             <mime-type>text/html</mime-type>

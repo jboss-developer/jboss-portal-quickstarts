@@ -18,8 +18,8 @@
 
 <portal-config
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_objects_1_4 http://www.gatein.org/xml/ns/gatein_objects_1_4"
-    xmlns="http://www.gatein.org/xml/ns/gatein_objects_1_4">
+    xsi:schemaLocation="http://www.portal.org/xml/ns/gatein_objects_1_4 http://www.portal.org/xml/ns/gatein_objects_1_4"
+    xmlns="http://www.portal.org/xml/ns/gatein_objects_1_4">
   <portal-name>classic</portal-name>
   <label>Classic</label>
   <description>Sample Portal</description>
