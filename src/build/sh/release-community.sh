@@ -9,15 +9,15 @@ mvnSettings="$1"
 
 oldSnapshotVersion=$(xpath pom.xml "/project/version/text()" 2>/dev/null)
 taggedVersion=$(echo "${oldSnapshotVersion}" | sed 's/-SNAPSHOT//')
-tag="gatein-quickstart-${taggedVersion}"
-qsNo=$(echo "${oldSnapshotVersion}" | sed 's/.*-qs-\([0-9]*\)-.*/\1/')
-newSnapshotVersion=${oldSnapshotVersion/qs-${qsNo}/qs-$((qsNo + 1))}
+tag="${taggedVersion}"
+qsNo=$(echo "${oldSnapshotVersion}" | sed 's/.*.build-\([0-9]*\)-.*/\1/')
+newSnapshotVersion=${oldSnapshotVersion/build-${qsNo}/build-$((qsNo + 1))}
 
 die() { echo "$@" 1>&2 ; exit 1; }
 
 # ensure we are on master
 currentBranch=$(git rev-parse --abbrev-ref HEAD)
-if [ "${currentBranch}" != "master" ]; then
+if [ "${currentBranch}" != "6.1.x-develop" ]; then
     die "You must be on master branch to run $0"
 fi
 if ! git diff-index --cached --quiet HEAD --; then
@@ -35,4 +35,4 @@ fi
 
 mvn install -P prepare-zips --settings "$mvnSettings"
 
-echo -e "You might want to push now:\ngit push upstream master && git push -u origin master && git push upstream ${tag}"
+echo -e "You might want to push now:\ngit push upstream ${currentBranch} && git push upstream ${tag}"
