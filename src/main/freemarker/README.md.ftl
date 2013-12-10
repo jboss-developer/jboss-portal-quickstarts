@@ -41,5 +41,5 @@ Available Quickstarts
 * [CDI Portlet with JSF](cdi-jsf-portlet/README.html)
 * [Portlet Using Portet-Specific CDI Scopes](cdi-scopes-portlet/README.html)
 * [Social Portlets](social-portlets/README.html)
-* [Portal Extension](gatein-portal-extension/README.html)
-* [Sample Portal](gatein-sample-portal/README.html)
+* [Portal Extension](portal-extension/README.html)
+* [Sample Portal](sample-portal/README.html)

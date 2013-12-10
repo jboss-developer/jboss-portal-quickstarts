@@ -1,4 +1,4 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See jboss-portal-quickstarts/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
 
 jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================
@@ -7,13 +7,13 @@ Level: Beginner
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
 Target Product: JBoss Portal  
-Source: <https://github.com/gatein/gatein-portal-quickstart>
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
 
 What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1
-and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.0.Final.
+and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.1.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
@@ -28,7 +28,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
+The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -60,7 +60,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 6.1.1 Maven Repository
+    * Application Platform 7.1.1 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository

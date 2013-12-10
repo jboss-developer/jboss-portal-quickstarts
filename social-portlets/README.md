@@ -1,4 +1,4 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/social-portlets/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See jboss-portal-quickstarts/src/main/freemarker/social-portlets/README.md.ftl ~-->
 
 social-portlets: Social Portlets
 ============================
@@ -7,7 +7,7 @@ Level: Intermediate
 Technologies: Portlet, JSP, OAuth, CDI  
 Summary: Portlets showing integration with Social networks  
 Target Product: JBoss Portal  
-Source: <https://github.com/gatein/gatein-portal-quickstart>
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
 
 What is it?
 -----------
@@ -50,7 +50,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
+The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss AS.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -82,7 +82,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 6.1.1 Maven Repository
+    * Application Platform 7.1.1 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository

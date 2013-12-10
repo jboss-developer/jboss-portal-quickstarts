@@ -1,4 +1,4 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/README.md.ftl ~-->
+<!--~ Do not edit this derived file! See jboss-portal-quickstarts/src/main/freemarker/README.md.ftl ~-->
 
 Portal Quickstarts
 ==================
@@ -10,7 +10,7 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with Red Hat JBoss Portal 6.1 running on JBoss EAP.
+This release of Portal Quickstarts is compatible with Red Hat JBoss Portal 6.1 running on JBoss AS.
 
 <a id="toc"></a>
 Available Quickstarts
@@ -24,5 +24,5 @@ Available Quickstarts
 * [CDI Portlet with JSF](cdi-jsf-portlet/README.html)
 * [Portlet Using Portet-Specific CDI Scopes](cdi-scopes-portlet/README.html)
 * [Social Portlets](social-portlets/README.html)
-* [Portal Extension](gatein-portal-extension/README.html)
-* [Sample Portal](gatein-sample-portal/README.html)
+* [Portal Extension](portal-extension/README.html)
+* [Sample Portal](sample-portal/README.html)

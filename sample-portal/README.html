@@ -1,0 +1,192 @@
+<!DOCTYPE html><html><head><title>README</title><link href="https://raw.github.com/pmuir/github-flavored-markdown/gh-pages/shared/css/documentation.css" rel="stylesheet"></link><link href="https://raw.github.com/github/github-flavored-markdown/gh-pages/shared/css/pygments.css" rel="stylesheet"></link></head><body><!--~ Do not edit this derived file! See jboss-portal-quickstarts/src/main/freemarker/sample-portal/README.html.ftl ~-->
+
+<h1><a id="sampleportal-sample-portal" class="anchor" href="#sampleportal-sample-portal"><span class="anchor-icon"></span></a>sample-portal: Sample Portal</h1>
+
+<p>Author: Thomas Heute, Peter Palaga<br/>
+Level: Beginner<br/>
+Technologies: Red Hat JBoss Portal, Portal Container<br/>
+Summary: Sample Portal<br/>
+Target Product: JBoss Portal<br/>
+Source: <a href="https://github.com/jboss-developer/jboss-portal-quickstarts.git">https://github.com/jboss-developer/jboss-portal-quickstarts.git</a></p>
+
+<h2><a id="what-is-it" class="anchor" href="#what-is-it"><span class="anchor-icon"></span></a>What is it?</h2>
+
+<p>This project demonstrates a how to create a new Portal Container from scratch. It covers many aspects of new Portal Container
+creation, such as:</p>
+
+<ul>
+<li>Custom Home Page Portlet</li>
+<li>Translation resource bundles</li>
+<li>Pages and Site Layouts</li>
+<li>Navigation Definitions</li>
+<li>Custom Sign In Page</li>
+</ul>
+
+<p>For more details, see <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portal_Containers.html">Portal Containers</a> page of
+Red Hat JBoss Portal Developer Guide.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+
+<h2><a id="system-requirements" class="anchor" href="#system-requirements"><span class="anchor-icon"></span></a>System Requirements</h2>
+
+<p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
+
+<p>The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss AS.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
+
+<h2><a id="configure-maven" class="anchor" href="#configure-maven"><span class="anchor-icon"></span></a>Configure Maven</h2>
+
+<p>You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download &amp; setup zipped Maven repository.</p>
+
+<h3><a id="a-use-hosted-maven-repository" class="anchor" href="#a-use-hosted-maven-repository"><span class="anchor-icon"></span></a>A. Use hosted Maven repository</h3>
+
+<p>This is the easier and thus recommended option. You need to configure the Maven user settings as follows:</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
+file located in the root folder of Red Hat JBoss Portal quickstarts. This effectivelly results in
+adding <code>http://maven.repository.redhat.com/techpreview/all</code> as <code>&lt;repository&gt;</code> and <code>&lt;pluginRepository&gt;</code> to your <code>settings.xml</code>.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul>
+
+<h3><a id="b-download-amp-setup-zipped-maven-repositories" class="anchor" href="#b-download-amp-setup-zipped-maven-repositories"><span class="anchor-icon"></span></a>B. Download &amp; setup zipped Maven repositories</h3>
+
+<ol>
+<li><p>Download the following zipped Maven repositories from <a href="https://access.redhat.com/">Red Hat Customer Portal</a>,
+Downloads &gt; JBoss Enterprise Middleware:</p>
+
+<ul>
+<li>Red Hat JBoss Portal 6.1 Maven Repository</li>
+<li>Web Framework Kit 2.3.0 Maven Repository</li>
+<li>Web Framework Kit 2.2.0 Maven Repository</li>
+<li>Web Framework Kit 2.1.0 Maven Repository</li>
+<li>Web Framework Kit 2.0.0 Maven Repository</li>
+<li>Application Platform 7.1.1 Maven Repository</li>
+<li>Application Platform 6.1.0 Maven Repository</li>
+<li>Application Platform 6.0.1 Maven Repository</li>
+<li>Application Platform 6.0.0 Maven Repository</li>
+</ul>
+
+<p>Unpack each of these files to a separate directory.</p></li>
+<li><p>Modify the <code>settings-zipped-repos.xml</code> file located in the root directory of Red Hat JBoss Portal
+quickstarts:</p>
+
+<ul>
+<li>For each zipped repository unpacked in the previous step, replace <code>/path/to/repo/</code> within <code>file:///path/to/repo/...</code>
+with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous
+step.</li>
+<li>Note that path to each repository needs tobe set twice: one within <code>&lt;repository&gt;</code> tag and one within
+<code>&lt;pluginRepository&gt;</code> tag.</li>
+<li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
+path. For example:</p>
+<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.1-quickstarts</span>
+</pre></div></li>
+</ul></li>
+<li><p>Configure the Maven user settings.</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code>
+file.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul></li>
+</ol>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/build-and-deploy-portal-container-or-extension.md.ftl ~-->
+
+<h2><a id="build-and-deploy" class="anchor" href="#build-and-deploy"><span class="anchor-icon"></span></a>Build and Deploy</h2>
+
+<p>Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
+<code>mvn jboss-as:deploy</code> or copying to the default JBoss AS deployment folder when 
+Red Hat JBoss Portal is running. Instead of that you will need to:</p>
+
+<ol>
+<li><p>Make sure that the Portal is not running, e.g. by running </p>
+<div class="highlight"><pre><span class="err">$</span><span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">connect</span> <span class="n">controller</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">9999</span> <span class="n">command</span><span class="o">=:</span><span class="n">shutdown</span>
+</pre></div></li>
+<li><p>Open a command line and navigate to the root directory of this quickstart.</p></li>
+<li><p>Run the following command to build the archive:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span>
+</pre></div>
+<p>This will create <code>ear/target/sample-portal.ear</code>.</p></li>
+<li><p>Copy this file into the Red Hat JBoss Portal extension deployment folder: <code>$JBOSS_HOME/gatein/extensions</code></p></li>
+</ol>
+
+<h2><a id="setup-jboss-datasources-and-security-policies" class="anchor" href="#setup-jboss-datasources-and-security-policies"><span class="anchor-icon"></span></a>Setup JBoss Datasources and Security Policies</h2>
+
+<p>In JBoss, Datasources and Security Policies need to be defined on the level of Application Server and they
+cannot[*] be defined within EARs because otherwise centralized management would not be possible. This is
+the reason why it is not enough just to deploy <code>sample-portal.ear</code>. You also need to define the
+Datasources and Security Policies e.g. in <code>$JBOSS_HOME/standalone/configuration/standalone.xml</code>.</p>
+
+<p>The <code>standalone.xml</code> available in the out-of-the-box Red Hat JBoss Portal 6.1 installation contains the needed pieces
+of XML commented out. Please search for <code>Uncommented this when deploying sample-portal</code> in the file and uncomment the
+necessary XML code blocks. Note that you should uncomment two <code>datasource</code>s and one <code>security-policy</code>.</p>
+
+<blockquote>
+<p>Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
+described in <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/7.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html">JBoss AS 7.1 Admin Guide</a></p>
+</blockquote>
+
+<p>[*] Datasources can be defined in EARs but such ones are not managed, see
+<a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/7.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files">JBoss AS 7.1 Admin Guide</a>.</p>
+
+<h2><a id="access-the-sample-portal" class="anchor" href="#access-the-sample-portal"><span class="anchor-icon"></span></a>Access the Sample Portal</h2>
+
+<p>To ensure that the Sample Portal has been deployed successfully visit
+<a href="http://127.0.0.1:8080/sample-portal/">http://127.0.0.1:8080/sample-portal</a>) with your web browser.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
+
+<h2><a id="start-the-portal" class="anchor" href="#start-the-portal"><span class="anchor-icon"></span></a>Start the Portal</h2>
+
+<ol>
+<li>Open a command line and navigate to the root of the JBoss server directory.</li>
+<li><p>The following shows the command line to start the server with the web profile:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+</pre></div></li>
+</ol>
+
+<h2><a id="undeploy-the-archive" class="anchor" href="#undeploy-the-archive"><span class="anchor-icon"></span></a>Undeploy the Archive</h2>
+
+<p>To delete a Portal Extension or Portal Container:</p>
+
+<ol>
+<li>Delete <code>JBOSS_HOME/gatein/extensions/sample-portal.ear</code></li>
+<li>Restart Red Hat JBoss Portal</li>
+</ol>
+
+<p>Please note that the content written to the database by the Extension or Portal Container (such as adding new pages) is not 
+reversible.</p>
+
+<h2><a id="use-jboss-developer-studio-or-eclipse-to-run-this-quickstart" class="anchor" href="#use-jboss-developer-studio-or-eclipse-to-run-this-quickstart"><span class="anchor-icon"></span></a>Use JBoss Developer Studio or Eclipse to Run this Quickstart</h2>
+
+<p>Portal Extensions and Portal Containers are not directly deployable from JBoss Developer Studio nor Eclipse at this time. 
+See Build and Deploy section above for an alternative.  </p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
+
+<h2><a id="debug-the-application" class="anchor" href="#debug-the-application"><span class="anchor-icon"></span></a>Debug the Application</h2>
+
+<p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
+commands to pull them into your local repository. The IDE should then detect them.</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
+<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
+</pre></div>
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
+
+<h2><a id="feedback" class="anchor" href="#feedback"><span class="anchor-icon"></span></a>Feedback</h2>
+
+<p>Please post feedback on this quickstart or Red Hat JBoss Portal on <a href="https://access.redhat.com/groups/jboss-enterprise-middleware">Online User Group</a>.</p>
+</body></html>

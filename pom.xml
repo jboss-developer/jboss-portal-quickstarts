@@ -19,10 +19,10 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.portal</groupId>
-    <artifactId>gatein-portal-quickstarts-parent</artifactId>
+    <artifactId>jboss-portal-quickstarts</artifactId>
     <version>6.1.1.build-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>JBoss Portal Quickstarts Parent</name>
+    <name>JBoss Portal Quickstarts</name>
     <url>http://jboss.org</url>
     <scm>
         <url>https://github.com/jboss-developer/jboss-portal-quickstarts.git</url>
@@ -44,8 +44,8 @@
         <module>cdi-jsf-portlet</module>
         <module>cdi-scopes-portlet</module>
         <module>social-portlets</module>
-        <module>gatein-portal-extension</module>
-        <module>gatein-sample-portal</module>
+        <module>portal-extension</module>
+        <module>sample-portal</module>
     </modules>
 
     <properties>

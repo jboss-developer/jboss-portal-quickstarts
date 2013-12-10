@@ -364,7 +364,7 @@
     </project>
     <project>
         <category></category>
-        <name>gatein-portal-extension</name>
+        <name>portal-extension</name>
         <priority>1</priority>
         <included-projects></included-projects>
         <shortDescription></shortDescription>
@@ -406,7 +406,7 @@
     </project>
     <project>
         <category></category>
-        <name>gatein-sample-portal</name>
+        <name>sample-portal</name>
         <priority>1</priority>
         <included-projects></included-projects>
         <shortDescription></shortDescription>
