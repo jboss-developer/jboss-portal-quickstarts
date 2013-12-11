@@ -10,7 +10,7 @@ newVersion="$3"
 rootDir="$(pwd)"
 
 ./src/build/sh/mvn-versions-set.sh "$mvnSettings" "${taggedVersion}"
-tag="gatein-quickstart-${taggedVersion}"
+tag="${taggedVersion}"
 msg="Tagged ${tag}"
 git commit -a -m "${msg}"
 git tag -a "${tag}" -m "${msg}"
