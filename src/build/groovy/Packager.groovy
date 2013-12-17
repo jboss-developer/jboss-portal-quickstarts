@@ -254,7 +254,7 @@ for (module in project.modules) {
         destfile: zipPath,
         basedir: "target/assembly-prepare",
         includes: "${module}/**",
-        excludes: "${module}/target/**, **/.*, **/.*/**"
+        excludes: "${module}/target/**, ${module}/*/target/**, **/.*, **/.*/**"
     )
 
     /* And the same thing once again for GateIn Downloads */
@@ -263,7 +263,7 @@ for (module in project.modules) {
         destfile: gateinQuickstartsZipPath,
         basedir: "target/assembly-prepare",
         includes: "${module}/**",
-        excludes: "${module}/target/**, **/.*, **/.*/**"
+        excludes: "${module}/target/**, ${module}/*/target/**, **/.*, **/.*/**"
     )
 
     File zipFile = new File(zipPath)

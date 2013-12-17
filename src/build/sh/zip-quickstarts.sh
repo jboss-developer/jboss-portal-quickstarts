@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-#set -x
+set -x
 
 QUICKSTARTS_ROOT_DIR="$1"
 OUTPUT_ZIP="$2"
@@ -20,6 +20,8 @@ function stripInclusionComments {
 }
 
 cd "$QUICKSTARTS_ROOT_DIR"
+# make the path absolute to be able to cd to it again
+QUICKSTARTS_ROOT_DIR="$(pwd)"
 find . -type f \
     | grep -v "/dist/" | grep -v "/target/" | grep -v "\./src/" | grep -v "\./pom.xml$" \
     | grep -v "/\.[^/][^/]*$" | grep -v "/\.[^/][^/]*/" \
