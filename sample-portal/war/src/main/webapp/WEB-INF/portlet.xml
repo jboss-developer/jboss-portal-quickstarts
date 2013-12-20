@@ -43,7 +43,6 @@
             <portlet-mode>help</portlet-mode>
         </supports>
         <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portal.sample</resource-bundle>
 
         <portlet-info>
             <title>Cool Portlet</title>
