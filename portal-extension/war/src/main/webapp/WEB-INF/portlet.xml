@@ -41,7 +41,6 @@
             <portlet-mode>help</portlet-mode>
         </supports>
         <supported-locale>en</supported-locale>
-        <resource-bundle>locale.portal.extension</resource-bundle>
 
         <portlet-info>
             <title>JustAdded Portlet</title>
