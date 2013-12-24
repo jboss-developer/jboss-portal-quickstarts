@@ -15,10 +15,10 @@ newSnapshotVersion=${oldSnapshotVersion/build-${qsNo}/build-$((qsNo + 1))}
 
 die() { echo "$@" 1>&2 ; exit 1; }
 
-# ensure we are on master
+# ensure we are on 6.1.x-develop
 currentBranch=$(git rev-parse --abbrev-ref HEAD)
 if [ "${currentBranch}" != "6.1.x-develop" ]; then
-    die "You must be on master branch to run $0"
+    die "You must be on 6.1.x-develop branch to run $0"
 fi
 if ! git diff-index --cached --quiet HEAD --; then
     die "There must not be any pending changes to run $0"
