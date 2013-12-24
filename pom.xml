@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>jboss-portal-quickstarts</artifactId>
-    <version>6.1.1.build-2</version>
+    <version>6.1.1.build-3-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss Portal Quickstarts</name>
     <url>http://jboss.org</url>
