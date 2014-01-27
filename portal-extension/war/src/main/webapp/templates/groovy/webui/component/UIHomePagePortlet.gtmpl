@@ -199,13 +199,13 @@ public static class LinksAndVersions {
     public static final String compatibility_portal_community_versionMm = "3.6";
     public static final String compatibility_portal_community_versionMmm = "3.6.0";
     public static final String compatibility_portal_product_projectName = "Red Hat JBoss Portal";
-    public static final String compatibility_portal_product_projectNameAndVersion = "Red Hat JBoss Portal 6.1";
+    public static final String compatibility_portal_product_projectNameAndVersion = "Red Hat JBoss Portal 6.1.1";
     public static final String compatibility_portal_product_projectNameShort = "JBoss Portal";
     public static final String compatibility_portal_product_versionMajor = "6";
-    public static final String compatibility_portal_product_versionMicro = "0";
+    public static final String compatibility_portal_product_versionMicro = "1";
     public static final String compatibility_portal_product_versionMinor = "1";
     public static final String compatibility_portal_product_versionMm = "6.1";
-    public static final String compatibility_portal_product_versionMmm = "6.1.0";
+    public static final String compatibility_portal_product_versionMmm = "6.1.1";
     public static final String compatibility_portal_projectName = "Red Hat JBoss Portal";
     public static final String compatibility_portal_projectNameAndVersion = "Red Hat JBoss Portal 6.1";
     public static final String compatibility_portal_projectNameShort = "JBoss Portal";

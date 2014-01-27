@@ -72,12 +72,12 @@
 
         <compatibility.portal.product.versionMajor>6</compatibility.portal.product.versionMajor>
         <compatibility.portal.product.versionMinor>1</compatibility.portal.product.versionMinor>
-        <compatibility.portal.product.versionMicro>0</compatibility.portal.product.versionMicro>
+        <compatibility.portal.product.versionMicro>1</compatibility.portal.product.versionMicro>
         <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
         <compatibility.portal.product.projectName>Red Hat JBoss Portal</compatibility.portal.product.projectName>
         <compatibility.portal.product.projectNameShort>JBoss Portal</compatibility.portal.product.projectNameShort>
-        <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMm}</compatibility.portal.product.projectNameAndVersion>
+        <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMmm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
         <compatibility.portal.versionMinor>${compatibility.portal.product.versionMinor}</compatibility.portal.versionMinor>

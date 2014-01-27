@@ -33,7 +33,18 @@
       <id>jboss-local-repositories</id>
       <repositories>
         <repository>
-          <id>jboss-portal</id>
+          <id>jboss-portal-6.1.1</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.1 Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.1.1-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>jboss-portal-6.1.0</id>
           <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
           <releases>
@@ -89,7 +100,7 @@
         </repository>
         <repository>
           <id>eap611</id>
-          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.0 Maven repository -->
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.1 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.1.1-maven-repository</url>
           <releases>
             <enabled>true</enabled>
@@ -136,8 +147,19 @@
 
       <pluginRepositories>
         <pluginRepository>
-          <id>jboss-portal-plugins</id>
-          <!-- Change this to where you have unpacked the zipped JBoss Portal Maven repository -->
+          <id>jboss-portal-plugins-6.1.1</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.1 Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.1.1-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>jboss-portal-plugins-6.1.0</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
@@ -192,7 +214,7 @@
         </pluginRepository>
         <pluginRepository>
           <id>eap611-plugins</id>
-          <!-- Change this to where you have unpacked the zipped Application Platform 6.0.1 Maven repository -->
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.1.1 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.1.1-maven-repository</url>
           <releases>
             <enabled>true</enabled>
