@@ -32,7 +32,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss AS.
+The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -61,11 +61,12 @@ This is the easier and thus recommended option. You need to configure the Maven 
     Downloads > JBoss Enterprise Middleware:
     * Red Hat JBoss Portal 6.1.1 Maven Repository
     * JBoss Portal Platform 6.1.0 Maven Repository
+    * Web Framework Kit 2.4.0 Maven Repository
     * Web Framework Kit 2.3.0 Maven Repository
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 7.1.1 Maven Repository
+    * Application Platform 6.1.1 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository
@@ -100,7 +101,7 @@ Build and Deploy
 ----------------
 
 Portal Extensions and Portal Containers are not hot-deployable. Therefore, it is not possible to deploy them using 
-`mvn jboss-as:deploy` or copying to the default JBoss AS deployment folder when 
+`mvn jboss-as:deploy` or copying to the default JBoss EAP deployment folder when 
 Red Hat JBoss Portal is running. Instead of that you will need to:
 
 1. Make sure that the Portal is not running, e.g. by running 
@@ -128,10 +129,10 @@ of XML commented out. Please search for `Uncommented this when deploying sample-
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [JBoss AS 7.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/7.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
+> described in [JBoss EAP 6.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[JBoss AS 7.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/7.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
+[JBoss EAP 6.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
 
 
 Access the Sample Portal

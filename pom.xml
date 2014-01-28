@@ -87,13 +87,6 @@
         <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
 
-        <compatibility.as.versionMajor>${compatibility.as.product.versionMajor}</compatibility.as.versionMajor>
-        <compatibility.as.versionMinor>${compatibility.as.product.versionMinor}</compatibility.as.versionMinor>
-        <compatibility.as.versionMm>${compatibility.as.versionMajor}.${compatibility.as.versionMinor}</compatibility.as.versionMm>
-        <compatibility.as.versionMmm>${compatibility.as.versionMm}.${compatibility.as.versionMicro}</compatibility.as.versionMmm>
-        <compatibility.as.projectName>${compatibility.as.product.projectName}</compatibility.as.projectName>
-        <compatibility.as.projectNameAndVersion>${compatibility.as.projectName} ${compatibility.as.versionMm}</compatibility.as.projectNameAndVersion>
-
         <compatibility.as.community.versionMajor>7</compatibility.as.community.versionMajor>
         <compatibility.as.community.versionMinor>1</compatibility.as.community.versionMinor>
         <compatibility.as.community.versionMicro>1</compatibility.as.community.versionMicro>
@@ -110,16 +103,17 @@
         <compatibility.as.product.projectName>JBoss EAP</compatibility.as.product.projectName>
         <compatibility.as.product.projectNameAndVersion>${compatibility.as.product.projectName} ${compatibility.as.product.versionMm}</compatibility.as.product.projectNameAndVersion>
 
-        <compatibility.as.versionMajor>${compatibility.as.community.versionMajor}</compatibility.as.versionMajor>
-        <compatibility.as.versionMinor>${compatibility.as.community.versionMinor}</compatibility.as.versionMinor>
-        <compatibility.as.versionMicro>${compatibility.as.community.versionMicro}</compatibility.as.versionMicro>
+        <compatibility.as.versionMajor>${compatibility.as.product.versionMajor}</compatibility.as.versionMajor>
+        <compatibility.as.versionMinor>${compatibility.as.product.versionMinor}</compatibility.as.versionMinor>
+        <compatibility.as.versionMicro>${compatibility.as.product.versionMicro}</compatibility.as.versionMicro>
         <compatibility.as.versionMm>${compatibility.as.versionMajor}.${compatibility.as.versionMinor}</compatibility.as.versionMm>
         <compatibility.as.versionMmm>${compatibility.as.versionMm}.${compatibility.as.versionMicro}</compatibility.as.versionMmm>
-        <compatibility.as.projectName>${compatibility.as.community.projectName}</compatibility.as.projectName>
+        <compatibility.as.projectName>${compatibility.as.product.projectName}</compatibility.as.projectName>
         <compatibility.as.projectNameAndVersion>${compatibility.as.projectName} ${compatibility.as.versionMm}</compatibility.as.projectNameAndVersion>
 
+
         <compatibility.wfk.versionMajor>2</compatibility.wfk.versionMajor>
-        <compatibility.wfk.versionMinor>3</compatibility.wfk.versionMinor>
+        <compatibility.wfk.versionMinor>4</compatibility.wfk.versionMinor>
         <compatibility.wfk.versionMicro>0</compatibility.wfk.versionMicro>
         <compatibility.wfk.versionMmm>${compatibility.wfk.versionMajor}.${compatibility.wfk.versionMinor}.${compatibility.wfk.versionMicro}</compatibility.wfk.versionMmm>
 

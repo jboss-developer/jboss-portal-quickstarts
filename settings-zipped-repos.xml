@@ -55,6 +55,17 @@
           </snapshots>
         </repository>
         <repository>
+          <id>wfk240</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.4.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.4.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
           <id>wfk230</id>
           <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.3.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.3.0-maven-repository</url>
@@ -161,6 +172,17 @@
           <id>jboss-portal-plugins-6.1.0</id>
           <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>wfk240-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.4.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-wfk-2.4.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>

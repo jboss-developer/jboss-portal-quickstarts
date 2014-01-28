@@ -30,7 +30,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss AS.
+The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -59,11 +59,12 @@ This is the easier and thus recommended option. You need to configure the Maven 
     Downloads > JBoss Enterprise Middleware:
     * Red Hat JBoss Portal 6.1.1 Maven Repository
     * JBoss Portal Platform 6.1.0 Maven Repository
+    * Web Framework Kit 2.4.0 Maven Repository
     * Web Framework Kit 2.3.0 Maven Repository
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 7.1.1 Maven Repository
+    * Application Platform 6.1.1 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository

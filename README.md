@@ -10,7 +10,7 @@ examples that can be used as a reference for your own project.
 Compatibility Information
 -------------------------
 
-This release of Portal Quickstarts is compatible with Red Hat JBoss Portal 6.1 running on JBoss AS.
+This release of Portal Quickstarts is compatible with Red Hat JBoss Portal 6.1 running on JBoss EAP.
 
 <a id="toc"></a>
 Available Quickstarts

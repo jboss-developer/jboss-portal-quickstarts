@@ -46,6 +46,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * ${compatibility.portal.product.projectNameAndVersion} Maven Repository
     * JBoss Portal Platform 6.1.0 Maven Repository
     * Web Framework Kit ${compatibility.wfk.versionMmm} Maven Repository
+    * Web Framework Kit 2.3.0 Maven Repository
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
