@@ -39,7 +39,7 @@
         <version.jboss.portal.bom>6.1.1.build-2</version.jboss.portal.bom>
 
         <!-- Versions of social libraries used by portlets. All those libs are available in Maven central -->
-        <twitter4j.version>3.0.3</twitter4j.version>
+        <twitter4j.version>3.0.5</twitter4j.version>
         <google.apis.plus.version>v1-rev69-1.14.2-beta</google.apis.plus.version>
         <google.apis.oauth.version>v2-rev36-1.14.2-beta</google.apis.oauth.version>
         <restfb.version>1.6.12</restfb.version>
