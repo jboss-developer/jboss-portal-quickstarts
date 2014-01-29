@@ -22,7 +22,7 @@
     <artifactId>simplest-hello-world-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Simplest Hello World Portlet</name>
-    <version>6.1.1.build-4-SNAPSHOT</version>
+    <version>6.1.1.build-4</version>
     <packaging>war</packaging>
     <description>The very essence of every possible portlet.</description>
     <url>http://www.jboss.org</url>
