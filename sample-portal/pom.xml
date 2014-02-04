@@ -44,7 +44,7 @@
         <version.org.gatein>3.6.0.Beta02-SNAPSHOT</version.org.gatein>
 
         <!-- JBoss Portal Bill of Materials (BOM) version -->
-        <version.jboss.portal.bom>6.1.1.ER01</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.1.1-redhat-1</version.jboss.portal.bom>
         <!-- <version.org.gatein.common>2.1.0.Final-redhat-1</version.org.gatein.common> -->
         <version.org.gatein.common>2.1.0.Final</version.org.gatein.common>
 

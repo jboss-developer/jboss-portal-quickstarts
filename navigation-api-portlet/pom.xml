@@ -36,7 +36,7 @@
 
     <properties>
         <!-- JBoss Portal Bill of Materials (BOM) version -->
-        <version.jboss.portal.bom>6.1.1.ER01</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.1.1-redhat-1</version.jboss.portal.bom>
 
         <!-- Other dependencies -->
         <pc-portlet.version>2.4.1.Final</pc-portlet.version>
