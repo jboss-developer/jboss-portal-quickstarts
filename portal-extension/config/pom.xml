@@ -20,7 +20,7 @@
     <parent>
         <artifactId>portal-extension</artifactId>
         <groupId>org.jboss.quickstarts.portal</groupId>
-        <version>6.1.1.build-5-SNAPSHOT</version>
+        <version>6.1.1.build-5</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
