@@ -121,6 +121,17 @@
           </snapshots>
         </repository>
         <repository>
+          <id>eap620</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.2.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.2.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
           <id>eap611</id>
           <!-- Change this to where you have unpacked the zipped Application Platform 6.1.1 Maven repository -->
           <url>file:///path/to/repo/jboss-eap-6.1.1-maven-repository</url>
@@ -249,6 +260,17 @@
           <id>wfk200-plugins</id>
           <!-- Change this to where you have unpacked the zipped Web Framework Kit 2.0.0 Maven repository -->
           <url>file:///path/to/repo/jboss-wfk-2.0.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>eap620-plugins</id>
+          <!-- Change this to where you have unpacked the zipped Application Platform 6.2.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-eap-6.2.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
