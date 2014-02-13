@@ -45,8 +45,19 @@
         </repository>
         <repository>
           <id>jboss-portal-6.1.0</id>
-          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
+          <!-- Change this to where you have unpacked the zipped JBoss Portal (also known as JBoss Portal Platform, JPP) 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+        <repository>
+          <id>jboss-portal-6.0.0</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal (also known as JBoss Enterprise Portal Platform, EPP) 6.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
@@ -170,8 +181,19 @@
         </pluginRepository>
         <pluginRepository>
           <id>jboss-portal-plugins-6.1.0</id>
-          <!-- Change this to where you have unpacked the zipped JBoss Portal 6.1.0 Maven repository -->
+          <!-- Change this to where you have unpacked the zipped JBoss Portal (also known as JBoss Portal Platform, JPP) 6.1.0 Maven repository -->
           <url>file:///path/to/repo/jboss-portal-6.1.0-maven-repository</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+          <id>jboss-portal-plugins-6.0.0</id>
+          <!-- Change this to where you have unpacked the zipped JBoss Portal (also known as JBoss Enterprise Portal Platform, EPP) 6.0.0 Maven repository -->
+          <url>file:///path/to/repo/jboss-portal-6.0.0-maven-repository</url>
           <releases>
             <enabled>true</enabled>
           </releases>
