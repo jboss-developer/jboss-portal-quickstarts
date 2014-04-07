@@ -21,31 +21,31 @@ Red Hat JBoss Portal API and JSP front-end. It contains:</p>
 </ul>
 
 <p>Portlets require that Red Hat JBoss Portal integration with particular social network is enabled. You can see
-chapter <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html">OAuth - Authentication with social network accounts</a> in Red Hat JBoss Portal
+chapter <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html">OAuth - Authentication with social network accounts</a> in Red Hat JBoss Portal
 reference guide for details.</p>
 
 <p>Each portlet is using access token of current authenticated portal user and this access token is
 used to call Social API operations. There is special portlet filter OAuthPortletFilter, which leverages
-<a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/part-Portal_API.html">Portal API</a> to obtain informations about access token of current user. Filter saves this info
+<a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/part-Portal_API.html">Portal API</a> to obtain informations about access token of current user. Filter saves this info
 to CDI RequestContext object, which is used by particular portlet.</p>
 
 <p>An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:</p>
 
 <ul>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html">Starting a Portlet Project</a></li>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html">Standard Portlet Development (JSR-286)</a></li>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/part-Portal_API.html">Portal API</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html">Starting a Portlet Project</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html">Standard Portlet Development (JSR-286)</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/part-Portal_API.html">Portal API</a></li>
 </ul>
 
 <p>Informations about configuration of OAuth authentication and integration with social networks could be found in the following
 chapters of  Red Hat JBoss Portal Reference Guide:</p>
 
 <ul>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html">OAuth - Authentication with social network accounts</a></li>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Facebook.html">Facebook</a></li>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Google.html">Google+</a></li>
-<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/Twitter.html">Twitter</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html">OAuth - Authentication with social network accounts</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/Facebook.html">Facebook</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/Google.html">Google+</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/Twitter.html">Twitter</a></li>
 </ul>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -56,7 +56,7 @@ chapters of  Red Hat JBoss Portal Reference Guide:</p>
 
 <p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
 
-<p>The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.</p>
+<p>The project is designed to be deployed on Red Hat JBoss Portal 6.2 running on JBoss EAP.</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 
@@ -87,7 +87,7 @@ operating system and rename it to <code>settings.xml</code>.</p></li>
 Downloads &gt; JBoss Enterprise Middleware:</p>
 
 <ul>
-<li>Red Hat JBoss Portal 6.1.1 Maven Repository</li>
+<li>Red Hat JBoss Portal 6.2.0 Maven Repository</li>
 <li>JBoss Portal Platform 6.1.0 Maven Repository</li>
 <li>JBoss Enterprise Portal Platform (EPP) 6.0.0 Maven Repository</li>
 <li>Web Framework Kit 2.4.0 Maven Repository</li>
@@ -96,7 +96,7 @@ Downloads &gt; JBoss Enterprise Middleware:</p>
 <li>Web Framework Kit 2.1.0 Maven Repository</li>
 <li>Web Framework Kit 2.0.0 Maven Repository</li>
 <li>Application Platform 6.2.0 Maven Repository</li>
-<li>Application Platform 6.1.1 Maven Repository</li>
+<li>Application Platform 6.3.0 Maven Repository</li>
 <li>Application Platform 6.1.0 Maven Repository</li>
 <li>Application Platform 6.0.1 Maven Repository</li>
 <li>Application Platform 6.0.0 Maven Repository</li>
@@ -114,7 +114,7 @@ step.</li>
 <code>&lt;pluginRepository&gt;</code> tag.</li>
 <li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
 path. For example:</p>
-<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.1-quickstarts</span>
+<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.2-quickstarts</span>
 </pre></div></li>
 </ul></li>
 <li><p>Configure the Maven user settings.</p>

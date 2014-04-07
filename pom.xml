@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>jboss-portal-quickstarts</artifactId>
-    <version>6.1.1.build-6-SNAPSHOT</version>
+    <version>6.2.0.build-1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>JBoss Portal Quickstarts</name>
     <url>http://jboss.org</url>
@@ -62,7 +62,7 @@
         <version.jboss.portal.bom>6.1.1.build-2</version.jboss.portal.bom>
 
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
-        <compatibility.portal.community.versionMinor>6</compatibility.portal.community.versionMinor>
+        <compatibility.portal.community.versionMinor>8</compatibility.portal.community.versionMinor>
         <compatibility.portal.community.versionMicro>0</compatibility.portal.community.versionMicro>
         <compatibility.portal.community.versionMm>${compatibility.portal.community.versionMajor}.${compatibility.portal.community.versionMinor}</compatibility.portal.community.versionMm>
         <compatibility.portal.community.versionMmm>${compatibility.portal.community.versionMm}.${compatibility.portal.community.versionMicro}</compatibility.portal.community.versionMmm>
@@ -71,8 +71,8 @@
         <compatibility.portal.community.projectNameAndVersion>${compatibility.portal.community.projectName} ${compatibility.portal.community.versionMm}</compatibility.portal.community.projectNameAndVersion>
 
         <compatibility.portal.product.versionMajor>6</compatibility.portal.product.versionMajor>
-        <compatibility.portal.product.versionMinor>1</compatibility.portal.product.versionMinor>
-        <compatibility.portal.product.versionMicro>1</compatibility.portal.product.versionMicro>
+        <compatibility.portal.product.versionMinor>2</compatibility.portal.product.versionMinor>
+        <compatibility.portal.product.versionMicro>0</compatibility.portal.product.versionMicro>
         <compatibility.portal.product.versionMm>${compatibility.portal.product.versionMajor}.${compatibility.portal.product.versionMinor}</compatibility.portal.product.versionMm>
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
         <compatibility.portal.product.projectName>Red Hat JBoss Portal</compatibility.portal.product.projectName>
@@ -87,17 +87,17 @@
         <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
 
-        <compatibility.as.community.versionMajor>7</compatibility.as.community.versionMajor>
-        <compatibility.as.community.versionMinor>1</compatibility.as.community.versionMinor>
-        <compatibility.as.community.versionMicro>1</compatibility.as.community.versionMicro>
+        <compatibility.as.community.versionMajor>6</compatibility.as.community.versionMajor>
+        <compatibility.as.community.versionMinor>3</compatibility.as.community.versionMinor>
+        <compatibility.as.community.versionMicro>0</compatibility.as.community.versionMicro>
         <compatibility.as.community.versionMm>${compatibility.as.community.versionMajor}.${compatibility.as.community.versionMinor}</compatibility.as.community.versionMm>
         <compatibility.as.community.versionMmm>${compatibility.as.community.versionMm}.${compatibility.as.community.versionMicro}</compatibility.as.community.versionMmm>
-        <compatibility.as.community.projectName>JBoss AS</compatibility.as.community.projectName>
+        <compatibility.as.community.projectName>JBoss EAP</compatibility.as.community.projectName>
         <compatibility.as.community.projectNameAndVersion>${compatibility.as.community.projectName} ${compatibility.as.community.versionMm}</compatibility.as.community.projectNameAndVersion>
 
         <compatibility.as.product.versionMajor>6</compatibility.as.product.versionMajor>
-        <compatibility.as.product.versionMinor>1</compatibility.as.product.versionMinor>
-        <compatibility.as.product.versionMicro>1</compatibility.as.product.versionMicro>
+        <compatibility.as.product.versionMinor>3</compatibility.as.product.versionMinor>
+        <compatibility.as.product.versionMicro>0</compatibility.as.product.versionMicro>
         <compatibility.as.product.versionMm>${compatibility.as.product.versionMajor}.${compatibility.as.product.versionMinor}</compatibility.as.product.versionMm>
         <compatibility.as.product.versionMmm>${compatibility.as.product.versionMm}.${compatibility.as.product.versionMicro}</compatibility.as.product.versionMmm>
         <compatibility.as.product.projectName>JBoss EAP</compatibility.as.product.projectName>

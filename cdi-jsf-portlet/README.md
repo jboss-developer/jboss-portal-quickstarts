@@ -25,10 +25,10 @@ following order:
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
-* [Standard Portlet Development (JSR-286)](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html)
-* [Basic JSF Portlet Development](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
-* [Generic CDI Portlet](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html)
+* [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
+* [Standard Portlet Development (JSR-286)](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html)
+* [Basic JSF Portlet Development](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
+* [Generic CDI Portlet](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -38,7 +38,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
+The project is designed to be deployed on Red Hat JBoss Portal 6.2 running on JBoss EAP.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -65,7 +65,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
 
 1.  Download the following zipped Maven repositories from [Red Hat Customer Portal](https://access.redhat.com/),
     Downloads > JBoss Enterprise Middleware:
-    * Red Hat JBoss Portal 6.1.1 Maven Repository
+    * Red Hat JBoss Portal 6.2.0 Maven Repository
     * JBoss Portal Platform 6.1.0 Maven Repository
     * JBoss Enterprise Portal Platform (EPP) 6.0.0 Maven Repository
     * Web Framework Kit 2.4.0 Maven Repository
@@ -74,7 +74,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
     * Application Platform 6.2.0 Maven Repository
-    * Application Platform 6.1.1 Maven Repository
+    * Application Platform 6.3.0 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository
@@ -91,7 +91,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified
       path. For example:
 
-            file:///home/joedoe/Quickstarts/jpp-6.1-quickstarts
+            file:///home/joedoe/Quickstarts/jpp-6.2-quickstarts
 3.  Configure the Maven user settings.
     * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
 
