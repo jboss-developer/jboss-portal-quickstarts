@@ -22,7 +22,7 @@ creation, such as:
 * Navigation Definitions
 * Custom Sign In Page
 
-For more details, see [Portal Containers](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portal_Containers.html) page of
+For more details, see [Portal Containers](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portal_Containers.html) page of
 Red Hat JBoss Portal Developer Guide.
 
 
@@ -32,7 +32,7 @@ System Requirements
 
 All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.
 
-The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.
+The project is designed to be deployed on Red Hat JBoss Portal 6.2 running on JBoss EAP.
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
@@ -59,7 +59,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
 
 1.  Download the following zipped Maven repositories from [Red Hat Customer Portal](https://access.redhat.com/),
     Downloads > JBoss Enterprise Middleware:
-    * Red Hat JBoss Portal 6.1.1 Maven Repository
+    * Red Hat JBoss Portal 6.2.0 Maven Repository
     * JBoss Portal Platform 6.1.0 Maven Repository
     * JBoss Enterprise Portal Platform (EPP) 6.0.0 Maven Repository
     * Web Framework Kit 2.4.0 Maven Repository
@@ -68,7 +68,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
     * Application Platform 6.2.0 Maven Repository
-    * Application Platform 6.1.1 Maven Repository
+    * Application Platform 6.3.0 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
     * Application Platform 6.0.0 Maven Repository
@@ -85,7 +85,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Be sure to use 3 forward slashes after `file:`. Two slashes are there for the protocol and one for the fully qualified
       path. For example:
 
-            file:///home/joedoe/Quickstarts/jpp-6.1-quickstarts
+            file:///home/joedoe/Quickstarts/jpp-6.2-quickstarts
 3.  Configure the Maven user settings.
     * Look for the `settings.xml` file in the `${user.home}/.m2/` directory. For example:
 
@@ -126,15 +126,15 @@ cannot[*] be defined within EARs because otherwise centralized management would 
 the reason why it is not enough just to deploy `sample-portal.ear`. You also need to define the
 Datasources and Security Policies e.g. in `$JBOSS_HOME/standalone/configuration/standalone.xml`.
 
-The `standalone.xml` available in the out-of-the-box Red Hat JBoss Portal 6.1 installation contains the needed pieces
+The `standalone.xml` available in the out-of-the-box Red Hat JBoss Portal 6.2 installation contains the needed pieces
 of XML commented out. Please search for `Uncommented this when deploying sample-portal` in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [JBoss EAP 6.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
+> described in [JBoss EAP 6.3 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[JBoss EAP 6.1 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
+[JBoss EAP 6.3 Admin Guide](https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
 
 
 Access the Sample Portal

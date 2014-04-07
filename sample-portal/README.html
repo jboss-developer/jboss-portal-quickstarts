@@ -22,7 +22,7 @@ creation, such as:</p>
 <li>Custom Sign In Page</li>
 </ul>
 
-<p>For more details, see <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Portal_Containers.html">Portal Containers</a> page of
+<p>For more details, see <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portal_Containers.html">Portal Containers</a> page of
 Red Hat JBoss Portal Developer Guide.</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -31,7 +31,7 @@ Red Hat JBoss Portal Developer Guide.</p>
 
 <p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
 
-<p>The project is designed to be deployed on Red Hat JBoss Portal 6.1 running on JBoss EAP.</p>
+<p>The project is designed to be deployed on Red Hat JBoss Portal 6.2 running on JBoss EAP.</p>
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 
@@ -62,7 +62,7 @@ operating system and rename it to <code>settings.xml</code>.</p></li>
 Downloads &gt; JBoss Enterprise Middleware:</p>
 
 <ul>
-<li>Red Hat JBoss Portal 6.1.1 Maven Repository</li>
+<li>Red Hat JBoss Portal 6.2.0 Maven Repository</li>
 <li>JBoss Portal Platform 6.1.0 Maven Repository</li>
 <li>JBoss Enterprise Portal Platform (EPP) 6.0.0 Maven Repository</li>
 <li>Web Framework Kit 2.4.0 Maven Repository</li>
@@ -71,7 +71,7 @@ Downloads &gt; JBoss Enterprise Middleware:</p>
 <li>Web Framework Kit 2.1.0 Maven Repository</li>
 <li>Web Framework Kit 2.0.0 Maven Repository</li>
 <li>Application Platform 6.2.0 Maven Repository</li>
-<li>Application Platform 6.1.1 Maven Repository</li>
+<li>Application Platform 6.3.0 Maven Repository</li>
 <li>Application Platform 6.1.0 Maven Repository</li>
 <li>Application Platform 6.0.1 Maven Repository</li>
 <li>Application Platform 6.0.0 Maven Repository</li>
@@ -89,7 +89,7 @@ step.</li>
 <code>&lt;pluginRepository&gt;</code> tag.</li>
 <li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
 path. For example:</p>
-<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.1-quickstarts</span>
+<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.2-quickstarts</span>
 </pre></div></li>
 </ul></li>
 <li><p>Configure the Maven user settings.</p>
@@ -133,17 +133,17 @@ cannot[*] be defined within EARs because otherwise centralized management would 
 the reason why it is not enough just to deploy <code>sample-portal.ear</code>. You also need to define the
 Datasources and Security Policies e.g. in <code>$JBOSS_HOME/standalone/configuration/standalone.xml</code>.</p>
 
-<p>The <code>standalone.xml</code> available in the out-of-the-box Red Hat JBoss Portal 6.1 installation contains the needed pieces
+<p>The <code>standalone.xml</code> available in the out-of-the-box Red Hat JBoss Portal 6.2 installation contains the needed pieces
 of XML commented out. Please search for <code>Uncommented this when deploying sample-portal</code> in the file and uncomment the
 necessary XML code blocks. Note that you should uncomment two <code>datasource</code>s and one <code>security-policy</code>.</p>
 
 <blockquote>
 <p>Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-described in <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html">JBoss EAP 6.1 Admin Guide</a></p>
+described in <a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html">JBoss EAP 6.3 Admin Guide</a></p>
 </blockquote>
 
 <p>[*] Datasources can be defined in EARs but such ones are not managed, see
-<a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.1/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files">JBoss EAP 6.1 Admin Guide</a>.</p>
+<a href="https://access.redhat.com/site/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files">JBoss EAP 6.3 Admin Guide</a>.</p>
 
 <h2><a id="access-the-sample-portal" class="anchor" href="#access-the-sample-portal"><span class="anchor-icon"></span></a>Access the Sample Portal</h2>
 
