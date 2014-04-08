@@ -22,7 +22,7 @@
     <artifactId>cdi-scopes-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Portlet Using Portet-Specific CDI Scopes</name>
-    <version>6.2.0.build-1-SNAPSHOT</version>
+    <version>6.2.0.build-1</version>
     <packaging>war</packaging>
     <description>Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
     <url>http://www.jboss.org</url>

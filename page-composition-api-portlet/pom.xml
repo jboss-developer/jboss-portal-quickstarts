@@ -22,7 +22,7 @@
     <artifactId>page-composition-api-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Page Composition API Portlet</name>
-    <version>6.2.0.build-1-SNAPSHOT</version>
+    <version>6.2.0.build-1</version>
     <packaging>war</packaging>
     <description>A Portlet using the Page Composition API to compose Portal Pages.</description>
     <url>http://www.jboss.org</url>
