@@ -22,7 +22,7 @@
     <artifactId>navigation-api-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Navigation API Portlet</name>
-    <version>6.2.0.build-2</version>
+    <version>6.2.0.build-3-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>The simple navigation portlet using Portal API.</description>
     <url>http://www.jboss.org</url>

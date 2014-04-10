@@ -20,7 +20,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.quickstarts.portal</groupId>
-    <version>6.2.0.build-2</version>
+    <version>6.2.0.build-3-SNAPSHOT</version>
     <artifactId>sample-portal</artifactId>
     <name>Sample Portal</name>
     <packaging>pom</packaging>
