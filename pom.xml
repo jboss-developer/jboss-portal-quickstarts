@@ -60,7 +60,7 @@
              JBT 4.1.0.CR1 - '-002'
         -->
         <org.jboss.quickstarts.portal.descriptor.suffix>-001</org.jboss.quickstarts.portal.descriptor.suffix>
-        <version.jboss.portal.bom>6.2.0.build-1-SNAPSHOT</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.2.0.build-1</version.jboss.portal.bom>
 
         <compatibility.portal.community.versionMajor>3</compatibility.portal.community.versionMajor>
         <compatibility.portal.community.versionMinor>8</compatibility.portal.community.versionMinor>

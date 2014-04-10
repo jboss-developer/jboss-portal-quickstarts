@@ -36,7 +36,7 @@
 
     <properties>
         <!-- JBoss Portal Bill of Materials (BOM) version -->
-        <version.jboss.portal.bom>6.1.1.build-2</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.2.0.build-1</version.jboss.portal.bom>
 
         <!-- Versions of social libraries used by portlets. All those libs are available in Maven central -->
         <twitter4j.version>3.0.5</twitter4j.version>
