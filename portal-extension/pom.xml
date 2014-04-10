@@ -42,7 +42,7 @@
 
     <properties>
         <!-- JBoss Portal Bill of Materials (BOM) version -->
-        <version.jboss.portal.bom>6.2.0.build-1</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.2.0.build-2</version.jboss.portal.bom>
 
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
