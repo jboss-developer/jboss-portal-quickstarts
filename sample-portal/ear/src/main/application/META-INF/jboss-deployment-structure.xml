@@ -27,4 +27,10 @@
     </dependencies>
   </sub-deployment>
 
+  <sub-deployment name="rest-sample-portal.war" >
+    <dependencies>
+      <module name="org.gatein.portal.container-dependencies"/>
+    </dependencies>
+  </sub-deployment>
+
 </jboss-deployment-structure>
