@@ -19,14 +19,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd
     http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd">
     <portlet>
-        <portlet-name>Page Composition API Demo</portlet-name>
+        <description>A Portlet using the Page Composition API to compose Portal Pages.</description>
+        <portlet-name>PageCompositionPortlet</portlet-name>
+        <display-name>Page Composition API Portlet</display-name>
         <portlet-class>org.jboss.quickstarts.portal.composition.PageCompositionPortlet</portlet-class>
         <supports>
             <mime-type>text/html</mime-type>
             <portlet-mode>view</portlet-mode>
         </supports>
         <portlet-info>
-            <title>Page Composition API Demo</title>
+            <title>Page Composition API Portlet</title>
             <keywords>Quickstarts</keywords>
         </portlet-info>
     </portlet>
