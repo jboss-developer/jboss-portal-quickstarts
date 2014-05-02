@@ -36,7 +36,7 @@
 
     <properties>
         <!-- JBoss Portal Bill of Materials (BOM) version -->
-        <version.jboss.portal.bom>6.2.0.build-2</version.jboss.portal.bom>
+        <version.jboss.portal.bom>6.2.0.build-3</version.jboss.portal.bom>
 
         <!-- maven-compiler-plugin -->
         <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
