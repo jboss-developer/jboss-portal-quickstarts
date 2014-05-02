@@ -22,7 +22,7 @@
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>social-portlets</artifactId>
     <name>Social Portlets</name>
-    <version>6.2.0.build-3-SNAPSHOT</version>
+    <version>6.2.0.build-3</version>
     <packaging>war</packaging>
     <description>Portlets showing integration with Social networks</description>
     <url>http://www.jboss.org</url>
