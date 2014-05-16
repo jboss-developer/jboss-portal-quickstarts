@@ -168,7 +168,7 @@
  * @author Peter Palaga
  *
  */
-public static class LinksAndVersions {
+public class LinksAndVersions {
     public static final String compatibility_as_community_projectName = "JBoss EAP";
     public static final String compatibility_as_community_projectNameAndVersion = "JBoss EAP 6.3";
     public static final String compatibility_as_community_versionMajor = "6";

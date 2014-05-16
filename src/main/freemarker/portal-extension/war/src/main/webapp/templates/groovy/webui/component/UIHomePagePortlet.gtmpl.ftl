@@ -232,7 +232,7 @@
  * @author Peter Palaga
  *
  */
-public static class LinksAndVersions {
+public class LinksAndVersions {
 <#list linksAndVersions?keys as key>
     public static final String ${key} = "${linksAndVersions[key]}";
 </#list>
