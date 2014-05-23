@@ -1,4 +1,3 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/README.md.ftl ~-->
 
 Portal Quickstarts
 ==================

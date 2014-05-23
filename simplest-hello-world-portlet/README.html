@@ -1,0 +1,205 @@
+<!DOCTYPE html><html><head><title>README</title><link href="https://raw.github.com/pmuir/github-flavored-markdown/gh-pages/shared/css/documentation.css" rel="stylesheet"></link><link href="https://raw.github.com/github/github-flavored-markdown/gh-pages/shared/css/pygments.css" rel="stylesheet"></link></head><body><!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/simplest-hello-world-portlet/README.html.ftl ~-->
+
+<h1><a id="simplesthelloworldportlet-simplest-hello-world-portlet" class="anchor" href="#simplesthelloworldportlet-simplest-hello-world-portlet"><span class="anchor-icon"></span></a>simplest-hello-world-portlet: Simplest Hello World Portlet</h1>
+
+<p>Author: Thomas Heute, Peter Palaga<br/>
+Level: Beginner<br/>
+Technologies: Portlet<br/>
+Summary: The very essence of every possible portlet.<br/>
+Target Product: JPP<br/>
+Source: <a href="https://github.com/gatein/gatein-portal-quickstart">https://github.com/gatein/gatein-portal-quickstart</a></p>
+
+<h2><a id="what-is-it" class="anchor" href="#what-is-it"><span class="anchor-icon"></span></a>What is it?</h2>
+
+<p>This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.</p>
+
+<p>An introduction and some background information to this quickstart can be found in the following chapters 
+of JBoss Portal Platform Developer Guide:</p>
+
+<ul>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html">Starting a Portlet Project</a></li>
+<li><a href="https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html">Standard Portlet Development (JSR-286)</a></li>
+</ul>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
+
+<h2><a id="system-requirements" class="anchor" href="#system-requirements"><span class="anchor-icon"></span></a>System Requirements</h2>
+
+<p>All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer and Maven 3.0 or newer.</p>
+
+<p>The project is designed to be deployed on JBoss Portal Platform 6.1 running on JBoss EAP.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
+
+<h2><a id="configure-maven" class="anchor" href="#configure-maven"><span class="anchor-icon"></span></a>Configure Maven</h2>
+
+<p>You have two options how you can configure Maven: A. Use hosted Maven repository or B. Download &amp; setup zipped Maven repository.</p>
+
+<h3><a id="a-use-hosted-maven-repository" class="anchor" href="#a-use-hosted-maven-repository"><span class="anchor-icon"></span></a>A. Use hosted Maven repository</h3>
+
+<p>This is the easier and thus recommended option. You need to configure the Maven user settings as follows:</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
+file located in the root folder of JBoss Portal Platform quickstarts. This effectivelly results in
+adding <code>http://maven.repository.redhat.com/techpreview/all</code> as <code>&lt;repository&gt;</code> and <code>&lt;pluginRepository&gt;</code> to your <code>settings.xml</code>.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the <code>settings-hosted-repo.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul>
+
+<h3><a id="b-download-amp-setup-zipped-maven-repositories" class="anchor" href="#b-download-amp-setup-zipped-maven-repositories"><span class="anchor-icon"></span></a>B. Download &amp; setup zipped Maven repositories</h3>
+
+<ol>
+<li><p>Download the following zipped Maven repositories from <a href="https://access.redhat.com/">Red Hat Customer Portal</a>,
+Downloads &gt; JBoss Enterprise Middleware:</p>
+
+<ul>
+<li>JBoss Portal Platform 6.1 Maven Repository</li>
+<li>Web Framework Kit 2.3.0 Maven Repository</li>
+<li>Web Framework Kit 2.2.0 Maven Repository</li>
+<li>Web Framework Kit 2.1.0 Maven Repository</li>
+<li>Web Framework Kit 2.0.0 Maven Repository</li>
+<li>Application Platform 6.1.1 Maven Repository</li>
+<li>Application Platform 6.1.0 Maven Repository</li>
+<li>Application Platform 6.0.1 Maven Repository</li>
+<li>Application Platform 6.0.0 Maven Repository</li>
+</ul>
+
+<p>Unpack each of these files to a separate directory.</p></li>
+<li><p>Modify the <code>settings-zipped-repos.xml</code> file located in the root directory of JBoss Portal Platform
+quickstarts:</p>
+
+<ul>
+<li>For each zipped repository unpacked in the previous step, replace <code>/path/to/repo/</code> within <code>file:///path/to/repo/...</code>
+with the fully qualified path of the directory where you unpacked the given zipped Maven repository in the previous
+step.</li>
+<li>Note that path to each repository needs tobe set twice: one within <code>&lt;repository&gt;</code> tag and one within
+<code>&lt;pluginRepository&gt;</code> tag.</li>
+<li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
+path. For example:</p>
+<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.1-quickstarts</span>
+</pre></div></li>
+</ul></li>
+<li><p>Configure the Maven user settings.</p>
+
+<ul>
+<li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+</pre></div></li>
+<li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code>
+file.</p></li>
+<li><p>If there is no <code>settings.xml</code> file, copy the modified <code>example-settings.xml</code> file to the <code>.m2</code> directory for your
+operating system and rename it to <code>settings.xml</code>.</p></li>
+</ul></li>
+</ol>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
+
+<h2><a id="start-the-portal" class="anchor" href="#start-the-portal"><span class="anchor-icon"></span></a>Start the Portal</h2>
+
+<ol>
+<li>Open a command line and navigate to the root of the JBoss server directory.</li>
+<li><p>The following shows the command line to start the server with the web profile:</p>
+<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
+<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+</pre></div></li>
+</ol>
+
+<h2><a id="build-and-deploy-the-quickstart" class="anchor" href="#build-and-deploy-the-quickstart"><span class="anchor-icon"></span></a>Build and Deploy the Quickstart</h2>
+
+<ol>
+<li>Make sure you have started the Portal as described above.</li>
+<li>Open a command line and navigate to the root directory of this quickstart.</li>
+<li><p>Type this command to build and deploy the archive:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">deploy</span>
+</pre></div>
+<p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
+just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</code> in the pom.xml file and adjust it to suit your needs.
+<code>username</code> and <code>password</code> elements can be omitted sometimes, depending on your JBoss security settings.</p>
+<div class="highlight"><pre><span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;hostname&gt;</span>127.0.0.1<span class="nt">&lt;/hostname&gt;</span>
+    <span class="nt">&lt;port&gt;</span>9999<span class="nt">&lt;/port&gt;</span>
+    <span class="nt">&lt;username&gt;</span>admin<span class="nt">&lt;/username&gt;</span>
+    <span class="nt">&lt;password&gt;</span>secret<span class="nt">&lt;/password&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+<p>This will deploy <code>target/simplest-hello-world-portlet.war</code> to the running instance of the portal.</p></li>
+</ol>
+
+<h2><a id="access-the-deployed-portlet" class="anchor" href="#access-the-deployed-portlet"><span class="anchor-icon"></span></a>Access the deployed Portlet</h2>
+
+<p>To ensure that the example portlet has been deployed successfully, do the following:</p>
+
+<ul>
+<li>Point your web browser at the base URL of your portal (URL of a default local JBoss Portal Platform installation is
+<a href="http://127.0.0.1:8080/portal/classic">http://127.0.0.1:8080/portal/classic</a>).</li>
+<li>Sign in as root or other user with manager:/platform/administrators permissions.</li>
+<li>Go to Top Menu &gt; Group &gt; Administration &gt; Application Registry and hit Import Applications. After that, you should
+see the newly imported Simplest Hello World Portlet under the Quickstarts Category.</li>
+<li>Then you can add the example portlet to a page of your choice: either (a) to a new page or (b) to an existing page.
+
+<ul>
+<li>If you have chosen (a) to add the portlet to a new page:
+
+<ul>
+<li>Go to Top Menu &gt; Group Editor &gt; Add New Page</li>
+<li>In the Page Creation Wizard, fill in:
+
+<ul>
+<li>Node Name: simplest-hello-world-portlet</li>
+<li>Display Name: Simplest Hello World Portlet</li>
+</ul></li>
+<li>Click Next</li>
+<li>Leave Empty Layout as it is and hit Next</li>
+<li>Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to the middle of the Page Creation Wizard</li>
+<li>Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.</li>
+</ul></li>
+<li>If you have chosen (b) to add the portlet to an existing page:
+
+<ul>
+<li>Navigate to the page where you want to add the portlet and go to Top Menu &gt; Group Editor &gt; Edit Page</li>
+<li>Drag-and-Drop Simplest Hello World Portlet from the Page Editor dialog to a place of your choice within the page.</li>
+<li>Click the Diskette-like Finish button in the header of the Page Editor dialog and see the newly added portlet in action.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2><a id="undeploy-the-archive" class="anchor" href="#undeploy-the-archive"><span class="anchor-icon"></span></a>Undeploy the Archive</h2>
+
+<ol>
+<li>Make sure you have started the JBoss Server as described above.</li>
+<li>Open a command line and navigate to the root directory of this quickstart.</li>
+<li><p>When you are finished testing, type this command to undeploy the archive:</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">undeploy</span>
+</pre></div></li>
+</ol>
+
+<h2><a id="use-jboss-developer-studio-or-eclipse-with-jboss-tools-to-run-this-quickstart" class="anchor" href="#use-jboss-developer-studio-or-eclipse-with-jboss-tools-to-run-this-quickstart"><span class="anchor-icon"></span></a>Use JBoss Developer Studio or Eclipse with JBoss Tools to Run this Quickstart</h2>
+
+<p>You can also deploy the quickstarts from Eclipse using JBoss Tools. For more information on how to set up Maven and JBoss Tools,
+refer to the
+<a href="https://access.redhat.com/knowledge/docs/JBoss_Enterprise_Application_Platform/">JBoss Enterprise Application Platform 6 Development Guide</a>
+or <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/" title="Get Started Developing Applications">Get Started Developing Applications</a>.</p>
+
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
+
+<h2><a id="debug-the-application" class="anchor" href="#debug-the-application"><span class="anchor-icon"></span></a>Debug the Application</h2>
+
+<p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
+commands to pull them into your local repository. The IDE should then detect them.</p>
+<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
+<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
+</pre></div>
+<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
+
+<h2><a id="feedback" class="anchor" href="#feedback"><span class="anchor-icon"></span></a>Feedback</h2>
+
+<p>Please post feedback on this quickstart or JBoss Portal Platform on <a href="https://access.redhat.com/groups/jboss-enterprise-middleware">Online User Group</a>.</p>
+</body></html>

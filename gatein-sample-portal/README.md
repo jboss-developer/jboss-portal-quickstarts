@@ -1,4 +1,3 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/gatein-sample-portal/README.md.ftl ~-->
 
 gatein-sample-portal: Sample Portal
 ============================
@@ -26,7 +25,6 @@ For more details, see [Portal Containers](https://access.redhat.com/site/documen
 JBoss Portal Platform Developer Guide.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
 System Requirements
 -------------------
 
@@ -35,7 +33,6 @@ All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer a
 The project is designed to be deployed on JBoss Portal Platform 6.1 running on JBoss EAP.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
@@ -94,7 +91,6 @@ This is the easier and thus recommended option. You need to configure the Maven 
 
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/build-and-deploy-portal-container-or-extension.md.ftl ~-->
 Build and Deploy
 ----------------
 
@@ -140,7 +136,6 @@ To ensure that the Sample Portal has been deployed successfully visit
 [http://127.0.0.1:8080/sample-portal](http://127.0.0.1:8080/sample-portal/)) with your web browser.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 Start the Portal
 ----------------
 
@@ -170,7 +165,6 @@ Portal Extensions and Portal Containers are not directly deployable from JBoss D
 See Build and Deploy section above for an alternative.  
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 Debug the Application
 ---------------------
 
@@ -181,7 +175,6 @@ commands to pull them into your local repository. The IDE should then detect the
     mvn dependency:resolve -Dclassifier=javadoc
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 Feedback
 --------
 

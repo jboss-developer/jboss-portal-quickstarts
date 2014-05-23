@@ -1,4 +1,3 @@
-<!--~ Do not edit this derived file! See gatein-portal-quickstarts-parent/src/main/freemarker/jsf2-hello-world-portlet/README.md.ftl ~-->
 
 jsf2-hello-world-portlet: JSF2 Hello World Portlet
 ============================
@@ -21,8 +20,6 @@ of JBoss Portal Platform Developer Guide:
 * [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
 * [Basic JSF Portlet Development](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.1/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
 System Requirements
 -------------------
 
@@ -31,7 +28,6 @@ All you need to build this example project is Java 6.0 (Java SDK 1.6) or newer a
 The project is designed to be deployed on JBoss Portal Platform 6.1 running on JBoss EAP.
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/configure-maven.md.ftl ~-->
 Configure Maven
 ---------------
 
@@ -90,7 +86,6 @@ This is the easier and thus recommended option. You need to configure the Maven 
 
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/start-the-portal.md.ftl ~-->
 Start the Portal
 ----------------
 
@@ -169,7 +164,6 @@ refer to the
 or [Get Started Developing Applications](http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Introduction/ "Get Started Developing Applications").
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/debug.md.ftl ~-->
 Debug the Application
 ---------------------
 
@@ -180,7 +174,6 @@ commands to pull them into your local repository. The IDE should then detect the
     mvn dependency:resolve -Dclassifier=javadoc
 
 
-<!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 Feedback
 --------
 
