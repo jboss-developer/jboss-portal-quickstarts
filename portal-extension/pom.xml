@@ -22,7 +22,7 @@
     <artifactId>portal-extension</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
     <name>Portal Extension</name>
-    <version>6.2.0.build-5</version>
+    <version>6.2.0.build-6-SNAPSHOT</version>
     <packaging>pom</packaging>
     <description>Portal Extension</description>
     <url>http://www.jboss.org</url>
