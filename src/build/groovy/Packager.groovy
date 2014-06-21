@@ -123,7 +123,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
         projectsNode.appendChild(projectNode);
     }
 
-    setTextContent(projectNode, "name", productNameShort.toLowerCase() + majorVersion + "-" + moduleProject.artifactId)
+    setTextContent(projectNode, "name", productNameShort.toLowerCase().replace(" ", "-") + majorVersion + "-" + moduleProject.artifactId)
     //setTextContent(projectNode, "category", "${product} "+ project.properties.get("compatibility.portal.versionMajor") +".x Quickstarts")
     setTextContent(projectNode, "category", "Portal Applications")
     setTextContent(projectNode, "included-projects", moduleProject.artifactId)
