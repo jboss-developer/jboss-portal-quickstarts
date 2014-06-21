@@ -13,7 +13,7 @@ What is it?
 -----------
 
 This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1,
-RichFaces 4.3 and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.1.Final.
+RichFaces 4.3 and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
