@@ -20,6 +20,7 @@ Available Quickstarts
 * [JSF2 Hello World Portlet](jsf2-hello-world-portlet/README.html)
 * [JSF2+RF4 Hello World Portlet](jsf2-rf4-hello-world-portlet/README.html)
 * [Navigation API Portlet](navigation-api-portlet/README.html)
+* [Page Composition API Portlet](page-composition-api-portlet/README.html)
 * [CDI Generic Portlet](cdi-generic-portlet/README.html)
 * [CDI Portlet with JSF](cdi-jsf-portlet/README.html)
 * [Portlet Using Portet-Specific CDI Scopes](cdi-scopes-portlet/README.html)
