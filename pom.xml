@@ -50,7 +50,7 @@
     </modules>
 
     <properties>
-        <org.jboss.ide.target.nameAndVersion>jbds7.1</org.jboss.ide.target.nameAndVersion>
+        <org.jboss.ide.target.nameAndVersion>jbds8.0</org.jboss.ide.target.nameAndVersion>
         <!-- descriptor.suffix history:
             GateIn:
              JBT 4.0.0.Alpha1 - <empty>
@@ -58,6 +58,7 @@
              JBT 4.0.0.Beta1 - '-002'
              JBT 4.1.0.Alpha2 - '-001'
              JBT 4.1.0.CR1 - '-002'
+             JBDS 8.0.0.CR1 - '-001'
         -->
         <org.jboss.quickstarts.portal.descriptor.suffix>-001</org.jboss.quickstarts.portal.descriptor.suffix>
         <version.jboss.portal.bom>6.2.0.build-5</version.jboss.portal.bom>
