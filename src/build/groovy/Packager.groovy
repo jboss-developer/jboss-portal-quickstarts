@@ -100,7 +100,7 @@ def enhanceProjectDescriptor(xPath, descriptorDom, moduleProject, zipFile, proje
     String product = project.properties.get("compatibility.portal.projectName");
     String productNameShort = project.properties.get("compatibility.portal.projectNameShort");
     String majorVersion = project.properties.get("compatibility.portal.versionMajor");
-    String downloadsRootUrl = project.properties.get("portal.quickstarts.downloads.url.prefix").toLowerCase();
+    String downloadsRootUrl = project.properties.get("portal.quickstarts.downloads.url.prefix").toLowerCase().replace(' ', '-');
 
     File genPropsFile = new File("src/main/freemarker/"+ moduleProject.getArtifactId(), "generator.properties");
     Properties genProps = new Properties();
@@ -279,7 +279,7 @@ descriptorDom.insertBefore(comment, descriptorDom.getDocumentElement());
 descriptorDom.insertBefore(descriptorDom.createTextNode("\n"), descriptorDom.getDocumentElement());
 
 String descriptorPath = "target/assembly/project-examples-" +
-        project.properties.get("compatibility.portal.projectNameShort").toLowerCase() +
+        project.properties.get("compatibility.portal.projectNameShort").toLowerCase().replace(' ', '-') +
         project.properties.get("compatibility.portal.versionMm") +
         "-" +
         project.properties.get("org.jboss.ide.target.nameAndVersion") +
