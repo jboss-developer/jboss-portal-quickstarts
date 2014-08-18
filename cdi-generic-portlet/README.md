@@ -6,8 +6,8 @@ Author: Ken Finnigan, Peter Palaga
 Level: Intermediate  
 Technologies: Portlet, CDI  
 Summary: An application that demonstrates use of CDI in a portlet.  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

@@ -19,11 +19,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>portal-extension</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
-    <name>Portal Extension</name>
+    <artifactId>portal-extension</artifactId>
     <version>6.2.0.build-6-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>Portal Extension</name>
     <description>Portal Extension</description>
     <url>http://www.jboss.org</url>
     <licenses>
@@ -34,12 +34,6 @@
         </license>
     </licenses>
 
-    <modules>
-        <module>config</module>
-        <module>war</module>
-        <module>ear</module>
-    </modules>
-
     <properties>
         <!-- JBoss Portal Bill of Materials (BOM) version -->
         <version.jboss.portal.bom>6.2.0.build-5</version.jboss.portal.bom>
@@ -47,7 +41,6 @@
         <!-- Plugin versions and settings -->
         <maven.ear.plugin.version>2.5</maven.ear.plugin.version>
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,6 +48,12 @@
         <version.surefire.plugin>2.10</version.surefire.plugin>
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
     </properties>
+
+    <modules>
+        <module>config</module>
+        <module>war</module>
+        <module>ear</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -93,23 +92,14 @@
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
             </plugin>
+            <!--
+              The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
+            -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${version.surefire.plugin}</version>
             </plugin>
-          <!--
-          The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian
-          -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>${version.surefire.plugin}</version>
-          </plugin>
 
         </plugins>
     </build>

@@ -19,11 +19,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cdi-scopes-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
-    <name>Portlet Using Portet-Specific CDI Scopes</name>
+    <artifactId>cdi-scopes-portlet</artifactId>
     <version>6.2.0.build-6-SNAPSHOT</version>
     <packaging>war</packaging>
+    <name>Portlet Using Portet-Specific CDI Scopes</name>
     <description>Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
     <url>http://www.jboss.org</url>
     <licenses>
@@ -43,7 +43,6 @@
 
 
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -150,15 +149,6 @@
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>

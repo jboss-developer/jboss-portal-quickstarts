@@ -201,6 +201,7 @@ public class LinksAndVersions {
     public static final String compatibility_portal_product_projectName = "Red Hat JBoss Portal";
     public static final String compatibility_portal_product_projectNameAndVersion = "Red Hat JBoss Portal 6.2.0";
     public static final String compatibility_portal_product_projectNameShort = "JBoss Portal";
+    public static final String compatibility_portal_product_projectNameXShort = "Portal";
     public static final String compatibility_portal_product_versionMajor = "6";
     public static final String compatibility_portal_product_versionMicro = "0";
     public static final String compatibility_portal_product_versionMinor = "2";
@@ -209,6 +210,7 @@ public class LinksAndVersions {
     public static final String compatibility_portal_projectName = "Red Hat JBoss Portal";
     public static final String compatibility_portal_projectNameAndVersion = "Red Hat JBoss Portal 6.2";
     public static final String compatibility_portal_projectNameShort = "JBoss Portal";
+    public static final String compatibility_portal_projectNameXShort = "Portal";
     public static final String compatibility_portal_versionMajor = "6";
     public static final String compatibility_portal_versionMinor = "2";
     public static final String compatibility_portal_versionMm = "6.2";

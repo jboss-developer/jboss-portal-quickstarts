@@ -6,8 +6,8 @@ Author: Ken Finnigan
 Level: Intermediate  
 Technologies: Portlet, CDI  
 Summary: Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

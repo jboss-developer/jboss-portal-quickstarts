@@ -23,8 +23,8 @@ Author: Thomas Heute, Peter Palaga  <#-- two spaces mean line break in MD -->
 Level: Beginner  <#-- two spaces mean line break in MD -->
 Technologies: ${compatibility.portal.projectName}, Portal Container  <#-- two spaces mean line break in MD -->
 Summary: ${project.description}  <#-- two spaces mean line break in MD -->
-Target Product: ${compatibility.portal.projectNameShort}  <#-- two spaces mean line break in MD -->
-Source: <${parent.scm.url}>
+Target Product: ${compatibility.portal.projectNameXShort}  <#-- two spaces mean line break in MD -->
+Source: <${parent.scm.url}>  <#-- two spaces mean line break in MD -->
 
 
 What is it?

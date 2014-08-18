@@ -6,8 +6,8 @@ Author: Peter Palaga, Brian Leathem, Ken Finnigan
 Level: Beginner  
 Technologies: JSF2, Portlet Bridge  
 Summary: A simple portlet using JavaServer Faces 2.  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

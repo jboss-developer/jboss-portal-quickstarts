@@ -23,8 +23,8 @@ Author: Marek Posolda, Viliam Rockai  <#-- two spaces mean line break in MD -->
 Level: Intermediate  <#-- two spaces mean line break in MD -->
 Technologies: Portlet, JSP, OAuth, CDI  <#-- two spaces mean line break in MD -->
 Summary: ${project.description}  <#-- two spaces mean line break in MD -->
-Target Product: ${compatibility.portal.projectNameShort}  <#-- two spaces mean line break in MD -->
-Source: <${parent.scm.url}>
+Target Product: ${compatibility.portal.projectNameXShort}  <#-- two spaces mean line break in MD -->
+Source: <${parent.scm.url}>  <#-- two spaces mean line break in MD -->
 
 What is it?
 -----------

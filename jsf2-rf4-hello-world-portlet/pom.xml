@@ -19,11 +19,11 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jsf2-rf4-hello-world-portlet</artifactId>
     <groupId>org.jboss.quickstarts.portal</groupId>
-    <name>JSF2+RF4 Hello World Portlet</name>
+    <artifactId>jsf2-rf4-hello-world-portlet</artifactId>
     <version>6.2.0.build-6-SNAPSHOT</version>
     <packaging>war</packaging>
+    <name>JSF2+RF4 Hello World Portlet</name>
     <description>A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.</description>
     <url>http://www.jboss.org</url>
     <licenses>
@@ -39,7 +39,6 @@
         <version.jboss.portal.bom>6.2.0.build-5</version.jboss.portal.bom>
 
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -123,15 +122,6 @@
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
             </plugin>
           <!--
           The Maven Surefire plugin tests your application. Here we ensure we are using a version compatible with Arquillian

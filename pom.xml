@@ -79,6 +79,7 @@
         <compatibility.portal.product.versionMmm>${compatibility.portal.product.versionMm}.${compatibility.portal.product.versionMicro}</compatibility.portal.product.versionMmm>
         <compatibility.portal.product.projectName>Red Hat JBoss Portal</compatibility.portal.product.projectName>
         <compatibility.portal.product.projectNameShort>JBoss Portal</compatibility.portal.product.projectNameShort>
+        <compatibility.portal.product.projectNameXShort>Portal</compatibility.portal.product.projectNameXShort>
         <compatibility.portal.product.projectNameAndVersion>${compatibility.portal.product.projectName} ${compatibility.portal.product.versionMmm}</compatibility.portal.product.projectNameAndVersion>
 
         <compatibility.portal.versionMajor>${compatibility.portal.product.versionMajor}</compatibility.portal.versionMajor>
@@ -87,6 +88,7 @@
         <compatibility.portal.versionMmm>${compatibility.portal.versionMm}.${compatibility.portal.versionMicro}</compatibility.portal.versionMmm>
         <compatibility.portal.projectName>${compatibility.portal.product.projectName}</compatibility.portal.projectName>
         <compatibility.portal.projectNameShort>${compatibility.portal.product.projectNameShort}</compatibility.portal.projectNameShort>
+        <compatibility.portal.projectNameXShort>${compatibility.portal.product.projectNameXShort}</compatibility.portal.projectNameXShort>
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
 
         <compatibility.as.community.versionMajor>6</compatibility.as.community.versionMajor>

@@ -6,8 +6,8 @@ Author: Marek Posolda, Viliam Rockai
 Level: Intermediate  
 Technologies: Portlet, JSP, OAuth, CDI  
 Summary: Portlets showing integration with Social networks  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

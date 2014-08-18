@@ -6,15 +6,15 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Portlet  
 Summary: The very essence of every possible portlet.  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------
 
 This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.
 
-An introduction and some background information to this quickstart can be found in the following chapters 
+An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
 * [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html)

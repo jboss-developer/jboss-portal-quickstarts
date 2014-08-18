@@ -21,9 +21,9 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>social-portlets</artifactId>
-    <name>Social Portlets</name>
     <version>6.2.0.build-6-SNAPSHOT</version>
     <packaging>war</packaging>
+    <name>Social Portlets</name>
     <description>Portlets showing integration with Social networks</description>
     <url>http://www.jboss.org</url>
     <licenses>
@@ -50,7 +50,6 @@
         <!-- Plugin versions and settings -->
         <version.jboss.maven.plugin>7.4.Final</version.jboss.maven.plugin>
         <!-- maven-compiler-plugin -->
-        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
         <maven.compiler.target>1.6</maven.compiler.target>
         <maven.compiler.source>1.6</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -185,15 +184,6 @@
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>${version.jboss.maven.plugin}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.plugin.version}</version>
-                <configuration>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>

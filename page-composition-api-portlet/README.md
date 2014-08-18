@@ -6,8 +6,8 @@ Author: Juraci Paixão Kröhling
 Level: Intermediate  
 Technologies: Portlet  
 Summary: A Portlet using the Page Composition API to compose Portal Pages.  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

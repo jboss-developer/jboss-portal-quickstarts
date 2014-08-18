@@ -6,8 +6,8 @@ Author: Thomas Heute, Peter Palaga
 Level: Beginner  
 Technologies: Red Hat JBoss Portal, Portal Container  
 Summary: Sample Portal  
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 
 What is it?

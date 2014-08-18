@@ -2,12 +2,12 @@
 
 navigation-api-portlet: Navigation API Portlet
 ============================
-Author: Viliam Rockai 
-Level: Beginner 
-Technologies: Portlet, JSP, JQuery 
-Summary: The simple navigation portlet using Portal API. 
-Target Product: JBoss Portal  
-Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git> 
+Author: Viliam Rockai  
+Level: Beginner  
+Technologies: Portlet, JSP, JQuery  
+Summary: The simple navigation portlet using Portal API.  
+Target Product: Portal  
+Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------

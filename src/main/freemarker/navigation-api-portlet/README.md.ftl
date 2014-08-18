@@ -19,12 +19,12 @@
 
 ${project.artifactId}: ${project.name}
 ============================
-Author: Viliam Rockai <#-- two spaces mean line break in MD -->
-Level: Beginner <#-- two spaces mean line break in MD -->
-Technologies: Portlet, JSP, JQuery <#-- two spaces mean line break in MD -->
-Summary: ${project.description} <#-- two spaces mean line break in MD -->
-Target Product: ${compatibility.portal.projectNameShort}  <#-- two spaces mean line break in MD -->
-Source: <${parent.scm.url}> <#-- two spaces mean line break in MD -->
+Author: Viliam Rockai  <#-- two spaces mean line break in MD -->
+Level: Beginner  <#-- two spaces mean line break in MD -->
+Technologies: Portlet, JSP, JQuery  <#-- two spaces mean line break in MD -->
+Summary: ${project.description}  <#-- two spaces mean line break in MD -->
+Target Product: ${compatibility.portal.projectNameXShort}  <#-- two spaces mean line break in MD -->
+Source: <${parent.scm.url}>  <#-- two spaces mean line break in MD -->
 
 What is it?
 -----------
