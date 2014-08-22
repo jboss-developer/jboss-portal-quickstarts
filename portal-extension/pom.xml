@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>portal-extension</artifactId>
-    <version>6.2.0.build-6-SNAPSHOT</version>
+    <version>6.2.0.build-6</version>
     <packaging>pom</packaging>
     <name>Portal Extension</name>
     <description>Portal Extension</description>
