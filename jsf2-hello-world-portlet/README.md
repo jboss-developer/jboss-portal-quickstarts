@@ -13,13 +13,13 @@ What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1
-and [Portlet Bridge](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
+and [Portlet Bridge](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
-* [Basic JSF Portlet Development](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
+* [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -189,4 +189,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).
+Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/discussions?title=&product=8&category=All&tags=All).

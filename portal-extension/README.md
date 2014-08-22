@@ -25,7 +25,7 @@ Portal Extension customizes the default portal available at [http://localhost:80
 * Change few translation strings
 * Add a few pages
 
-For more details, see [Portal Extension](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-Portal_Extension.html) page of
+For more details, see [Portal Extension](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portal_Extension.html) page of
 Red Hat JBoss Portal Developer Guide.
 
 
@@ -176,4 +176,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).
+Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/discussions?title=&product=8&category=All&tags=All).

@@ -17,10 +17,10 @@ This project demonstrates how to use CDI Scopes `@PortletLifecycleScoped` and `@
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
-* [Standard Portlet Development (JSR-286)](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html)
-* [CDI Portlet Development](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/chap-CDI_Portlet_Development.html)
-* [Portlet CDI Scopes](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Portlet_CDI_Scopes.html)
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
+* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Standard_Portlet_Development_JSR-286)
+* [CDI Portlet Development](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-CDI_Portlet_Development.html)
+* [Portlet CDI Scopes](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-CDI_Portlet_Development.html#sect-Portlet_CDI_Scopes)
 
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
@@ -191,4 +191,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).
+Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/discussions?title=&product=8&category=All&tags=All).

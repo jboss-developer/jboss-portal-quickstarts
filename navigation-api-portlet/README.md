@@ -17,9 +17,9 @@ This project demonstrates how to create the navigation portlet using the GateIn 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Starting_a_Portlet_Project.html)
-* [Standard Portlet Development (JSR-286)](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html)
-* [Portal API](https://access.redhat.com/site/documentation/en-US/JBoss_Portal_Platform/6.2/html/Development_Guide/part-Portal_API.html)
+* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
+* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Standard_Portlet_Development_JSR-286)
+* [Portal API](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/part-Portal_API.html)
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->
@@ -189,4 +189,4 @@ commands to pull them into your local repository. The IDE should then detect the
 Feedback
 --------
 
-Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/groups/jboss-enterprise-middleware).
+Please post feedback on this quickstart or Red Hat JBoss Portal on [Online User Group](https://access.redhat.com/discussions?title=&product=8&category=All&tags=All).

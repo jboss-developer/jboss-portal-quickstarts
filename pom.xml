@@ -125,51 +125,47 @@
         <mvnrepo.redhat.all.url>http://maven.repository.redhat.com/techpreview/all</mvnrepo.redhat.all.url>
 
         <portal.user.forum.label>Online User Group</portal.user.forum.label>
-        <portal.user.forum.url>https://access.redhat.com/groups/jboss-enterprise-middleware</portal.user.forum.url>
+        <portal.user.forum.url>https://access.redhat.com/discussions?title=&amp;product=8&amp;category=All&amp;tags=All</portal.user.forum.url>
 
-        <!-- <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/docs/en-US</jboss.confluence.root.url> -->
-        <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
+        <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
+        <!-- <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url> -->
 
-        <portal.docs.prefix>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}/html</portal.docs.prefix>
-        <portal.docs.url>${jboss.confluence.root.url}/JBoss_Portal_Platform/${compatibility.portal.versionMm}</portal.docs.url>
+        <portal.docs.prefix>${jboss.confluence.root.url}/Red_Hat_JBoss_Portal/${compatibility.portal.versionMm}/html</portal.docs.prefix>
+        <portal.docs.url>${jboss.confluence.root.url}/Red_Hat_JBoss_Portal/${compatibility.portal.versionMm}</portal.docs.url>
         <portal.devguide.url>${portal.docs.prefix}/Development_Guide</portal.devguide.url>
 
         <portal.devguide.containers.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Containers.html</portal.devguide.containers.url>
         <portal.devguide.extensions.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html</portal.devguide.extensions.url>
 
-        <portal.devguide.custom.groovy.template.url>${portal.docs.prefix}/Development_Guide/Custom_Groovy_Template_for_a_Portlet.html</portal.devguide.custom.groovy.template.url>
-        <portal.devguide.custom.portlet.skin.url>${portal.docs.prefix}/Development_Guide/sect-Custom_Skin_for_a_Portlet.html</portal.devguide.custom.portlet.skin.url>
-        <portal.devguide.nav.pages.url>${portal.docs.prefix}/Development_Guide/sect-Custom_Navigation_and_Pages.html</portal.devguide.nav.pages.url>
-        <portal.devguide.i18n.url>${portal.docs.prefix}/Development_Guide/Custom_Internationalization_Resource_Bundles.html</portal.devguide.i18n.url>
+        <portal.devguide.custom.groovy.template.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html##Custom_Groovy_Template_for_a_Portlet</portal.devguide.custom.groovy.template.url>
+        <portal.devguide.custom.portlet.skin.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#sect-Custom_Skin_for_a_Portlet</portal.devguide.custom.portlet.skin.url>
+        <portal.devguide.nav.pages.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#sect-Custom_Navigation_and_Pages</portal.devguide.nav.pages.url>
+        <portal.devguide.i18n.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#Custom_Internationalization_Resource_Bundles</portal.devguide.i18n.url>
 
-        <portal.devguide.starting.portlet.project.url>${portal.docs.prefix}/Development_Guide/sect-Starting_a_Portlet_Project.html</portal.devguide.starting.portlet.project.url>
-        <portal.devguide.jsf.plain.jsr268.portlet.url>${portal.docs.prefix}/Development_Guide/sect-Standard_Portlet_Development_JSR-286.html</portal.devguide.jsf.plain.jsr268.portlet.url>
+        <portal.devguide.starting.portlet.project.url>${portal.docs.prefix}/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project</portal.devguide.starting.portlet.project.url>
+        <portal.devguide.jsf.plain.jsr268.portlet.url>${portal.docs.prefix}/Development_Guide/chap-Portlet_Development.html#sect-Standard_Portlet_Development_JSR-286</portal.devguide.jsf.plain.jsr268.portlet.url>
         <portal.devguide.jsf.portlets.url>${portal.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</portal.devguide.jsf.portlets.url>
         <portal.devguide.jsf.basic.portlet.url>${portal.docs.prefix}/Development_Guide/chap-Basic_JSF_Portlet_Development.html</portal.devguide.jsf.basic.portlet.url>
         <portal.devguide.jsf.rf.portlet.url>${portal.docs.prefix}/Development_Guide/chap-JSF_Portlet_Development_with_RichFaces.html</portal.devguide.jsf.rf.portlet.url>
         <portal.devguide.api.portal.url>${portal.docs.prefix}/Development_Guide/part-Portal_API.html</portal.devguide.api.portal.url>
 
         <!-- TODO: Where is portlet primer in the prod docs? -->
-        <portal.refguide.portlet.primer.url>${portal.docs.prefix}/Development_Guide/sect-JSR-168_and_JSR-286_overview.html</portal.refguide.portlet.primer.url>
+        <portal.refguide.portlet.primer.url>${portal.docs.prefix}/Development_Guide/chap-Portlet_Development_Resources.html#sect-JSR-168_and_JSR-286_overview</portal.refguide.portlet.primer.url>
         <portal.refguide.pbr.url>${portal.docs.prefix}/Development_Guide/chap-Portlet_Bridge.html</portal.refguide.pbr.url>
 
         <!-- TODO: CDI in prod doc. -->
         <portal.devguide.cdi.url>${portal.docs.prefix}/Development_Guide/chap-CDI_Portlet_Development.html</portal.devguide.cdi.url>
-        <portal.devguide.cdi.generic.portlet.url>${portal.docs.prefix}/Development_Guide/GenericPortlet_and_Portlet_Filter_Injection.html</portal.devguide.cdi.generic.portlet.url>
-        <portal.devguide.cdi.scope.portlets.url>${portal.docs.prefix}/Development_Guide/sect-Portlet_CDI_Scopes.html</portal.devguide.cdi.scope.portlets.url>
+        <portal.devguide.cdi.generic.portlet.url>${portal.docs.prefix}/Development_Guide/chap-CDI_Portlet_Development.html#GenericPortlet_and_Portlet_Filter_Injection</portal.devguide.cdi.generic.portlet.url>
+        <portal.devguide.cdi.scope.portlets.url>${portal.docs.prefix}/Development_Guide/chap-CDI_Portlet_Development.html#sect-Portlet_CDI_Scopes</portal.devguide.cdi.scope.portlets.url>
 
         <portal.refguide.oauth.url>${portal.docs.prefix}/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html</portal.refguide.oauth.url>
-        <portal.refguide.facebook.url>${portal.docs.prefix}/Development_Guide/Facebook.html</portal.refguide.facebook.url>
-        <portal.refguide.google.url>${portal.docs.prefix}/Development_Guide/Google.html</portal.refguide.google.url>
-        <portal.refguide.twitter.url>${portal.docs.prefix}/Development_Guide/Twitter.html</portal.refguide.twitter.url>
+        <portal.refguide.facebook.url>${portal.docs.prefix}/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Facebook</portal.refguide.facebook.url>
+        <portal.refguide.google.url>${portal.docs.prefix}/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Google</portal.refguide.google.url>
+        <portal.refguide.twitter.url>${portal.docs.prefix}/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Twitter</portal.refguide.twitter.url>
 
         <jboss.admin.guide.url.prefix>${jboss.confluence.root.url}/JBoss_Enterprise_Application_Platform/${compatibility.as.versionMm}/html/Administration_and_Configuration_Guide</jboss.admin.guide.url.prefix>
         <jboss.admin.guide.ds.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html</jboss.admin.guide.ds.url>
         <jboss.admin.guide.ds.files.url>${jboss.admin.guide.url.prefix}/chap-Datasource_Management.html#Deployment_of_-ds.xml_files</jboss.admin.guide.ds.files.url>
-
-
-        <!-- Other guides -->
-        <gatein.refguide.pbr.url>https://docs.jboss.org/author/display/PBR32</gatein.refguide.pbr.url>
 
         <!-- Other URLs -->
         <facebook.url>https://www.facebook.com</facebook.url>
