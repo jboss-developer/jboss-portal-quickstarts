@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>jsf2-hello-world-portlet</artifactId>
-    <version>6.2.0.build-7-SNAPSHOT</version>
+    <version>6.2.0.build-7</version>
     <packaging>war</packaging>
     <name>JSF2 Hello World Portlet</name>
     <description>A simple portlet using JavaServer Faces 2.</description>
