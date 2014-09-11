@@ -22,7 +22,7 @@
     <parent>
         <artifactId>portal-extension</artifactId>
         <groupId>org.jboss.quickstarts.portal</groupId>
-        <version>6.2.0.build-7</version>
+        <version>6.2.0.build-8-SNAPSHOT</version>
     </parent>
     <artifactId>portal-extension-ear</artifactId>
     <packaging>ear</packaging>
