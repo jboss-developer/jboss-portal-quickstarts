@@ -20,28 +20,28 @@ Red Hat JBoss Portal API and JSP front-end. It contains:
 * 1 portlet for [Twitter](https://twitter.com/) integration, which is using Twitter API and leverages [Twitter4j library](http://twitter4j.org/en/index.html) for this purpose
 
 Portlets require that Red Hat JBoss Portal integration with particular social network is enabled. You can see
-chapter [OAuth - Authentication with social network accounts](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html) in Red Hat JBoss Portal
+chapter [OAuth - Authentication with social network accounts](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html) in Red Hat JBoss Portal
 reference guide for details.
 
 Each portlet is using access token of current authenticated portal user and this access token is
 used to call Social API operations. There is special portlet filter OAuthPortletFilter, which leverages
-[Portal API](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/part-Portal_API.html) to obtain informations about access token of current user. Filter saves this info
+[Portal API](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/part-Portal_API.html) to obtain informations about access token of current user. Filter saves this info
 to CDI RequestContext object, which is used by particular portlet.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
-* [Standard Portlet Development (JSR-286)](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Standard_Portlet_Development_JSR-286)
-* [Portal API](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/part-Portal_API.html)
+* [Starting a Portlet Project](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
+* [Standard Portlet Development (JSR-286)](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Standard_Portlet_Development_JSR-286)
+* [Portal API](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/part-Portal_API.html)
 
 Informations about configuration of OAuth authentication and integration with social networks could be found in the following
 chapters of  Red Hat JBoss Portal Reference Guide:
 
-* [OAuth - Authentication with social network accounts](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html)
-* [Facebook](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Facebook)
-* [Google+](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Google)
-* [Twitter](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Twitter)
+* [OAuth - Authentication with social network accounts](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Administration_and_Configuration_Guide/chap-OAuth_-_Authentication_with_Social_Network_accounts.html)
+* [Facebook](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Facebook)
+* [Google+](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Google)
+* [Twitter](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Using_Data_from_Social_Networks_in_Portlets.html#Twitter)
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->

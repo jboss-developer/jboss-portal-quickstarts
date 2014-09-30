@@ -36,7 +36,7 @@
     
     <p>
         Before you proceed, you may want to read 
-        <a id="portal.devguide.cdi.scope.portlets.url" href="http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-CDI_Portlet_Development.html#sect-Portlet_CDI_Scopes">Portlet CDI Scopes</a>
+        <a id="portal.devguide.cdi.scope.portlets.url" href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-CDI_Portlet_Development.html#sect-Portlet_CDI_Scopes">Portlet CDI Scopes</a>
         Section of <span id="compatibility.portal.projectNameShort">JBoss Portal</span> Developer Guide.
     </p>
     

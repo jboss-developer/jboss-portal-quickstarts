@@ -13,13 +13,13 @@ What is it?
 -----------
 
 This project demonstrates how to create a simple portlet using JavaServer Faces 2.1
-and [Portlet Bridge](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
+and [Portlet Bridge](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:
 
-* [Starting a Portlet Project](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
-* [Basic JSF Portlet Development](http://documentation-devel.engineering.redhat.com/site/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
+* [Starting a Portlet Project](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Development.html#sect-Starting_a_Portlet_Project)
+* [Basic JSF Portlet Development](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Basic_JSF_Portlet_Development.html)
 
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/portlet-general.md.ftl ~-->
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/system-requirements.md.ftl ~-->

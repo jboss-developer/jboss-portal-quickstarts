@@ -127,8 +127,8 @@
         <portal.user.forum.label>Online User Group</portal.user.forum.label>
         <portal.user.forum.url>https://access.redhat.com/discussions?title=&amp;product=8&amp;category=All&amp;tags=All</portal.user.forum.url>
 
-        <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/site/documentation/en-US</jboss.confluence.root.url>
-        <!-- <jboss.confluence.root.url>https://access.redhat.com/site/documentation/en-US</jboss.confluence.root.url> -->
+        <!-- <jboss.confluence.root.url>http://documentation-devel.engineering.redhat.com/site/documentation/en-US</jboss.confluence.root.url> -->
+        <jboss.confluence.root.url>https://access.redhat.com/documentation/en-US</jboss.confluence.root.url>
 
         <portal.docs.prefix>${jboss.confluence.root.url}/Red_Hat_JBoss_Portal/${compatibility.portal.versionMm}/html</portal.docs.prefix>
         <portal.docs.url>${jboss.confluence.root.url}/Red_Hat_JBoss_Portal/${compatibility.portal.versionMm}</portal.docs.url>
@@ -137,7 +137,7 @@
         <portal.devguide.containers.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Containers.html</portal.devguide.containers.url>
         <portal.devguide.extensions.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html</portal.devguide.extensions.url>
 
-        <portal.devguide.custom.groovy.template.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html##Custom_Groovy_Template_for_a_Portlet</portal.devguide.custom.groovy.template.url>
+        <portal.devguide.custom.groovy.template.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#Custom_Groovy_Template_for_a_Portlet</portal.devguide.custom.groovy.template.url>
         <portal.devguide.custom.portlet.skin.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#sect-Custom_Skin_for_a_Portlet</portal.devguide.custom.portlet.skin.url>
         <portal.devguide.nav.pages.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#sect-Custom_Navigation_and_Pages</portal.devguide.nav.pages.url>
         <portal.devguide.i18n.url>${portal.docs.prefix}/Development_Guide/chap-Portal_Extension.html#Custom_Internationalization_Resource_Bundles</portal.devguide.i18n.url>
