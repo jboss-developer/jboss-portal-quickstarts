@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>sample-portal</artifactId>
-    <version>6.2.0.build-8-SNAPSHOT</version>
+    <version>6.2.0.build-8</version>
     <packaging>pom</packaging>
     <name>Sample Portal</name>
     <description>Sample Portal</description>

@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>simplest-hello-world-portlet</artifactId>
-    <version>6.2.0.build-8-SNAPSHOT</version>
+    <version>6.2.0.build-8</version>
     <packaging>war</packaging>
     <name>Simplest Hello World Portlet</name>
     <description>The very essence of every possible portlet.</description>
