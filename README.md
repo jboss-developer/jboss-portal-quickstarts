@@ -27,3 +27,10 @@ Available Quickstarts
 * [Social Portlets](social-portlets/README.html)
 * [Portal Extension](portal-extension/README.html)
 * [Sample Portal](sample-portal/README.html)
+
+
+How to Contribute
+------------------
+
+* [Contributing Guide](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/CONTRIBUTING.md#jboss-developer-contributing-guide): This document contains information targeted for developers who want to contribute to JBoss developer projects.
+
