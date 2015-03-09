@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>sample-portal</artifactId>
-    <version>6.2.0.build-9-SNAPSHOT</version>
+    <version>6.2.0.build-9</version>
     <packaging>pom</packaging>
     <name>Sample Portal</name>
     <description>This project demonstrates a how to create a new Portal Container from scratch.</description>

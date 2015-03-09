@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>portal-extension</artifactId>
-    <version>6.2.0.build-9-SNAPSHOT</version>
+    <version>6.2.0.build-9</version>
     <packaging>pom</packaging>
     <name>Portal Extension</name>
     <description>This project demonstrates how it is possible - using a Portal Extension - to customize a portal without modifying the files included in portal.ear.</description>
