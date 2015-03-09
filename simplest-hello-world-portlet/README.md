@@ -5,7 +5,7 @@ simplest-hello-world-portlet: Simplest Hello World Portlet
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Portlet  
-Summary: The very essence of every possible portlet.  
+Summary: This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Social Portlets</name>
-    <description>Portlets showing integration with Social networks</description>
+    <description>This project demonstrates how to use APIs of Facebook, Twitter and Google+ in Portlets.</description>
     <url>http://www.jboss.org</url>
     <licenses>
         <license>

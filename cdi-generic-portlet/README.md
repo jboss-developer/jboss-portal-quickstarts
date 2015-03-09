@@ -5,7 +5,7 @@ cdi-generic-portlet: CDI Generic Portlet
 Author: Ken Finnigan, Peter Palaga  
 Level: Intermediate  
 Technologies: Portlet, CDI  
-Summary: An application that demonstrates use of CDI in a portlet.  
+Summary: This project demonstrates how to use CDI in Portlets and Portlet Filters.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

@@ -5,14 +5,14 @@
 <p>Author: Peter Palaga, Brian Leathem, Ken Finnigan<br/>
 Level: Beginner<br/>
 Technologies: RF4, JSF2, Portlet Bridge<br/>
-Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.<br/>
+Summary: This project demonstrates how to create a simple portlet using JavaServer Faces, RichFaces 4.3 and Portlet Bridge.<br/>
 Target Product: Portal<br/>
 Source: <a href="https://github.com/jboss-developer/jboss-portal-quickstarts.git">https://github.com/jboss-developer/jboss-portal-quickstarts.git</a>  </p>
 
 <h2><a id="what-is-it" class="anchor" href="#what-is-it"><span class="anchor-icon"></span></a>What is it?</h2>
 
-<p>This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1,
-RichFaces 4.3 and <a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html">Portlet Bridge</a> 3.3.2.Final.</p>
+<p>This project demonstrates how to create a simple portlet using JavaServer Faces 2.1,
+RichFaces 4.3 and <a href="https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html">Portlet Bridge</a> 3.3.3.Final.</p>
 
 <p>An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:</p>
@@ -45,8 +45,8 @@ of Red Hat JBoss Portal Developer Guide:</p>
 
 <ul>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="vg">Linux</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="nl">Mac:</span><span class="w"> </span><span class="o">~/.</span><span class="vg">m2</span><span class="o">/</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w">       </span><span class="o">\</span><span class="vg">Users</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="o">\</span><span class="vg">Documents</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">Settings</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
 file located in the root folder of Red Hat JBoss Portal quickstarts. This effectivelly results in
@@ -90,15 +90,15 @@ step.</li>
 <code>&lt;pluginRepository&gt;</code> tag.</li>
 <li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
 path. For example:</p>
-<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.2-quickstarts</span>
+<div class="highlight"><pre><span class="nl">file:</span><span class="o">///</span><span class="vg">home</span><span class="o">/</span><span class="vg">joedoe</span><span class="o">/</span><span class="vg">Quickstarts</span><span class="o">/</span><span class="vg">jpp</span><span class="mf">-6.2</span><span class="o">-</span><span class="vg">quickstarts</span>
 </pre></div></li>
 </ul></li>
 <li><p>Configure the Maven user settings.</p>
 
 <ul>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="vg">Linux</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="nl">Mac:</span><span class="w"> </span><span class="o">~/.</span><span class="vg">m2</span><span class="o">/</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w">       </span><span class="o">\</span><span class="vg">Users</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="o">\</span><span class="vg">Documents</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">Settings</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code>
 file.</p></li>
@@ -114,8 +114,8 @@ operating system and rename it to <code>settings.xml</code>.</p></li>
 <ol>
 <li>Open a command line and navigate to the root of the JBoss server directory.</li>
 <li><p>The following shows the command line to start the server with the web profile:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="nl">Linux:</span><span class="w">   </span><span class="vg">JBOSS_HOME</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">standalone</span><span class="o">.</span><span class="vg">sh</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w"> </span><span class="vg">JBOSS_HOME</span><span class="o">\</span><span class="vg">bin</span><span class="o">\</span><span class="vg">standalone</span><span class="o">.</span><span class="vg">bat</span>
 </pre></div></li>
 </ol>
 
@@ -125,20 +125,21 @@ operating system and rename it to <code>settings.xml</code>.</p></li>
 <li>Make sure you have started the Portal as described above.</li>
 <li>Open a command line and navigate to the root directory of this quickstart.</li>
 <li><p>Type this command to build and deploy the archive:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">deploy</span>
-</pre></div>
-<p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
-just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</code> in the pom.xml file and adjust it to suit your needs.
-<code>username</code> and <code>password</code> elements can be omitted sometimes, depending on your JBoss security settings.</p>
-<div class="highlight"><pre><span class="nt">&lt;configuration&gt;</span>
-    <span class="nt">&lt;hostname&gt;</span>127.0.0.1<span class="nt">&lt;/hostname&gt;</span>
-    <span class="nt">&lt;port&gt;</span>9999<span class="nt">&lt;/port&gt;</span>
-    <span class="nt">&lt;username&gt;</span>admin<span class="nt">&lt;/username&gt;</span>
-    <span class="nt">&lt;password&gt;</span>secret<span class="nt">&lt;/password&gt;</span>
-<span class="nt">&lt;/configuration&gt;</span>
-</pre></div>
-<p>This will deploy <code>target/jsf2-rf4-hello-world-portlet.war</code> to the running instance of the portal.</p></li>
+<div class="highlight"><pre><span class="vg">mvn</span><span class="w"> </span><span class="vg">clean</span><span class="w"> </span><span class="vg">package</span><span class="w"> </span><span class="vg">jboss</span><span class="o">-</span><span class="nl">as:</span><span class="vg">deploy</span>
+</pre></div></li>
 </ol>
+
+<p>To deploy to other than default localhost:9999 JBoss instance, copy the following configuration
+   just after <code>&lt;artifactId&gt;jboss-as-maven-plugin&lt;/artifactId&gt;</code> in the pom.xml file and adjust it to suit your needs.
+   <code>username</code> and <code>password</code> elements can be omitted sometimes, depending on your JBoss security settings.</p>
+<div class="highlight"><pre>    <span class="nt">&lt;configuration&gt;</span>
+        <span class="nt">&lt;hostname&gt;</span>127.0.0.1<span class="nt">&lt;/hostname&gt;</span>
+        <span class="nt">&lt;port&gt;</span>9999<span class="nt">&lt;/port&gt;</span>
+        <span class="nt">&lt;username&gt;</span>admin<span class="nt">&lt;/username&gt;</span>
+        <span class="nt">&lt;password&gt;</span>secret<span class="nt">&lt;/password&gt;</span>
+    <span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+<p>This will deploy <code>target/jsf2-rf4-hello-world-portlet.war</code> to the running instance of the portal.</p>
 
 <h2><a id="access-the-deployed-portlet" class="anchor" href="#access-the-deployed-portlet"><span class="anchor-icon"></span></a>Access the deployed Portlet</h2>
 
@@ -184,7 +185,7 @@ see the newly imported JSF2+RF4 Hello World Portlet under the Quickstarts Catego
 <li>Make sure you have started the JBoss Server as described above.</li>
 <li>Open a command line and navigate to the root directory of this quickstart.</li>
 <li><p>When you are finished testing, type this command to undeploy the archive:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">:</span><span class="n">undeploy</span>
+<div class="highlight"><pre><span class="vg">mvn</span><span class="w"> </span><span class="vg">jboss</span><span class="o">-</span><span class="nl">as:</span><span class="vg">undeploy</span>
 </pre></div></li>
 </ol>
 
@@ -201,8 +202,8 @@ or <a href="http://www.jboss.org/jdf/quickstarts/jboss-as-quickstart/guide/Intro
 
 <p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
-<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
+<div class="highlight"><pre><span class="vg">mvn</span><span class="w"> </span><span class="nl">dependency:</span><span class="vg">sources</span>
+<span class="vg">mvn</span><span class="w"> </span><span class="nl">dependency:</span><span class="vg">resolve</span><span class="w"> </span><span class="o">-</span><span class="vg">Dclassifier</span><span class="o">=</span><span class="vg">javadoc</span>
 </pre></div>
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 

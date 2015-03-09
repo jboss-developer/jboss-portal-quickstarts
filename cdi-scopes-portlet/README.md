@@ -5,7 +5,7 @@ cdi-scopes-portlet: Portlet Using Portet-Specific CDI Scopes
 Author: Ken Finnigan  
 Level: Intermediate  
 Technologies: Portlet, CDI  
-Summary: Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.  
+Summary: This project demonstrates how to use CDI Scopes @PortletLifecycleScoped` and @PortletRedisplayScoped` in Portlets.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

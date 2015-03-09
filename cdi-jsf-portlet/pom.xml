@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>CDI Portlet with JSF</name>
-    <description>An application that demonstrates use of JSF 2 RI and CDI in a portlet</description>
+    <description>This project demonstrates how to use CDI and JSF in portlets.</description>
     <url>http://www.jboss.org</url>
     <licenses>
         <license>

@@ -5,7 +5,7 @@ sample-portal: Sample Portal
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Red Hat JBoss Portal, Portal Container  
-Summary: Sample Portal  
+Summary: This project demonstrates a how to create a new Portal Container from scratch.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

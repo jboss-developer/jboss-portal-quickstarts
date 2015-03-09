@@ -5,7 +5,7 @@ portal-extension: Portal Extension
 Author: Thomas Heute, Peter Palaga  
 Level: Beginner  
 Technologies: Red Hat JBoss Portal, Portal Extension  
-Summary: Portal Extension  
+Summary: This project demonstrates how it is possible - using a Portal Extension - to customize a portal without modifying the files included in portal.ear.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

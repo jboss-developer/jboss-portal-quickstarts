@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Simplest Hello World Portlet</name>
-    <description>The very essence of every possible portlet.</description>
+    <description>This project demonstrates how to create the simplest possible portlet compliant with Portlet Specification 2.0.</description>
     <url>http://www.jboss.org</url>
     <licenses>
         <license>

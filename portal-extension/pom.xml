@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Portal Extension</name>
-    <description>Portal Extension</description>
+    <description>This project demonstrates how it is possible - using a Portal Extension - to customize a portal without modifying the files included in portal.ear.</description>
     <url>http://www.jboss.org</url>
     <licenses>
         <license>

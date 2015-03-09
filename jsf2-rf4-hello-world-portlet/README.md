@@ -5,15 +5,15 @@ jsf2-rf4-hello-world-portlet: JSF2+RF4 Hello World Portlet
 Author: Peter Palaga, Brian Leathem, Ken Finnigan  
 Level: Beginner  
 Technologies: RF4, JSF2, Portlet Bridge  
-Summary: A simple portlet using JavaServer Faces 2.1 and RichFaces 4.2.  
+Summary: This project demonstrates how to create a simple portlet using JavaServer Faces, RichFaces 4.3 and Portlet Bridge.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces 2.1,
-RichFaces 4.3 and [Portlet Bridge](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.2.Final.
+This project demonstrates how to create a simple portlet using JavaServer Faces 2.1,
+RichFaces 4.3 and [Portlet Bridge](https://access.redhat.com/documentation/en-US/Red_Hat_JBoss_Portal/6.2/html/Development_Guide/chap-Portlet_Bridge.html) 3.3.3.Final.
 
 An introduction and some background information to this quickstart can be found in the following chapters
 of Red Hat JBoss Portal Developer Guide:

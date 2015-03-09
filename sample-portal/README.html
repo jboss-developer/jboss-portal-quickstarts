@@ -5,7 +5,7 @@
 <p>Author: Thomas Heute, Peter Palaga<br/>
 Level: Beginner<br/>
 Technologies: Red Hat JBoss Portal, Portal Container<br/>
-Summary: Sample Portal<br/>
+Summary: This project demonstrates a how to create a new Portal Container from scratch.<br/>
 Target Product: Portal<br/>
 Source: <a href="https://github.com/jboss-developer/jboss-portal-quickstarts.git">https://github.com/jboss-developer/jboss-portal-quickstarts.git</a>  </p>
 
@@ -45,8 +45,8 @@ Red Hat JBoss Portal Developer Guide.</p>
 
 <ul>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="vg">Linux</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="nl">Mac:</span><span class="w"> </span><span class="o">~/.</span><span class="vg">m2</span><span class="o">/</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w">       </span><span class="o">\</span><span class="vg">Users</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="o">\</span><span class="vg">Documents</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">Settings</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>settings-hosted-repo.xml</code>
 file located in the root folder of Red Hat JBoss Portal quickstarts. This effectivelly results in
@@ -90,15 +90,15 @@ step.</li>
 <code>&lt;pluginRepository&gt;</code> tag.</li>
 <li><p>Be sure to use 3 forward slashes after <code>file:</code>. Two slashes are there for the protocol and one for the fully qualified
 path. For example:</p>
-<div class="highlight"><pre><span class="nl">file:</span><span class="c1">///home/joedoe/Quickstarts/jpp-6.2-quickstarts</span>
+<div class="highlight"><pre><span class="nl">file:</span><span class="o">///</span><span class="vg">home</span><span class="o">/</span><span class="vg">joedoe</span><span class="o">/</span><span class="vg">Quickstarts</span><span class="o">/</span><span class="vg">jpp</span><span class="mf">-6.2</span><span class="o">-</span><span class="vg">quickstarts</span>
 </pre></div></li>
 </ul></li>
 <li><p>Configure the Maven user settings.</p>
 
 <ul>
 <li><p>Look for the <code>settings.xml</code> file in the <code>${user.home}/.m2/</code> directory. For example:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span> <span class="n">or</span> <span class="n">Mac</span><span class="o">:</span> <span class="o">~/</span><span class="p">.</span><span class="n">m2</span><span class="o">/</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span>       <span class="err">\</span><span class="n">Users</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span> <span class="n">or</span> <span class="err">\</span><span class="n">Documents</span> <span class="n">and</span> <span class="n">Settings</span><span class="err">\</span><span class="n">USER_NAME</span><span class="err">\</span><span class="p">.</span><span class="n">m2</span><span class="err">\</span><span class="n">settings</span><span class="p">.</span><span class="n">xml</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="vg">Linux</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="nl">Mac:</span><span class="w"> </span><span class="o">~/.</span><span class="vg">m2</span><span class="o">/</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w">       </span><span class="o">\</span><span class="vg">Users</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span><span class="w"> </span><span class="vg">or</span><span class="w"> </span><span class="o">\</span><span class="vg">Documents</span><span class="w"> </span><span class="vg">and</span><span class="w"> </span><span class="vg">Settings</span><span class="o">\</span><span class="vg">USER_NAME</span><span class="o">\.</span><span class="vg">m2</span><span class="o">\</span><span class="vg">settings</span><span class="o">.</span><span class="vg">xml</span>
 </pre></div></li>
 <li><p>If you have an existing <code>settings.xml</code> file, modify it with the configuration information from the <code>example-settings.xml</code>
 file.</p></li>
@@ -117,11 +117,11 @@ Red Hat JBoss Portal is running. Instead of that you will need to:</p>
 
 <ol>
 <li><p>Make sure that the Portal is not running, e.g. by running </p>
-<div class="highlight"><pre><span class="err">$</span><span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">cli</span><span class="p">.</span><span class="n">sh</span> <span class="o">--</span><span class="n">connect</span> <span class="n">controller</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="mi">9999</span> <span class="n">command</span><span class="o">=:</span><span class="n">shutdown</span>
+<div class="highlight"><pre><span class="err">$</span><span class="vg">JBOSS_HOME</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">jboss</span><span class="o">-</span><span class="vg">cli</span><span class="o">.</span><span class="vg">sh</span><span class="w"> </span><span class="o">--</span><span class="vg">connect</span><span class="w"> </span><span class="vg">controller</span><span class="o">=</span><span class="mf">127.0.0.1</span><span class="o">:</span><span class="il">9999</span><span class="w"> </span><span class="vg">command</span><span class="o">=:</span><span class="vg">shutdown</span>
 </pre></div></li>
 <li><p>Open a command line and navigate to the root directory of this quickstart.</p></li>
 <li><p>Run the following command to build the archive:</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">clean</span> <span class="n">package</span>
+<div class="highlight"><pre><span class="vg">mvn</span><span class="w"> </span><span class="vg">clean</span><span class="w"> </span><span class="vg">package</span>
 </pre></div>
 <p>This will create <code>ear/target/sample-portal.ear</code>.</p></li>
 <li><p>Copy this file into the Red Hat JBoss Portal extension deployment folder: <code>$JBOSS_HOME/gatein/extensions</code></p></li>
@@ -158,8 +158,8 @@ described in <a href="https://access.redhat.com/documentation/en-US/JBoss_Enterp
 <ol>
 <li>Open a command line and navigate to the root of the JBoss server directory.</li>
 <li><p>The following shows the command line to start the server with the web profile:</p>
-<div class="highlight"><pre><span class="n">For</span> <span class="n">Linux</span><span class="o">:</span>   <span class="n">JBOSS_HOME</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">standalone</span><span class="p">.</span><span class="n">sh</span>
-<span class="n">For</span> <span class="n">Windows</span><span class="o">:</span> <span class="n">JBOSS_HOME</span><span class="err">\</span><span class="n">bin</span><span class="err">\</span><span class="n">standalone</span><span class="p">.</span><span class="n">bat</span>
+<div class="highlight"><pre><span class="vg">For</span><span class="w"> </span><span class="nl">Linux:</span><span class="w">   </span><span class="vg">JBOSS_HOME</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">standalone</span><span class="o">.</span><span class="vg">sh</span>
+<span class="vg">For</span><span class="w"> </span><span class="nl">Windows:</span><span class="w"> </span><span class="vg">JBOSS_HOME</span><span class="o">\</span><span class="vg">bin</span><span class="o">\</span><span class="vg">standalone</span><span class="o">.</span><span class="vg">bat</span>
 </pre></div></li>
 </ol>
 
@@ -186,8 +186,8 @@ See Build and Deploy section above for an alternative.  </p>
 
 <p>If you want to debug the source code or look at the Javadocs of any library in the project, run either of the following 
 commands to pull them into your local repository. The IDE should then detect them.</p>
-<div class="highlight"><pre><span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">sources</span>
-<span class="n">mvn</span> <span class="n">dependency</span><span class="o">:</span><span class="n">resolve</span> <span class="o">-</span><span class="n">Dclassifier</span><span class="o">=</span><span class="n">javadoc</span>
+<div class="highlight"><pre><span class="vg">mvn</span><span class="w"> </span><span class="nl">dependency:</span><span class="vg">sources</span>
+<span class="vg">mvn</span><span class="w"> </span><span class="nl">dependency:</span><span class="vg">resolve</span><span class="w"> </span><span class="o">-</span><span class="vg">Dclassifier</span><span class="o">=</span><span class="vg">javadoc</span>
 </pre></div>
 <!--~ Included from gatein-portal-quickstarts-parent/src/main/freemarker/include/feedback.md.ftl ~-->
 

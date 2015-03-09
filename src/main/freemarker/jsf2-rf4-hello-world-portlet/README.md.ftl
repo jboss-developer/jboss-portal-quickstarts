@@ -29,7 +29,7 @@ Source: <${parent.scm.url}>  <#-- two spaces mean line break in MD -->
 What is it?
 -----------
 
-This project demonstrates how to create a simplest portlet using JavaServer Faces ${version.javax["faces-api"]},
+This project demonstrates how to create a simple portlet using JavaServer Faces ${version.javax["faces-api"]},
 RichFaces ${version.org.richfaces.mm} and [Portlet Bridge](${portal.refguide.pbr.url}) ${version.org.jboss.portletbridge}.
 
 An introduction and some background information to this quickstart can be found in the following chapters

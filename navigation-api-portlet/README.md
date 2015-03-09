@@ -5,7 +5,7 @@ navigation-api-portlet: Navigation API Portlet
 Author: Viliam Rockai  
 Level: Beginner  
 Technologies: Portlet, JSP, JQuery  
-Summary: The simple navigation portlet using Portal API.  
+Summary: This project demonstrates how to create the navigation portlet using the GateIn Portal API with a JSP front-end.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

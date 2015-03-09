@@ -5,7 +5,7 @@ cdi-jsf-portlet: CDI Portlet with JSF
 Author: Ken Finnigan, Peter Palaga  
 Level: Intermediate  
 Technologies: Portlet, CDI, JSF  
-Summary: An application that demonstrates use of JSF 2 RI and CDI in a portlet  
+Summary: This project demonstrates how to use CDI and JSF in portlets.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 

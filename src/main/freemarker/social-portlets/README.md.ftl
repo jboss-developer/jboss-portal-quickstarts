@@ -29,7 +29,7 @@ Source: <${parent.scm.url}>  <#-- two spaces mean line break in MD -->
 What is it?
 -----------
 
-This project demonstrates how to create social portlets in ${compatibility.portal.projectName} with usage of
+This project demonstrates how to create social portlets in ${compatibility.portal.projectName} using
 ${compatibility.portal.projectName} API and JSP front-end. It contains:
 
 * 3 portlets for [Facebook](${facebook.url}) integration, which are using [Facebook Graph API](${facebook.graph.url}) and leverages [RestFB library](${facebook.restfb.url}) for this purpose

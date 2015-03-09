@@ -5,14 +5,14 @@ social-portlets: Social Portlets
 Author: Marek Posolda, Viliam Rockai  
 Level: Intermediate  
 Technologies: Portlet, JSP, OAuth, CDI  
-Summary: Portlets showing integration with Social networks  
+Summary: This project demonstrates how to use APIs of Facebook, Twitter and Google+ in Portlets.  
 Target Product: Portal  
 Source: <https://github.com/jboss-developer/jboss-portal-quickstarts.git>  
 
 What is it?
 -----------
 
-This project demonstrates how to create social portlets in Red Hat JBoss Portal with usage of
+This project demonstrates how to create social portlets in Red Hat JBoss Portal using
 Red Hat JBoss Portal API and JSP front-end. It contains:
 
 * 3 portlets for [Facebook](https://www.facebook.com) integration, which are using [Facebook Graph API](https://developers.facebook.com/docs/reference/api/) and leverages [RestFB library](http://restfb.com/) for this purpose

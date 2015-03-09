@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Portlet Using Portet-Specific CDI Scopes</name>
-    <description>Portlet Using Portal-Specific CDI Scopes @PortletLifecycleScoped and @PortletRedisplayScoped.</description>
+    <description>This project demonstrates how to use CDI Scopes @PortletLifecycleScoped` and @PortletRedisplayScoped` in Portlets.</description>
     <url>http://www.jboss.org</url>
     <licenses>
         <license>

@@ -24,7 +24,7 @@
     <version>6.2.0.build-9-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Sample Portal</name>
-    <description>Sample Portal</description>
+    <description>This project demonstrates a how to create a new Portal Container from scratch.</description>
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
