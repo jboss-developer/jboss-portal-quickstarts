@@ -21,7 +21,7 @@
 
     <parent>
         <groupId>org.jboss.quickstarts.portal</groupId>
-        <version>6.2.0.build-10</version>
+        <version>6.2.0.build-11-SNAPSHOT</version>
         <artifactId>sample-portal</artifactId>
     </parent>
     <artifactId>sample-portal-ear</artifactId>

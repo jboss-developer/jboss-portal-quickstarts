@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>page-composition-api-portlet</artifactId>
-    <version>6.2.0.build-10</version>
+    <version>6.2.0.build-11-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Page Composition API Portlet</name>
     <description>A Portlet using the Page Composition API to compose Portal Pages.</description>

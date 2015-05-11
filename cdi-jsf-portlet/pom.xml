@@ -21,7 +21,7 @@
 
     <groupId>org.jboss.quickstarts.portal</groupId>
     <artifactId>cdi-jsf-portlet</artifactId>
-    <version>6.2.0.build-10</version>
+    <version>6.2.0.build-11-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>CDI Portlet with JSF</name>
     <description>This project demonstrates how to use CDI and JSF in portlets.</description>
