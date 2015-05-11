@@ -68,7 +68,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 6.3.0 Maven Repository
+    * Application Platform 6.4.0 Maven Repository
     * Application Platform 6.2.0 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository
@@ -132,10 +132,10 @@ of XML commented out. Please search for `Uncommented this when deploying sample-
 necessary XML code blocks. Note that you should uncomment two `datasource`s and one `security-policy`.
 
 > Except for editting standalone.xml, JBoss Datasources and Security Policies can be defined using CLI or JBoss Web Console as
-> described in [JBoss EAP 6.3 Admin Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
+> described in [JBoss EAP 6.4 Admin Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html)
 
 [*] Datasources can be defined in EARs but such ones are not managed, see
-[JBoss EAP 6.3 Admin Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.3/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
+[JBoss EAP 6.4 Admin Guide](https://access.redhat.com/documentation/en-US/JBoss_Enterprise_Application_Platform/6.4/html/Administration_and_Configuration_Guide/chap-Datasource_Management.html#Deployment_of_-ds.xml_files).
 
 
 Access the Sample Portal

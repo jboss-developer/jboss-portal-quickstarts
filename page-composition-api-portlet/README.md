@@ -65,7 +65,7 @@ This is the easier and thus recommended option. You need to configure the Maven 
     * Web Framework Kit 2.2.0 Maven Repository
     * Web Framework Kit 2.1.0 Maven Repository
     * Web Framework Kit 2.0.0 Maven Repository
-    * Application Platform 6.3.0 Maven Repository
+    * Application Platform 6.4.0 Maven Repository
     * Application Platform 6.2.0 Maven Repository
     * Application Platform 6.1.0 Maven Repository
     * Application Platform 6.0.1 Maven Repository

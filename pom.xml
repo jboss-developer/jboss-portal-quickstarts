@@ -92,7 +92,7 @@
         <compatibility.portal.projectNameAndVersion>${compatibility.portal.projectName} ${compatibility.portal.versionMm}</compatibility.portal.projectNameAndVersion>
 
         <compatibility.as.community.versionMajor>6</compatibility.as.community.versionMajor>
-        <compatibility.as.community.versionMinor>3</compatibility.as.community.versionMinor>
+        <compatibility.as.community.versionMinor>4</compatibility.as.community.versionMinor>
         <compatibility.as.community.versionMicro>0</compatibility.as.community.versionMicro>
         <compatibility.as.community.versionMm>${compatibility.as.community.versionMajor}.${compatibility.as.community.versionMinor}</compatibility.as.community.versionMm>
         <compatibility.as.community.versionMmm>${compatibility.as.community.versionMm}.${compatibility.as.community.versionMicro}</compatibility.as.community.versionMmm>
@@ -100,7 +100,7 @@
         <compatibility.as.community.projectNameAndVersion>${compatibility.as.community.projectName} ${compatibility.as.community.versionMm}</compatibility.as.community.projectNameAndVersion>
 
         <compatibility.as.product.versionMajor>6</compatibility.as.product.versionMajor>
-        <compatibility.as.product.versionMinor>3</compatibility.as.product.versionMinor>
+        <compatibility.as.product.versionMinor>4</compatibility.as.product.versionMinor>
         <compatibility.as.product.versionMicro>0</compatibility.as.product.versionMicro>
         <compatibility.as.product.versionMm>${compatibility.as.product.versionMajor}.${compatibility.as.product.versionMinor}</compatibility.as.product.versionMm>
         <compatibility.as.product.versionMmm>${compatibility.as.product.versionMm}.${compatibility.as.product.versionMicro}</compatibility.as.product.versionMmm>
