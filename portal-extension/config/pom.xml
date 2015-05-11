@@ -22,7 +22,7 @@
     <parent>
         <artifactId>portal-extension</artifactId>
         <groupId>org.jboss.quickstarts.portal</groupId>
-        <version>6.2.0.build-10-SNAPSHOT</version>
+        <version>6.2.0.build-10</version>
     </parent>
     <artifactId>portal-extension-config</artifactId>
     <packaging>jar</packaging>
